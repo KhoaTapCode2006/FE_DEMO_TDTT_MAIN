@@ -9,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
-
   <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
   <script>
     tailwind.config = {
@@ -54,6 +53,9 @@
   <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <link href="https://unpkg.com/@vietmap/vietmap-gl-js@6.0.1/dist/vietmap-gl.css" rel="stylesheet" />
+  <script src="https://unpkg.com/@vietmap/vietmap-gl-js@6.0.1/dist/vietmap-gl.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/date-fns@3/cdn.min.js"></script>
 
@@ -116,6 +118,45 @@
       transition:left .2s; box-shadow:0 1px 4px rgba(0,0,0,.2);
     }
     .toggle-track.on .toggle-thumb { left:23px; }
+
+    .user-location-marker {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: rgba(0, 52, 111, 0.95);
+      border: 2px solid rgba(255,255,255,0.95);
+      box-shadow: 0 0 0 4px rgba(0, 84, 157, 0.18);
+      animation: user-location-flicker 1.5s ease-in-out infinite;
+    }
+    .user-location-marker::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px rgba(0, 84, 157, 0.28);
+      opacity: 0.6;
+      animation: user-location-pulse 1.8s ease-out infinite;
+    }
+    @keyframes user-location-flicker {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.06); opacity: 0.8; }
+    }
+    @keyframes user-location-pulse {
+      0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.8; }
+      70% { transform: translate(-50%, -50%) scale(1.8); opacity: 0; }
+      100% { transform: translate(-50%, -50%) scale(1.8); opacity: 0; }
+    }
+    .hotel-marker-flicker {
+      animation: hotel-flicker 2.2s ease-in-out infinite;
+    }
+    @keyframes hotel-flicker {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
 
     /* Date picker calendar */
     .cal-day {
@@ -209,6 +250,15 @@
     ];
 
     const DISCOVER_ENDPOINT = "http://localhost:8010/proxy/api/v1/discover";
+
+    const VIETMAP_CONFIG = {
+      STYLE_URL: "https://maps.vietmap.vn/maps/styles/dm/style.json",
+      API_KEY: "6033c4efaa0e172ca5cb9ebc5c9d394da9a38466072ce84e",
+    };
+
+    function getVietMapStyleUrl() {
+      return `${VIETMAP_CONFIG.STYLE_URL}?apikey=${VIETMAP_CONFIG.API_KEY}`;
+    }
 
     // ── API stubs (wire to real backend by replacing these) ──────────────────
     window.API = {
@@ -388,6 +438,7 @@
         lng: parseFloat(gps.longitude) || null,
         amenities,
         images: normalizedImages,
+        thumbnail: normalizedImages[0] || null,
         latestReview,
         reviews,
         nearbyLandmarks: Array.isArray(raw.nearby_places)
@@ -953,10 +1004,8 @@
     function SearchBar({ location, setLocation, checkIn, checkOut, setDates, guests, setGuests, minPrice, maxPrice, onPriceChange, onSubmit }) {
       const [showCal,    setShowCal]    = useState(false);
       const [showGuests, setShowGuests] = useState(false);
-      const [showPrice,  setShowPrice]  = useState(false);
       const calRef    = useRef(null);
       const guestsRef = useRef(null);
-      const priceRef  = useRef(null);
 
       useEffect(() => {
         function h(e) {
@@ -976,13 +1025,7 @@
         return parts.join(", ");
       })();
 
-      function fmtPriceShort(n) {
-        if (n >= 1000000) return `${(n / 1000000).toFixed(1)}tr`;
-        if (n >= 1000)    return `${(n / 1000).toFixed(0)}K`;
-        return String(n);
-      }
 
-      const priceLabel = `${fmtPriceShort(minPrice)} – ${fmtPriceShort(maxPrice)} VNĐ`;
 
       return (
         <div className="flex-none z-40 flex justify-center px-4 py-3">
@@ -1010,25 +1053,6 @@
                   checkIn={checkIn} checkOut={checkOut}
                   onChange={setDates}
                   onClose={() => setShowCal(false)}
-                />
-              )}
-            </div>
-
-            {/* Price Range */}
-            <div ref={priceRef} className="relative flex-1 flex items-center gap-2 px-3 py-1 cursor-pointer border-r border-outline-variant/30"
-                 onClick={() => { setShowPrice(v => !v); setShowCal(false); setShowGuests(false); }}>
-              <Icon name="payments" className="text-on-surface-variant flex-none" />
-              <div className="flex flex-col min-w-0">
-                <span className="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Khoảng giá</span>
-                <span className="text-sm font-medium text-on-surface whitespace-nowrap truncate">{priceLabel}</span>
-              </div>
-              <Icon name="expand_more" size={18} className="text-on-surface-variant ml-auto flex-none" />
-              {showPrice && (
-                <PriceRangeSelector
-                  minPrice={minPrice}
-                  maxPrice={maxPrice}
-                  onChange={onPriceChange}
-                  onClose={() => setShowPrice(false)}
                 />
               )}
             </div>
@@ -1065,184 +1089,589 @@
     }
 
     // ══════════════════════════════════════════════════════════════════════════
-    // COMPONENT: GoogleMap (with draggable radius circle)
+    // COMPONENT: VietMap (with adjustable radius circle + clustered hotels)
     // ══════════════════════════════════════════════════════════════════════════
     function GoogleMapPanel({ radiusM, setRadiusM, userLocation, hotels, activeHotel, onHotelSelect }) {
       const mapRef = useRef(null);
       const mapObjRef = useRef(null);
-      const circleRef = useRef(null);
-      const markersRef = useRef([]);
-      const infoWindowRef = useRef(null);
+      const popupRef = useRef(null);
+      const userLocationMarkerRef = useRef(null);
+      const radiusHandleRef = useRef(null);
+      const hotelMarkersRef = useRef([]);
+      const hotelsRef = useRef(hotels);
+      const initialUserLocationCenteredRef = useRef(false);
+      const initialCircleRadiusSetRef = useRef(false);
       const [mapReady, setMapReady] = useState(false);
       const [mapError, setMapError] = useState(false);
 
       useEffect(() => {
-        if (window.google?.maps) { initMap(); return; }
-        const key = window.API.GOOGLE_MAPS_KEY;
-        if (!key || key === "YOUR_GOOGLE_MAPS_API_KEY") {
-          setMapError(true); return;
-        }
-        const s = document.createElement("script");
-        s.async = true;
-        s.defer = true;
-        s.loading = "lazy";
-        s.src = `https://maps.googleapis.com/maps/api/js?key=${key}&libraries=places,marker`;
-        s.onload = initMap;
-        s.onerror = () => setMapError(true);
-        document.head.appendChild(s);
-      }, []);
+        hotelsRef.current = hotels;
+      }, [hotels]);
 
-      function createCircleMarker(map, position, color, { title, zIndex } = {}) {
-        if (window.google?.maps?.marker?.AdvancedMarkerElement) {
-          const content = document.createElement("div");
-          Object.assign(content.style, {
-            width: "16px",
-            height: "16px",
-            borderRadius: "50%",
-            backgroundColor: color,
-            border: "3px solid #ffffff",
-            boxShadow: "0 0 0 6px rgba(0, 0, 0, 0.08)",
-            boxSizing: "border-box",
+      function clearHotelMarkers() {
+        hotelMarkersRef.current.forEach(marker => marker.remove());
+        hotelMarkersRef.current = [];
+      }
+
+      function createHotelMarkers(hotels) {
+        clearHotelMarkers();
+        if (!mapObjRef.current || !window.vietmapgl) return;
+
+        hotels
+          .filter(hotel => hotel.lat != null && hotel.lng != null)
+          .forEach(hotel => {
+            const insideCircle = getDistanceMeters(userLocation, { lat: hotel.lat, lng: hotel.lng }) <= radiusM;
+            const size = insideCircle ? 52 : 42;
+            const element = document.createElement("div");
+            element.style.width = `${size}px`;
+            element.style.height = `${size}px`;
+            element.style.borderRadius = "50%";
+            element.style.overflow = "hidden";
+            element.style.boxShadow = "0 0 0 2px rgba(255,255,255,0.95),0 10px 22px rgba(0,0,0,0.22)";
+            element.style.border = "2px solid rgba(255,255,255,0.95)";
+            element.style.cursor = "pointer";
+            element.style.backgroundColor = "#ffffff";
+            element.style.transition = "width 0.2s ease, height 0.2s ease, transform 0.2s ease";
+            if (insideCircle) {
+              element.className = "hotel-marker-flicker";
+              element.style.transform = "scale(1.05)";
+            }
+
+            const image = document.createElement("img");
+            image.src = hotel.thumbnail || hotel.images?.[0] || "";
+            image.alt = hotel.name || "Hotel";
+            image.style.width = "100%";
+            image.style.height = "100%";
+            image.style.objectFit = "cover";
+            image.style.display = "block";
+            element.appendChild(image);
+
+            element.addEventListener("click", (event) => {
+              event.stopPropagation();
+              onHotelSelect?.(hotel);
+              showHotelPopup(hotel, [hotel.lng, hotel.lat]);
+            });
+
+            const marker = new window.vietmapgl.Marker({ element, anchor: "center" })
+              .setLngLat([hotel.lng, hotel.lat])
+              .addTo(mapObjRef.current);
+
+            hotelMarkersRef.current.push(marker);
           });
-          const marker = new google.maps.marker.AdvancedMarkerElement({
-            map,
-            position,
-            title,
-            content,
-          });
-          if (typeof zIndex === "number") marker.setZIndex(zIndex);
-          return marker;
+      }
+
+      function getDistanceMeters(a, b) {
+        const R = 6371000;
+        const φ1 = a.lat * Math.PI / 180;
+        const φ2 = b.lat * Math.PI / 180;
+        const Δφ = (b.lat - a.lat) * Math.PI / 180;
+        const Δλ = (b.lng - a.lng) * Math.PI / 180;
+        const sinΔφ = Math.sin(Δφ / 2);
+        const sinΔλ = Math.sin(Δλ / 2);
+        const h = sinΔφ * sinΔφ + Math.cos(φ1) * Math.cos(φ2) * sinΔλ * sinΔλ;
+        return 2 * R * Math.atan2(Math.sqrt(h), Math.sqrt(1 - h));
+      }
+
+      function buildCircleGeoJSON(center, radius) {
+        const coords = [];
+        const R = 6371000;
+        const φ1 = center.lat * Math.PI / 180;
+        const λ1 = center.lng * Math.PI / 180;
+        const δ = radius / R;
+
+        for (let i = 0; i <= 64; i += 1) {
+          const θ = (i / 64) * 2 * Math.PI;
+          const φ2 = Math.asin(Math.sin(φ1) * Math.cos(δ) + Math.cos(φ1) * Math.sin(δ) * Math.cos(θ));
+          const λ2 = λ1 + Math.atan2(
+            Math.sin(θ) * Math.sin(δ) * Math.cos(φ1),
+            Math.cos(δ) - Math.sin(φ1) * Math.sin(φ2)
+          );
+          coords.push([λ2 * 180 / Math.PI, φ2 * 180 / Math.PI]);
         }
 
-        return new google.maps.Marker({
-          map,
-          position,
-          title,
-          icon: {
-            path: google.maps.SymbolPath.CIRCLE,
-            scale: 8,
-            fillColor: color,
-            fillOpacity: 1,
-            strokeColor: "#ffffff",
-            strokeWeight: 3,
+        return {
+          type: "Feature",
+          geometry: {
+            type: "Polygon",
+            coordinates: [coords],
           },
-          zIndex,
-        });
+        };
       }
 
-      function initMap() {
-        if (!mapRef.current) return;
-        const center = userLocation || { lat:10.7769, lng:106.7009 };
-        const map = new google.maps.Map(mapRef.current, {
-          center, zoom:14,
-          disableDefaultUI: true,
-          gestureHandling: "greedy",
-          styles: MAP_STYLE,
-        });
-        mapObjRef.current = map;
-
-        createCircleMarker(map, center, "#00346f", { zIndex: 30, title: "You" });
-
-        const circle = new google.maps.Circle({
-          map, center, radius:radiusM,
-          strokeColor:"#00346f", strokeOpacity:0.7, strokeWeight:2,
-          fillColor:"#00346f", fillOpacity:0.08,
-          editable:true, 
-          draggable:false,
-        });
-        circleRef.current = circle;
-
-        circle.addListener("radius_changed", () => {
-          setRadiusM(Math.round(circle.getRadius()));
-        });
-
-        setMapReady(true);
+      function getRadiusHandleCoordinates(center, radius) {
+        return getCirclePoint(center, radius, 45);
       }
 
-      function showMarkerInfo(hotel, marker, pan = false) {
-        if (!window.google?.maps || !mapObjRef.current) return;
-        if (!infoWindowRef.current) {
-          infoWindowRef.current = new google.maps.InfoWindow({ maxWidth: 320 });
-        }
+      function buildHotelGeoJSON(hotels) {
+        return {
+          type: "FeatureCollection",
+          features: hotels
+            .filter(hotel => hotel.lat != null && hotel.lng != null)
+            .map(hotel => ({
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [hotel.lng, hotel.lat],
+              },
+              properties: {
+                hotelId: hotel.id,
+                name: hotel.name || "Hotel",
+                address: hotel.address || "",
+                price: hotel.pricePerNight || 0,
+                link: hotel.link || "",
+              },
+            })),
+        };
+      }
 
-        const content = `
-          <div style="font-family:Inter,sans-serif;font-size:14px;line-height:1.4;max-width:300px;">
+      function getRadiusHandleCoordinates(center, radius) {
+        return getCirclePoint(center, radius, 45);
+      }
+
+      function getRadiusForCoverage(center, hotels, coverage = 0.5) {
+        const distances = hotels
+          .filter(hotel => hotel.lat != null && hotel.lng != null)
+          .map(hotel => getDistanceMeters(center, { lat: hotel.lat, lng: hotel.lng }))
+          .sort((a, b) => a - b);
+
+        if (!distances.length) return radiusM;
+        const index = Math.min(distances.length - 1, Math.max(0, Math.floor(distances.length * coverage) - 1));
+        return distances[index] * 1.15;
+      }
+
+      function buildBoundsForHotels(center, hotels, coverage = 0.5) {
+        const sorted = hotels
+          .filter(hotel => hotel.lat != null && hotel.lng != null)
+          .map(hotel => ({ hotel, distance: getDistanceMeters(center, { lat: hotel.lat, lng: hotel.lng }) }))
+          .sort((a, b) => a.distance - b.distance);
+
+        if (!sorted.length || !window.vietmapgl) return null;
+        const count = Math.max(1, Math.floor(sorted.length * coverage));
+        const bounds = new vietmapgl.LngLatBounds([center.lng, center.lat], [center.lng, center.lat]);
+        sorted.slice(0, count).forEach(item => bounds.extend([item.hotel.lng, item.hotel.lat]));
+        return bounds;
+      }
+
+      function getCirclePoint(center, radius, bearing = 90) {
+        const R = 6371000;
+        const φ1 = center.lat * Math.PI / 180;
+        const λ1 = center.lng * Math.PI / 180;
+        const δ = radius / R;
+        const θ = bearing * Math.PI / 180;
+        const φ2 = Math.asin(Math.sin(φ1) * Math.cos(δ) + Math.cos(φ1) * Math.sin(δ) * Math.cos(θ));
+        const λ2 = λ1 + Math.atan2(
+          Math.sin(θ) * Math.sin(δ) * Math.cos(φ1),
+          Math.cos(δ) - Math.sin(φ1) * Math.sin(φ2)
+        );
+        return [λ2 * 180 / Math.PI, φ2 * 180 / Math.PI];
+      }
+
+      function getCircleBounds(center, radius) {
+        const east = getCirclePoint(center, radius, 90);
+        const west = getCirclePoint(center, radius, 270);
+        const north = getCirclePoint(center, radius, 0);
+        const south = getCirclePoint(center, radius, 180);
+        const bounds = new window.vietmapgl.LngLatBounds(west, east);
+        bounds.extend(north);
+        bounds.extend(south);
+        return bounds;
+      }
+
+      function getPopupHtml(hotel) {
+        return `
+          <div style="font-family:Inter,sans-serif;font-size:14px;line-height:1.4;max-width:320px;">
             <strong style="color:#00346f;">${hotel.name}</strong>
             <div style="margin:6px 0 4px;color:#4d5a6b;font-size:13px;">${hotel.address || ""}</div>
             <div style="font-weight:700;color:#ff5722;">${fmtPrice(hotel.pricePerNight)}</div>
-            ${hotel.link ? `<div style="margin-top:8px;"><a href="${hotel.link}" target="_blank" style="color:#00346f;font-weight:700;text-decoration:none;">Mở hotel</a></div>` : ""}
+            ${hotel.link ? `<div style="margin-top:8px;"><a href="${hotel.link}" target="_blank" style="color:#00346f;font-weight:700;text-decoration:none;">Open hotel</a></div>` : ""}
           </div>`;
+      }
 
-        infoWindowRef.current.setContent(content);
-        infoWindowRef.current.open(mapObjRef.current, marker);
-        if (pan) mapObjRef.current.panTo(marker.getPosition());
+      function showHotelPopup(hotel, coordinates) {
+        if (!mapObjRef.current || !hotel || hotel.lat == null || hotel.lng == null) return;
+        if (popupRef.current) popupRef.current.remove();
+
+        const popup = new vietmapgl.Popup({ offset: 18, closeButton: false })
+          .setLngLat(coordinates || [hotel.lng, hotel.lat])
+          .setHTML(getPopupHtml(hotel))
+          .addTo(mapObjRef.current);
+
+        popupRef.current = popup;
+      }
+
+      useEffect(() => {
+        const loadVietMapScript = () => {
+          return new Promise((resolve, reject) => {
+            if (window.vietmapgl) return resolve(window.vietmapgl);
+
+            const existing = document.querySelector('script[src*="vietmap-gl.js"]');
+            if (existing) {
+              if (window.vietmapgl) return resolve(window.vietmapgl);
+              if (existing.readyState === "complete") {
+                return window.vietmapgl
+                  ? resolve(window.vietmapgl)
+                  : reject(new Error("VietMap library did not initialize after script load"));
+              }
+              existing.addEventListener("load", () => window.vietmapgl ? resolve(window.vietmapgl) : reject(new Error("VietMap library did not initialize")), { once: true });
+              existing.addEventListener("error", () => reject(new Error("VietMap script failed to load")), { once: true });
+              return;
+            }
+
+            const script = document.createElement("script");
+            script.src = "https://unpkg.com/@vietmap/vietmap-gl-js@6.0.1/dist/vietmap-gl.js";
+            script.async = true;
+            script.defer = true;
+            script.onload = () => window.vietmapgl ? resolve(window.vietmapgl) : reject(new Error("VietMap library did not initialize"));
+            script.onerror = () => reject(new Error("VietMap script failed to load"));
+            document.head.appendChild(script);
+          });
+        };
+
+        const initVietMap = async () => {
+          if (!mapRef.current) {
+            setMapError(true);
+            return;
+          }
+
+          try {
+            await loadVietMapScript();
+            const map = new window.vietmapgl.Map({
+              container: mapRef.current,
+              style: getVietMapStyleUrl(),
+              center: [userLocation.lng, userLocation.lat],
+              zoom: 14,
+              doubleClickZoom: false,
+            });
+
+            mapObjRef.current = map;
+
+            map.on("load", () => {
+              map.addSource("search-radius", {
+                type: "geojson",
+                data: buildCircleGeoJSON(userLocation, radiusM),
+              });
+
+              map.addLayer({
+                id: "search-radius-fill",
+                type: "fill",
+                source: "search-radius",
+                paint: {
+                  "fill-color": "#00346f",
+                  "fill-opacity": 0.08,
+                },
+              });
+
+              map.addLayer({
+                id: "search-radius-line",
+                type: "line",
+                source: "search-radius",
+                paint: {
+                  "line-color": "#00346f",
+                  "line-opacity": 0.7,
+                  "line-width": 2,
+                },
+              });
+
+              map.addSource("user-location", {
+                type: "geojson",
+                data: {
+                  type: "Feature",
+                  geometry: {
+                    type: "Point",
+                    coordinates: [userLocation.lng, userLocation.lat],
+                  },
+                },
+              });
+
+              map.addLayer({
+                id: "user-location-dot",
+                type: "circle",
+                source: "user-location",
+                paint: {
+                  "circle-color": "#00346f",
+                  "circle-radius": 10,
+                  "circle-stroke-color": "#ffffff",
+                  "circle-stroke-width": 3,
+                },
+              });
+
+              const locationElement = document.createElement("div");
+              locationElement.className = "user-location-marker";
+              userLocationMarkerRef.current = new window.vietmapgl.Marker({ element: locationElement, anchor: "center" })
+                .setLngLat([userLocation.lng, userLocation.lat])
+                .addTo(map);
+
+              map.addSource("hotels", {
+                type: "geojson",
+                data: buildHotelGeoJSON(hotels),
+                cluster: true,
+                clusterMaxZoom: 14,
+                clusterRadius: 50,
+              });
+
+              map.addLayer({
+                id: "clusters",
+                type: "circle",
+                source: "hotels",
+                filter: ["has", "point_count"],
+                paint: {
+                  "circle-color": "#ff5a3c",
+                  "circle-radius": ["step", ["get", "point_count"], 18, 10, 26, 30, 36],
+                  "circle-stroke-color": "#ffffff",
+                  "circle-stroke-width": 2,
+                },
+              });
+
+              map.addLayer({
+                id: "cluster-count",
+                type: "symbol",
+                source: "hotels",
+                filter: ["has", "point_count"],
+                layout: {
+                  "text-field": "{point_count_abbreviated}",
+                  "text-size": 12,
+                },
+                paint: {
+                  "text-color": "#ffffff",
+                },
+              });
+
+              map.on("click", "clusters", (e) => {
+                const feature = e.features?.[0];
+                if (!feature || !map.getSource("hotels")) return;
+                const clusterId = feature.properties.cluster_id;
+                map.getSource("hotels").getClusterExpansionZoom(clusterId, (err, zoom) => {
+                  if (err) return;
+                  map.easeTo({ center: feature.geometry.coordinates, zoom });
+                });
+              });
+
+              map.on("mouseenter", "clusters", () => {
+                map.getCanvas().style.cursor = "pointer";
+              });
+              map.on("mouseleave", "clusters", () => {
+                map.getCanvas().style.cursor = "";
+              });
+
+              map.resize();
+              setMapReady(true);
+              createHotelMarkers(hotels);
+            });
+
+            map.on("error", () => setMapError(true));
+
+            return () => {
+              if (popupRef.current) popupRef.current.remove();
+              map.remove();
+            };
+          } catch (err) {
+            console.error("VietMap initialization failed:", err);
+            setMapError(true);
+          }
+        };
+
+        initVietMap();
+      }, []);
+
+      function updateRadiusHandle(center, radius) {
+        if (!mapObjRef.current || !window.vietmapgl) return;
+        const map = mapObjRef.current;
+        const coords = getRadiusHandleCoordinates(center, radius);
+
+        function clampRadius(distance) {
+          return Math.min(40000, Math.max(500, Math.round(distance / 100) * 100));
+        }
+
+        function setHandleToRadius(nextRadius) {
+          const nextCoords = getRadiusHandleCoordinates(center, nextRadius);
+          if (radiusHandleRef.current) {
+            radiusHandleRef.current.setLngLat(nextCoords);
+          }
+        }
+
+        function setRadiusFromPointer(clientX, clientY) {
+          const rect = map.getContainer().getBoundingClientRect();
+          const point = map.unproject([clientX - rect.left, clientY - rect.top]);
+          const distance = getDistanceMeters(center, { lat: point.lat, lng: point.lng });
+          const nextRadius = clampRadius(distance);
+          setRadiusM(nextRadius);
+          setHandleToRadius(nextRadius);
+        }
+
+        if (radiusHandleRef.current) {
+          radiusHandleRef.current.setLngLat(coords);
+          return;
+        }
+
+        const element = document.createElement("div");
+        element.style.width = "28px";
+        element.style.height = "28px";
+        element.style.borderRadius = "50%";
+        element.style.background = "#ff5a3c";
+        element.style.border = "2px solid #fff";
+        element.style.boxShadow = "0 0 0 8px rgba(255,90,60,0.18)";
+        element.style.display = "flex";
+        element.style.alignItems = "center";
+        element.style.justifyContent = "center";
+        element.style.fontSize = "14px";
+        element.style.fontWeight = "700";
+        element.style.color = "#fff";
+        element.style.cursor = "grab";
+        element.style.userSelect = "none";
+        element.style.touchAction = "none";
+        element.innerText = "⇔";
+
+        const marker = new window.vietmapgl.Marker({ element, anchor: "center" })
+          .setLngLat(coords)
+          .addTo(map);
+
+        const onPointerMove = (evt) => {
+          if (!evt.isPrimary) return;
+          setRadiusFromPointer(evt.clientX, evt.clientY);
+        };
+
+        const onPointerUp = () => {
+          document.removeEventListener("pointermove", onPointerMove);
+          document.removeEventListener("pointerup", onPointerUp);
+          element.style.cursor = "grab";
+        };
+
+        element.addEventListener("pointerdown", (evt) => {
+          evt.preventDefault();
+          evt.stopPropagation();
+          element.style.cursor = "grabbing";
+          document.addEventListener("pointermove", onPointerMove);
+          document.addEventListener("pointerup", onPointerUp, { once: true });
+        });
+
+        radiusHandleRef.current = marker;
       }
 
       useEffect(() => {
         if (!mapReady || !mapObjRef.current) return;
+        mapObjRef.current.resize();
+      }, [mapReady]);
 
-        markersRef.current.forEach(marker => marker.setMap(null));
-        markersRef.current = [];
+      useEffect(() => {
+        if (!mapReady || !mapObjRef.current) return;
+        const handleResize = () => mapObjRef.current?.resize();
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+      }, [mapReady]);
 
-        if (!hotels?.length) return;
-
-        const bounds = new google.maps.LatLngBounds();
-        hotels.forEach((hotel) => {
-          if (hotel.lat == null || hotel.lng == null) return;
-          bounds.extend({ lat: hotel.lat, lng: hotel.lng });
-
-          const marker = createCircleMarker(mapObjRef.current, { lat: hotel.lat, lng: hotel.lng }, "#ff5a3c", { title: hotel.name });
-          marker.hotelId = hotel.id;
-          marker.addListener("click", () => {
-            onHotelSelect?.(hotel);
-            showMarkerInfo(hotel, marker);
-          });
-          markersRef.current.push(marker);
-        });
-
-        if (!bounds.isEmpty()) {
-          mapObjRef.current.fitBounds(bounds, 120);
+      useEffect(() => {
+        if (!mapReady || !mapObjRef.current) return;
+        const map = mapObjRef.current;
+        const source = map.getSource("hotels");
+        if (source) {
+          source.setData(buildHotelGeoJSON(hotels));
         }
 
-        return () => markersRef.current.forEach(marker => marker.setMap(null));
-      }, [hotels, mapReady, onHotelSelect]);
+        createHotelMarkers(hotels);
+
+        if (hotels.length > 0) {
+          const targetRadius = getRadiusForCoverage(userLocation, hotels, 0.5);
+          setRadiusM(prev => Math.max(prev, targetRadius));
+        }
+      }, [hotels, mapReady, userLocation, setRadiusM]);
 
       useEffect(() => {
-        if (!mapReady || !activeHotel || !mapObjRef.current || !markersRef.current.length) return;
-        const marker = markersRef.current.find(m => m.hotelId === activeHotel.id);
-        if (marker) showMarkerInfo(activeHotel, marker, true);
+        if (!mapReady || !mapObjRef.current) return;
+        const map = mapObjRef.current;
+        const radiusSource = map.getSource("search-radius");
+        if (radiusSource) {
+          radiusSource.setData(buildCircleGeoJSON(userLocation, radiusM));
+        }
+        const userSource = map.getSource("user-location");
+        if (userSource) {
+          userSource.setData({
+            type: "Feature",
+            geometry: {
+              type: "Point",
+              coordinates: [userLocation.lng, userLocation.lat],
+            },
+          });
+        }
+
+        if (userLocationMarkerRef.current) {
+          userLocationMarkerRef.current.setLngLat([userLocation.lng, userLocation.lat]);
+        }
+        updateRadiusHandle(userLocation, radiusM);
+        createHotelMarkers(hotels);
+
+        const bounds = getCircleBounds(userLocation, radiusM);
+        if (bounds && !bounds.isEmpty()) {
+          map.fitBounds(bounds, { padding: 100, maxZoom: 14 });
+        }
+      }, [mapReady, radiusM, userLocation, hotels]);
+
+      useEffect(() => {
+        if (!mapReady || !mapObjRef.current || initialUserLocationCenteredRef.current) return;
+        mapObjRef.current.easeTo({ center: [userLocation.lng, userLocation.lat], zoom: 14 });
+        initialUserLocationCenteredRef.current = true;
+      }, [mapReady, userLocation]);
+
+      useEffect(() => {
+        if (!mapReady || !mapObjRef.current || initialCircleRadiusSetRef.current) return;
+        const map = mapObjRef.current;
+        const bounds = map.getBounds();
+        if (!bounds.isEmpty()) {
+          const center = map.getCenter();
+          const north = bounds.getNorth();
+          const south = bounds.getSouth();
+          const east = bounds.getEast();
+          const west = bounds.getWest();
+          const dLat = Math.min(
+            getDistanceMeters({ lat: center.lat, lng: center.lng }, { lat: north, lng: center.lng }),
+            getDistanceMeters({ lat: center.lat, lng: center.lng }, { lat: south, lng: center.lng })
+          );
+          const dLng = Math.min(
+            getDistanceMeters({ lat: center.lat, lng: center.lng }, { lat: center.lat, lng: east }),
+            getDistanceMeters({ lat: center.lat, lng: center.lng }, { lat: center.lat, lng: west })
+          );
+          const nextRadius = Math.min(40000, Math.max(500, Math.round(Math.min(dLat, dLng) * 0.9 / 100) * 100));
+          setRadiusM(nextRadius);
+          initialCircleRadiusSetRef.current = true;
+        }
+      }, [mapReady, userLocation]);
+
+      useEffect(() => {
+        if (!mapReady || !mapObjRef.current || !activeHotel) return;
+        const map = mapObjRef.current;
+        const coords = [activeHotel.lng, activeHotel.lat];
+        map.easeTo({ center: coords, zoom: 16 });
+        showHotelPopup(activeHotel, coords);
       }, [activeHotel, mapReady]);
 
-      useEffect(() => {
-        if (circleRef.current) circleRef.current.setRadius(radiusM);
-      }, [radiusM]);
+      function zoom(delta) {
+        if (!mapObjRef.current) return;
+        mapObjRef.current.easeTo({ zoom: (mapObjRef.current.getZoom() || 14) + delta });
+      }
 
-      function zoom(delta) { mapObjRef.current?.setZoom((mapObjRef.current.getZoom()||14)+delta); }
       function recenter() {
-        const c = userLocation||{lat:10.7769,lng:106.7009};
-        mapObjRef.current?.panTo(c);
-        mapObjRef.current?.setZoom(14);
-        circleRef.current?.setCenter(c);
+        if (!mapObjRef.current) return;
+        const c = [userLocation.lng, userLocation.lat];
+        mapObjRef.current.easeTo({ center: c, zoom: 14 });
       }
 
       return (
-        <div className="flex-1 relative overflow-hidden bg-surface-container-highest">
+        <div className="flex-1 relative overflow-hidden bg-surface-container-highest min-h-[640px]">
           <div ref={mapRef} className="absolute inset-0 w-full h-full" />
           {mapError && (
             <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-surface-container-low">
               <div className="w-full h-full" style={{
-                background:"#e8eaed",
-                backgroundImage:`
+                background: "#e8eaed",
+                backgroundImage: `
                   linear-gradient(rgba(255,255,255,.4) 1px,transparent 1px),
                   linear-gradient(90deg,rgba(255,255,255,.4) 1px,transparent 1px),
                   linear-gradient(rgba(0,0,0,.03) 1px,transparent 1px),
                   linear-gradient(90deg,rgba(0,0,0,.03) 1px,transparent 1px)`,
-                backgroundSize:"100px 100px,100px 100px,20px 20px,20px 20px",
+                backgroundSize: "100px 100px,100px 100px,20px 20px,20px 20px",
               }} />
               <div className="absolute flex flex-col items-center gap-2">
                 <Icon name="map" size={40} className="text-outline" />
                 <p className="text-sm font-semibold text-on-surface-variant bg-white/80 px-4 py-2 rounded-xl">
-                  Add your Google Maps API key in <code className="text-primary">window.API.GOOGLE_MAPS_KEY</code>
+                  VietMap failed to load — please check the script include and network.
                 </p>
               </div>
             </div>
@@ -1265,7 +1694,7 @@
             <div className="flex flex-col gap-1">
               <label className="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Search Radius</label>
               <input
-                type="range" min={500} max={10000} step={500} value={radiusM}
+                type="range" min={500} max={40000} step={500} value={radiusM}
                 onChange={e => setRadiusM(Number(e.target.value))}
                 className="w-36 h-1.5 cursor-pointer accent-primary"
               />
@@ -1526,7 +1955,7 @@
 
           <div className="flex-1 overflow-hidden px-6 pt-6 pb-6">
             {loading ? (
-              <div className="skeleton h-[520px] w-full rounded-[32px]" />
+              <div className="skeleton h-full w-full rounded-[32px]" />
             ) : total === 0 ? (
               <div className="flex flex-col items-center justify-center gap-3 h-full text-center">
                 <Icon name="search_off" size={48} className="text-outline" />
@@ -1960,9 +2389,11 @@
       const resizeRef = useRef(null);
 
       useEffect(() => {
-        navigator.geolocation?.getCurrentPosition(
+        if (!navigator.geolocation) return;
+        navigator.geolocation.getCurrentPosition(
           p => setUserLoc({ lat:p.coords.latitude, lng:p.coords.longitude }),
-          () => {}, { timeout:6000 }
+          err => console.warn("Geolocation error:", err),
+          { enableHighAccuracy: true, timeout: 12000, maximumAge: 0 }
         );
       }, []);
 
@@ -2017,8 +2448,8 @@
           address: location,
           check_in:  (checkIn  || new Date()).toISOString(),
           check_out: (checkOut || new Date()).toISOString(),
-          min_price: Math.round(minPrice),
-          max_price: Math.round(maxPrice),
+          min_price: 1,
+          max_price: 1000000000,
           radius: radiusM,
           children:  childrenAges,
           adults:    guests.adults,
@@ -2105,11 +2536,11 @@ const TARGET = "http://localhost:8010/proxy/api/v1/discover";
             </div>
             <div className="relative flex-none border-l border-outline-variant/20 bg-surface-container-lowest" style={{ width: sidebarWidth, minWidth: 300, maxWidth: 620 }}>
               <div
-                className={`absolute left-0 top-0 bottom-0 z-20 flex items-center justify-center px-1 ${isResizing ? "bg-primary/10" : "hover:bg-outline-variant/10"}`}
+                className={`absolute left-0 top-0 bottom-0 z-20 flex items-center justify-center px-1 ${isResizing ? "bg-primary/10" : "hover:bg-outline-variant/30"}`}
                 style={{ cursor: "col-resize", width: 18, marginLeft: -18 }}
                 onPointerDown={startSidebarResize}
               >
-                <div className="w-1 h-16 rounded-full bg-outline-variant/40" />
+                <div className="w-1 h-16 rounded-full bg-on-surface-variant" />
               </div>
               <HotelSidebar hotels={hotels} loading={loading} onHotelClick={setActiveHotel} onFilterOpen={() => setFilterOpen(true)} />
             </div>
