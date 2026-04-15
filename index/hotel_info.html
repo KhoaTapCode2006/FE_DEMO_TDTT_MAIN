@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Booking4LU | Grand Heritage Resort &amp; Spa</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-fixed-variant": "#00458f",
+              "tertiary": "#003b4e",
+              "primary-fixed": "#d7e2ff",
+              "tertiary-fixed": "#bee9ff",
+              "tertiary-container": "#00536c",
+              "inverse-primary": "#abc7ff",
+              "on-secondary-fixed-variant": "#5d4201",
+              "on-tertiary-container": "#74c7ed",
+              "surface-container-low": "#f2f4f7",
+              "on-primary": "#ffffff",
+              "surface-container-highest": "#e0e3e6",
+              "on-tertiary-fixed": "#001f2a",
+              "secondary-fixed": "#ffdea5",
+              "error-container": "#ffdad6",
+              "on-primary-container": "#9bbdff",
+              "surface-dim": "#d8dadd",
+              "on-background": "#191c1e",
+              "primary-container": "#004a99",
+              "on-secondary-container": "#785a1a",
+              "on-primary-fixed": "#001b3f",
+              "surface-container-high": "#e6e8eb",
+              "on-tertiary-fixed-variant": "#004d65",
+              "inverse-surface": "#2d3133",
+              "surface-bright": "#f7f9fc",
+              "error": "#ba1a1a",
+              "on-error-container": "#93000a",
+              "secondary-container": "#fed488",
+              "on-surface-variant": "#424751",
+              "inverse-on-surface": "#eff1f4",
+              "on-surface": "#191c1e",
+              "on-tertiary": "#ffffff",
+              "primary-fixed-dim": "#abc7ff",
+              "primary": "#00346f",
+              "tertiary-fixed-dim": "#7ed1f7",
+              "surface-container": "#eceef1",
+              "on-secondary": "#ffffff",
+              "secondary-fixed-dim": "#e9c176",
+              "surface-tint": "#255dad",
+              "on-error": "#ffffff",
+              "surface-variant": "#e0e3e6",
+              "outline": "#737783",
+              "outline-variant": "#c2c6d3",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed": "#261900",
+              "background": "#f7f9fc",
+              "surface": "#f7f9fc",
+              "secondary": "#775a19"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-white/85 backdrop-blur-xl shadow-[0px_12px_32px_rgba(0,52,111,0.08)]">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-blue-900">Booking4LU</div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-blue-900 border-b-2 border-amber-600 pb-1 text-sm font-semibold tracking-tight" href="#">Hotels</a>
+<a class="text-slate-500 hover:text-blue-800 transition-colors duration-300 text-sm font-semibold tracking-tight" href="#">Experiences</a>
+<a class="text-slate-500 hover:text-blue-800 transition-colors duration-300 text-sm font-semibold tracking-tight" href="#">Social</a>
+</nav>
+<div class="flex items-center space-x-4">
+<button class="p-2 text-slate-500 hover:bg-slate-50 rounded-full transition-colors duration-300">
+<span class="material-symbols-outlined" data-icon="language">language</span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-slate-50 rounded-full transition-colors duration-300">
+<span class="material-symbols-outlined" data-icon="tune">tune</span>
+</button>
+<button class="flex items-center space-x-2 p-1 pr-3 border border-outline-variant/20 rounded-full hover:bg-slate-50 transition-colors duration-300">
+<span class="material-symbols-outlined text-3xl" data-icon="account_circle">account_circle</span>
+<span class="text-sm font-semibold">Sign In</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-20 max-w-screen-2xl mx-auto px-6">
+<!-- Breadcrumb / Utility Row -->
+<div class="flex items-center justify-between mb-8">
+<div class="flex items-center space-x-2 text-sm text-on-surface-variant font-medium">
+<a class="hover:text-primary transition-colors" href="#">Destinations</a>
+<span class="material-symbols-outlined text-base">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Vietnam</a>
+<span class="material-symbols-outlined text-base">chevron_right</span>
+<span class="text-primary font-semibold">Grand Heritage Resort &amp; Spa</span>
+</div>
+<div class="flex items-center space-x-4">
+<button class="flex items-center space-x-2 text-sm font-semibold px-4 py-2 hover:bg-surface-container rounded-full transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="share">share</span>
+<span>Share</span>
+</button>
+<button class="flex items-center space-x-2 text-sm font-semibold px-4 py-2 hover:bg-surface-container rounded-full transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="favorite">favorite</span>
+<span>Save</span>
+</button>
+</div>
+</div>
+<!-- Hero Bento Grid Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-12">
+<!-- Left: Smooth Gallery Slider Mockup -->
+<div class="lg:col-span-8 group relative overflow-hidden rounded-[2rem] bg-surface-container shadow-xl">
+<div class="aspect-[16/10] w-full relative">
+<img class="w-full h-full object-cover" data-alt="luxury hotel exterior with glowing warm lights and symmetric architecture reflecting in a still pool at twilight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3zGOOjcuYgkpyBuRayO82FCDK2pq2e02NIx6uLz4yDKt4e8KG2_WsTSlewZ1UqWPMYSUsXbgxqKH3oMr0N7oIKwl692QNOlMXjxGV79YvkjKv0wfNanqdVJmq9k7rMql5rV9Vbf-P8lvht0ACW-GAZM5oWFQ4wlt8IhAWDwkA9Yppv1eIWfAJ_Gi5peb4ctFKE7lkRXhPfyR0eXNjBdOsGCelNxAZJqs9T1eC97ElbSkYC6amRzCq-98CxbA2TRa7W6KjqW8PZiI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent pointer-events-none"></div>
+<!-- Slider Navigation Overlay -->
+<div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center space-x-3 z-10">
+<div class="w-12 h-1 bg-white rounded-full"></div>
+<div class="w-8 h-1 bg-white/40 rounded-full"></div>
+<div class="w-8 h-1 bg-white/40 rounded-full"></div>
+<div class="w-8 h-1 bg-white/40 rounded-full"></div>
+</div>
+<button class="absolute left-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-white hover:text-primary transition-all">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+<button class="absolute right-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-white hover:text-primary transition-all">
+<span class="material-symbols-outlined">arrow_forward_ios</span>
+</button>
+</div>
+<!-- Thumbnails Overlay (Desktop Only) -->
+<div class="absolute bottom-6 right-6 flex space-x-2">
+<div class="w-20 h-20 rounded-xl overflow-hidden border-2 border-white shadow-lg">
+<img class="w-full h-full object-cover" data-alt="elegant hotel room interior with plush white bedding and large floor to ceiling windows overlooking the city" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_KWOWawlj49t3LlmT_fK1m1JQjGrQZnardo69QIIrjdkfSV3ZZ54pNttQWR9PtKxbD1KhWpfVSWxZdWTGrTOemZqldqypL1lK6hLTcVouUTpNrGr-Hc4aWAwRhYePlEW18FqRhCn1hqWnDr8fcqGwqBcAse-pqi1JJNSJNJ8doEMVWIl1UqsKABG2cZ_YUPNkPeLynbaSdQy2gbeF6KP9ZJcJg27vODVm10BouwZke8yIq8-GAPJ_X1T1RiB0EnwzlPCTjwuN4As"/>
+</div>
+<div class="w-20 h-20 rounded-xl overflow-hidden border-2 border-white/40 shadow-lg relative group-hover:border-white transition-all">
+<img class="w-full h-full object-cover" data-alt="serene infinity pool at sunset with golden reflections on the water and tropical palm trees silhouette" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACBt2RNrcwu_3jmGHBH8uItrLlZ5hS5fGvyM8aPALH6Qgym8FID0BQ6ui1UhuLNBuVYk_oLvbXO-Yqh_FAOpK547OWsYj3AVVmPKJif-XymvJvI6vBh59-euzQL5_cAVrrVdDph1x7VwJah5pZgme_KiBCtcxy38vyW7epWvo8Y5viNgI_B4R4U1Ji2swz-LYGZvSLzmCZu7v3-bGF8qEjXksUHZbHneb8_tH51nh5rVsMs02pVv2Q0cvZczMbyN1Js52yY_MZhuo"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center text-white font-bold">+12</div>
+</div>
+</div>
+</div>
+<!-- Right: Property Core Info -->
+<div class="lg:col-span-4 flex flex-col space-y-6">
+<div class="p-8 bg-surface-container-lowest rounded-[2rem] shadow-[0px_12px_32px_rgba(0,52,111,0.08)] flex-1">
+<div class="flex items-center justify-between mb-4">
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container text-xs font-bold uppercase tracking-widest rounded-full">Premium Selection</span>
+<div class="flex items-center space-x-1 text-secondary">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-on-surface">4.9</span>
+<span class="text-on-surface-variant text-sm font-medium">(2.4k reviews)</span>
+</div>
+</div>
+<h1 class="font-headline text-3xl font-extrabold text-primary mb-2 leading-tight">Grand Heritage Resort &amp; Spa</h1>
+<div class="flex items-start space-x-2 text-on-surface-variant mb-6">
+<span class="material-symbols-outlined text-lg mt-0.5">location_on</span>
+<span class="text-sm">22 Le Thanh Tong, Hoan Kiem District, Hanoi, Vietnam</span>
+</div>
+<div class="grid grid-cols-3 gap-4 mb-8">
+<div class="flex flex-col items-center p-3 bg-surface-container-low rounded-2xl">
+<span class="material-symbols-outlined text-tertiary mb-1" data-icon="wifi">wifi</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Free Wifi</span>
+</div>
+<div class="flex flex-col items-center p-3 bg-surface-container-low rounded-2xl">
+<span class="material-symbols-outlined text-tertiary mb-1" data-icon="pool">pool</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Pool</span>
+</div>
+<div class="flex flex-col items-center p-3 bg-surface-container-low rounded-2xl">
+<span class="material-symbols-outlined text-tertiary mb-1" data-icon="fitness_center">fitness_center</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Gym</span>
+</div>
+</div>
+<div class="pt-6 border-t border-outline-variant/10">
+<div class="flex items-baseline justify-between">
+<div class="flex flex-col">
+<span class="text-xs font-semibold text-on-surface-variant uppercase tracking-widest">Starts from</span>
+<div class="flex items-baseline space-x-1">
+<span class="text-3xl font-black text-primary">$340</span>
+<span class="text-on-surface-variant font-medium">/ night</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Booking Widget -->
+<div class="p-8 bg-primary rounded-[2rem] text-white shadow-2xl shadow-primary/20 relative overflow-hidden">
+<div class="absolute -right-12 -top-12 w-48 h-48 bg-white/10 rounded-full blur-3xl"></div>
+<h3 class="font-headline font-bold text-xl mb-6 relative z-10">Check Availability</h3>
+<div class="space-y-4 relative z-10">
+<div class="grid grid-cols-2 gap-3">
+<div class="p-3 bg-white/10 rounded-xl backdrop-blur-sm">
+<label class="block text-[10px] font-bold uppercase tracking-widest opacity-70 mb-1">Check In</label>
+<div class="font-semibold text-sm">Oct 12, 2024</div>
+</div>
+<div class="p-3 bg-white/10 rounded-xl backdrop-blur-sm">
+<label class="block text-[10px] font-bold uppercase tracking-widest opacity-70 mb-1">Check Out</label>
+<div class="font-semibold text-sm">Oct 15, 2024</div>
+</div>
+</div>
+<div class="p-3 bg-white/10 rounded-xl backdrop-blur-sm">
+<label class="block text-[10px] font-bold uppercase tracking-widest opacity-70 mb-1">Guests</label>
+<div class="font-semibold text-sm">2 Adults, 1 Room</div>
+</div>
+<button class="w-full py-4 bg-gradient-to-r from-secondary to-secondary-container text-on-secondary-container font-extrabold rounded-xl shadow-lg hover:scale-[1.02] transition-transform">
+                            Book Now
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Details Sections Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-16">
+<!-- Main Content: Description & Reviews -->
+<div class="lg:col-span-8">
+<section class="mb-12">
+<h2 class="font-headline text-2xl font-bold text-primary mb-6">About the Property</h2>
+<p class="text-on-surface-variant leading-relaxed text-lg mb-6">
+                        Experience the epitome of French colonial architecture blended with traditional Vietnamese elegance. The Grand Heritage Resort &amp; Spa offers a tranquil oasis in the heart of Hanoi's bustling historic district. Each suite is meticulously curated with hand-woven silk tapestries and dark teak furnishings, offering an editorial retreat for the discerning traveler.
+                    </p>
+<button class="text-secondary font-bold flex items-center space-x-1 hover:space-x-2 transition-all">
+<span>Read full description</span>
+<span class="material-symbols-outlined">arrow_right_alt</span>
+</button>
+</section>
+<!-- Latest Reviews -->
+<section class="mb-12">
+<div class="flex items-center justify-between mb-8">
+<h2 class="font-headline text-2xl font-bold text-primary">Latest Guest Reviews</h2>
+<a class="text-sm font-bold text-tertiary" href="#">See all 2,412 reviews</a>
+</div>
+<div class="space-y-6">
+<!-- Review Card 1 -->
+<div class="p-8 bg-surface-container-low rounded-[2rem] transition-all hover:bg-surface-container-high group">
+<div class="flex items-start justify-between mb-4">
+<div class="flex items-center space-x-4">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-slate-200">
+<img class="w-full h-full object-cover" data-alt="portrait of a smiling young woman with natural light and a soft background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtxRAAtnLWswSeJOuhvzsqWTYbBgs41GZJJWU0Upn6rngbYs0aH-x1JZCjB4gdjq4eLgrdRIn5ksQotBqHFc70nzXO5agwy0zBe876dTfFh1O8esc7hkeudpaLVOhgm_O5TKpK95mNj4Mpwbe_teL7FT0v-ApglHGywM0KegD0cIA8RBrwoSsrqFJ8cOijxZnatX_X7tURriS2McB5QLIRpKKqQ2xH3fCmwcSYM876LgeBwvUZKNwZlOH88ctaeDGaT-gViItEGtI"/>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">Elena Rodriguez</h4>
+<p class="text-xs text-on-surface-variant">Stayed 4 nights • Oct 2023</p>
+</div>
+</div>
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="text-on-surface-variant italic">"An absolute masterpiece of hospitality. The concierge service was impeccable, guiding us to the most authentic street food spots that weren't on any map. The room details were exquisite."</p>
+</div>
+<!-- Review Card 2 -->
+<div class="p-8 bg-surface-container-low rounded-[2rem] transition-all hover:bg-surface-container-high group">
+<div class="flex items-start justify-between mb-4">
+<div class="flex items-center space-x-4">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-slate-200">
+<img class="w-full h-full object-cover" data-alt="close-up portrait of a professional man with a slight smile and modern glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeuMNnanm27ysOk6rv7_FhqFlUvyEUSsh2_mTiCHEmdWzu27TtGfFnI3GKE32eHL4vx1u0cL9ZC-yBCqhfoJhQERapF3bgBWUXmeA-hjUWFQlpfbqk-4RB_o3J1i88f6y-E61uVkC1_FfzfxvM8zXlmYGTnYAjDbnJRjgjYiitLufZgQVkdLMmghXfZMhixVLe0wZY_Ltza_o1gYX8fzbYRDjgpmZFitmZ3nGZKIed23fP1SbiSjL4k0kDOmjnjWhbwNXAUOXIlyI"/>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">Markus Thiele</h4>
+<p class="text-xs text-on-surface-variant">Stayed 2 nights • Sep 2023</p>
+</div>
+</div>
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="text-on-surface-variant italic">"The spa treatments are world-class. If you're visiting Hanoi, this resort is the only place to truly disconnect while staying connected to the city's heartbeat."</p>
+</div>
+</div>
+</section>
+</div>
+<!-- Sidebar: Landmarks & Map -->
+<div class="lg:col-span-4">
+<section class="p-8 bg-white rounded-[2rem] shadow-[0px_12px_32px_rgba(0,52,111,0.08)] mb-8">
+<h3 class="font-headline text-xl font-bold text-primary mb-6">Nearby Landmarks</h3>
+<div class="space-y-6">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined">museum</span>
+</div>
+<span class="text-sm font-semibold">Grand Opera House</span>
+</div>
+<span class="text-xs font-bold text-on-surface-variant">0.4 km</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined">water</span>
+</div>
+<span class="text-sm font-semibold">Hoan Kiem Lake</span>
+</div>
+<span class="text-xs font-bold text-on-surface-variant">0.8 km</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined">temple_buddhist</span>
+</div>
+<span class="text-sm font-semibold">St. Joseph's Cathedral</span>
+</div>
+<span class="text-xs font-bold text-on-surface-variant">1.2 km</span>
+</div>
+</div>
+<div class="mt-10 rounded-2xl overflow-hidden h-48 bg-slate-200 relative">
+<img class="w-full h-full object-cover" data-alt="stylized map view of city streets with prominent markers for landmarks and clean typography" data-location="Hanoi" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpqyFeY_fK2Gp-mpWmgT9FYGc0Jy6RobIZEyOdtEGZ6LGV4P5tRfE1QfWKlQlwhqmcTnWEP832bEV38tF5r29x8Rh1-CNs8BUE_LbsV5jco9w0O5thD00vzP6R4PwBjZppbGeVB1lgbJpJg1W3ex86OwZFnUR7LbbnnCsIQ-4u_shKoHv4w62IBNKnVQikGnnsQOZngl_q36F8rDa6Q5gHnPfiMzeoaqkltMnfPB4-lgTjyo_Q0iqg-mXPM0huviH3r1WWbrUzDbk"/>
+<div class="absolute inset-0 bg-primary/10"></div>
+<div class="absolute bottom-4 left-1/2 -translate-x-1/2">
+<button class="px-6 py-2 bg-white text-primary text-xs font-bold rounded-full shadow-lg border border-primary/10">View on Map</button>
+</div>
+</div>
+</section>
+<section class="p-8 bg-tertiary rounded-[2rem] text-white overflow-hidden relative">
+<div class="relative z-10">
+<h4 class="font-headline font-bold text-lg mb-2">Need private transport?</h4>
+<p class="text-sm opacity-80 mb-6">Book a chauffeur from the airport directly to our lobby.</p>
+<button class="px-6 py-3 bg-white text-tertiary font-bold rounded-xl text-sm">Add Transfer</button>
+</div>
+<span class="material-symbols-outlined absolute -right-4 -bottom-4 text-white/5 text-9xl">airport_shuttle</span>
+</section>
+</div>
+</div>
+</main>
+<!-- Chatbot Widget -->
+<div class="fixed bottom-8 right-8 z-[100] flex items-center justify-center">
+<button class="w-16 h-16 rounded-full bg-gradient-to-r from-blue-900 to-blue-700 text-white shadow-2xl shadow-blue-900/20 hover:scale-110 transition-transform duration-300 flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl" data-icon="support_agent">support_agent</span>
+</button>
+</div>
+<!-- Footer -->
+<footer class="w-full border-t border-slate-200 bg-slate-50 mt-20">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-8 space-y-4 md:space-y-0 max-w-screen-2xl mx-auto">
+<div class="text-lg font-bold text-blue-900">Booking4LU</div>
+<div class="flex space-x-8">
+<a class="text-xs uppercase tracking-widest font-semibold text-slate-500 hover:text-amber-600 transition-colors" href="#">About</a>
+<a class="text-xs uppercase tracking-widest font-semibold text-slate-500 hover:text-amber-600 transition-colors" href="#">Contact</a>
+<a class="text-xs uppercase tracking-widest font-semibold text-slate-500 hover:text-amber-600 transition-colors" href="#">Privacy</a>
+<a class="text-xs uppercase tracking-widest font-semibold text-slate-500 hover:text-amber-600 transition-colors" href="#">Terms</a>
+<a class="text-xs uppercase tracking-widest font-semibold text-slate-500 hover:text-amber-600 transition-colors" href="#">Support</a>
+</div>
+<p class="text-[10px] text-slate-400 font-medium">© 2024 Booking4LU. Editorial Excellence in Travel.</p>
+</div>
+</footer>
+</body></html>

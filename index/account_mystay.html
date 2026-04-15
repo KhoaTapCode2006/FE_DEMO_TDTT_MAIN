@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>My Stays | Booking4LU</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#7ed1f7",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#5d4201",
+                    "on-primary-container": "#9bbdff",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed": "#261900",
+                    "primary-fixed": "#d7e2ff",
+                    "on-tertiary-fixed-variant": "#004d65",
+                    "surface-container": "#eceef1",
+                    "on-primary-fixed-variant": "#00458f",
+                    "surface-bright": "#f7f9fc",
+                    "secondary-fixed": "#ffdea5",
+                    "surface-tint": "#255dad",
+                    "on-secondary-container": "#785a1a",
+                    "background": "#f7f9fc",
+                    "surface": "#f7f9fc",
+                    "secondary-fixed-dim": "#e9c176",
+                    "on-primary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-background": "#191c1e",
+                    "error-container": "#ffdad6",
+                    "on-secondary": "#ffffff",
+                    "on-surface-variant": "#424751",
+                    "inverse-on-surface": "#eff1f4",
+                    "inverse-primary": "#abc7ff",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed": "#bee9ff",
+                    "surface-container-highest": "#e0e3e6",
+                    "surface-container-high": "#e6e8eb",
+                    "on-primary-fixed": "#001b3f",
+                    "surface-variant": "#e0e3e6",
+                    "outline": "#737783",
+                    "on-tertiary-container": "#74c7ed",
+                    "surface-dim": "#d8dadd",
+                    "primary": "#00346f",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#00536c",
+                    "on-tertiary-fixed": "#001f2a",
+                    "primary-container": "#004a99",
+                    "inverse-surface": "#2d3133",
+                    "on-surface": "#191c1e",
+                    "surface-container-low": "#f2f4f7",
+                    "secondary": "#775a19",
+                    "tertiary": "#003b4e",
+                    "primary-fixed-dim": "#abc7ff",
+                    "outline-variant": "#c2c6d3",
+                    "secondary-container": "#fed488"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .headline { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar -->
+<header class="flex justify-between items-center px-8 w-full top-0 z-40 fixed bg-slate-50 dark:bg-slate-950 shadow-sm w-full h-16">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black text-blue-900 dark:text-blue-100 font-['Manrope'] tracking-tight">Booking4LU</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative hidden md:block">
+<input class="bg-slate-100 dark:bg-slate-900 border-none rounded-full px-6 py-2 w-64 focus:ring-2 focus:ring-primary/20 text-sm" placeholder="Search experiences..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined p-2 text-slate-500 hover:bg-slate-200/50 transition-colors rounded-full">notifications</button>
+<button class="material-symbols-outlined p-2 text-slate-500 hover:bg-slate-200/50 transition-colors rounded-full">settings</button>
+<img alt="User profile avatar" class="w-10 h-10 rounded-full object-cover ring-2 ring-primary/10" data-alt="close-up portrait of a professional man with a friendly expression in a bright studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALliJPS3zJN-Qyn80NBS5-jsAy4XChnHgwIl9qeRn7wVcNV6XnokEFG4x1wmbIHji3PNQsn-2CeMwn7Ck-iPx89Ktj4lfYCoy8_dAw8hpljDWk-S2SKylBKUcvs8klGWyVrerRcO3rkFir41VD0kM8NIMSY43DrvWKJg3igVMzzXR8tpQeHDjNZ-eSW34OeA7yzQAh_ijIGI98xzCwwp1li6SE20S-xsz-KMqJaeery9XYnLJvNzoQ0Fid6WdAa120FVjuT1Y1Qg0"/>
+</div>
+</div>
+</header>
+<!-- SideNavBar -->
+<nav class="flex flex-col h-full fixed left-0 top-0 pt-20 z-30 h-screen w-64 bg-white dark:bg-slate-900 shadow-[12px_0_32px_rgba(0,52,111,0.04)] font-['Manrope'] text-sm font-medium">
+<div class="px-6 py-6 border-b border-slate-100 dark:border-slate-800 mb-4">
+<h2 class="text-blue-900 dark:text-blue-400 font-bold text-lg leading-tight">Traveler Profile</h2>
+<p class="text-slate-500 text-xs mt-1">Azure Prestige Member</p>
+</div>
+<div class="flex-1 space-y-1">
+<!-- Active Tab: My Stays -->
+<a class="flex items-center gap-3 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-300 rounded-r-full font-bold px-6 py-3 transition-all active:translate-x-1 duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">hotel</span>
+<span>My Stays</span>
+</a>
+<a class="flex items-center gap-3 text-slate-600 dark:text-slate-400 hover:text-blue-800 px-6 py-3 transition-all hover:bg-slate-100 dark:hover:bg-slate-800 active:translate-x-1 duration-150" href="#">
+<span class="material-symbols-outlined">bookmark</span>
+<span>Saved Lists</span>
+</a>
+<a class="flex items-center gap-3 text-slate-600 dark:text-slate-400 hover:text-blue-800 px-6 py-3 transition-all hover:bg-slate-100 dark:hover:bg-slate-800 active:translate-x-1 duration-150" href="#">
+<span class="material-symbols-outlined">rate_review</span>
+<span>Reviews</span>
+</a>
+<a class="flex items-center gap-3 text-slate-600 dark:text-slate-400 hover:text-blue-800 px-6 py-3 transition-all hover:bg-slate-100 dark:hover:bg-slate-800 active:translate-x-1 duration-150" href="#">
+<span class="material-symbols-outlined">group</span>
+<span>Friends</span>
+</a>
+</div>
+<div class="px-6 py-6 space-y-4">
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-white py-3 rounded-xl font-bold shadow-lg shadow-primary/20 active:scale-95 transition-transform">
+                Book New Stay
+            </button>
+<div class="pt-4 border-t border-slate-100 dark:border-slate-800 space-y-2">
+<a class="flex items-center gap-3 text-slate-500 hover:text-blue-800 py-2 transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">help_outline</span>
+<span>Help Center</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 hover:text-red-600 py-2 transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">logout</span>
+<span>Logout</span>
+</a>
+</div>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="pl-64 pt-16 min-h-screen">
+<!-- Hero Header Section -->
+<div class="relative h-64 md:h-80 w-full overflow-hidden">
+<img alt="Luxury hotel lobby cover" class="w-full h-full object-cover" data-alt="wide shot of a grand luxury hotel lobby with marble floors, gold accents, and expansive floor-to-ceiling windows overlooking a city skyline" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1CfU8KV5scJ935NdtHmGu2clg86oHbbmWp5S1CUnA2lfRWP1rIdJxVacB6vox14GeTGd1X1Nj4EkTfLukAtdWCdGZPAnUbXj9TeZYZK7ReZCJ8MiIVSNXSj5xOAzFCNaYkhZDM3bqm91ibz5xAR-F0wJwUzbEMdO8URvEfEwfQxB1pIqJnFS5OU-DNbl1VI06789EX3yYj1HMl78QZWZp_no4-p01axQis9NJvr6MT7PBPRjuaK4klROFdGnjnom5IUAvA_g6aX0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
+<div class="absolute bottom-0 left-0 w-full px-12 pb-8 flex items-end justify-between">
+<div class="flex items-center gap-6">
+<div class="relative -mb-4">
+<img alt="Primary user profile" class="w-32 h-32 rounded-2xl object-cover border-4 border-white shadow-xl" data-alt="professional studio headshot of a smiling man with sharp features and modern grooming" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsnKAMVrycgancQ-ftUycskp-FyMHcXiLPOTfN1nDIgw1HxklAaZ68T2Hry44c1bQVozc2RX8Nf09ixfA04GIZNVnB59347dHmal74DaLDFlUnLjydXqnEAUUDs30jEsUWoqQFS0CD7-RNM_id1Kd2cnXo1S-8FixJqLLj9s2F7JWjwl39HmJbRvM59dJJAyTbmxj4J44tXlj9wo0fa_es3tP4vKHPJPreUMq589ru1yM1kN3eEDAeckhL9c0tfEPXeHzPKiwuKbc"/>
+<div class="absolute -bottom-2 -right-2 bg-secondary text-white p-1.5 rounded-lg shadow-lg">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<div class="text-white mb-2">
+<h1 class="text-3xl font-extrabold tracking-tight">Alexander Sterling</h1>
+<p class="text-blue-100/90 font-medium flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">location_on</span> London, United Kingdom
+                        </p>
+</div>
+</div>
+<div class="flex gap-3 mb-2">
+<button class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-6 py-2.5 rounded-xl font-bold hover:bg-white/20 transition-all">Edit Profile</button>
+<button class="bg-secondary text-white px-6 py-2.5 rounded-xl font-bold shadow-lg shadow-secondary/20 hover:scale-105 transition-all">Share Profile</button>
+</div>
+</div>
+</div>
+<!-- Content Canvas -->
+<div class="px-12 py-12">
+<div class="flex justify-between items-center mb-10">
+<div>
+<h2 class="text-3xl font-extrabold text-primary mb-2">My Stays</h2>
+<p class="text-on-surface-variant font-medium">Viewing your upcoming and previous luxury getaways.</p>
+</div>
+<div class="flex gap-4">
+<button class="px-4 py-2 bg-surface-container-high rounded-full text-sm font-semibold text-primary">All Stays</button>
+<button class="px-4 py-2 hover:bg-surface-container-low rounded-full text-sm font-semibold text-on-surface-variant">Upcoming</button>
+<button class="px-4 py-2 hover:bg-surface-container-low rounded-full text-sm font-semibold text-on-surface-variant">Completed</button>
+</div>
+</div>
+<!-- Bento-style Card Grid -->
+<div class="grid grid-cols-12 gap-8">
+<!-- Featured Stay Card (Large) -->
+<div class="col-span-12 lg:col-span-8 bg-surface-container-lowest rounded-3xl overflow-hidden shadow-[0px_12px_32px_rgba(0,52,111,0.06)] flex flex-col md:flex-row h-full">
+<div class="md:w-1/2 relative">
+<img alt="Luxury Resort" class="w-full h-full object-cover" data-alt="luxury seaside resort with infinity pools and tropical gardens under a clear sunset sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAneHMpNq5PZKRXbpfLCetGLEN5oZ-jk-dBwjI6IOAKI9byYYkvak2uvXyJB_8h8C_qHN0wKXJr4jQP1SlIwMEwViHhzJKHe4V9BJmovCHfqSVm1bA_j5CelBZt4sWYBkswq8TIOpShb5yoR-xOjfX3RXHSvsk84ATPY4kSd-77NNYqXpR6NOHAOxwqJ3K9xt2fsQGNbakPiu-rovto65kT6WIi7ay45I9i0Q_TTM1DoUylkdCkfM0BWVXR8rgIPsgqiZcxTdxWnLw"/>
+<div class="absolute top-4 left-4 bg-primary text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">Upcoming</div>
+</div>
+<div class="md:w-1/2 p-8 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-2xl font-bold text-primary">Azure Bay Retreat</h3>
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.9</span>
+</div>
+</div>
+<p class="text-on-surface-variant text-sm mb-6 leading-relaxed italic">"The panoramic ocean views from the terrace were breathtaking. Looking forward to returning this summer for the spa expansion."</p>
+<div class="space-y-3">
+<div class="flex items-center gap-3 text-tertiary">
+<span class="material-symbols-outlined text-xl">calendar_today</span>
+<span class="text-sm font-medium text-on-surface">July 14 — July 21, 2024</span>
+</div>
+<div class="flex items-center gap-3 text-tertiary">
+<span class="material-symbols-outlined text-xl">confirmation_number</span>
+<span class="text-sm font-medium text-on-surface">Conf: #AZR-92834</span>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-outline-variant/20 flex items-center justify-between">
+<span class="text-2xl font-black text-primary">$4,250 <span class="text-xs font-medium text-on-surface-variant">total</span></span>
+<button class="bg-surface-container-high text-primary px-6 py-2 rounded-xl font-bold text-sm hover:bg-primary hover:text-white transition-all">Details</button>
+</div>
+</div>
+</div>
+<!-- Stats/Profile Quick View (Side) -->
+<div class="col-span-12 lg:col-span-4 space-y-8">
+<div class="bg-primary text-white p-8 rounded-3xl shadow-xl shadow-primary/20 relative overflow-hidden">
+<div class="relative z-10">
+<h4 class="text-lg font-bold mb-6">Loyalty Status</h4>
+<div class="flex justify-between items-end mb-2">
+<span class="text-4xl font-black">92%</span>
+<span class="text-xs font-medium uppercase tracking-widest text-blue-200">Platinum goal</span>
+</div>
+<div class="w-full bg-blue-900/50 h-2.5 rounded-full overflow-hidden mb-6">
+<div class="bg-secondary-container h-full w-[92%] rounded-full shadow-[0_0_12px_rgba(254,212,136,0.5)]"></div>
+</div>
+<p class="text-sm text-blue-100 leading-relaxed">Only 2 more stays until you reach Platinum status and unlock private jet transfers.</p>
+</div>
+<!-- Abstract accent -->
+<div class="absolute -bottom-10 -right-10 w-40 h-40 bg-white/5 rounded-full blur-2xl"></div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-3xl shadow-[0px_12px_32px_rgba(0,52,111,0.06)]">
+<h4 class="text-lg font-bold text-primary mb-6">Quick Links</h4>
+<div class="space-y-4">
+<a class="flex items-center justify-between p-4 bg-surface-container-low rounded-2xl hover:bg-surface-container-high transition-all group" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">payments</span>
+<span class="font-bold text-sm">Payment Methods</span>
+</div>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward_ios</span>
+</a>
+<a class="flex items-center justify-between p-4 bg-surface-container-low rounded-2xl hover:bg-surface-container-high transition-all group" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">support_agent</span>
+<span class="font-bold text-sm">Concierge Chat</span>
+</div>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward_ios</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Past Stay Card 1 -->
+<div class="col-span-12 md:col-span-6 bg-surface-container-lowest rounded-3xl overflow-hidden shadow-[0px_12px_32px_rgba(0,52,111,0.06)] group">
+<div class="h-48 overflow-hidden relative">
+<img alt="Modern Villa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="sleek modern minimalist villa with large glass walls and a private pool overlooking a lavender field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtF8DGR4ULfGwkbg2WUpFpas8GFMp8oDK4gBIu90vs-HzxMlGbSl_OsCQnAN90dX7QFr4FKSeTHnvE_vvG9jvoZ1xzbHSIWUcWAFI3ufEmnIgf8ajPxohG7tqV9ph2nsC3BrOkWDyb2YZ0ytgDf1l3piLaPHf34M5EM6MxO49Cv4VZzb5UTqiCTbbOO5CEwtiANJgcSknZK4fh13DRSd2fTs6mmH6IMi-y77gD7cDbtYn3Wy8iWh-gUAiob6JQ2lp-D5mX4UBzTZU"/>
+<div class="absolute inset-0 bg-black/20"></div>
+<div class="absolute top-4 right-4 glass-panel px-3 py-1 rounded-full text-xs font-bold text-primary">Completed</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-bold text-primary text-xl">The Glass House</h3>
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-sm">5.0</span>
+</div>
+</div>
+<p class="text-on-surface-variant text-xs font-medium uppercase tracking-tighter mb-4">Provence, France</p>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-2 italic">"Unmatched privacy and the most comfortable bed I've ever slept in. The local wine tasting arranged was a highlight."</p>
+<div class="flex items-center justify-between">
+<div class="text-xs text-on-surface-variant">May 02 — May 09, 2024</div>
+<button class="text-secondary font-bold text-sm border-b-2 border-transparent hover:border-secondary transition-all">Review Stay</button>
+</div>
+</div>
+</div>
+<!-- Past Stay Card 2 -->
+<div class="col-span-12 md:col-span-6 bg-surface-container-lowest rounded-3xl overflow-hidden shadow-[0px_12px_32px_rgba(0,52,111,0.06)] group">
+<div class="h-48 overflow-hidden relative">
+<img alt="Alpine Lodge" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="cozy luxury alpine lodge with wood and stone architecture surrounded by snow-capped mountains" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpoZVHoGEalo1epchdZeqI5VFhtgz3FRNv-OPPJBTdK7r4xcFp1BK7KiAxR5CTZID11880Gx5QGpaqUmK1Pzoe3L3Npe6B39yWcj6BmO5R-ZXr845JOAl2LQML8BkuOw5TsFckX93DTpzOscHfLZr10npKDxBwu30TGzaWT7VBd8DtCvyu2o0MjB-uJuWVamVY2FBpknc9U6VR7MM15cv8D6QUoYq3Arr69PVpxCnpgyhhPjV8hb0CAMbbRJJvep2cjATaLATz1Vg"/>
+<div class="absolute inset-0 bg-black/20"></div>
+<div class="absolute top-4 right-4 glass-panel px-3 py-1 rounded-full text-xs font-bold text-primary">Completed</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-bold text-primary text-xl">Summit Peak Lodge</h3>
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-sm">4.7</span>
+</div>
+</div>
+<p class="text-on-surface-variant text-xs font-medium uppercase tracking-tighter mb-4">St. Moritz, Switzerland</p>
+<p class="text-on-surface-variant text-sm mb-6 line-clamp-2 italic">"The ski-in/ski-out accessibility was perfect. Service was attentive, though the restaurant was quite busy."</p>
+<div class="flex items-center justify-between">
+<div class="text-xs text-on-surface-variant">Feb 12 — Feb 19, 2024</div>
+<button class="text-secondary font-bold text-sm border-b-2 border-transparent hover:border-secondary transition-all">Review Stay</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Contextual FAB - Restricted to Dashboard/Discovery but shown here as primary action for "My Stays" context if desired -->
+<button class="fixed bottom-8 right-8 bg-primary text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-50">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add</span>
+</button>
+</body></html>

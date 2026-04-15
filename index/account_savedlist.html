@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Booking4LU - Saved Lists</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#7ed1f7",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#5d4201",
+                    "on-primary-container": "#9bbdff",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed": "#261900",
+                    "primary-fixed": "#d7e2ff",
+                    "on-tertiary-fixed-variant": "#004d65",
+                    "surface-container": "#eceef1",
+                    "on-primary-fixed-variant": "#00458f",
+                    "surface-bright": "#f7f9fc",
+                    "secondary-fixed": "#ffdea5",
+                    "surface-tint": "#255dad",
+                    "on-secondary-container": "#785a1a",
+                    "background": "#f7f9fc",
+                    "surface": "#f7f9fc",
+                    "secondary-fixed-dim": "#e9c176",
+                    "on-primary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-background": "#191c1e",
+                    "error-container": "#ffdad6",
+                    "on-secondary": "#ffffff",
+                    "on-surface-variant": "#424751",
+                    "inverse-on-surface": "#eff1f4",
+                    "inverse-primary": "#abc7ff",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed": "#bee9ff",
+                    "surface-container-highest": "#e0e3e6",
+                    "surface-container-high": "#e6e8eb",
+                    "on-primary-fixed": "#001b3f",
+                    "surface-variant": "#e0e3e6",
+                    "outline": "#737783",
+                    "on-tertiary-container": "#74c7ed",
+                    "surface-dim": "#d8dadd",
+                    "primary": "#00346f",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#00536c",
+                    "on-tertiary-fixed": "#001f2a",
+                    "primary-container": "#004a99",
+                    "inverse-surface": "#2d3133",
+                    "on-surface": "#191c1e",
+                    "surface-container-low": "#f2f4f7",
+                    "secondary": "#775a19",
+                    "tertiary": "#003b4e",
+                    "primary-fixed-dim": "#abc7ff",
+                    "outline-variant": "#c2c6d3",
+                    "secondary-container": "#fed488"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "2xl": "1rem",
+                    "3xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope", "sans-serif"],
+                    "body": ["Inter", "sans-serif"],
+                    "label": ["Inter", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface">
+<!-- TopNavBar -->
+<header class="flex justify-between items-center px-8 w-full top-0 z-40 fixed h-16 bg-slate-50 dark:bg-slate-950 shadow-sm">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black text-blue-900 dark:text-blue-100 font-headline">Booking4LU</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center bg-surface-container-highest rounded-full px-4 py-2 w-64 group focus-within:ring-2 ring-surface-tint/20 transition-all">
+<span class="material-symbols-outlined text-outline text-lg">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full font-body" placeholder="Search saved items..." type="text"/>
+</div>
+<button class="p-2 rounded-full hover:bg-slate-200/50 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-blue-900 dark:text-blue-400">notifications</span>
+</button>
+<button class="p-2 rounded-full hover:bg-slate-200/50 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-blue-900 dark:text-blue-400">settings</span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border-2 border-primary-container">
+<img alt="User profile avatar" class="w-full h-full object-cover" data-alt="close-up portrait of a professional man with a friendly expression in soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCd3V79NXgdT0COo_48tQ9SB_MUfyTAT8EyrcO0mfnAKQLgM7aKVdIL3VLP9UmndCW2-lYPFWwr6xBV-JQYjs6XCycS0WC4FQYtKVE77R3f2jyc7unJz8pguQ0EAPXRgRQ3QmYGpeHIh8dv1pOsm8O9I6otX93UUI1mZs8u451SzUqrB7a91eZ3b0I3d036IBnW3jQmUIbDf7XsfIdjVcMr2fBdX98MdjjFP-m5aJZBExB6-7VJF_GL2nEimWe7YCSCEMweqf_bjj8"/>
+</div>
+</div>
+</header>
+<!-- SideNavBar -->
+<aside class="flex flex-col h-full fixed left-0 top-0 pt-20 z-30 h-screen w-64 bg-white dark:bg-slate-900 shadow-[12px_0_32px_rgba(0,52,111,0.04)]">
+<div class="px-6 mb-8">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div>
+<p class="font-headline font-bold text-blue-900 dark:text-blue-400 text-sm leading-tight">Traveler Profile</p>
+<p class="text-[10px] uppercase tracking-wider text-secondary font-bold">Azure Prestige Member</p>
+</div>
+</div>
+<button class="w-full py-3 px-4 bg-gradient-to-r from-primary to-primary-container text-white rounded-xl font-headline font-bold text-sm shadow-lg shadow-primary/20 active:translate-x-1 duration-150">
+                Book New Stay
+            </button>
+</div>
+<nav class="flex-1">
+<ul class="space-y-1">
+<li>
+<a class="flex items-center gap-4 text-slate-600 dark:text-slate-400 hover:text-blue-800 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all px-6 py-3 font-['Manrope'] text-sm font-medium" href="#">
+<span class="material-symbols-outlined">hotel</span>
+<span>My Stays</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-4 bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-300 rounded-r-full font-bold px-6 py-3 font-['Manrope'] text-sm font-medium" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+<span>Saved Lists</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-4 text-slate-600 dark:text-slate-400 hover:text-blue-800 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all px-6 py-3 font-['Manrope'] text-sm font-medium" href="#">
+<span class="material-symbols-outlined">rate_review</span>
+<span>Reviews</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-4 text-slate-600 dark:text-slate-400 hover:text-blue-800 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all px-6 py-3 font-['Manrope'] text-sm font-medium" href="#">
+<span class="material-symbols-outlined">group</span>
+<span>Friends</span>
+</a>
+</li>
+</ul>
+</nav>
+<div class="mt-auto pb-8 border-t-0">
+<ul class="space-y-1">
+<li>
+<a class="flex items-center gap-4 text-slate-600 dark:text-slate-400 hover:text-blue-800 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all px-6 py-3 font-['Manrope'] text-sm font-medium" href="#">
+<span class="material-symbols-outlined">help_outline</span>
+<span>Help Center</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-4 text-slate-600 dark:text-slate-400 hover:text-blue-800 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all px-6 py-3 font-['Manrope'] text-sm font-medium" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span>Logout</span>
+</a>
+</li>
+</ul>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 pt-24 px-12 pb-12 min-h-screen">
+<!-- Header Section -->
+<header class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div class="max-w-2xl">
+<span class="text-secondary font-headline font-extrabold tracking-widest text-xs uppercase mb-3 block">Curation</span>
+<h1 class="text-5xl font-headline font-extrabold text-primary mb-4 leading-tight tracking-tight">Your Saved Lists</h1>
+<p class="text-on-surface-variant text-lg font-light leading-relaxed">Organize your next global adventures into themed collections for seamless planning and prestige access.</p>
+</div>
+<button class="flex items-center gap-2 px-8 py-4 bg-surface-container-highest text-primary font-headline font-bold rounded-2xl hover:bg-primary hover:text-white transition-all group">
+<span class="material-symbols-outlined group-hover:rotate-90 transition-transform">add</span>
+<span>Create New List</span>
+</button>
+</header>
+<!-- Bento Grid Layout for Saved Lists -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- List Card 1: Large Featured Asymmetric -->
+<div class="md:col-span-2 md:row-span-2 group relative overflow-hidden rounded-3xl bg-surface-container-low transition-all hover:shadow-2xl">
+<div class="absolute inset-0 z-0 scale-105 group-hover:scale-100 transition-transform duration-700">
+<img class="w-full h-full object-cover" data-alt="luxury overwater villa in Maldives with turquoise water during a vibrant orange and purple sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd8bUa0ofT3peQz2jfGk8lE0bGqYDh-1WSbN__bUGCONP1DBgQVawGyQ8BbUCH47i-YQb27qDrhLtmx-W75DNSb06_L_ImKoEYNjFZ09J1-b76I55jPvgZLHdDswz4rm3rSqYdQq2B7Ci8ZzSnNQmx2MBarcdZv43j6moX_m2dV5vFm4yxnvc3n_LhXlVoc74aHRg-knwKYxNrAUmqx8YQt3DYBo2xADF16VRWVC74ch-YidDdjN2rfgM_ZQbjIvnMZqJfm9a5rZA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent"></div>
+</div>
+<div class="relative z-10 h-full p-8 flex flex-col justify-end text-white">
+<div class="flex items-center gap-2 mb-3">
+<span class="px-3 py-1 glass-panel text-[10px] font-bold rounded-full text-primary uppercase">12 Destinations</span>
+<span class="px-3 py-1 glass-panel text-[10px] font-bold rounded-full text-secondary uppercase">Premium Only</span>
+</div>
+<h2 class="text-4xl font-headline font-extrabold mb-4">Dream Honeymoon</h2>
+<p class="text-on-primary-container font-light max-w-md mb-6">A private collection of secluded islands, Michelin-star dining, and ultra-luxe suites for the perfect start.</p>
+<div class="flex items-center gap-4">
+<button class="px-6 py-3 bg-white text-primary rounded-xl font-bold text-sm hover:bg-secondary hover:text-white transition-colors">Explore List</button>
+<div class="flex -space-x-3">
+<img class="w-10 h-10 rounded-full border-2 border-white object-cover" data-alt="blurred luxurious hotel lobby interior with golden accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgapKlXY4G8hONvwb4ZlwcdubdfGUU3XaJ1Qoc2Ku_2qjJD6s8b-C5ONNYQt9ROgbBjYhb1z5ryzcMpYBYYGDCDHnbFiTI2EGnwdThWu6FF2eKByIR2vOzvV-bADMShC-UM296fNmXZrtRAfZmUDB6wVsA_6pFgiTchtJIKoB0Pk8PTteirvDxdibwAeyhF48p5rVb5EK555uFNAA6Vbrxg1GDUyyBQ66_qZSsv8KBtdBHHp0ItmBFaFxIj9DHax04BVjdi5ruZV4"/>
+<img class="w-10 h-10 rounded-full border-2 border-white object-cover" data-alt="poolside view of a tropical resort" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXBTZZBeErk7USZBi3tx_d3M0_-ts2jvNhNGLzkDSKufFIoV06lWiRoqo-xJ6S2eXPjktmBSnQYGTpVayZ0zFfLzS6s_-ejrgAZLM223oClYRsKyYuPd4SqwiYYiDivnf3ovGeDe5ES8lLh2NgGH9CrYT8HWlRgnQxt-rCOBY4JVUlPMGdn3WuVo6TFEHDu1nqNt5_TYuR3XjTrIIh7-Bp-s5vxNrgXjZRTkjrHosqI7I6hi52RelyJxt5we8FR4EOQBTXLKnxSHo"/>
+<div class="w-10 h-10 rounded-full bg-tertiary border-2 border-white flex items-center justify-center text-[10px] font-bold">+9</div>
+</div>
+</div>
+</div>
+</div>
+<!-- List Card 2: Business Trips -->
+<div class="group relative overflow-hidden rounded-3xl bg-surface-container-highest transition-all hover:shadow-xl h-80">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="modern glass skyscrapers in London financial district with cool morning lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvWWBiLStqccMtaEf7dFciI4Xc1ZxaWljg9FzugV_SEjCGeqL9Xwu0xw_ZCHl-BCWc235v6CcAOKlDKMZz3KG_7jYgTi6WfAUsil4r2fp_ojJ5vl1I4thdXEy65jssbtharX5THiB8auDzAhtvvfmrrRq3lSvvh1TqXpklvjklyClt5M9JrHsak57q7svHxDVX02Y8qkjKLFSOgVOCBml-TA50tey7Hj2RLtnIKWsWErWfWAjUm7KV1MBbiD45ZomTxGFLbSap1-0"/>
+<div class="absolute inset-0 bg-gradient-to-br from-tertiary/80 to-primary/40"></div>
+</div>
+<div class="relative z-10 p-6 flex flex-col h-full text-white">
+<span class="material-symbols-outlined text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">business_center</span>
+<h3 class="text-2xl font-headline font-bold mb-2">Business Trips</h3>
+<p class="text-sm font-light opacity-80 mb-auto">High-speed connectivity and prime locations for the executive traveler.</p>
+<div class="flex justify-between items-center pt-4">
+<span class="text-xs font-semibold">8 Items</span>
+<span class="material-symbols-outlined">arrow_forward_ios</span>
+</div>
+</div>
+</div>
+<!-- List Card 3: Summer 2024 -->
+<div class="group relative overflow-hidden rounded-3xl bg-surface-container-highest transition-all hover:shadow-xl h-80">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="aerial drone shot of clear blue Mediterranean sea and white sandy beach" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTxHB1f2trGu3COdkRNFo0bZK12O-bGRVkC6RrOLpdyxoOo5ZKj7Kdy4Oic7t7Ywj2UTLTAHrv743zDxgXVX9VxaK-B842GI9jjjZlQ40uojLK1dJ7qJTQooHlVXyZq9IVsNSOqUuKWXbKZr9F0WhPzwx9z7lgWL7J93TqYZKUzXppl8wgv9ASuwBFEKhPD7RwBIsK6bQSokYkJN2iETtnYTxLhOEICBneQwH5xlYYf8AeC32DzeoiXlD6hesEX90a0LzX5PRjJIM"/>
+<div class="absolute inset-0 bg-gradient-to-tr from-secondary/60 to-transparent"></div>
+</div>
+<div class="relative z-10 p-6 flex flex-col h-full text-white">
+<span class="material-symbols-outlined text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">sunny</span>
+<h3 class="text-2xl font-headline font-bold mb-2">Summer 2024</h3>
+<p class="text-sm font-light opacity-80 mb-auto">Beaches, festivals, and sunshine retreats carefully selected for peak season.</p>
+<div class="flex justify-between items-center pt-4">
+<span class="text-xs font-semibold">24 Items</span>
+<span class="material-symbols-outlined">arrow_forward_ios</span>
+</div>
+</div>
+</div>
+<!-- List Card 4: Alpine Hideaways -->
+<div class="group relative overflow-hidden rounded-3xl bg-surface-container-low transition-all hover:shadow-xl h-96">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="cozy wooden mountain cabin surrounded by snow-covered pine trees in the Alps" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7u5g6IUPDx_E9BzNTrO9h1_rvDLLMlkFNkqMu5K_YM8d70IMBVR3yEvrP8BG6RR-845lqe8Xv92yDHxl7CuL33D03M6OcCsjCUV_EsEkSS1pEZxJZw_es3wGhrBxIG5_-1AA5ds_0x9ifXuMfPsai1lTxYVhPyZzrZYFtUP-q1gZyfkfAnFmLppDxvB6d4VKnL_gx9NLVKCTbBsQ24ZdvgNVv7lEgIcSg5wm64qX-aW8vghoBOfKWKektZ0wH4uBo-3tIkOIvClY"/>
+<div class="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/20 transition-colors"></div>
+</div>
+<div class="relative z-10 p-8 flex flex-col h-full">
+<div class="mt-auto glass-panel p-6 rounded-2xl">
+<h3 class="text-xl font-headline font-bold text-primary mb-1">Alpine Hideaways</h3>
+<p class="text-xs text-on-surface-variant font-medium">Winter Season • 6 Hotels</p>
+</div>
+</div>
+</div>
+<!-- List Card 5: Urban Explorations -->
+<div class="group relative overflow-hidden rounded-3xl bg-surface-container-low transition-all hover:shadow-xl h-96">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="bustling modern city street at night with neon lights and motion-blurred traffic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3lPR_NqGrN1eWRgUeYen2UhCLphZ9e70hp12uc_7hXCao84zrw5nUwYBbA571zzjwHtHHvfvf9INGPHIC0xgcrhkNx-y_ol4upLJuzVg4QuBTJo7q8Bt2T-HSxR4g2eyEg_MN2e_h-0NmGN_3PVRMdY3zXOvj2gujv2T98OIH2_kl6FGLY2kDZhBdM9EtZxs0OAeBXEmQRfpRrDllcUpuQKwsCjAeFrB3j_tFdrfd7KuTN4Zs-pPUVGaiYZOurtLHGm27xMKNbv4"/>
+<div class="absolute inset-0 bg-primary/20"></div>
+</div>
+<div class="relative z-10 p-8 flex flex-col h-full">
+<div class="mt-auto glass-panel p-6 rounded-2xl">
+<h3 class="text-xl font-headline font-bold text-primary mb-1">Urban Explorations</h3>
+<p class="text-xs text-on-surface-variant font-medium">City Breaks • 15 Spots</p>
+</div>
+</div>
+</div>
+<!-- List Card 6: Empty State / New Selection -->
+<div class="border-2 border-dashed border-outline-variant rounded-3xl flex flex-col items-center justify-center p-8 text-center h-96 group hover:border-primary/40 transition-colors">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center mb-4 group-hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-3xl">auto_awesome</span>
+</div>
+<h3 class="text-lg font-headline font-bold text-primary mb-2">Curate with AI</h3>
+<p class="text-sm text-on-surface-variant max-w-[200px] mb-6">Let our digital concierge suggest a list based on your taste.</p>
+<button class="text-secondary font-headline font-extrabold text-xs uppercase tracking-widest border-b-2 border-secondary pb-1 hover:text-primary hover:border-primary transition-all">Start Magic Search</button>
+</div>
+</div>
+<!-- Detail Insights Section (Asymmetric Editorial Style) -->
+<section class="mt-20 grid grid-cols-12 gap-12 items-center">
+<div class="col-span-12 md:col-span-7 rounded-3xl overflow-hidden shadow-2xl relative h-[400px]">
+<img class="w-full h-full object-cover" data-alt="vibrant blue lake surrounded by mountains at dawn with soft morning mist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpkWdEXWTyrzN7nYFlAiUxLhZ_Qk4oVNNNxC0Mr2AH76QsNu0dsOYRLi7luMSB0gFO1kQdgNctwgMnD36GiTUdEx0RV_PyCBbmNcj9CoJcVx6J5KZ-MwcgOOEWzS6Yci8xXfRvWuuAevcTP4LNqlxYkb5DGzYT-ermkeoY61J8ALhm-FAeIYyiHucnjEUCRKJZ14nieb7Ga-lmUuFqmL6YZAXewD3eBZERgv3YmYPT7RUTM9t6-fzoxJF90zcEOKYvDtZDhHWu4uc"/>
+<div class="absolute inset-0 flex items-center justify-center bg-black/10">
+<button class="w-20 h-20 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center group hover:bg-white transition-all">
+<span class="material-symbols-outlined text-white group-hover:text-primary text-4xl pl-1">play_arrow</span>
+</button>
+</div>
+</div>
+<div class="col-span-12 md:col-span-5">
+<h3 class="text-3xl font-headline font-extrabold text-primary mb-6">Mastering Your Collections</h3>
+<div class="space-y-8">
+<div class="flex gap-4">
+<div class="shrink-0 w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="text-secondary font-bold text-xs">01</span>
+</div>
+<div>
+<h4 class="font-bold text-primary mb-2">Smart Sorting</h4>
+<p class="text-sm text-on-surface-variant">Your lists now automatically sort by price drop alerts and seasonal availability.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="shrink-0 w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center">
+<span class="text-primary font-bold text-xs">02</span>
+</div>
+<div>
+<h4 class="font-bold text-primary mb-2">Shared Access</h4>
+<p class="text-sm text-on-surface-variant">Invite travel companions to 'Saved Lists' to vote on your next stay.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="shrink-0 w-8 h-8 rounded-full bg-tertiary-fixed flex items-center justify-center">
+<span class="text-tertiary font-bold text-xs">03</span>
+</div>
+<div>
+<h4 class="font-bold text-primary mb-2">Offline Export</h4>
+<p class="text-sm text-on-surface-variant">Generate a prestige PDF itinerary for any list with one click.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- FAB (Suppressed on Details, but appropriate for this main dashboard/profile list screen) -->
+<button class="fixed bottom-8 right-8 w-16 h-16 bg-primary text-white rounded-2xl shadow-2xl flex items-center justify-center group hover:bg-secondary transition-all active:scale-95 z-50">
+<span class="material-symbols-outlined text-3xl transition-transform group-hover:rotate-12">maps_ugc</span>
+</button>
+</body></html>

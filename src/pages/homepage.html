@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<!--
+  homepage.html — Booking4LU Main Page
+  ─────────────────────────────────────────────────────────────────────────────
+  Requirements covered:
+    1. Full homepage matching design with Google Maps + backend API hooks
+    2. Map centred on user location, expandable radius circle, clustered markers
+    3. Filter panel (budget, property type, star rating, amenities)
+    4. Hotel sidebar — click card → hotel popup
+    5. Hotel popup with image carousel, amenities, landmarks, "Visit Hotel" CTA
+
+  Architecture notes:
+    • All API calls are in src/services/hotelService.js  (USE_MOCK flag)
+    • All map helpers are in src/utils/mapUtils.js
+    • API keys / endpoints live in src/config/api.js
+    • This file imports those modules as ES modules (type="module")
+    • To migrate to React: each <section id="…"> maps to a component
+  ─────────────────────────────────────────────────────────────────────────────
+-->
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking4LU | Editorial Travel Excellence</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
+
+  <!-- Material Symbols -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+
+  <!-- Tailwind CDN (swap for PostCSS build in production) -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary:                    "#00346f",
+            "primary-container":        "#004a99",
+            "primary-fixed":            "#d7e2ff",
+            "on-primary":               "#ffffff",
+            "on-primary-container":     "#9bbdff",
+            secondary:                  "#775a19",
+            "secondary-container":      "#fed488",
+            "on-secondary-container":   "#785a1a",
+            tertiary:                   "#003b4e",
+            "tertiary-container":       "#00536c",
+            "on-tertiary-container":    "#74c7ed",
+            background:                 "#f7f9fc",
+            surface:                    "#f7f9fc",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low":    "#f2f4f7",
+            "surface-container":        "#eceef1",
+            "surface-container-high":   "#e6e8eb",
+            "surface-container-highest":"#e0e3e6",
+            "on-surface":               "#191c1e",
+            "on-surface-variant":       "#424751",
+            outline:                    "#737783",
+            "outline-variant":          "#c2c6d3",
+            "surface-tint":             "#255dad",
+            error:                      "#ba1a1a",
+          },
+          fontFamily: {
+            headline: ["Manrope", "sans-serif"],
+            body:     ["Inter",   "sans-serif"],
+          },
+          boxShadow: {
+            "editorial": "0px 12px 32px rgba(0,52,111,0.08)",
+            "card":      "0px 4px 16px rgba(0,52,111,0.06)",
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    /* ── Material Symbols default variant ── */
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      user-select: none;
+    }
+    .icon-filled { font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+
+    /* ── Glassmorphism panel ── */
+    .glass {
+      background: rgba(255,255,255,0.88);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    /* ── Map placeholder grid (shown before Google Maps loads) ── */
+    .map-placeholder {
+      background-color: #e0e3e6;
+      background-image: radial-gradient(#c2c6d3 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    /* ── Radius slider thumb ── */
+    #radius-slider { accent-color: #00346f; }
+
+    /* ── Filter modal slide-up animation ── */
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(24px) scale(0.98); }
+      to   { opacity: 1; transform: translateY(0)    scale(1);    }
+    }
+    .modal-enter { animation: slideUp 0.25s ease forwards; }
+
+    /* ── Hotel card hover lift ── */
+    .hotel-card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .hotel-card:hover { transform: translateY(-2px); box-shadow: 0px 16px 40px rgba(0,52,111,0.12); }
+
+    /* ── Popup image carousel ── */
+    .carousel-track { transition: transform 0.35s ease; }
+
+    /* ── Scrollbar styling for sidebar ── */
+    #hotel-sidebar::-webkit-scrollbar { width: 4px; }
+    #hotel-sidebar::-webkit-scrollbar-track { background: transparent; }
+    #hotel-sidebar::-webkit-scrollbar-thumb { background: #c2c6d3; border-radius: 4px; }
+
+    /* ── Loading skeleton pulse ── */
+    @keyframes shimmer {
+      0%   { background-position: -400px 0; }
+      100% { background-position:  400px 0; }
+    }
+    .skeleton {
+      background: linear-gradient(90deg, #e6e8eb 25%, #f2f4f7 50%, #e6e8eb 75%);
+      background-size: 800px 100%;
+      animation: shimmer 1.4s infinite;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+
+<body class="bg-background font-body text-on-surface antialiased overflow-hidden h-screen flex flex-col">
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     NAVBAR  (shared component → React: <Navbar />)
+     ═══════════════════════════════════════════════════════════════════════════ -->
+<header id="navbar" class="flex-none w-full z-50 glass shadow-editorial">
+  <nav class="flex items-center justify-between px-6 py-3 max-w-screen-2xl mx-auto gap-4">
+
+    <!-- Brand -->
+    <a href="homepage.html" class="text-2xl font-headline font-extrabold tracking-tighter text-primary whitespace-nowrap">
+      Booking4LU
+    </a>
+
+    <!-- Nav links -->
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#" class="text-sm font-semibold text-primary border-b-2 border-secondary pb-0.5">Hotels</a>
+      <a href="#" class="text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors">Experiences</a>
+      <a href="#" class="text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors">Social</a>
+    </div>
+
+    <!-- Right actions -->
+    <div class="flex items-center gap-2">
+
+      <!-- Search bar -->
+      <div class="relative hidden lg:block">
+        <input id="nav-search" type="text" placeholder="Search destinations…"
+               class="bg-surface-container-high rounded-full px-4 py-2 text-sm w-56 border-0 focus:ring-2 focus:ring-surface-tint outline-none" />
+        <span class="material-symbols-outlined absolute right-3 top-2 text-on-surface-variant text-[20px]">search</span>
+      </div>
+
+      <!-- Language switcher -->
+      <div class="relative group">
+        <button class="flex items-center gap-1 p-2 rounded-full hover:bg-surface-container transition-colors">
+          <span class="material-symbols-outlined text-primary text-[22px]">language</span>
+          <span class="text-xs font-bold text-primary" id="lang-label">EN</span>
+        </button>
+        <div class="absolute right-0 top-full mt-2 w-44 glass rounded-xl shadow-editorial border border-outline-variant/20
+                    invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 z-50 overflow-hidden">
+          <div class="p-2 flex flex-col gap-0.5">
+            <button onclick="setLang('EN','🇺🇸')" class="lang-opt flex items-center gap-3 px-3 py-2 rounded-lg bg-surface-container-low text-sm font-medium">🇺🇸 English</button>
+            <button onclick="setLang('VI','🇻🇳')" class="lang-opt flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-surface-container-low text-sm font-medium">🇻🇳 Tiếng Việt</button>
+            <button onclick="setLang('ZH','🇨🇳')" class="lang-opt flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-surface-container-low text-sm font-medium">🇨🇳 简体中文</button>
+            <button onclick="setLang('JA','🇯🇵')" class="lang-opt flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-surface-container-low text-sm font-medium">🇯🇵 日本語</button>
+            <button onclick="setLang('IT','🇮🇹')" class="lang-opt flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-surface-container-low text-sm font-medium">🇮🇹 Italiano</button>
+            <button onclick="setLang('DE','🇩🇪')" class="lang-opt flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-surface-container-low text-sm font-medium">🇩🇪 Deutsch</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Account -->
+      <a href="../index/login.html">
+        <button class="p-2 rounded-full hover:bg-surface-container transition-colors">
+          <span class="material-symbols-outlined text-primary text-[26px]">account_circle</span>
+        </button>
+      </a>
+    </div>
+  </nav>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SEARCH BAR  (floating above map)
+     ═══════════════════════════════════════════════════════════════════════════ -->
+<div class="flex-none relative z-40 flex justify-center px-4 -mb-6 mt-3">
+  <div class="glass rounded-2xl shadow-editorial flex items-center p-2 w-full max-w-2xl border border-white/60">
+
+    <!-- Location input -->
+    <div class="flex-1 flex items-center px-3 border-r border-outline-variant/30">
+      <span class="material-symbols-outlined text-on-surface-variant mr-2 text-[20px]">location_on</span>
+      <input id="location-input" type="text" value="Ho Chi Minh City, Vietnam"
+             class="border-0 focus:ring-0 w-full text-sm font-medium bg-transparent outline-none text-on-surface" />
+    </div>
+
+    <!-- Date range -->
+    <div class="hidden sm:flex items-center px-3 border-r border-outline-variant/30 gap-2">
+      <span class="material-symbols-outlined text-on-surface-variant text-[20px]">calendar_month</span>
+      <span id="date-range" class="text-sm font-medium text-on-surface whitespace-nowrap">Oct 24 – Oct 28</span>
+    </div>
+
+    <!-- Filter trigger -->
+    <button id="btn-filter-open"
+            class="ml-2 flex items-center gap-2 bg-secondary-container text-on-secondary-container px-4 py-2.5 rounded-xl font-bold text-sm hover:brightness-95 transition-all active:scale-95">
+      <span class="material-symbols-outlined text-[20px]">tune</span>
+      Filters
+    </button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     MAIN CONTENT  — Map (left) + Sidebar (right)
+     ═══════════════════════════════════════════════════════════════════════════ -->
+<main class="flex-1 flex overflow-hidden min-h-0">
+
+  <!-- ── MAP PANEL ─────────────────────────────────────────────────────────── -->
+  <section id="map-section" class="flex-1 relative map-placeholder overflow-hidden">
+
+    <!-- Google Map mounts here -->
+    <div id="google-map" class="absolute inset-0 w-full h-full"></div>
+
+    <!-- Map loading overlay (hidden once map is ready) -->
+    <div id="map-loading" class="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-surface-container-low/80 z-10">
+      <div class="w-10 h-10 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+      <p class="text-sm font-semibold text-on-surface-variant">Locating you…</p>
+    </div>
+
+    <!-- Map controls (zoom + recenter) -->
+    <div class="absolute right-4 top-1/2 -translate-y-1/2 flex flex-col gap-2 z-20">
+      <button id="btn-zoom-in"  class="bg-white p-2.5 rounded-xl shadow-card text-primary hover:bg-surface-container-low transition-colors">
+        <span class="material-symbols-outlined">add</span>
+      </button>
+      <button id="btn-zoom-out" class="bg-white p-2.5 rounded-xl shadow-card text-primary hover:bg-surface-container-low transition-colors">
+        <span class="material-symbols-outlined">remove</span>
+      </button>
+      <button id="btn-recenter" class="bg-white p-2.5 rounded-xl shadow-card text-primary hover:bg-surface-container-low transition-colors mt-3">
+        <span class="material-symbols-outlined">my_location</span>
+      </button>
+    </div>
+
+    <!-- Radius control (req #2 — expandable circle) -->
+    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 glass rounded-2xl shadow-editorial px-5 py-3 flex items-center gap-4 border border-white/60">
+      <span class="material-symbols-outlined text-primary text-[20px]">radio_button_checked</span>
+      <div class="flex flex-col gap-1">
+        <label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Search Radius</label>
+        <input id="radius-slider" type="range" min="500" max="10000" step="500" value="3000"
+               class="w-36 h-1.5 cursor-pointer" />
+      </div>
+      <span id="radius-label" class="text-sm font-bold text-primary w-14 text-right">3.0 km</span>
+    </div>
+  </section>
+
+  <!-- ── HOTEL SIDEBAR ──────────────────────────────────────────────────────── -->
+  <aside id="hotel-sidebar"
+         class="w-full md:w-[420px] lg:w-[460px] bg-surface-container-lowest border-l border-outline-variant/20 overflow-y-auto flex flex-col flex-none">
+
+    <!-- Sidebar header -->
+    <div class="sticky top-0 bg-surface-container-lowest/95 backdrop-blur-sm z-10 px-6 pt-6 pb-4 border-b border-outline-variant/10">
+      <div class="flex items-end justify-between">
+        <div>
+          <h2 class="font-headline text-2xl font-extrabold text-primary tracking-tight">Curated Stays</h2>
+          <p class="text-on-surface-variant text-xs mt-0.5">Exclusively for Booking4LU members</p>
+        </div>
+        <span id="results-count" class="text-xs font-bold uppercase tracking-widest text-secondary">— Results</span>
+      </div>
+    </div>
+
+    <!-- Hotel list (populated by JS) -->
+    <div id="hotel-list" class="p-6 flex flex-col gap-8">
+      <!-- Skeleton placeholders shown while loading -->
+      <div class="skeleton h-64 w-full rounded-2xl"></div>
+      <div class="skeleton h-64 w-full rounded-2xl"></div>
+    </div>
+
+    <!-- Empty state -->
+    <div id="hotel-empty" class="hidden flex-1 flex flex-col items-center justify-center gap-3 p-12 text-center">
+      <span class="material-symbols-outlined text-5xl text-outline">search_off</span>
+      <p class="font-headline font-bold text-lg text-primary">No stays found</p>
+      <p class="text-sm text-on-surface-variant">Try adjusting your filters or expanding the search radius.</p>
+    </div>
+  </aside>
+</main>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     FILTER MODAL  (req #3)
+     React component: <FilterModal />
+     ═══════════════════════════════════════════════════════════════════════════ -->
+<div id="filter-modal" class="fixed inset-0 z-[200] hidden items-center justify-center p-4">
+  <!-- Backdrop -->
+  <div id="filter-backdrop" class="absolute inset-0 bg-primary/20 backdrop-blur-xl"></div>
+
+  <!-- Panel -->
+  <div class="modal-enter relative bg-surface-container-lowest w-full max-w-3xl max-h-[90vh] rounded-[2rem] shadow-2xl flex flex-col overflow-hidden">
+
+    <!-- Header -->
+    <div class="flex items-center justify-between px-8 py-6 bg-surface-container-low border-b border-outline-variant/10">
+      <div>
+        <h2 class="font-headline text-2xl font-extrabold text-primary">Filter Preferences</h2>
+        <p class="text-xs text-on-surface-variant mt-0.5">Tailor your stay to your exact requirements</p>
+      </div>
+      <button id="btn-filter-close" class="p-2 rounded-full hover:bg-surface-container-high transition-colors">
+        <span class="material-symbols-outlined text-2xl">close</span>
+      </button>
+    </div>
+
+    <!-- Scrollable body -->
+    <div class="overflow-y-auto px-8 py-6 flex flex-col gap-10">
+
+      <!-- Budget range -->
+      <div>
+        <div class="flex items-end justify-between mb-4">
+          <h3 class="font-headline font-bold text-lg text-primary">Budget Range (VND)</h3>
+          <span id="price-label" class="text-sm font-bold text-primary bg-primary-fixed px-3 py-1 rounded-lg">0 – 100M</span>
+        </div>
+        <!-- Dual range (visual only — wire to real range inputs for production) -->
+        <div class="relative h-2 bg-surface-container-high rounded-full mb-6">
+          <div id="price-track" class="absolute inset-y-0 left-0 right-0 bg-primary-container rounded-full"></div>
+          <input id="price-min" type="range" min="0" max="100" value="0"
+                 class="absolute w-full h-full opacity-0 cursor-pointer" style="z-index:3" />
+          <input id="price-max" type="range" min="0" max="100" value="100"
+                 class="absolute w-full h-full opacity-0 cursor-pointer" style="z-index:3" />
+          <div id="thumb-min" class="absolute -top-2 w-6 h-6 bg-white border-4 border-primary rounded-full shadow-lg pointer-events-none" style="left:0%"></div>
+          <div id="thumb-max" class="absolute -top-2 w-6 h-6 bg-white border-4 border-primary rounded-full shadow-lg pointer-events-none" style="left:100%"></div>
+        </div>
+        <!-- Quick presets -->
+        <div class="grid grid-cols-5 gap-2">
+          <button class="price-preset py-2 text-[11px] font-bold rounded-lg border border-outline-variant/30 hover:bg-primary-fixed transition-colors" data-min="0" data-max="1">Under 1M</button>
+          <button class="price-preset py-2 text-[11px] font-bold rounded-lg border border-outline-variant/30 hover:bg-primary-fixed transition-colors" data-min="1" data-max="5">1M–5M</button>
+          <button class="price-preset py-2 text-[11px] font-bold rounded-lg border border-outline-variant/30 hover:bg-primary-fixed transition-colors" data-min="5" data-max="15">5M–15M</button>
+          <button class="price-preset py-2 text-[11px] font-bold rounded-lg border border-outline-variant/30 hover:bg-primary-fixed transition-colors" data-min="15" data-max="50">15M–50M</button>
+          <button class="price-preset py-2 text-[11px] font-bold rounded-lg border border-outline-variant/30 hover:bg-primary-fixed transition-colors" data-min="50" data-max="100">50M–100M</button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <!-- Property type -->
+        <div>
+          <h3 class="font-headline font-bold text-lg text-primary mb-4">Property Type</h3>
+          <div class="grid grid-cols-2 gap-3">
+            <label class="filter-type-label flex items-center gap-3 p-4 bg-surface-container-low rounded-xl cursor-pointer hover:bg-surface-container-high transition-colors">
+              <input type="checkbox" value="Hotel"     class="filter-type w-5 h-5 rounded text-primary border-outline-variant focus:ring-primary" checked />
+              <span class="text-sm font-semibold">Hotel</span>
+            </label>
+            <label class="filter-type-label flex items-center gap-3 p-4 bg-surface-container-low rounded-xl cursor-pointer hover:bg-surface-container-high transition-colors">
+              <input type="checkbox" value="Penthouse" class="filter-type w-5 h-5 rounded text-primary border-outline-variant focus:ring-primary" />
+              <span class="text-sm font-semibold">Penthouse</span>
+            </label>
+            <label class="filter-type-label flex items-center gap-3 p-4 bg-surface-container-low rounded-xl cursor-pointer hover:bg-surface-container-high transition-colors">
+              <input type="checkbox" value="Resort"    class="filter-type w-5 h-5 rounded text-primary border-outline-variant focus:ring-primary" />
+              <span class="text-sm font-semibold">Resort</span>
+            </label>
+            <label class="filter-type-label flex items-center gap-3 p-4 bg-surface-container-low rounded-xl cursor-pointer hover:bg-surface-container-high transition-colors">
+              <input type="checkbox" value="Villa"     class="filter-type w-5 h-5 rounded text-primary border-outline-variant focus:ring-primary" />
+              <span class="text-sm font-semibold">Villa</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Star rating -->
+        <div>
+          <h3 class="font-headline font-bold text-lg text-primary mb-4">Star Rating</h3>
+          <div class="flex flex-wrap gap-2">
+            <button class="star-btn px-5 py-2.5 rounded-xl border border-outline-variant/30 font-bold text-sm flex items-center gap-1 hover:bg-secondary-container transition-colors" data-stars="1">1 <span class="material-symbols-outlined icon-filled text-amber-500 text-sm">star</span></button>
+            <button class="star-btn px-5 py-2.5 rounded-xl border border-outline-variant/30 font-bold text-sm flex items-center gap-1 hover:bg-secondary-container transition-colors" data-stars="2">2 <span class="material-symbols-outlined icon-filled text-amber-500 text-sm">star</span></button>
+            <button class="star-btn px-5 py-2.5 rounded-xl border border-outline-variant/30 font-bold text-sm flex items-center gap-1 hover:bg-secondary-container transition-colors" data-stars="3">3 <span class="material-symbols-outlined icon-filled text-amber-500 text-sm">star</span></button>
+            <button class="star-btn px-5 py-2.5 rounded-xl bg-secondary-container font-bold text-sm flex items-center gap-1" data-stars="4">4 <span class="material-symbols-outlined icon-filled text-amber-500 text-sm">star</span></button>
+            <button class="star-btn px-5 py-2.5 rounded-xl border border-outline-variant/30 font-bold text-sm flex items-center gap-1 hover:bg-secondary-container transition-colors" data-stars="5">5 <span class="material-symbols-outlined icon-filled text-amber-500 text-sm">star</span></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Amenities -->
+      <div>
+        <h3 class="font-headline font-bold text-lg text-primary mb-4">Essential Amenities</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <button class="amenity-btn flex flex-col items-center gap-2 p-4 rounded-xl border border-outline-variant/20 hover:bg-primary/5 transition-colors" data-amenity="wifi">
+            <span class="material-symbols-outlined text-tertiary-container">wifi</span>
+            <span class="text-xs font-bold">WiFi</span>
+          </button>
+          <button class="amenity-btn flex flex-col items-center gap-2 p-4 rounded-xl border border-outline-variant/20 hover:bg-primary/5 transition-colors" data-amenity="pool">
+            <span class="material-symbols-outlined text-tertiary-container">pool</span>
+            <span class="text-xs font-bold">Pool</span>
+          </button>
+          <button class="amenity-btn flex flex-col items-center gap-2 p-4 rounded-xl border border-outline-variant/20 hover:bg-primary/5 transition-colors" data-amenity="fitness_center">
+            <span class="material-symbols-outlined text-tertiary-container">fitness_center</span>
+            <span class="text-xs font-bold">Gym</span>
+          </button>
+          <button class="amenity-btn flex flex-col items-center gap-2 p-4 rounded-xl border border-outline-variant/20 hover:bg-primary/5 transition-colors" data-amenity="spa">
+            <span class="material-symbols-outlined text-tertiary-container">spa</span>
+            <span class="text-xs font-bold">Spa</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="flex items-center justify-between px-8 py-5 bg-surface-container-lowest border-t border-outline-variant/10">
+      <button id="btn-filter-clear" class="text-sm font-bold text-primary underline decoration-secondary underline-offset-4 hover:text-primary-container transition-colors">
+        Clear all
+      </button>
+      <div class="flex items-center gap-4">
+        <label class="flex items-center gap-2 cursor-pointer">
+          <input id="available-only" type="checkbox" class="w-4 h-4 rounded text-primary border-outline-variant focus:ring-primary" />
+          <span class="text-sm font-semibold text-on-surface-variant">Available only</span>
+        </label>
+        <button id="btn-filter-apply"
+                class="bg-gradient-to-r from-primary to-primary-container text-white px-10 py-3 rounded-2xl font-bold text-sm hover:shadow-editorial transition-shadow active:scale-95">
+          Apply Filters
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     HOTEL POPUP  (req #4 + #5)
+     React component: <HotelPopup hotel={selectedHotel} />
+     ═══════════════════════════════════════════════════════════════════════════ -->
+<div id="hotel-popup" class="fixed inset-0 z-[300] hidden items-center justify-center p-4">
+  <!-- Backdrop -->
+  <div id="popup-backdrop" class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+
+  <!-- Card -->
+  <div class="modal-enter relative bg-white w-full max-w-3xl rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row max-h-[90vh]">
+
+    <!-- ── Left: Image carousel ── -->
+    <div class="relative w-full md:w-[45%] flex-none bg-surface-container-highest overflow-hidden" style="min-height:300px">
+      <!-- Slides container -->
+      <div id="carousel-track" class="carousel-track flex h-full">
+        <!-- Images injected by JS -->
+      </div>
+
+      <!-- Prev / Next -->
+      <button id="carousel-prev"
+              class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-card transition-colors z-10">
+        <span class="material-symbols-outlined text-[20px]">chevron_left</span>
+      </button>
+      <button id="carousel-next"
+              class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-card transition-colors z-10">
+        <span class="material-symbols-outlined text-[20px]">chevron_right</span>
+      </button>
+
+      <!-- Dot indicators -->
+      <div id="carousel-dots" class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10"></div>
+    </div>
+
+    <!-- ── Right: Details ── -->
+    <div class="flex-1 flex flex-col overflow-y-auto">
+
+      <!-- Close button -->
+      <button id="btn-popup-close"
+              class="absolute top-4 right-4 bg-white/90 hover:bg-white p-1.5 rounded-full shadow-card transition-colors z-20">
+        <span class="material-symbols-outlined text-[20px]">close</span>
+      </button>
+
+      <div class="p-6 flex flex-col gap-5 flex-1">
+
+        <!-- Name + rating -->
+        <div>
+          <h2 id="popup-name" class="font-headline text-2xl font-extrabold text-primary leading-tight"></h2>
+          <div class="flex items-center gap-2 mt-1">
+            <div class="flex items-center gap-0.5">
+              <!-- Stars rendered by JS -->
+              <span id="popup-stars" class="flex gap-0.5"></span>
+            </div>
+            <span id="popup-rating" class="text-sm font-bold text-secondary"></span>
+            <span id="popup-review-count" class="text-xs text-on-surface-variant"></span>
+          </div>
+          <p id="popup-address" class="text-sm text-on-surface-variant flex items-center gap-1 mt-1">
+            <span class="material-symbols-outlined text-[16px]">location_on</span>
+          </p>
+        </div>
+
+        <!-- Amenities + Landmarks (two-column) -->
+        <div class="grid grid-cols-2 gap-4">
+          <!-- Featured amenities -->
+          <div>
+            <h4 class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-3">Featured Amenities</h4>
+            <div id="popup-amenities" class="flex flex-wrap gap-3"></div>
+          </div>
+          <!-- Nearby landmarks -->
+          <div>
+            <h4 class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-3">Nearby Landmarks</h4>
+            <ul id="popup-landmarks" class="flex flex-col gap-1.5 text-sm text-on-surface-variant"></ul>
+          </div>
+        </div>
+
+        <!-- Latest review -->
+        <div class="bg-surface-container-low rounded-2xl p-4">
+          <h4 class="text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2">Latest Review</h4>
+          <div class="flex items-start gap-3">
+            <div id="popup-avatar" class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center flex-none">
+              <span class="material-symbols-outlined text-primary text-[18px]">person</span>
+            </div>
+            <div>
+              <p id="popup-review-author" class="text-xs font-bold text-primary"></p>
+              <p id="popup-review-text" class="text-xs text-on-surface-variant mt-0.5 leading-relaxed"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Price + CTA -->
+        <div class="bg-surface-container-low rounded-2xl p-5 text-center mt-auto">
+          <div class="flex items-baseline justify-center gap-1 mb-1">
+            <span id="popup-price" class="text-3xl font-headline font-extrabold text-primary"></span>
+            <span class="text-sm text-on-surface-variant font-medium">/ night</span>
+          </div>
+          <p id="popup-price-note" class="text-xs text-on-surface-variant mb-4"></p>
+
+          <div class="flex flex-col gap-2">
+            <!-- Book Now -->
+            <button id="btn-book-now"
+                    class="w-full bg-gradient-to-r from-primary to-primary-container text-white py-3.5 rounded-2xl font-bold text-sm hover:shadow-editorial transition-shadow active:scale-95">
+              Book Now
+            </button>
+            <!-- Visit Hotel page (req #5) -->
+            <button id="btn-visit-hotel"
+                    class="w-full border-2 border-primary text-primary py-3 rounded-2xl font-bold text-sm hover:bg-primary-fixed transition-colors active:scale-95">
+              Visit Hotel Page
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     CONCIERGE CHAT WIDGET
+     ═══════════════════════════════════════════════════════════════════════════ -->
+<div id="chat-widget" class="fixed bottom-6 right-6 z-[150] flex flex-col items-end gap-3">
+  <!-- Chat window (toggled) -->
+  <div id="chat-window" class="hidden w-80 bg-white rounded-3xl shadow-2xl overflow-hidden border border-outline-variant/20">
+    <div class="bg-gradient-to-r from-primary to-primary-container p-4 text-white flex items-center gap-3">
+      <div class="w-9 h-9 bg-white/20 rounded-full flex items-center justify-center">
+        <span class="material-symbols-outlined text-[20px]">support_agent</span>
+      </div>
+      <div>
+        <p class="text-sm font-bold">LU Concierge</p>
+        <p class="text-[10px] opacity-75 uppercase tracking-widest">Always active</p>
+      </div>
+      <button id="btn-chat-close" class="ml-auto p-1 rounded-full hover:bg-white/20 transition-colors">
+        <span class="material-symbols-outlined text-[18px]">close</span>
+      </button>
+    </div>
+    <div id="chat-messages" class="h-56 overflow-y-auto bg-surface-container-low p-4 flex flex-col gap-3">
+      <div class="bg-white p-3 rounded-2xl rounded-tl-none text-xs shadow-sm max-w-[85%] text-on-surface">
+        Welcome to Booking4LU. How can I assist with your premium reservation today?
+      </div>
+    </div>
+    <div class="p-3 bg-white border-t border-outline-variant/10 flex gap-2">
+      <input id="chat-input" type="text" placeholder="Type a message…"
+             class="flex-1 text-xs bg-surface-container-low rounded-full px-4 py-2 border-0 focus:ring-1 focus:ring-primary outline-none" />
+      <button id="btn-chat-send" class="bg-primary text-white p-2 rounded-full hover:bg-primary-container transition-colors">
+        <span class="material-symbols-outlined text-[18px]">send</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- FAB -->
+  <button id="btn-chat-toggle"
+          class="w-14 h-14 bg-gradient-to-br from-primary to-primary-container text-white rounded-full flex items-center justify-center shadow-2xl shadow-primary/40 hover:scale-110 transition-transform duration-300">
+    <span class="material-symbols-outlined text-2xl">chat</span>
+  </button>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════════════════════════════════════════ -->
+<footer class="flex-none border-t border-outline-variant/20 bg-surface-container-low">
+  <div class="flex flex-col md:flex-row items-center justify-between px-10 py-5 gap-3 max-w-screen-2xl mx-auto">
+    <span class="font-headline font-extrabold text-primary">Booking4LU</span>
+    <div class="flex gap-6">
+      <a href="#" class="text-[11px] uppercase tracking-widest font-semibold text-on-surface-variant hover:text-secondary transition-colors">About</a>
+      <a href="#" class="text-[11px] uppercase tracking-widest font-semibold text-on-surface-variant hover:text-secondary transition-colors">Privacy</a>
+      <a href="#" class="text-[11px] uppercase tracking-widest font-semibold text-on-surface-variant hover:text-secondary transition-colors">Terms</a>
+      <a href="#" class="text-[11px] uppercase tracking-widest font-semibold text-on-surface-variant hover:text-secondary transition-colors">Support</a>
+    </div>
+    <p class="text-[10px] text-outline">© 2024 Booking4LU. Editorial Excellence in Travel.</p>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     APPLICATION SCRIPT
+     ─────────────────────────────────────────────────────────────────────────
+     Structured as a self-contained module. When migrating to React:
+       • State variables → useState / useReducer
+       • init() → useEffect
+       • Each section → its own component + hook
+     ═══════════════════════════════════════════════════════════════════════════ -->
+<script type="module">
+// ─── Imports ──────────────────────────────────────────────────────────────────
+import { API_CONFIG }                    from "../config/api.js";
+import { searchHotels, getHotelDetail } from "../services/hotelService.js";
+import {
+  loadGoogleMapsAPI, initMap, drawRadiusCircle,
+  createHotelMarker, createClusterMarker, clearMarkers, clusterHotels, _fmtPrice,
+} from "../utils/mapUtils.js";
+
+// ─── App state ────────────────────────────────────────────────────────────────
+const state = {
+  // Map
+  map:          null,
+  radiusCircle: null,
+  markers:      [],
+  userLocation: { lat: 10.7769, lng: 106.7009 }, // fallback: HCMC centre
+
+  // Search
+  radiusM: API_CONFIG.DEFAULT_RADIUS_M,
+  hotels:  [],
+
+  // Filters
+  filters: {
+    priceMin:      null,
+    priceMax:      null,
+    types:         [],
+    amenities:     [],
+    starRating:    null,
+    availableOnly: false,
+  },
+
+  // Popup / carousel
+  activeHotel:    null,
+  carouselIndex:  0,
+};
+
+// ─── DOM refs ─────────────────────────────────────────────────────────────────
+const $ = (id) => document.getElementById(id);
+
+const DOM = {
+  mapEl:          $("google-map"),
+  mapLoading:     $("map-loading"),
+  hotelList:      $("hotel-list"),
+  hotelEmpty:     $("hotel-empty"),
+  resultsCount:   $("results-count"),
+  radiusSlider:   $("radius-slider"),
+  radiusLabel:    $("radius-label"),
+
+  // Filter modal
+  filterModal:    $("filter-modal"),
+  filterBackdrop: $("filter-backdrop"),
+  priceLabel:     $("price-label"),
+  priceMin:       $("price-min"),
+  priceMax:       $("price-max"),
+  thumbMin:       $("thumb-min"),
+  thumbMax:       $("thumb-max"),
+  availableOnly:  $("available-only"),
+
+  // Popup
+  popup:          $("hotel-popup"),
+  popupBackdrop:  $("popup-backdrop"),
+  carouselTrack:  $("carousel-track"),
+  carouselDots:   $("carousel-dots"),
+  popupName:      $("popup-name"),
+  popupStars:     $("popup-stars"),
+  popupRating:    $("popup-rating"),
+  popupReviews:   $("popup-review-count"),
+  popupAddress:   $("popup-address"),
+  popupAmenities: $("popup-amenities"),
+  popupLandmarks: $("popup-landmarks"),
+  popupAvatar:    $("popup-avatar"),
+  popupAuthor:    $("popup-review-author"),
+  popupReviewTxt: $("popup-review-text"),
+  popupPrice:     $("popup-price"),
+  popupPriceNote: $("popup-price-note"),
+
+  // Chat
+  chatWindow:     $("chat-window"),
+  chatMessages:   $("chat-messages"),
+  chatInput:      $("chat-input"),
+};
+
+// ─── Amenity icon map ─────────────────────────────────────────────────────────
+const AMENITY_ICONS = {
+  wifi:           { icon: "wifi",           label: "Free WiFi" },
+  pool:           { icon: "pool",           label: "Pool" },
+  fitness_center: { icon: "fitness_center", label: "Fitness Center" },
+  spa:            { icon: "spa",            label: "Spa" },
+  restaurant:     { icon: "restaurant",     label: "Restaurant" },
+  parking:        { icon: "local_parking",  label: "Parking" },
+};
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════════════════════════════════════
+
+async function init() {
+  bindEvents();
+  await getUserLocation();
+  await initGoogleMap();
+  await loadHotels();
+}
+
+// ─── Geolocation ──────────────────────────────────────────────────────────────
+
+function getUserLocation() {
+  return new Promise((resolve) => {
+    if (!navigator.geolocation) { resolve(); return; }
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        state.userLocation = { lat: pos.coords.latitude, lng: pos.coords.longitude };
+        resolve();
+      },
+      () => resolve(), // silently fall back to default
+      { timeout: 6000 }
+    );
+  });
+}
+
+// ─── Map setup ────────────────────────────────────────────────────────────────
+
+async function initGoogleMap() {
+  try {
+    await loadGoogleMapsAPI();
+    state.map = initMap(DOM.mapEl, state.userLocation);
+
+    // User location marker (blue dot)
+    new google.maps.Marker({
+      map: state.map,
+      position: state.userLocation,
+      icon: {
+        path: google.maps.SymbolPath.CIRCLE,
+        scale: 8,
+        fillColor: "#00346f",
+        fillOpacity: 1,
+        strokeColor: "#ffffff",
+        strokeWeight: 3,
+      },
+      title: "Your location",
+      zIndex: 30,
+    });
+
+    // Initial radius circle
+    state.radiusCircle = drawRadiusCircle(state.map, state.userLocation, state.radiusM);
+
+    DOM.mapLoading.classList.add("hidden");
+
+    // Zoom controls
+    $("btn-zoom-in") .addEventListener("click", () => state.map.setZoom(state.map.getZoom() + 1));
+    $("btn-zoom-out").addEventListener("click", () => state.map.setZoom(state.map.getZoom() - 1));
+    $("btn-recenter").addEventListener("click", () => {
+      state.map.panTo(state.userLocation);
+      state.map.setZoom(14);
+    });
+
+  } catch (err) {
+    // Google Maps failed (bad key / offline) — keep placeholder grid visible
+    console.warn("Google Maps unavailable:", err.message);
+    DOM.mapLoading.innerHTML = `
+      <span class="material-symbols-outlined text-4xl text-outline">map</span>
+      <p class="text-sm text-on-surface-variant">Map unavailable — add your Google Maps API key in src/config/api.js</p>`;
+  }
+}
+
+// ─── Hotel loading + rendering ────────────────────────────────────────────────
+
+async function loadHotels() {
+  // Show skeletons
+  DOM.hotelList.innerHTML = `
+    <div class="skeleton h-64 w-full rounded-2xl"></div>
+    <div class="skeleton h-64 w-full rounded-2xl"></div>`;
+  DOM.hotelEmpty.classList.add("hidden");
+
+  try {
+    // ── API CALL (req #1) ──────────────────────────────────────────────────
+    state.hotels = await searchHotels({
+      lat:     state.userLocation.lat,
+      lng:     state.userLocation.lng,
+      radius:  state.radiusM,
+      filters: state.filters,
+    });
+
+    renderHotelList(state.hotels);
+    renderMapMarkers(state.hotels);
+    DOM.resultsCount.textContent = `${state.hotels.length} Results`;
+
+  } catch (err) {
+    console.error("Failed to load hotels:", err);
+    DOM.hotelList.innerHTML = `
+      <div class="text-center py-12 text-on-surface-variant text-sm">
+        Failed to load hotels. Please try again.
+      </div>`;
+  }
+}
+
+// ─── Sidebar hotel cards ──────────────────────────────────────────────────────
+
+function renderHotelList(hotels) {
+  if (!hotels.length) {
+    DOM.hotelList.innerHTML = "";
+    DOM.hotelEmpty.classList.remove("hidden");
+    return;
+  }
+
+  DOM.hotelEmpty.classList.add("hidden");
+  DOM.hotelList.innerHTML = hotels.map((h) => buildHotelCard(h)).join("");
+
+  // Attach click handlers
+  DOM.hotelList.querySelectorAll("[data-hotel-id]").forEach((el) => {
+    el.addEventListener("click", () => openPopup(el.dataset.hotelId));
+  });
+}
+
+/** Build a hotel card HTML string. */
+function buildHotelCard(h) {
+  const price = _fmtPrice(h.pricePerNight, h.currency);
+  const amenityIcons = h.amenities.slice(0, 3).map((a) => {
+    const meta = AMENITY_ICONS[a] || { icon: a, label: a };
+    return `<div class="flex items-center gap-1 text-on-surface-variant">
+      <span class="material-symbols-outlined text-tertiary-container text-lg">${meta.icon}</span>
+      <span class="text-xs font-medium">${meta.label}</span>
+    </div>`;
+  }).join("");
+
+  return `
+    <article class="hotel-card group cursor-pointer rounded-2xl overflow-hidden bg-surface-container-lowest shadow-card"
+             data-hotel-id="${h.id}" role="button" tabindex="0"
+             aria-label="View details for ${h.name}">
+      <!-- Image -->
+      <div class="relative h-52 overflow-hidden">
+        <img src="${h.images[0]}" alt="${h.name}"
+             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+        <!-- Rating badge -->
+        <div class="absolute top-3 right-3 glass px-2.5 py-1 rounded-full flex items-center gap-1 shadow-sm">
+          <span class="material-symbols-outlined icon-filled text-amber-500 text-sm">star</span>
+          <span class="text-sm font-bold text-primary">${h.rating}</span>
+        </div>
+        ${h.badge ? `<div class="absolute bottom-3 left-3">
+          <span class="bg-primary text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">${h.badge}</span>
+        </div>` : ""}
+      </div>
+      <!-- Info -->
+      <div class="p-4">
+        <div class="flex items-start justify-between gap-2">
+          <div class="min-w-0">
+            <h3 class="font-headline font-bold text-lg text-primary leading-tight truncate">${h.name}</h3>
+            <p class="text-xs text-on-surface-variant flex items-center gap-0.5 mt-0.5">
+              <span class="material-symbols-outlined text-[14px]">location_on</span>${h.address}
+            </p>
+          </div>
+          <div class="text-right flex-none">
+            <p class="text-lg font-extrabold text-primary font-headline">${price}</p>
+            <p class="text-[10px] text-outline uppercase font-semibold">per night</p>
+          </div>
+        </div>
+        <div class="flex gap-4 mt-3">${amenityIcons}</div>
+      </div>
+    </article>`;
+}
+
+// ─── Map markers ──────────────────────────────────────────────────────────────
+
+function renderMapMarkers(hotels) {
+  if (!state.map) return;
+
+  clearMarkers(state.markers);
+
+  const clusters = clusterHotels(hotels);
+
+  clusters.forEach(({ pos, hotels: group }) => {
+    if (group.length === 1) {
+      // Single hotel → price-tag marker
+      const m = createHotelMarker(state.map, group[0], (h) => openPopup(h.id));
+      state.markers.push(m);
+    } else {
+      // Multiple hotels → cluster bubble
+      const m = createClusterMarker(state.map, pos, group, (hs) => {
+        // On cluster click: zoom in to reveal individual markers
+        state.map.setZoom(state.map.getZoom() + 2);
+        state.map.panTo(pos);
+      });
+      state.markers.push(m);
+    }
+  });
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// HOTEL POPUP  (req #4 + #5)
+// ═══════════════════════════════════════════════════════════════════════════════
+
+async function openPopup(hotelId) {
+  try {
+    // ── API CALL ──────────────────────────────────────────────────────────
+    const hotel = await getHotelDetail(hotelId);
+    state.activeHotel   = hotel;
+    state.carouselIndex = 0;
+
+    populatePopup(hotel);
+    DOM.popup.classList.remove("hidden");
+    DOM.popup.classList.add("flex");
+    document.body.style.overflow = "hidden";
+
+  } catch (err) {
+    console.error("Failed to load hotel detail:", err);
+  }
+}
+
+function closePopup() {
+  DOM.popup.classList.add("hidden");
+  DOM.popup.classList.remove("flex");
+  document.body.style.overflow = "";
+  state.activeHotel = null;
+}
+
+function populatePopup(h) {
+  // Name + rating
+  DOM.popupName.textContent = h.name;
+  DOM.popupStars.innerHTML  = Array.from({ length: 5 }, (_, i) =>
+    `<span class="material-symbols-outlined ${i < Math.round(h.rating) ? "icon-filled" : ""} text-amber-500 text-base">star</span>`
+  ).join("");
+  DOM.popupRating.textContent  = h.rating.toFixed(1);
+  DOM.popupReviews.textContent = `(${h.reviewCount.toLocaleString()} reviews)`;
+  DOM.popupAddress.innerHTML   = `<span class="material-symbols-outlined text-[16px]">location_on</span>${h.address}`;
+
+  // Amenities
+  DOM.popupAmenities.innerHTML = h.amenities.map((a) => {
+    const meta = AMENITY_ICONS[a] || { icon: a, label: a };
+    return `<div class="flex flex-col items-center gap-1 p-2 bg-surface-container-low rounded-xl w-16 text-center">
+      <span class="material-symbols-outlined text-tertiary-container text-2xl">${meta.icon}</span>
+      <span class="text-[10px] font-semibold text-on-surface-variant leading-tight">${meta.label}</span>
+    </div>`;
+  }).join("");
+
+  // Landmarks
+  DOM.popupLandmarks.innerHTML = h.nearbyLandmarks.map((l) =>
+    `<li class="flex items-center justify-between gap-2">
+      <span class="truncate">${l.name}</span>
+      <span class="text-[11px] font-bold text-secondary whitespace-nowrap">${l.distance}</span>
+    </li>`
+  ).join("");
+
+  // Review
+  DOM.popupAuthor.textContent    = h.latestReview.author;
+  DOM.popupReviewTxt.textContent = h.latestReview.text;
+
+  // Price
+  const nights = 3; // TODO: derive from selected date range
+  const total  = h.pricePerNight * nights;
+  DOM.popupPrice.textContent     = _fmtPrice(h.pricePerNight, h.currency) + " " + h.currency;
+  DOM.popupPriceNote.textContent = `Total for ${nights} nights: ${_fmtPrice(total, h.currency)} ${h.currency} (incl. taxes & fees)`;
+
+  // Carousel
+  buildCarousel(h.images);
+
+  // "Visit Hotel" button → hotel_info page (req #5)
+  $("btn-visit-hotel").onclick = () => {
+    window.location.href = `../index/hotel_info.html?id=${h.id}`;
+  };
+
+  // "Book Now" button
+  $("btn-book-now").onclick = () => {
+    // TODO: wire to booking flow / API
+    alert(`Booking flow for "${h.name}" — connect to booking API here.`);
+  };
+}
+
+// ─── Carousel ─────────────────────────────────────────────────────────────────
+
+function buildCarousel(images) {
+  DOM.carouselTrack.innerHTML = images.map((src, i) =>
+    `<img src="${src}" alt="Hotel image ${i + 1}"
+          class="w-full h-full object-cover flex-none" style="min-width:100%" />`
+  ).join("");
+
+  DOM.carouselDots.innerHTML = images.map((_, i) =>
+    `<button class="carousel-dot w-2 h-2 rounded-full transition-colors ${i === 0 ? "bg-white" : "bg-white/40"}"
+             data-index="${i}" aria-label="Go to image ${i + 1}"></button>`
+  ).join("");
+
+  DOM.carouselDots.querySelectorAll(".carousel-dot").forEach((dot) => {
+    dot.addEventListener("click", () => goToSlide(Number(dot.dataset.index)));
+  });
+
+  goToSlide(0);
+}
+
+function goToSlide(index) {
+  const total = state.activeHotel?.images.length || 1;
+  state.carouselIndex = (index + total) % total;
+  DOM.carouselTrack.style.transform = `translateX(-${state.carouselIndex * 100}%)`;
+  DOM.carouselDots.querySelectorAll(".carousel-dot").forEach((d, i) => {
+    d.classList.toggle("bg-white",     i === state.carouselIndex);
+    d.classList.toggle("bg-white/40",  i !== state.carouselIndex);
+  });
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// FILTER LOGIC
+// ═══════════════════════════════════════════════════════════════════════════════
+
+function openFilterModal() {
+  DOM.filterModal.classList.remove("hidden");
+  DOM.filterModal.classList.add("flex");
+}
+
+function closeFilterModal() {
+  DOM.filterModal.classList.add("hidden");
+  DOM.filterModal.classList.remove("flex");
+}
+
+function applyFilters() {
+  // Collect property types
+  state.filters.types = [...document.querySelectorAll(".filter-type:checked")].map((el) => el.value);
+
+  // Star rating (last active star-btn)
+  const activeStar = document.querySelector(".star-btn.active");
+  state.filters.starRating = activeStar ? Number(activeStar.dataset.stars) : null;
+
+  // Amenities
+  state.filters.amenities = [...document.querySelectorAll(".amenity-btn.active")].map((el) => el.dataset.amenity);
+
+  // Price range (convert M VND → raw VND)
+  const minM = Number(DOM.priceMin.value);
+  const maxM = Number(DOM.priceMax.value);
+  state.filters.priceMin = minM > 0   ? minM * 1_000_000 : null;
+  state.filters.priceMax = maxM < 100 ? maxM * 1_000_000 : null;
+
+  state.filters.availableOnly = DOM.availableOnly.checked;
+
+  closeFilterModal();
+  loadHotels();
+}
+
+function clearFilters() {
+  state.filters = { priceMin: null, priceMax: null, types: [], amenities: [], starRating: null, availableOnly: false };
+
+  document.querySelectorAll(".filter-type").forEach((el) => { el.checked = el.value === "Hotel"; });
+  document.querySelectorAll(".star-btn").forEach((el) => el.classList.remove("active", "bg-secondary-container"));
+  document.querySelectorAll(".amenity-btn").forEach((el) => el.classList.remove("active", "bg-primary/10", "border-primary/40"));
+  DOM.priceMin.value = 0;
+  DOM.priceMax.value = 100;
+  DOM.availableOnly.checked = false;
+  updatePriceUI();
+}
+
+function updatePriceUI() {
+  const min = Number(DOM.priceMin.value);
+  const max = Number(DOM.priceMax.value);
+  DOM.priceLabel.textContent = `${min}M – ${max}M`;
+  DOM.thumbMin.style.left    = `${min}%`;
+  DOM.thumbMax.style.left    = `${max}%`;
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// EVENT BINDING
+// ═══════════════════════════════════════════════════════════════════════════════
+
+function bindEvents() {
+  // Filter modal
+  $("btn-filter-open") .addEventListener("click", openFilterModal);
+  $("btn-filter-close").addEventListener("click", closeFilterModal);
+  $("btn-filter-apply").addEventListener("click", applyFilters);
+  $("btn-filter-clear").addEventListener("click", clearFilters);
+  DOM.filterBackdrop   .addEventListener("click", closeFilterModal);
+
+  // Price sliders
+  DOM.priceMin.addEventListener("input", updatePriceUI);
+  DOM.priceMax.addEventListener("input", updatePriceUI);
+
+  // Price presets
+  document.querySelectorAll(".price-preset").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      DOM.priceMin.value = btn.dataset.min;
+      DOM.priceMax.value = btn.dataset.max;
+      updatePriceUI();
+      document.querySelectorAll(".price-preset").forEach((b) => b.classList.remove("bg-primary-container", "text-white"));
+      btn.classList.add("bg-primary-container", "text-white");
+    });
+  });
+
+  // Star rating toggle
+  document.querySelectorAll(".star-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const already = btn.classList.contains("active");
+      document.querySelectorAll(".star-btn").forEach((b) => b.classList.remove("active", "bg-secondary-container"));
+      if (!already) btn.classList.add("active", "bg-secondary-container");
+    });
+  });
+
+  // Amenity toggle
+  document.querySelectorAll(".amenity-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      btn.classList.toggle("active");
+      btn.classList.toggle("bg-primary/10");
+      btn.classList.toggle("border-primary/40");
+    });
+  });
+
+  // Popup close
+  $("btn-popup-close") .addEventListener("click", closePopup);
+  DOM.popupBackdrop    .addEventListener("click", closePopup);
+
+  // Carousel prev / next
+  $("carousel-prev").addEventListener("click", () => goToSlide(state.carouselIndex - 1));
+  $("carousel-next").addEventListener("click", () => goToSlide(state.carouselIndex + 1));
+
+  // Keyboard: Escape closes modals
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") { closePopup(); closeFilterModal(); }
+  });
+
+  // Radius slider (req #2)
+  DOM.radiusSlider.addEventListener("input", () => {
+    state.radiusM = Number(DOM.radiusSlider.value);
+    DOM.radiusLabel.textContent = `${(state.radiusM / 1000).toFixed(1)} km`;
+    if (state.radiusCircle) drawRadiusCircle(state.map, state.userLocation, state.radiusM, state.radiusCircle);
+    // Debounce hotel reload on radius change
+    clearTimeout(DOM.radiusSlider._timer);
+    DOM.radiusSlider._timer = setTimeout(loadHotels, 600);
+  });
+
+  // Chat widget
+  $("btn-chat-toggle").addEventListener("click", () => {
+    DOM.chatWindow.classList.toggle("hidden");
+  });
+  $("btn-chat-close").addEventListener("click", () => {
+    DOM.chatWindow.classList.add("hidden");
+  });
+  $("btn-chat-send").addEventListener("click", sendChatMessage);
+  DOM.chatInput.addEventListener("keydown", (e) => { if (e.key === "Enter") sendChatMessage(); });
+}
+
+// ─── Chat (stub — wire to AI/backend) ─────────────────────────────────────────
+
+function sendChatMessage() {
+  const text = DOM.chatInput.value.trim();
+  if (!text) return;
+
+  // Append user bubble
+  DOM.chatMessages.insertAdjacentHTML("beforeend", `
+    <div class="bg-primary-fixed p-3 rounded-2xl rounded-tr-none text-xs self-end max-w-[85%] text-primary ml-auto">
+      ${text}
+    </div>`);
+  DOM.chatInput.value = "";
+  DOM.chatMessages.scrollTop = DOM.chatMessages.scrollHeight;
+
+  // TODO: POST to /api/concierge with { message: text, sessionId }
+  setTimeout(() => {
+    DOM.chatMessages.insertAdjacentHTML("beforeend", `
+      <div class="bg-white p-3 rounded-2xl rounded-tl-none text-xs shadow-sm max-w-[85%] text-on-surface">
+        I'm looking into that for you. One moment…
+      </div>`);
+    DOM.chatMessages.scrollTop = DOM.chatMessages.scrollHeight;
+  }, 800);
+}
+
+// ─── Language switcher ────────────────────────────────────────────────────────
+
+window.setLang = function(code, flag) {
+  $("lang-label").textContent = code;
+  // TODO: i18n — load locale strings from /api/i18n/:code
+};
+
+// ─── Boot ─────────────────────────────────────────────────────────────────────
+init();
+</script>
+</body>
+</html>

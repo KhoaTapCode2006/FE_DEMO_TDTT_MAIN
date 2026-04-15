@@ -1,0 +1,863 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reviews - Booking4LU</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#00346f", "primary-container": "#004a99", "on-primary": "#ffffff",
+            "primary-fixed": "#d7e2ff", "primary-fixed-dim": "#abc7ff",
+            secondary: "#775a19", "secondary-container": "#fed488",
+            "on-secondary-container": "#785a1a", "on-secondary-fixed-variant": "#5d4201",
+            tertiary: "#003b4e", "tertiary-container": "#00536c", "on-tertiary-container": "#74c7ed",
+            background: "#f7f9fc", surface: "#f7f9fc", "surface-bright": "#f7f9fc",
+            "surface-dim": "#d8dadd", "surface-variant": "#e0e3e6",
+            "surface-container-lowest": "#ffffff", "surface-container-low": "#f2f4f7",
+            "surface-container": "#eceef1", "surface-container-high": "#e6e8eb",
+            "surface-container-highest": "#e0e3e6",
+            "on-surface": "#191c1e", "on-surface-variant": "#424751",
+            outline: "#737783", "outline-variant": "#c2c6d3",
+            "inverse-surface": "#2d3133", "inverse-on-surface": "#eff1f4",
+            "inverse-primary": "#abc7ff", error: "#ba1a1a", "error-container": "#ffdad6",
+          },
+          fontFamily: { headline: ["Manrope","sans-serif"], body: ["Inter","sans-serif"], label: ["Inter","sans-serif"] },
+        },
+      },
+    };
+  </script>
+  <style>
+    body { font-family:'Inter',sans-serif; background-color:#f7f9fc; }
+    h1,h2,h3,h4,.font-headline { font-family:'Manrope',sans-serif; }
+    .material-symbols-outlined { font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24; line-height:1; }
+    .icon-fill { font-variation-settings:'FILL' 1,'wght' 500,'GRAD' 0,'opsz' 24; }
+    .glass-modal { background:rgba(224,227,230,0.85); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); }
+    .photo-tilt-1 { transform:rotate(-2deg); }
+    .photo-tilt-2 { transform:rotate(3deg); }
+    .photo-tilt-1:hover,.photo-tilt-2:hover { transform:rotate(0deg); }
+    .review-card { transition: opacity 0.4s ease, transform 0.4s ease; }
+    .review-card.hidden-card { display:none; }
+  </style>
+</head>
+<body class="text-on-surface">
+
+<!-- TOP NAV -->
+<header class="fixed top-0 left-0 right-0 z-50 h-16 bg-white shadow-sm flex items-center justify-between px-8">
+  <span class="font-headline text-2xl font-black text-blue-900 tracking-tight">Booking4LU</span>
+  <div class="flex items-center gap-5">
+    <button class="w-9 h-9 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors">
+      <span class="material-symbols-outlined text-on-surface-variant">notifications</span>
+    </button>
+    <button class="w-9 h-9 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors">
+      <span class="material-symbols-outlined text-on-surface-variant">settings</span>
+    </button>
+    <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=ichigo&hair=short01&hairColor=f97316&eyes=variant01&skinColor=f5cfa0&backgroundColor=b6e3f4" alt="User avatar" class="w-9 h-9 rounded-full object-cover border-2 border-primary-fixed" />
+  </div>
+</header>
+
+<div class="flex min-h-screen pt-16">
+
+  <!-- SIDEBAR -->
+  <aside class="fixed left-0 top-16 bottom-0 w-64 bg-white border-r border-outline-variant/30 shadow-[4px_0_24px_rgba(0,52,111,0.05)] flex flex-col z-40">
+    <div class="px-6 py-6 border-b border-outline-variant/20">
+      <div class="flex items-center gap-3">
+        <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=ichigo&hair=short01&hairColor=f97316&eyes=variant01&skinColor=f5cfa0&backgroundColor=b6e3f4" alt="Profile" class="w-11 h-11 rounded-full object-cover border-2 border-primary-fixed" />
+        <div>
+          <p class="font-headline font-bold text-sm text-primary leading-tight">Traveler Profile</p>
+          <p class="text-xs text-on-surface-variant mt-0.5">Azure Prestige Member</p>
+        </div>
+      </div>
+    </div>
+    <nav class="flex-1 py-4 flex flex-col gap-1 px-3">
+      <a href="#" class="flex items-center gap-3 px-4 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-all text-sm font-medium font-headline">
+        <span class="material-symbols-outlined text-[20px]">hotel</span>My Stays
+      </a>
+      <a href="#" class="flex items-center gap-3 px-4 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-all text-sm font-medium font-headline">
+        <span class="material-symbols-outlined text-[20px]">bookmark</span>Saved Lists
+      </a>
+      <a href="#" class="flex items-center gap-3 px-4 py-2.5 rounded-xl bg-blue-50 text-primary font-bold text-sm font-headline">
+        <span class="material-symbols-outlined icon-fill text-[20px] text-primary">rate_review</span>Reviews
+      </a>
+      <a href="#" class="flex items-center gap-3 px-4 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-all text-sm font-medium font-headline">
+        <span class="material-symbols-outlined text-[20px]">group</span>Friends
+      </a>
+    </nav>
+    <div class="px-4 pb-4">
+      <button class="w-full py-3 rounded-2xl bg-gradient-to-r from-primary to-primary-container text-white font-headline font-bold text-sm shadow-lg active:scale-95 transition-all">
+        Book New Stay
+      </button>
+    </div>
+    <div class="border-t border-outline-variant/20 px-4 py-4 flex flex-col gap-1">
+      <a href="#" class="flex items-center gap-3 px-4 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-all text-sm">
+        <span class="material-symbols-outlined text-[20px]">help_outline</span>Help Center
+      </a>
+      <a href="#" class="flex items-center gap-3 px-4 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-low hover:text-red-600 transition-all text-sm">
+        <span class="material-symbols-outlined text-[20px]">logout</span>Logout
+      </a>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="ml-64 flex-1 px-10 py-10 bg-background min-h-screen">
+    <div class="max-w-5xl mx-auto">
+
+      <!-- Page Header -->
+      <div class="flex items-end justify-between mb-10">
+        <div>
+          <h1 class="font-headline text-4xl font-extrabold text-primary tracking-tight mb-2">Your Reviews</h1>
+          <p class="text-on-surface-variant text-sm font-medium">Manage and share your travel experiences with the Booking4LU community.</p>
+        </div>
+        <div class="flex items-center gap-3">
+          <!-- Search bar -->
+          <div class="flex items-center gap-2 px-5 py-2.5 h-[42px] rounded-full border border-outline-variant bg-white shadow-sm">
+            <span class="material-symbols-outlined text-on-surface-variant text-[18px]">search</span>
+            <input id="search-input" type="text" placeholder="Search reviews..."
+                   oninput="searchReviews(this.value)"
+                   class="text-sm font-bold text-on-surface placeholder:text-outline bg-transparent outline-none w-32" />
+          </div>
+          <!-- Filter button -->
+          <button onclick="document.getElementById('filter-modal').classList.remove('hidden')"
+                  class="flex items-center gap-2 px-5 py-2.5 h-[42px] rounded-full border border-outline-variant bg-white text-primary font-bold text-sm hover:bg-surface-container-low transition-colors shadow-sm">
+            <span class="material-symbols-outlined text-[18px]">tune</span>Filter
+          </button>
+          <div class="flex items-center gap-3 bg-amber-50 border border-amber-200 rounded-2xl px-5 py-3">
+            <span class="material-symbols-outlined icon-fill text-amber-500 text-3xl">star</span>
+            <div>
+              <p id="avg-rating-display" class="font-headline font-black text-2xl text-amber-700 leading-none">4.9</p>
+              <p class="text-[10px] font-bold uppercase tracking-widest text-amber-600 mt-0.5">Avg. Rating</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- REVIEW LIST -->
+      <div id="review-list" class="space-y-6">
+
+        <!-- CARD 1 — The Azure Heights Resort -->
+        <article class="review-card flex flex-col lg:flex-row gap-0 rounded-3xl overflow-hidden shadow-[0_8px_40px_rgba(0,52,111,0.08)] bg-surface-container-lowest" data-date="2023-10" data-rating="5" data-has-photos="true">
+          <div class="flex-1 p-8 lg:p-10 flex flex-col">
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <span class="inline-flex items-center gap-1.5 text-[11px] font-black uppercase tracking-widest text-secondary mb-2">
+                  <span class="material-symbols-outlined icon-fill text-[14px]">verified</span>
+                  Verified Stay &nbsp;·&nbsp; Oct 2023
+                </span>
+                <h2 class="font-headline text-2xl font-extrabold text-primary">The Azure Heights Resort</h2>
+              </div>
+              <div class="star-row flex items-center gap-0.5 mt-1">
+                <span class="material-symbols-outlined icon-fill text-amber-400 text-[20px]">star</span>
+                <span class="material-symbols-outlined icon-fill text-amber-400 text-[20px]">star</span>
+                <span class="material-symbols-outlined icon-fill text-amber-400 text-[20px]">star</span>
+                <span class="material-symbols-outlined icon-fill text-amber-400 text-[20px]">star</span>
+                <span class="material-symbols-outlined icon-fill text-amber-400 text-[20px]">star</span>
+              </div>
+            </div>
+            <p class="review-text text-on-surface-variant leading-relaxed text-[15px] italic mb-6 flex-1">
+              "An unparalleled experience of luxury and tranquility. From the moment the digital concierge checked us in, to the breathtaking views of the coastline from our balcony, every detail was meticulously curated. The spa treatments were world-class and the infinity pool at sunset is something I'll never forget."
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-tertiary/10 text-tertiary text-xs font-bold"><span class="material-symbols-outlined text-[14px]">pool</span>Infinity Pool</span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-tertiary/10 text-tertiary text-xs font-bold"><span class="material-symbols-outlined text-[14px]">spa</span>Full-Service Spa</span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-tertiary/10 text-tertiary text-xs font-bold"><span class="material-symbols-outlined text-[14px]">restaurant</span>Fine Dining</span>
+            </div>
+            <div class="flex items-center justify-between pt-5 border-t border-outline-variant/20">
+              <div class="flex items-center gap-2">
+                <div class="flex -space-x-2">
+                  <img src="https://i.pravatar.cc/32?img=12" class="w-7 h-7 rounded-full border-2 border-white" alt="" />
+                  <img src="https://i.pravatar.cc/32?img=22" class="w-7 h-7 rounded-full border-2 border-white" alt="" />
+                  <img src="https://i.pravatar.cc/32?img=33" class="w-7 h-7 rounded-full border-2 border-white" alt="" />
+                </div>
+                <span class="text-xs font-semibold text-on-surface-variant">12 travelers found this helpful</span>
+              </div>
+              <div class="flex items-center gap-3">
+                  <button onclick="openEditModal(this)" class="flex items-center gap-1.5 text-primary font-bold text-sm hover:text-primary-container transition-colors">
+                Edit <span class="material-symbols-outlined text-[16px]">edit</span>
+              </button>
+                  <button onclick="deleteCard(this)" class="flex items-center gap-1.5 text-error font-bold text-sm hover:text-red-700 transition-colors">
+                Delete <span class="material-symbols-outlined text-[16px]">delete</span>
+              </button>
+              </div>
+            </div>
+          </div>
+          <div class="w-full lg:w-72 bg-surface-container-low flex flex-col gap-4 p-6 justify-center items-center">
+            <div class="w-full h-44 rounded-2xl overflow-hidden shadow-xl photo-tilt-1 transition-transform duration-500 cursor-pointer" onclick="openLightbox(this)">
+              <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80" alt="Resort" class="review-img w-full h-full object-cover" />
+            </div>
+            <div class="grid grid-cols-2 gap-3 w-full">
+              <div class="aspect-square rounded-xl overflow-hidden shadow-md photo-tilt-2 transition-transform duration-500 cursor-pointer" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&q=80" alt="Pool" class="review-img w-full h-full object-cover" />
+              </div>
+              <div class="aspect-square rounded-xl overflow-hidden shadow-md cursor-pointer photo-tilt-1 transition-transform duration-500" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=80" alt="Aerial" class="review-img w-full h-full object-cover" />
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 2 — Urban Echo Loft -->
+        <article class="review-card relative bg-surface-container-lowest rounded-3xl overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.05)] p-8 lg:p-10" data-date="2023-08" data-rating="4" data-has-photos="true">
+          <div class="absolute top-0 right-0 w-72 h-72 bg-secondary/10 rounded-full blur-3xl -mr-24 -mt-24 pointer-events-none"></div>
+          <div class="relative z-10 flex flex-col md:flex-row gap-8 items-start">
+            <div class="flex-1">
+              <div class="flex items-start justify-between mb-4">
+                <div>
+                  <p class="text-[11px] font-black uppercase tracking-widest text-secondary mb-1">Stayed: August 2023 · 3 Nights</p>
+                  <h3 class="font-headline text-xl font-bold text-primary">Urban Echo Loft</h3>
+                </div>
+                <div class="star-row flex items-center gap-0.5 mt-1">
+                  <span class="material-symbols-outlined icon-fill text-amber-400 text-[20px]">star</span>
+                  <span class="material-symbols-outlined icon-fill text-amber-400 text-[20px]">star</span>
+                  <span class="material-symbols-outlined icon-fill text-amber-400 text-[20px]">star</span>
+                  <span class="material-symbols-outlined icon-fill text-amber-400 text-[20px]">star</span>
+                  <span class="material-symbols-outlined text-outline-variant text-[20px]">star</span>
+                </div>
+              </div>
+              <p class="review-text text-on-surface-variant leading-relaxed text-[15px] mb-5">
+                Great central location and very chic interior design. The automated check-in was seamless. Only minor issue was the street noise on Friday night, but the provided noise-canceling machine helped significantly. Would definitely recommend for business travelers.
+              </p>
+              <div class="flex flex-wrap gap-3 mb-5">
+                <span class="inline-flex items-center gap-1.5 text-xs font-bold text-on-surface uppercase tracking-wider"><span class="material-symbols-outlined icon-fill text-green-500 text-[16px]">check_circle</span>Location</span>
+                <span class="inline-flex items-center gap-1.5 text-xs font-bold text-on-surface uppercase tracking-wider"><span class="material-symbols-outlined icon-fill text-green-500 text-[16px]">check_circle</span>Cleanliness</span>
+                <span class="inline-flex items-center gap-1.5 text-xs font-bold text-on-surface uppercase tracking-wider"><span class="material-symbols-outlined icon-fill text-green-500 text-[16px]">check_circle</span>Value</span>
+              </div>
+              <div class="flex justify-end pt-4 border-t border-outline-variant/20">
+                <div class="flex items-center gap-3">
+                  <button onclick="openEditModal(this)" class="flex items-center gap-1.5 text-primary font-bold text-sm hover:text-primary-container transition-colors">
+                  Edit <span class="material-symbols-outlined text-[16px]">edit</span>
+                </button>
+                  <button onclick="deleteCard(this)" class="flex items-center gap-1.5 text-error font-bold text-sm hover:text-red-700 transition-colors">
+                Delete <span class="material-symbols-outlined text-[16px]">delete</span>
+              </button>
+                </div>
+              </div>
+            </div>
+            <div class="flex-shrink-0 w-full md:w-52">
+              <div class="aspect-[4/3] rounded-2xl overflow-hidden border-4 border-white shadow-2xl cursor-pointer" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=500&q=80" alt="Loft" class="review-img w-full h-full object-cover" />
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 3 — Grand Peak Lodge -->
+        <article class="review-card bg-surface-container-lowest rounded-3xl border border-outline-variant/20 shadow-[0_2px_16px_rgba(0,0,0,0.04)] p-8" data-date="2023-06" data-rating="5" data-has-photos="false">
+          <div class="flex flex-col gap-4">
+            <div class="flex items-start justify-between">
+              <div>
+                <p class="text-[11px] font-black uppercase tracking-widest text-secondary mb-1">June 2023</p>
+                <h3 class="font-headline font-bold text-xl text-primary">Grand Peak Lodge</h3>
+              </div>
+              <div class="star-row flex items-center gap-0.5 mt-1">
+                <span class="material-symbols-outlined icon-fill text-amber-400 text-[20px]">star</span>
+                <span class="material-symbols-outlined icon-fill text-amber-400 text-[20px]">star</span>
+                <span class="material-symbols-outlined icon-fill text-amber-400 text-[20px]">star</span>
+                <span class="material-symbols-outlined icon-fill text-amber-400 text-[20px]">star</span>
+                <span class="material-symbols-outlined icon-fill text-amber-400 text-[20px]">star</span>
+              </div>
+            </div>
+            <p class="review-text text-on-surface-variant text-[15px] leading-relaxed">
+              The most cozy retreat I've ever visited. The fireplace in the room was a highlight, and the breakfast spread featured local organic produce that was absolutely delicious. The mountain views from the deck were breathtaking every single morning.
+            </p>
+            <div class="flex justify-end pt-4 border-t border-outline-variant/20">
+                <div class="flex items-center gap-3">
+                  <button onclick="openEditModal(this)" class="flex items-center gap-1.5 text-primary font-bold text-sm hover:text-primary-container transition-colors">
+                Edit <span class="material-symbols-outlined text-[16px]">edit</span>
+              </button>
+                  <button onclick="deleteCard(this)" class="flex items-center gap-1.5 text-error font-bold text-sm hover:text-red-700 transition-colors">
+                Delete <span class="material-symbols-outlined text-[16px]">delete</span>
+              </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 4 — Coral Bay Villas (hidden) -->
+        <article class="review-card hidden-card bg-surface-container-lowest rounded-3xl border border-outline-variant/20 shadow-[0_2px_16px_rgba(0,0,0,0.04)] p-8" data-date="2023-05" data-rating="5" data-has-photos="true">
+          <div class="flex flex-col lg:flex-row gap-8 items-start">
+            <div class="flex-1 flex flex-col gap-4">
+              <div class="flex items-start justify-between">
+                <div>
+                  <span class="inline-flex items-center gap-1.5 text-[11px] font-black uppercase tracking-widest text-secondary mb-1">
+                    <span class="material-symbols-outlined icon-fill text-[14px]">verified</span>
+                    Verified Stay &nbsp;·&nbsp; May 2023
+                  </span>
+                  <h3 class="font-headline text-xl font-extrabold text-primary">Coral Bay Villas</h3>
+                </div>
+                <div class="star-row flex items-center gap-0.5 mt-1">
+                  <span class="material-symbols-outlined icon-fill text-amber-400 text-[20px]">star</span>
+                  <span class="material-symbols-outlined icon-fill text-amber-400 text-[20px]">star</span>
+                  <span class="material-symbols-outlined icon-fill text-amber-400 text-[20px]">star</span>
+                  <span class="material-symbols-outlined icon-fill text-amber-400 text-[20px]">star</span>
+                  <span class="material-symbols-outlined icon-fill text-amber-400 text-[20px]">star</span>
+                </div>
+              </div>
+              <p class="review-text text-on-surface-variant leading-relaxed text-[15px] italic">
+                "A hidden gem nestled between lush tropical gardens and a pristine white-sand beach. The private plunge pool in our villa was an absolute dream. Staff were incredibly attentive without being intrusive — the perfect balance of luxury and privacy."
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-tertiary/10 text-tertiary text-xs font-bold"><span class="material-symbols-outlined text-[14px]">beach_access</span>Private Beach</span>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-tertiary/10 text-tertiary text-xs font-bold"><span class="material-symbols-outlined text-[14px]">pool</span>Plunge Pool</span>
+              </div>
+              <div class="flex justify-end pt-4 border-t border-outline-variant/20">
+                <div class="flex items-center gap-3">
+                  <button onclick="openEditModal(this)" class="flex items-center gap-1.5 text-primary font-bold text-sm hover:text-primary-container transition-colors">
+                  Edit <span class="material-symbols-outlined text-[16px]">edit</span>
+                </button>
+                  <button onclick="deleteCard(this)" class="flex items-center gap-1.5 text-error font-bold text-sm hover:text-red-700 transition-colors">
+                Delete <span class="material-symbols-outlined text-[16px]">delete</span>
+              </button>
+                </div>
+              </div>
+            </div>
+            <div class="flex-shrink-0 w-full lg:w-48">
+              <div class="aspect-[4/3] rounded-2xl overflow-hidden border-4 border-white shadow-xl cursor-pointer" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?w=500&q=80" alt="Coral Bay" class="review-img w-full h-full object-cover" />
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 5 — The Meridian Hotel (hidden) -->
+        <article class="review-card hidden-card relative bg-surface-container-lowest rounded-3xl overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.05)] p-8" data-date="2023-04" data-rating="5" data-has-photos="false">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none"></div>
+          <div class="relative z-10 flex flex-col gap-4">
+            <div class="flex items-start justify-between">
+              <div>
+                <p class="text-[11px] font-black uppercase tracking-widest text-secondary mb-1">Stayed: April 2023 · 2 Nights</p>
+                <h3 class="font-headline text-xl font-bold text-primary">The Meridian Hotel</h3>
+              </div>
+              <div class="star-row flex items-center gap-0.5 mt-1">
+                <span class="material-symbols-outlined icon-fill text-amber-400 text-[20px]">star</span>
+                <span class="material-symbols-outlined icon-fill text-amber-400 text-[20px]">star</span>
+                <span class="material-symbols-outlined icon-fill text-amber-400 text-[20px]">star</span>
+                <span class="material-symbols-outlined icon-fill text-amber-400 text-[20px]">star</span>
+                <span class="material-symbols-outlined icon-fill text-amber-400 text-[20px]">star</span>
+              </div>
+            </div>
+            <p class="review-text text-on-surface-variant leading-relaxed text-[15px]">
+              Exceptional city hotel with a rooftop bar that offers the most stunning panoramic views I've ever seen. The rooms are impeccably designed with smart home technology throughout. Breakfast was a lavish affair with over 40 items on the menu.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <span class="inline-flex items-center gap-1.5 text-xs font-bold text-on-surface uppercase tracking-wider"><span class="material-symbols-outlined icon-fill text-green-500 text-[16px]">check_circle</span>Rooftop Bar</span>
+              <span class="inline-flex items-center gap-1.5 text-xs font-bold text-on-surface uppercase tracking-wider"><span class="material-symbols-outlined icon-fill text-green-500 text-[16px]">check_circle</span>Smart Rooms</span>
+              <span class="inline-flex items-center gap-1.5 text-xs font-bold text-on-surface uppercase tracking-wider"><span class="material-symbols-outlined icon-fill text-green-500 text-[16px]">check_circle</span>Breakfast</span>
+            </div>
+            <div class="flex items-center justify-between pt-4 border-t border-outline-variant/20">
+              <div class="flex items-center gap-2">
+                <div class="flex -space-x-2">
+                  <img src="https://i.pravatar.cc/32?img=5" class="w-7 h-7 rounded-full border-2 border-white" alt="" />
+                  <img src="https://i.pravatar.cc/32?img=8" class="w-7 h-7 rounded-full border-2 border-white" alt="" />
+                </div>
+                <span class="text-xs font-semibold text-on-surface-variant">8 travelers found this helpful</span>
+              </div>
+              <div class="flex items-center gap-3">
+                  <button onclick="openEditModal(this)" class="flex items-center gap-1.5 text-primary font-bold text-sm hover:text-primary-container transition-colors">
+                Edit <span class="material-symbols-outlined text-[16px]">edit</span>
+              </button>
+                  <button onclick="deleteCard(this)" class="flex items-center gap-1.5 text-error font-bold text-sm hover:text-red-700 transition-colors">
+                Delete <span class="material-symbols-outlined text-[16px]">delete</span>
+              </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 6 — Sakura Ryokan (hidden) -->
+        <article class="review-card hidden-card bg-surface-container-lowest rounded-3xl border border-outline-variant/20 shadow-[0_2px_16px_rgba(0,0,0,0.04)] p-8" data-date="2023-03" data-rating="5" data-has-photos="false">
+          <div class="flex flex-col gap-4">
+            <div class="flex items-start justify-between">
+              <div>
+                <p class="text-[11px] font-black uppercase tracking-widest text-secondary mb-1">March 2023</p>
+                <h3 class="font-headline font-bold text-xl text-primary">Sakura Ryokan</h3>
+              </div>
+              <div class="star-row flex items-center gap-0.5 mt-1">
+                <span class="material-symbols-outlined icon-fill text-amber-400 text-[20px]">star</span>
+                <span class="material-symbols-outlined icon-fill text-amber-400 text-[20px]">star</span>
+                <span class="material-symbols-outlined icon-fill text-amber-400 text-[20px]">star</span>
+                <span class="material-symbols-outlined icon-fill text-amber-400 text-[20px]">star</span>
+                <span class="material-symbols-outlined icon-fill text-amber-400 text-[20px]">star</span>
+              </div>
+            </div>
+            <p class="review-text text-on-surface-variant text-[15px] leading-relaxed">
+              An authentic Japanese ryokan experience that transported me to another era. The tatami rooms, kaiseki dinner, and outdoor onsen under the cherry blossoms were absolutely magical. A truly once-in-a-lifetime cultural immersion.
+            </p>
+            <div class="flex justify-end pt-4 border-t border-outline-variant/20">
+                <div class="flex items-center gap-3">
+                  <button onclick="openEditModal(this)" class="flex items-center gap-1.5 text-primary font-bold text-sm hover:text-primary-container transition-colors">
+                Edit <span class="material-symbols-outlined text-[16px]">edit</span>
+              </button>
+                  <button onclick="deleteCard(this)" class="flex items-center gap-1.5 text-error font-bold text-sm hover:text-red-700 transition-colors">
+                Delete <span class="material-symbols-outlined text-[16px]">delete</span>
+              </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /review-list -->
+
+      <!-- Pagination -->
+      <div class="mt-12 flex flex-col items-center gap-4">
+        <button id="show-more-btn" onclick="toggleReviews()"
+                class="flex items-center gap-2 px-10 py-3 rounded-full border-2 border-primary text-primary font-headline font-bold text-sm hover:bg-primary hover:text-white transition-all active:scale-95 shadow-sm">
+          <span class="material-symbols-outlined text-[18px]" id="show-more-icon">expand_more</span>
+          <span id="show-more-label">Show All 6 Reviews</span>
+        </button>
+        <p id="review-count-label" class="text-xs text-on-surface-variant font-medium">Showing 3 of 6 reviews</p>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<!-- FILTER MODAL -->
+<div id="filter-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-6">
+  <div class="absolute inset-0 bg-black/20" onclick="closeFilterModal()"></div>
+  <div class="relative w-full max-w-md glass-modal rounded-[2.5rem] p-10 shadow-2xl">
+    <div class="flex items-center justify-between mb-8">
+      <h4 class="font-headline text-2xl font-extrabold text-primary">Filter Reviews</h4>
+      <button onclick="closeFilterModal()" class="w-10 h-10 rounded-full hover:bg-white/60 flex items-center justify-center transition-colors">
+        <span class="material-symbols-outlined text-on-surface-variant">close</span>
+      </button>
+    </div>
+    <div class="space-y-7">
+      <!-- Sort By -->
+      <div>
+        <label class="block text-[11px] font-black uppercase tracking-widest text-on-surface-variant mb-3">Sort By</label>
+        <div class="flex flex-wrap gap-2" id="sort-btns">
+          <button data-sort="recent"  onclick="selectSort(this)"
+                  class="sort-btn active-sort px-5 py-2.5 rounded-full bg-primary text-white font-bold text-sm shadow-sm transition-colors">Most Recent</button>
+          <button data-sort="rating"  onclick="selectSort(this)"
+                  class="sort-btn px-5 py-2.5 rounded-full bg-white text-primary font-bold text-sm shadow-sm hover:bg-surface-container-low transition-colors">Highest Rating</button>
+          <button data-sort="photos"  onclick="selectSort(this)"
+                  class="sort-btn px-5 py-2.5 rounded-full bg-white text-primary font-bold text-sm shadow-sm hover:bg-surface-container-low transition-colors">Photos Only</button>
+        </div>
+      </div>
+      <!-- Rating Range -->
+      <div>
+        <label class="block text-[11px] font-black uppercase tracking-widest text-on-surface-variant mb-3">
+          Rating Range — <span id="range-label" class="text-primary normal-case font-black">All Stars</span>
+        </label>
+        <input id="rating-range" type="range" min="0" max="5" value="0"
+               oninput="updateRangeLabel(this.value)"
+               class="w-full h-2 rounded-full appearance-none cursor-pointer accent-primary bg-outline-variant/40" />
+        <div class="flex justify-between text-xs font-bold text-on-surface-variant mt-2">
+          <span>All</span><span>1★</span><span>2★</span><span>3★</span><span>4★</span><span>5★</span>
+        </div>
+      </div>
+    </div>
+    <button onclick="applyFilters()"
+            class="w-full mt-10 py-4 bg-primary text-white rounded-2xl font-headline font-bold text-base shadow-xl hover:bg-primary-container transition-colors active:scale-95">
+      Apply Filters
+    </button>
+  </div>
+</div>
+
+<!-- EDIT REVIEW MODAL -->
+<div id="edit-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-6">
+  <div class="absolute inset-0 bg-black/40 backdrop-blur-sm" onclick="closeEditModal()"></div>
+  <div class="relative w-full max-w-lg bg-white rounded-[2rem] shadow-2xl overflow-hidden">
+    <div class="h-1.5 w-full bg-gradient-to-r from-primary to-primary-container"></div>
+    <div class="p-8">
+      <div class="flex items-center justify-between mb-6">
+        <div>
+          <h4 class="font-headline text-xl font-extrabold text-primary">Edit Review</h4>
+          <p id="edit-modal-subtitle" class="text-xs text-on-surface-variant mt-0.5"></p>
+        </div>
+        <button onclick="closeEditModal()" class="w-9 h-9 rounded-full hover:bg-surface-container flex items-center justify-center transition-colors">
+          <span class="material-symbols-outlined text-on-surface-variant text-[20px]">close</span>
+        </button>
+      </div>
+      <!-- Star picker -->
+      <div class="mb-6">
+        <label class="block text-[11px] font-black uppercase tracking-widest text-on-surface-variant mb-3">Your Rating</label>
+        <div class="flex items-center gap-1" id="star-picker">
+          <button type="button" onclick="setRating(1)" class="star-btn transition-transform hover:scale-110"><span class="material-symbols-outlined text-[36px] text-amber-400 icon-fill">star</span></button>
+          <button type="button" onclick="setRating(2)" class="star-btn transition-transform hover:scale-110"><span class="material-symbols-outlined text-[36px] text-amber-400 icon-fill">star</span></button>
+          <button type="button" onclick="setRating(3)" class="star-btn transition-transform hover:scale-110"><span class="material-symbols-outlined text-[36px] text-amber-400 icon-fill">star</span></button>
+          <button type="button" onclick="setRating(4)" class="star-btn transition-transform hover:scale-110"><span class="material-symbols-outlined text-[36px] text-amber-400 icon-fill">star</span></button>
+          <button type="button" onclick="setRating(5)" class="star-btn transition-transform hover:scale-110"><span class="material-symbols-outlined text-[36px] text-amber-400 icon-fill">star</span></button>
+          <span id="rating-label" class="ml-3 text-sm font-bold text-secondary">5 / 5 €” Excellent</span>
+        </div>
+      </div>
+      <!-- Textarea -->
+      <div class="mb-6">
+        <label class="block text-[11px] font-black uppercase tracking-widest text-on-surface-variant mb-3">Review Content</label>
+        <textarea id="edit-review-text" rows="5"
+          class="w-full rounded-2xl border border-outline-variant bg-surface-container-low px-4 py-3 text-[15px] text-on-surface leading-relaxed resize-none focus:outline-none focus:ring-2 focus:ring-primary/40 focus:border-primary transition-all placeholder:text-outline"
+          placeholder="Share your experience..."></textarea>
+        <div class="flex justify-end mt-1.5">
+          <span id="char-count" class="text-xs text-outline">0 / 600</span>
+        </div>
+      </div>
+      <!-- Actions -->
+      <div class="flex items-center gap-3 pt-2">
+        <button onclick="closeEditModal()" class="flex-1 py-3 rounded-2xl border-2 border-outline-variant text-on-surface-variant font-headline font-bold text-sm hover:bg-surface-container transition-colors active:scale-95">
+          Cancel
+        </button>
+        <button onclick="saveReview()" class="flex-1 py-3 rounded-2xl bg-primary text-white font-headline font-bold text-sm shadow-lg hover:bg-primary-container transition-colors active:scale-95 flex items-center justify-center gap-2">
+          <span class="material-symbols-outlined text-[18px]">check</span>Save Changes
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div id="toast" class="hidden fixed bottom-8 left-1/2 -translate-x-1/2 z-[60] flex items-center gap-3 bg-inverse-surface text-inverse-on-surface px-6 py-3.5 rounded-2xl shadow-2xl text-sm font-bold">
+  <span class="material-symbols-outlined icon-fill text-green-400 text-[20px]">check_circle</span>
+  Review updated successfully!
+</div>
+
+<script>
+  // ── Search ────────────────────────────────────
+  function searchReviews(query) {
+    const q = query.trim().toLowerCase();
+    // Hiện tất cả cards trước (bỏ hidden-card)
+    document.querySelectorAll('.review-card').forEach(card => {
+      card.classList.remove('hidden-card');
+      const name = card.querySelector('h2, h3')?.textContent?.toLowerCase() || '';
+      card.style.display = (!q || name.includes(q)) ? '' : 'none';
+    });
+    const visible = document.querySelectorAll('.review-card:not([style*="display: none"])').length;
+    const total = document.querySelectorAll('.review-card').length;
+    document.getElementById('review-count-label').textContent =
+      q ? `Found ${visible} of ${total} reviews` : `Showing all ${total} reviews`;
+    // Ẩn show-more khi đang search
+    document.getElementById('show-more-btn').style.display = q ? 'none' : '';
+  }
+
+  // ── Delete ────────────────────────────────────
+  function deleteCard(btn) {
+    const card = btn.closest('article');
+    if (!confirm('Delete this review?')) return;
+    card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+    card.style.opacity = '0';
+    card.style.transform = 'scale(0.97)';
+    setTimeout(() => {
+      card.remove();
+      updateAvgRating();
+      const remaining = document.querySelectorAll('.review-card').length;
+      document.getElementById('review-count-label').textContent =
+        `Showing ${remaining} of ${remaining} reviews`;
+    }, 300);
+  }
+
+  // ── Filter ────────────────────────────────────
+  let activeSortMode = 'recent';
+
+  function closeFilterModal() {
+    document.getElementById('filter-modal').classList.add('hidden');
+  }
+
+  function selectSort(btn) {
+    activeSortMode = btn.dataset.sort;
+    document.querySelectorAll('.sort-btn').forEach(b => {
+      b.classList.remove('bg-primary','text-white');
+      b.classList.add('bg-white','text-primary');
+    });
+    btn.classList.remove('bg-white','text-primary');
+    btn.classList.add('bg-primary','text-white');
+  }
+
+  function updateRangeLabel(val) {
+    const labels = ['All Stars','1 Star','2 Stars','3 Stars','4 Stars','5 Stars'];
+    document.getElementById('range-label').textContent = labels[val] || 'All Stars';
+  }
+
+  function applyFilters() {
+    const ratingFilter = parseInt(document.getElementById('rating-range').value);
+    const list = document.getElementById('review-list');
+
+    // Hiện tất cả cards trước (bỏ hidden-card)
+    let cards = Array.from(document.querySelectorAll('.review-card'));
+    cards.forEach(c => c.classList.remove('hidden-card'));
+
+    // 1. Filter
+    cards.forEach(c => {
+      const r = parseInt(c.dataset.rating) || 5;
+      const hasPhotos = c.dataset.hasPhotos === 'true';
+      let show = true;
+      if (ratingFilter > 0 && r !== ratingFilter) show = false;
+      if (activeSortMode === 'photos' && !hasPhotos) show = false;
+      c.style.display = show ? '' : 'none';
+    });
+
+    // 2. Sort visible cards
+    const visibleCards = cards.filter(c => c.style.display !== 'none');
+
+    if (activeSortMode === 'recent') {
+      visibleCards.sort((a, b) => b.dataset.date.localeCompare(a.dataset.date));
+    } else if (activeSortMode === 'rating') {
+      visibleCards.sort((a, b) => {
+        const rA = parseInt(a.dataset.rating) || 5;
+        const rB = parseInt(b.dataset.rating) || 5;
+        return rB - rA;
+      });
+    }
+    // photos mode: just filter, keep original order
+
+    // 3. Re-append in sorted order
+    visibleCards.forEach(c => list.appendChild(c));
+
+    // 4. Update count label
+    const total = cards.length;
+    const shown = visibleCards.length;
+    document.getElementById('review-count-label').textContent =
+      shown === total ? `Showing all ${total} reviews` : `Showing ${shown} of ${total} reviews`;
+
+    // 5. Hide show-more btn if filter is active
+    const isFiltered = ratingFilter > 0 || activeSortMode === 'photos';
+    document.getElementById('show-more-btn').style.display = isFiltered ? 'none' : '';
+
+    closeFilterModal();
+  }
+
+  // ── Show / Hide reviews ────────────────────────
+  let allShown = false;
+
+  function toggleReviews() {
+    const hiddenCards = document.querySelectorAll('.review-card.hidden-card');
+    const icon = document.getElementById('show-more-icon');
+    const label = document.getElementById('show-more-label');
+    const countLabel = document.getElementById('review-count-label');
+    if (!allShown) {
+      hiddenCards.forEach(c => c.classList.remove('hidden-card'));
+      icon.textContent = 'expand_less';
+      label.textContent = 'Show Less';
+      countLabel.textContent = 'Showing all 6 reviews';
+      allShown = true;
+    } else {
+      const allCards = document.querySelectorAll('.review-card');
+      allCards.forEach((c, i) => { if (i >= 3) c.classList.add('hidden-card'); });
+      icon.textContent = 'expand_more';
+      label.textContent = 'Show All 6 Reviews';
+      countLabel.textContent = 'Showing 3 of 6 reviews';
+      allShown = false;
+      document.getElementById('review-list').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  // Edit Modal
+  let currentRating = 5;
+  let activeReviewPara = null;
+  let activeCard = null;
+
+  function openEditModal(btn) {
+    activeCard = btn.closest('article');
+    activeReviewPara = activeCard.querySelector('.review-text');
+
+    // Read stored rating or count filled stars in the card's .star-row
+    const stored = activeCard.dataset.rating;
+    if (stored) {
+      currentRating = parseInt(stored);
+    } else {
+      const starRow = activeCard.querySelector('.star-row');
+      currentRating = starRow ? starRow.querySelectorAll('span.icon-fill').length || 5 : 5;
+    }
+
+    const hotelName = activeCard.querySelector('h2, h3')?.textContent?.trim() || '';
+    document.getElementById('edit-modal-subtitle').textContent = hotelName;
+    document.getElementById('edit-review-text').value = activeReviewPara?.textContent?.trim() || '';
+    setRating(currentRating);
+    updateCharCount();
+    document.getElementById('edit-modal').classList.remove('hidden');
+  }
+
+  function closeEditModal() {
+    document.getElementById('edit-modal').classList.add('hidden');
+    activeReviewPara = null;
+    activeCard = null;
+  }
+
+  function setRating(val) {
+    currentRating = val;
+    const labels = ['','1 / 5 — Poor','2 / 5 — Fair','3 / 5 — Good','4 / 5 — Great','5 / 5 — Excellent'];
+    const stars = document.querySelectorAll('#star-picker .star-btn span');
+    stars.forEach((s, i) => {
+      if (i < val) {
+        s.style.fontVariationSettings = "'FILL' 1,'wght' 500,'GRAD' 0,'opsz' 24";
+        s.classList.remove('text-outline-variant');
+        s.classList.add('text-amber-400');
+      } else {
+        s.style.fontVariationSettings = "'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24";
+        s.classList.remove('text-amber-400');
+        s.classList.add('text-outline-variant');
+      }
+    });
+    document.getElementById('rating-label').textContent = labels[val];
+  }
+
+  function updateCharCount() {
+    const ta = document.getElementById('edit-review-text');
+    const el = document.getElementById('char-count');
+    el.textContent = ta.value.length + ' / 600';
+    el.classList.toggle('text-error', ta.value.length > 600);
+  }
+  document.getElementById('edit-review-text').addEventListener('input', updateCharCount);
+
+  function updateAvgRating() {
+    const cards = document.querySelectorAll('.review-card');
+    let total = 0;
+    cards.forEach(card => {
+      const stored = card.dataset.rating;
+      if (stored) {
+        total += parseInt(stored);
+      } else {
+        const starRow = card.querySelector('.star-row');
+        total += starRow ? starRow.querySelectorAll('span.icon-fill').length : 5;
+      }
+    });
+    const avg = (total / cards.length).toFixed(1);
+    document.getElementById('avg-rating-display').textContent = avg;
+  }
+
+  function saveReview() {
+    const newText = document.getElementById('edit-review-text').value.trim();
+    if (!newText || !activeReviewPara || !activeCard) return;
+
+    // 1. Update review text
+    activeReviewPara.textContent = newText;
+
+    // 2. Store rating on card
+    activeCard.dataset.rating = currentRating;
+
+    // 3. Re-render the star row inside the card
+    const starRow = activeCard.querySelector('.star-row');
+    if (starRow) {
+      // Detect star size from existing spans (text-[16px] for pill cards, text-[20px] for others)
+      const existingSpan = starRow.querySelector('span');
+      const sizeClass = existingSpan && existingSpan.classList.contains('text-[16px]') ? 'text-[16px]' : 'text-[20px]';
+      starRow.innerHTML = '';
+      for (let i = 1; i <= 5; i++) {
+        const span = document.createElement('span');
+        span.className = 'material-symbols-outlined ' + sizeClass + ' ' + (i <= currentRating ? 'icon-fill text-amber-400' : 'text-outline-variant');
+        span.textContent = 'star';
+        starRow.appendChild(span);
+      }
+    }
+
+    // 4. Update rating number in pill (if present)
+    const ratingNum = activeCard.querySelector('.rating-number');
+    if (ratingNum) ratingNum.textContent = currentRating + '.0';
+
+    closeEditModal();
+    updateAvgRating();
+    showToast();
+  }
+
+  function showToast() {
+    const t = document.getElementById('toast');
+    t.classList.remove('hidden');
+    setTimeout(() => t.classList.add('hidden'), 2800);
+  }
+
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeEditModal(); });
+</script>
+<!-- LIGHTBOX -->
+<div id="lightbox" class="hidden fixed inset-0 z-[70] flex items-center justify-center bg-black/90" onclick="closeLightbox()">
+  <!-- Close -->
+  <button onclick="closeLightbox()" class="absolute top-5 right-5 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors z-10">
+    <span class="material-symbols-outlined text-white text-[22px]">close</span>
+  </button>
+
+  <!-- Prev -->
+  <button id="lb-prev" onclick="event.stopPropagation(); lbMove(-1)"
+          class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/25 flex items-center justify-center transition-colors z-10">
+    <span class="material-symbols-outlined text-white text-[28px]">chevron_left</span>
+  </button>
+
+  <!-- Image -->
+  <img id="lb-img" src="" alt="" class="max-h-[85vh] max-w-[85vw] rounded-2xl shadow-2xl object-contain select-none" onclick="event.stopPropagation()" />
+
+  <!-- Next -->
+  <button id="lb-next" onclick="event.stopPropagation(); lbMove(1)"
+          class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/25 flex items-center justify-center transition-colors z-10">
+    <span class="material-symbols-outlined text-white text-[28px]">chevron_right</span>
+  </button>
+
+  <!-- Counter -->
+  <div id="lb-counter" class="absolute bottom-5 left-1/2 -translate-x-1/2 text-white/70 text-sm font-bold bg-black/40 px-4 py-1.5 rounded-full"></div>
+</div>
+
+<script>
+  // ── Lightbox ───────────────────────────────────
+  let lbImages = [];
+  let lbIndex  = 0;
+
+  function openLightbox(wrapper) {
+    // Collect all review-img in the same article
+    const card = wrapper.closest('article');
+    const imgs = Array.from(card.querySelectorAll('.review-img'));
+    if (!imgs.length) return;
+
+    lbImages = imgs.map(i => ({ src: i.src, alt: i.alt }));
+    // Find which image was clicked
+    const clicked = wrapper.querySelector('.review-img');
+    lbIndex = clicked ? lbImages.findIndex(i => i.src === clicked.src) : 0;
+    if (lbIndex < 0) lbIndex = 0;
+
+    lbRender();
+    document.getElementById('lightbox').classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+
+  function lbMove(dir) {
+    lbIndex = (lbIndex + dir + lbImages.length) % lbImages.length;
+    lbRender();
+  }
+
+  function lbRender() {
+    const img = document.getElementById('lb-img');
+    img.style.opacity = '0';
+    setTimeout(() => {
+      img.src = lbImages[lbIndex].src.replace(/w=\d+/, 'w=1200');
+      img.alt = lbImages[lbIndex].alt;
+      img.style.opacity = '1';
+    }, 120);
+    img.style.transition = 'opacity 0.15s ease';
+
+    // Counter
+    document.getElementById('lb-counter').textContent =
+      lbImages.length > 1 ? `${lbIndex + 1} / ${lbImages.length}` : '';
+
+    // Hide nav if only 1 image
+    const show = lbImages.length > 1;
+    document.getElementById('lb-prev').style.display = show ? '' : 'none';
+    document.getElementById('lb-next').style.display = show ? '' : 'none';
+  }
+
+  // Keyboard navigation
+  document.addEventListener('keydown', e => {
+    const lb = document.getElementById('lightbox');
+    if (lb.classList.contains('hidden')) return;
+    if (e.key === 'ArrowRight') lbMove(1);
+    if (e.key === 'ArrowLeft')  lbMove(-1);
+    if (e.key === 'Escape')     closeLightbox();
+  });
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

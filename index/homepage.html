@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Booking4LU | Editorial Travel Excellence</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-fixed-variant": "#00458f",
+              "tertiary": "#003b4e",
+              "primary-fixed": "#d7e2ff",
+              "tertiary-fixed": "#bee9ff",
+              "tertiary-container": "#00536c",
+              "inverse-primary": "#abc7ff",
+              "on-secondary-fixed-variant": "#5d4201",
+              "on-tertiary-container": "#74c7ed",
+              "surface-container-low": "#f2f4f7",
+              "on-primary": "#ffffff",
+              "surface-container-highest": "#e0e3e6",
+              "on-tertiary-fixed": "#001f2a",
+              "secondary-fixed": "#ffdea5",
+              "error-container": "#ffdad6",
+              "on-primary-container": "#9bbdff",
+              "surface-dim": "#d8dadd",
+              "on-background": "#191c1e",
+              "primary-container": "#004a99",
+              "on-secondary-container": "#785a1a",
+              "on-primary-fixed": "#001b3f",
+              "surface-container-high": "#e6e8eb",
+              "on-tertiary-fixed-variant": "#004d65",
+              "inverse-surface": "#2d3133",
+              "surface-bright": "#f7f9fc",
+              "error": "#ba1a1a",
+              "on-error-container": "#93000a",
+              "secondary-container": "#fed488",
+              "on-surface-variant": "#424751",
+              "inverse-on-surface": "#eff1f4",
+              "on-surface": "#191c1e",
+              "on-tertiary": "#ffffff",
+              "primary-fixed-dim": "#abc7ff",
+              "primary": "#00346f",
+              "tertiary-fixed-dim": "#7ed1f7",
+              "surface-container": "#eceef1",
+              "on-secondary": "#ffffff",
+              "secondary-fixed-dim": "#e9c176",
+              "surface-tint": "#255dad",
+              "on-error": "#ffffff",
+              "surface-variant": "#e0e3e6",
+              "outline": "#737783",
+              "outline-variant": "#c2c6d3",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-fixed": "#261900",
+              "background": "#f7f9fc",
+              "surface": "#f7f9fc",
+              "secondary": "#775a19"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+        }
+        .map-bg {
+            background-color: #e0e3e6;
+            background-image: radial-gradient(#c2c6d3 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface antialiased">
+<!-- TopNavBar (Shared Component) -->
+<header class="fixed top-0 w-full z-50 bg-white/85 backdrop-blur-xl shadow-[0px_12px_32px_rgba(0,52,111,0.08)]">
+<nav class="flex justify-between items-center w-full px-6 py-4 max-w-screen-2xl mx-auto">
+<!-- Brand Logo -->
+<div class="text-2xl font-bold tracking-tighter text-blue-900">Booking4LU</div>
+<!-- Navigation Links -->
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-sm font-semibold tracking-tight text-blue-900 border-b-2 border-amber-600 pb-1" href="#">Hotels</a>
+<a class="text-sm font-semibold tracking-tight text-slate-500 hover:text-blue-800 transition-colors duration-300" href="#">Experiences</a>
+<a class="text-sm font-semibold tracking-tight text-slate-500 hover:text-blue-800 transition-colors duration-300" href="#">Social</a>
+</div>
+<!-- Trailing Actions & Search -->
+<div class="flex items-center space-x-4">
+<div class="relative hidden sm:block">
+<input class="bg-surface-container-high border-none rounded-full px-4 py-2 text-sm w-64 focus:ring-2 focus:ring-surface-tint" placeholder="Search destinations..." type="text"/>
+<button class="absolute right-3 top-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+</div>
+<!-- Language Switcher -->
+<div class="group relative">
+<button class="p-2 rounded-full hover:bg-slate-50 transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-blue-900">language</span>
+<span class="text-xs font-bold text-blue-900">EN</span>
+</button>
+<!-- Language Dropdown (Hidden by default, shown on hover/focus) -->
+<div class="absolute right-0 top-full mt-2 w-48 glass-panel rounded-xl shadow-xl border border-outline-variant/20 hidden group-hover:block overflow-hidden">
+<div class="grid grid-cols-1 p-2">
+<button class="flex items-center gap-3 px-3 py-2 hover:bg-surface-container-low rounded-lg transition-colors">
+<span class="text-lg">🇻🇳</span> <span class="text-xs font-medium">Tiếng Việt</span>
+</button>
+<button class="flex items-center gap-3 px-3 py-2 bg-surface-container-low rounded-lg transition-colors">
+<span class="text-lg">🇺🇸</span> <span class="text-xs font-medium">English</span>
+</button>
+<button class="flex items-center gap-3 px-3 py-2 hover:bg-surface-container-low rounded-lg transition-colors">
+<span class="text-lg">🇨🇳</span> <span class="text-xs font-medium">简体中文</span>
+</button>
+<button class="flex items-center gap-3 px-3 py-2 hover:bg-surface-container-low rounded-lg transition-colors">
+<span class="text-lg">🇯🇵</span> <span class="text-xs font-medium">日本語</span>
+</button>
+<button class="flex items-center gap-3 px-3 py-2 hover:bg-surface-container-low rounded-lg transition-colors">
+<span class="text-lg">🇮🇹</span> <span class="text-xs font-medium">Italiano</span>
+</button>
+<button class="flex items-center gap-3 px-3 py-2 hover:bg-surface-container-low rounded-lg transition-colors">
+<span class="text-lg">🇩🇪</span> <span class="text-xs font-medium">Deutsch</span>
+</button>
+</div>
+</div>
+</div>
+<button class="p-2 rounded-full hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined text-blue-900">account_circle</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="pt-20 min-h-screen flex flex-col md:flex-row overflow-hidden h-screen">
+<!-- Search & Filter Bar (Floating for Map Context) -->
+<div class="absolute top-24 left-1/2 -translate-x-1/2 z-40 w-full max-w-2xl px-4">
+<div class="bg-white/90 backdrop-blur-md rounded-2xl shadow-xl flex items-center p-2 border border-white">
+<div class="flex-1 flex items-center px-4 border-r border-slate-100">
+<span class="material-symbols-outlined text-slate-400 mr-2">location_on</span>
+<input class="border-none focus:ring-0 w-full font-medium text-on-surface bg-transparent" type="text" value="Ho Chi Minh City, Vietnam"/>
+</div>
+<div class="flex-1 hidden sm:flex items-center px-4 border-r border-slate-100">
+<span class="material-symbols-outlined text-slate-400 mr-2">calendar_month</span>
+<span class="text-sm font-medium text-on-surface">Oct 24 - Oct 28</span>
+</div>
+<button class="ml-2 bg-secondary-container text-on-secondary-container p-3 rounded-xl hover:scale-105 transition-transform flex items-center gap-2" id="filter-trigger">
+<span class="material-symbols-outlined">tune</span>
+<span class="text-sm font-bold">Filters</span>
+</button>
+</div>
+</div>
+<!-- Left Column: Map Content -->
+<div class="flex-1 relative map-bg overflow-hidden">
+<!-- Mock Interactive Map -->
+<div class="absolute inset-0 w-full h-full" data-location="Ho Chi Minh City" style="">
+<!-- User Location Pulse -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<div class="relative flex items-center justify-center">
+<div class="absolute w-64 h-64 bg-primary/10 rounded-full border-2 border-primary animate-pulse"></div>
+<div class="w-4 h-4 bg-primary rounded-full ring-4 ring-white shadow-lg z-10"></div>
+</div>
+</div>
+<!-- Cluster Marker -->
+<div class="absolute top-1/4 left-1/3 group cursor-pointer">
+<div class="bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center font-bold shadow-lg border-2 border-white group-hover:scale-110 transition-transform">
+                        12
+                    </div>
+</div>
+<!-- Individual Hotel Markers -->
+<!-- Marker 1 — The Azure Sanctuary -->
+<div class="absolute top-1/3 right-1/4 cursor-pointer marker-wrapper" data-id="hotel-1">
+  <div class="marker-inner bg-white rounded-lg shadow-sm border border-outline-variant/40 transition-all duration-300 p-1.5 flex flex-col items-center gap-1 w-[80px]">
+    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8_Up820xTy9L7dCfBvhEMebEI2SbLeOcrnhDT6S65F7l2IeuTzFiU5Ku0P0Gh1ca1yAdXi5lpaT2F3VBFO5EWr8Fx3K1RVCxE5TJx-fwdzd_RAwQ_iT8jymVnuJAfw6Tasm0PdSsaBOKS3m0ilcS218QSbIc4LPN5LhgzsRp_Wgoj-G7SRopesItOitbFDZ1O-48wBZn23-z96FgSmxngMYTL20bIawlXIwsUHtNsDqtBEd4wzQ_BrG2EA9UnP5IN9eBFFqMgkSg" alt="The Azure Sanctuary" class="w-full h-12 rounded object-cover"/>
+    <span class="text-[10px] font-semibold text-blue-900 truncate w-full text-center leading-tight">The Azure Sanctuary</span>
+  </div>
+  <div class="w-2 h-2 bg-white border-b border-r border-outline-variant/40 rotate-45 mx-auto -mt-px shadow-sm"></div>
+</div>
+
+<!-- Marker 2 — The Gilded Manor -->
+<div class="absolute bottom-1/4 right-1/3 cursor-pointer marker-wrapper" data-id="hotel-2">
+  <div class="marker-inner bg-white rounded-lg shadow-sm border border-outline-variant/40 transition-all duration-300 p-1.5 flex flex-col items-center gap-1 w-[80px]">
+    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdT-tkeqqMwu7a090Frmt7FtFibb_hp29IHEEbYoFLaAT-D9fHm_AkQVxOH-cYPMdUPo2FAz0N1ryQlWazhl75Ggcv-Ttw-fr15Po3caDasTcbvXwxj1j3g7-7IFOKRW9WsLk5bNOpCkpPx7X8ryM3zF1XhpQ5sKVIpSikNW6bDZRgnaa1WUsaPHtjB74_-_JM2Ba5tTNnaxfM3AApjqWEaJqx34rWyhnx1y_vdvyJr-NjwaWb8SuLviarCjhmi3rTdLPO0DVDp4A" alt="The Gilded Manor" class="w-full h-12 rounded object-cover"/>
+    <span class="text-[10px] font-semibold text-blue-900 truncate w-full text-center leading-tight">The Gilded Manor</span>
+  </div>
+  <div class="w-2 h-2 bg-white border-b border-r border-outline-variant/40 rotate-45 mx-auto -mt-px shadow-sm"></div>
+</div>
+</div>
+<!-- Map Controls -->
+<div class="absolute right-6 top-1/2 -translate-y-1/2 flex flex-col gap-2 z-30">
+<button class="bg-white p-3 rounded-xl shadow-lg text-primary hover:bg-slate-50"><span class="material-symbols-outlined">add</span></button>
+<button class="bg-white p-3 rounded-xl shadow-lg text-primary hover:bg-slate-50"><span class="material-symbols-outlined">remove</span></button>
+<button class="bg-white p-3 rounded-xl shadow-lg text-primary hover:bg-slate-50 mt-4"><span class="material-symbols-outlined">my_location</span></button>
+</div>
+</div>
+<!-- Right Column: Sidebar (High-Rated Hotels) -->
+<aside class="w-full md:w-[450px] bg-white border-l border-outline-variant/20 overflow-y-auto flex flex-col">
+<div class="p-6">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h2 class="font-headline text-2xl font-extrabold text-blue-900 tracking-tight">Curated Stays</h2>
+<p class="text-slate-500 text-sm">Exclusively for Booking4LU members</p>
+</div>
+<span class="text-xs font-bold uppercase tracking-widest text-secondary">248 Results</span>
+</div>
+<!-- High-Rated Hotels List -->
+<div class="space-y-8">
+<!-- Hotel Card 1 -->
+<div class="group cursor-pointer hotel-card" data-id="hotel-1">
+<div class="relative h-64 w-full rounded-2xl overflow-hidden mb-4">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="luxurious modern hotel bedroom with ocean view through floor-to-ceiling windows at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8_Up820xTy9L7dCfBvhEMebEI2SbLeOcrnhDT6S65F7l2IeuTzFiU5Ku0P0Gh1ca1yAdXi5lpaT2F3VBFO5EWr8Fx3K1RVCxE5TJx-fwdzd_RAwQ_iT8jymVnuJAfw6Tasm0PdSsaBOKS3m0ilcS218QSbIc4LPN5LhgzsRp_Wgoj-G7SRopesItOitbFDZ1O-48wBZn23-z96FgSmxngMYTL20bIawlXIwsUHtNsDqtBEd4wzQ_BrG2EA9UnP5IN9eBFFqMgkSg"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-amber-500 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold text-blue-900">4.9</span>
+</div>
+<div class="absolute bottom-4 left-4">
+<span class="bg-primary text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Premier Boutique</span>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline font-bold text-xl text-blue-900 leading-tight">The Azure Sanctuary</h3>
+<p class="text-slate-500 text-sm flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-sm">location_on</span> District 1, Ho Chi Minh City
+                                </p>
+</div>
+<div class="text-right">
+<div class="text-xl font-extrabold text-blue-900 tracking-tighter">7.5M VND</div>
+<div class="text-[10px] text-slate-400 font-semibold uppercase">per night</div>
+</div>
+</div>
+<div class="flex gap-4 mt-3">
+<div class="flex items-center gap-1 text-slate-500">
+<span class="material-symbols-outlined text-lg text-tertiary">pool</span>
+<span class="text-xs font-medium">Infinity Pool</span>
+</div>
+<div class="flex items-center gap-1 text-slate-500">
+<span class="material-symbols-outlined text-lg text-tertiary">spa</span>
+<span class="text-xs font-medium">Wellness Spa</span>
+</div>
+</div>
+</div>
+<!-- Hotel Card 2 -->
+<div class="group cursor-pointer hotel-card" data-id="hotel-2">
+<div class="relative h-64 w-full rounded-2xl overflow-hidden mb-4">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="sophisticated grand hotel lobby with marble floors and ornate crystal chandeliers at night" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdT-tkeqqMwu7a090Frmt7FtFibb_hp29IHEEbYoFLaAT-D9fHm_AkQVxOH-cYPMdUPo2FAz0N1ryQlWazhl75Ggcv-Ttw-fr15Po3caDasTcbvXwxj1j3g7-7IFOKRW9WsLk5bNOpCkpPx7X8ryM3zF1XhpQ5sKVIpSikNW6bDZRgnaa1WUsaPHtjB74_-_JM2Ba5tTNnaxfM3AApjqWEaJqx34rWyhnx1y_vdvyJr-NjwaWb8SuLviarCjhmi3rTdLPO0DVDp4A"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-amber-500 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold text-blue-900">4.7</span>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline font-bold text-xl text-blue-900 leading-tight">The Gilded Manor</h3>
+<p class="text-slate-500 text-sm flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-sm">location_on</span> District 3, Riverside
+                                </p>
+</div>
+<div class="text-right">
+<div class="text-xl font-extrabold text-blue-900 tracking-tighter">4.2M VND</div>
+<div class="text-[10px] text-slate-400 font-semibold uppercase">per night</div>
+</div>
+</div>
+<div class="flex gap-4 mt-3">
+<div class="flex items-center gap-1 text-slate-500">
+<span class="material-symbols-outlined text-lg text-tertiary">wifi</span>
+<span class="text-xs font-medium">Free High-speed</span>
+</div>
+<div class="flex items-center gap-1 text-slate-500">
+<span class="material-symbols-outlined text-lg text-tertiary">fitness_center</span>
+<span class="text-xs font-medium">24/7 Gym</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</aside>
+</main>
+<!-- Filter Modal (Aero Effect) -->
+<div class="fixed inset-0 z-[100] flex items-center justify-center p-6 hidden" id="filter-modal">
+<div class="absolute inset-0 bg-blue-900/20 backdrop-blur-xl"></div>
+<div class="relative bg-white w-full max-w-4xl max-h-[921px] rounded-[2rem] shadow-2xl overflow-hidden flex flex-col">
+<!-- Modal Header -->
+<div class="p-8 border-b border-slate-100 flex justify-between items-center bg-surface-container-low">
+<div>
+<h2 class="font-headline text-3xl font-extrabold text-blue-900">Filter Preferences</h2>
+<p class="text-slate-500 text-sm">Tailor your stay to your exact requirements</p>
+</div>
+<button class="p-2 hover:bg-slate-200 rounded-full transition-colors" id="filter-close">
+<span class="material-symbols-outlined text-3xl">close</span>
+</button>
+</div>
+<!-- Modal Content -->
+<div class="overflow-y-auto p-8 space-y-12">
+<!-- Price Range Slider -->
+<div>
+<div class="flex justify-between items-end mb-6">
+<label class="font-headline font-bold text-lg text-blue-900">Budget Range (VND)</label>
+<span class="text-primary font-bold bg-primary-fixed px-3 py-1 rounded-lg">0 - 100M VND</span>
+</div>
+<div class="relative h-2 bg-slate-100 rounded-full mb-8">
+<div class="absolute inset-y-0 left-0 right-0 bg-primary-container rounded-full"></div>
+<div class="absolute left-0 -top-2 w-6 h-6 bg-white border-4 border-primary rounded-full shadow-lg cursor-pointer"></div>
+<div class="absolute right-0 -top-2 w-6 h-6 bg-white border-4 border-primary rounded-full shadow-lg cursor-pointer"></div>
+</div>
+<div class="grid grid-cols-5 gap-2">
+<button class="py-2 px-1 text-[10px] font-bold border border-outline-variant/30 rounded-lg hover:bg-primary-fixed transition-colors">Under 1M</button>
+<button class="py-2 px-1 text-[10px] font-bold border border-outline-variant/30 rounded-lg bg-primary-container text-white">1M-5M</button>
+<button class="py-2 px-1 text-[10px] font-bold border border-outline-variant/30 rounded-lg hover:bg-primary-fixed transition-colors">5M-15M</button>
+<button class="py-2 px-1 text-[10px] font-bold border border-outline-variant/30 rounded-lg hover:bg-primary-fixed transition-colors">15M-50M</button>
+<button class="py-2 px-1 text-[10px] font-bold border border-outline-variant/30 rounded-lg hover:bg-primary-fixed transition-colors">50M-100M</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Property Type -->
+<div>
+<h3 class="font-headline font-bold text-lg text-blue-900 mb-6">Property Type</h3>
+<div class="grid grid-cols-2 gap-3">
+<label class="flex items-center gap-3 p-4 bg-surface-container-low rounded-xl cursor-pointer hover:bg-surface-container-high transition-colors">
+<input checked="" class="w-5 h-5 rounded text-primary border-none bg-white focus:ring-0" type="checkbox"/>
+<span class="text-sm font-semibold">Hotel</span>
+</label>
+<label class="flex items-center gap-3 p-4 bg-surface-container-low rounded-xl cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="w-5 h-5 rounded text-primary border-none bg-white focus:ring-0" type="checkbox"/>
+<span class="text-sm font-semibold">Penthouse</span>
+</label>
+<label class="flex items-center gap-3 p-4 bg-surface-container-low rounded-xl cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="w-5 h-5 rounded text-primary border-none bg-white focus:ring-0" type="checkbox"/>
+<span class="text-sm font-semibold">Resort</span>
+</label>
+<label class="flex items-center gap-3 p-4 bg-surface-container-low rounded-xl cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="w-5 h-5 rounded text-primary border-none bg-white focus:ring-0" type="checkbox"/>
+<span class="text-sm font-semibold">Villa</span>
+</label>
+</div>
+</div>
+<!-- Ratings -->
+<div>
+<h3 class="font-headline font-bold text-lg text-blue-900 mb-6">Star Rating</h3>
+<div class="flex flex-wrap gap-2">
+<button class="px-6 py-3 border border-outline-variant/30 rounded-xl hover:bg-secondary-container transition-colors flex items-center gap-1 font-bold">1 <span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="px-6 py-3 border border-outline-variant/30 rounded-xl hover:bg-secondary-container transition-colors flex items-center gap-1 font-bold">2 <span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="px-6 py-3 border border-outline-variant/30 rounded-xl hover:bg-secondary-container transition-colors flex items-center gap-1 font-bold">3 <span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="px-6 py-3 bg-secondary-container rounded-xl flex items-center gap-1 font-bold">4 <span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="px-6 py-3 border border-outline-variant/30 rounded-xl hover:bg-secondary-container transition-colors flex items-center gap-1 font-bold">5 <span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span></button>
+</div>
+</div>
+</div>
+<!-- Amenities -->
+<div>
+<h3 class="font-headline font-bold text-lg text-blue-900 mb-6">Essential Amenities</h3>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<button class="flex items-center gap-3 p-4 border border-outline-variant/20 rounded-xl hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined text-tertiary">wifi</span>
+<span class="text-xs font-bold">Wifi</span>
+</button>
+<button class="flex items-center gap-3 p-4 border border-outline-variant/20 rounded-xl bg-primary/5 border-primary/20">
+<span class="material-symbols-outlined text-tertiary">pool</span>
+<span class="text-xs font-bold">Pool</span>
+</button>
+<button class="flex items-center gap-3 p-4 border border-outline-variant/20 rounded-xl hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined text-tertiary">fitness_center</span>
+<span class="text-xs font-bold">Gym</span>
+</button>
+<button class="flex items-center gap-3 p-4 border border-outline-variant/20 rounded-xl hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined text-tertiary">spa</span>
+<span class="text-xs font-bold">Spa</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Modal Footer -->
+<div class="p-8 border-t border-slate-100 flex justify-between items-center bg-white mt-auto">
+<button class="text-blue-900 font-bold underline decoration-amber-600 underline-offset-4">Clear all</button>
+<div class="flex gap-4">
+<label class="flex items-center gap-2 mr-4">
+<input class="w-5 h-5 rounded text-primary" type="checkbox"/>
+<span class="text-sm font-bold text-slate-600">Show available only</span>
+</label>
+<button class="bg-gradient-to-r from-blue-900 to-blue-700 text-white px-12 py-4 rounded-2xl font-bold hover:shadow-lg transition-shadow" id="filter-apply">Apply Filters</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Chatbot Widget (Concierge) -->
+<div class="fixed bottom-8 right-8 z-[100] flex flex-col items-end group">
+<!-- Expanded Chat Window (Concept - Initial Hidden) -->
+<div class="mb-4 w-80 bg-white rounded-3xl shadow-2xl overflow-hidden border border-outline-variant/20 hidden group-hover:block">
+<div class="bg-primary p-4 text-white">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">support_agent</span>
+</div>
+<div>
+<div class="text-sm font-bold">LU Concierge</div>
+<div class="text-[10px] opacity-80 uppercase tracking-widest">Always active</div>
+</div>
+</div>
+</div>
+<div class="p-4 h-64 overflow-y-auto bg-slate-50 flex flex-col gap-3">
+<div class="bg-white p-3 rounded-2xl rounded-tl-none text-xs shadow-sm max-w-[80%]">
+                    Welcome to Booking4LU. How can I assist with your premium reservation today?
+                </div>
+<div class="bg-primary-fixed p-3 rounded-2xl rounded-tr-none text-xs self-end max-w-[80%] text-blue-900">
+                    I need a villa with a private pool in District 1.
+                </div>
+</div>
+<div class="p-3 bg-white border-t flex gap-2">
+<input class="flex-1 text-xs border-none bg-slate-100 rounded-full px-4 py-2 focus:ring-1 focus:ring-primary" placeholder="Type a message..." type="text"/>
+<button class="bg-primary text-white p-2 rounded-full">
+<span class="material-symbols-outlined text-sm">send</span>
+</button>
+</div>
+</div>
+<!-- FAB Trigger -->
+<button class="w-16 h-16 bg-gradient-to-br from-blue-900 to-blue-700 text-white rounded-full flex items-center justify-center shadow-2xl shadow-blue-900/40 hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-3xl">chat</span>
+</button>
+</div>
+<!-- Footer (Shared Component) -->
+<footer class="w-full border-t border-slate-200 bg-slate-50 relative z-10">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-8 space-y-4 md:space-y-0 max-w-screen-2xl mx-auto">
+<div class="text-lg font-bold text-blue-900">Booking4LU</div>
+<div class="flex gap-8">
+<a class="text-xs uppercase tracking-widest font-semibold text-slate-500 hover:text-amber-600 transition-colors" href="#">About</a>
+<a class="text-xs uppercase tracking-widest font-semibold text-slate-500 hover:text-amber-600 transition-colors" href="#">Privacy</a>
+<a class="text-xs uppercase tracking-widest font-semibold text-slate-500 hover:text-amber-600 transition-colors" href="#">Terms</a>
+<a class="text-xs uppercase tracking-widest font-semibold text-slate-500 hover:text-amber-600 transition-colors" href="#">Support</a>
+</div>
+<p class="text-[10px] text-slate-400 font-medium">© 2024 Booking4LU. Editorial Excellence in Travel.</p>
+</div>
+</footer>
+<!-- Filter Trigger Logic Mock -->
+<script>
+        const trigger = document.getElementById('filter-trigger');
+        const modal = document.getElementById('filter-modal');
+        const close = document.getElementById('filter-close');
+        const apply = document.getElementById('filter-apply');
+
+        trigger.onclick = () => modal.classList.remove('hidden');
+        close.onclick = () => modal.classList.add('hidden');
+        apply.onclick = () => modal.classList.add('hidden');
+    </script>
+
+<style>
+  /* Marker highlight state */
+  .marker-wrapper.is-highlighted {
+    z-index: 50;
+  }
+  .marker-wrapper.is-highlighted .marker-inner {
+    transform: scale(1.2);
+    border-color: #ef4444 !important;
+    box-shadow: 0 8px 24px rgba(239, 68, 68, 0.4);
+  }
+  .marker-inner {
+    transform: scale(1);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  }
+  .marker-wrapper:hover .marker-inner {
+    transform: scale(1.08);
+    box-shadow: 0 4px 12px rgba(0, 52, 111, 0.15);
+  }
+
+  /* Card highlight state */
+  .hotel-card.is-highlighted {
+    outline: 2px solid #00346f;
+    outline-offset: 4px;
+    border-radius: 1rem;
+  }
+</style>
+
+<script>
+  // ── Hover Highlight Marker ─────────────────────
+  document.querySelectorAll('.hotel-card').forEach(card => {
+    const id = card.dataset.id;
+
+    // mouseenter: highlight marker
+    card.addEventListener('mouseenter', () => {
+      const marker = document.querySelector(`.marker-wrapper[data-id="${id}"]`);
+      if (marker) marker.classList.add('is-highlighted');
+    });
+
+    // mouseleave: remove highlight
+    card.addEventListener('mouseleave', () => {
+      const marker = document.querySelector(`.marker-wrapper[data-id="${id}"]`);
+      if (marker) marker.classList.remove('is-highlighted');
+    });
+
+    // click: scroll marker into view (mock center map effect)
+    card.addEventListener('click', () => {
+      const marker = document.querySelector(`.marker-wrapper[data-id="${id}"]`);
+      if (!marker) return;
+
+      // Pulse animation on marker to simulate "centering"
+      marker.classList.add('is-highlighted');
+      marker.querySelector('.marker-inner').style.transform = 'scale(1.35)';
+      setTimeout(() => {
+        marker.querySelector('.marker-inner').style.transform = '';
+        marker.classList.remove('is-highlighted');
+      }, 800);
+    });
+  });
+
+  // ── Bonus: hover marker → highlight card ──────
+  document.querySelectorAll('.marker-wrapper').forEach(marker => {
+    const id = marker.dataset.id;
+
+    marker.addEventListener('mouseenter', () => {
+      const card = document.querySelector(`.hotel-card[data-id="${id}"]`);
+      if (card) {
+        card.classList.add('is-highlighted');
+        card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    });
+
+    marker.addEventListener('mouseleave', () => {
+      const card = document.querySelector(`.hotel-card[data-id="${id}"]`);
+      if (card) card.classList.remove('is-highlighted');
+    });
+  });
+</script>
+
+</body></html>

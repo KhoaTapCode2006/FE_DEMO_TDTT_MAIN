@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Booking4LU | Access Your Premium World</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-fixed-variant": "#00458f",
+                        "tertiary": "#003b4e",
+                        "primary-fixed": "#d7e2ff",
+                        "tertiary-fixed": "#bee9ff",
+                        "tertiary-container": "#00536c",
+                        "inverse-primary": "#abc7ff",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "on-tertiary-container": "#74c7ed",
+                        "surface-container-low": "#f2f4f7",
+                        "on-primary": "#ffffff",
+                        "surface-container-highest": "#e0e3e6",
+                        "on-tertiary-fixed": "#001f2a",
+                        "secondary-fixed": "#ffdea5",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#9bbdff",
+                        "surface-dim": "#d8dadd",
+                        "on-background": "#191c1e",
+                        "primary-container": "#004a99",
+                        "on-secondary-container": "#785a1a",
+                        "on-primary-fixed": "#001b3f",
+                        "surface-container-high": "#e6e8eb",
+                        "on-tertiary-fixed-variant": "#004d65",
+                        "inverse-surface": "#2d3133",
+                        "surface-bright": "#f7f9fc",
+                        "error": "#ba1a1a",
+                        "on-error-container": "#93000a",
+                        "secondary-container": "#fed488",
+                        "on-surface-variant": "#424751",
+                        "inverse-on-surface": "#eff1f4",
+                        "on-surface": "#191c1e",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed-dim": "#abc7ff",
+                        "primary": "#00346f",
+                        "tertiary-fixed-dim": "#7ed1f7",
+                        "surface-container": "#eceef1",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed-dim": "#e9c176",
+                        "surface-tint": "#255dad",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e0e3e6",
+                        "outline": "#737783",
+                        "outline-variant": "#c2c6d3",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed": "#261900",
+                        "background": "#f7f9fc",
+                        "surface": "#f7f9fc",
+                        "secondary": "#775a19"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col">
+<!-- TopNavBar - Rendered but with suppression logic for transactional pages applied to content -->
+<nav class="fixed top-0 w-full z-50 bg-white/85 backdrop-blur-xl shadow-[0px_12px_32px_rgba(0,52,111,0.08)]">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-blue-900">Booking4LU</div>
+<div class="hidden md:flex space-x-8">
+<a class="text-slate-500 hover:text-blue-800 text-sm font-semibold tracking-tight transition-colors duration-300" href="#">Hotels</a>
+<a class="text-slate-500 hover:text-blue-800 text-sm font-semibold tracking-tight transition-colors duration-300" href="#">Experiences</a>
+<a class="text-slate-500 hover:text-blue-800 text-sm font-semibold tracking-tight transition-colors duration-300" href="#">Social</a>
+</div>
+<div class="flex items-center space-x-4">
+<span class="material-symbols-outlined text-blue-900 cursor-pointer hover:bg-slate-50 p-2 rounded-full transition-colors">language</span>
+<span class="material-symbols-outlined text-blue-900 cursor-pointer hover:bg-slate-50 p-2 rounded-full transition-colors">account_circle</span>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-24 pb-12 flex items-center justify-center relative overflow-hidden">
+<!-- Background Image Bleed -->
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="luxury hotel infinity pool overlooking a serene mediterranean coastline at dusk with soft golden ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2fHVYIXT9QR8_ZVwNp4CBRCp1cxfEcZ_t3yeW4cw3aknThGmdGdlkL6eTmrNSaxEtK_IyqSCMih-N7_NsGG5uLqjibl2j5zra68uEBgswRaq2FLq21GhhZV9StCoAuUBXMPbYTBwl0JF4Q3kKH8-0rDpMZcr2CXNOxw0v0ILdYOg-gWUhdycxV25s6El2iWgO9O4y-WiXygMHT9EVieRka57xFFFoTVZB3mMSMBMG7zY_DO5Ks2G0FF7GxLHG_hBa7GdCxyZi0yo"/>
+<div class="absolute inset-0 bg-primary/20 backdrop-brightness-75"></div>
+</div>
+<div class="container mx-auto px-4 z-10 grid lg:grid-cols-12 gap-8 items-start">
+<!-- Left Side: Editorial Content -->
+<div class="lg:col-span-5 text-white py-12 hidden lg:block">
+<h1 class="text-6xl font-extrabold tracking-tighter mb-6 leading-tight">
+                    The Art of <br/><span class="text-secondary-fixed">Exceptional</span> Travel.
+                </h1>
+<p class="text-xl font-medium opacity-90 max-w-md leading-relaxed mb-8">
+                    Welcome to the Digital Concierge. Whether you're returning for another escape or joining our inner circle, luxury awaits.
+                </p>
+<div class="flex flex-col space-y-4">
+<div class="flex items-center space-x-4">
+<div class="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-md">
+<span class="material-symbols-outlined text-secondary-fixed">verified_user</span>
+</div>
+<div>
+<p class="font-bold text-lg">Verified Excellence</p>
+<p class="text-sm opacity-70">Every property curated for perfection.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Side: Forms Container -->
+<div class="lg:col-span-7 w-full max-w-4xl mx-auto">
+<div class="grid md:grid-cols-2 gap-px bg-outline-variant/20 rounded-[2rem] overflow-hidden shadow-2xl glass-card border border-white/20">
+<!-- Login Form Section -->
+<div class="p-8 lg:p-10 bg-white/60">
+<div class="mb-10">
+<h2 class="text-3xl font-bold text-primary mb-2">Welcome back</h2>
+<p class="text-on-surface-variant text-sm">Please enter your credentials to access your account.</p>
+</div>
+<form action="#" class="space-y-6">
+<div class="space-y-2">
+<label class="text-xs font-semibold uppercase tracking-widest text-primary/70 ml-1">Username or Email</label>
+<input class="w-full px-5 py-4 bg-surface-container-highest/50 rounded-xl border-none focus:ring-2 focus:ring-surface-tint text-on-surface transition-all" placeholder="alex.lux@example.com" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-semibold uppercase tracking-widest text-primary/70 ml-1">Password</label>
+<input class="w-full px-5 py-4 bg-surface-container-highest/50 rounded-xl border-none focus:ring-2 focus:ring-surface-tint text-on-surface transition-all" placeholder="••••••••" type="password"/>
+</div>
+<div class="flex items-center justify-between">
+<label class="flex items-center space-x-2 cursor-pointer group">
+<input class="w-5 h-5 rounded border-none bg-surface-container-highest text-primary focus:ring-0 focus:ring-offset-0 transition-colors" type="checkbox"/>
+<span class="text-sm text-on-surface-variant group-hover:text-primary transition-colors">Remember me</span>
+</label>
+<a class="text-sm font-semibold text-secondary hover:underline" href="#">Forgot password?</a>
+</div>
+<button class="w-full py-4 rounded-xl bg-gradient-to-r from-primary to-primary-container text-white font-bold text-lg shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all" type="submit">
+                                Log In
+                            </button>
+</form>
+<div class="mt-8 pt-8 border-t border-primary/5">
+<p class="text-center text-sm text-on-surface-variant">Don't have an account yet? <br class="md:hidden"/>Use the registration form to join us.</p>
+</div>
+</div>
+<!-- Registration Form Section -->
+<div class="p-8 lg:p-10 bg-white/40">
+<div class="mb-8">
+<h2 class="text-3xl font-bold text-primary mb-2">New Member</h2>
+<p class="text-on-surface-variant text-sm">Join the circle of premium travelers.</p>
+</div>
+<form action="#" class="space-y-5">
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-1">
+<label class="text-[10px] font-bold uppercase tracking-tighter text-primary/60 ml-1">Username</label>
+<input class="w-full px-4 py-3 bg-white/50 rounded-lg border-none focus:ring-2 focus:ring-surface-tint text-sm" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="text-[10px] font-bold uppercase tracking-tighter text-primary/60 ml-1">Full Name</label>
+<input class="w-full px-4 py-3 bg-white/50 rounded-lg border-none focus:ring-2 focus:ring-surface-tint text-sm" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-1">
+<label class="text-[10px] font-bold uppercase tracking-tighter text-primary/60 ml-1">National ID (CMND)</label>
+<input class="w-full px-4 py-3 bg-white/50 rounded-lg border-none focus:ring-2 focus:ring-surface-tint text-sm" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="text-[10px] font-bold uppercase tracking-tighter text-primary/60 ml-1">Date of Birth</label>
+<input class="w-full px-4 py-3 bg-white/50 rounded-lg border-none focus:ring-2 focus:ring-surface-tint text-sm" type="date"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="text-[10px] font-bold uppercase tracking-tighter text-primary/60 ml-1">Gender</label>
+<div class="flex space-x-6 py-2">
+<label class="flex items-center space-x-2 cursor-pointer">
+<input class="text-primary focus:ring-0" name="gender" type="radio"/>
+<span class="text-sm">Male</span>
+</label>
+<label class="flex items-center space-x-2 cursor-pointer">
+<input class="text-primary focus:ring-0" name="gender" type="radio"/>
+<span class="text-sm">Female</span>
+</label>
+<label class="flex items-center space-x-2 cursor-pointer">
+<input class="text-primary focus:ring-0" name="gender" type="radio"/>
+<span class="text-sm">Other</span>
+</label>
+</div>
+</div>
+<div class="space-y-1">
+<label class="text-[10px] font-bold uppercase tracking-tighter text-primary/60 ml-1">Email Address</label>
+<input class="w-full px-4 py-3 bg-white/50 rounded-lg border-none focus:ring-2 focus:ring-surface-tint text-sm" type="email"/>
+</div>
+<div class="grid grid-cols-3 gap-4">
+<div class="col-span-2 space-y-1">
+<label class="text-[10px] font-bold uppercase tracking-tighter text-primary/60 ml-1">Phone Number</label>
+<div class="flex">
+<select class="rounded-l-lg border-none bg-white/60 text-xs w-20 focus:ring-0">
+<option>+84</option>
+<option>+1</option>
+<option>+44</option>
+</select>
+<input class="w-full rounded-r-lg border-none bg-white/50 focus:ring-2 focus:ring-surface-tint text-sm" type="tel"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="text-[10px] font-bold uppercase tracking-tighter text-primary/60 ml-1">ZIP Code</label>
+<input class="w-full px-4 py-3 bg-white/50 rounded-lg border-none focus:ring-2 focus:ring-surface-tint text-sm" type="text"/>
+</div>
+</div>
+<button class="w-full py-4 mt-4 rounded-xl border-2 border-primary text-primary font-bold hover:bg-primary hover:text-white transition-all duration-300" type="submit">
+                                Sign Up
+                            </button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Chatbot Widget - SideNavBar mapping -->
+<div class="fixed bottom-8 right-8 z-[100] flex items-center justify-center">
+<button class="w-16 h-16 rounded-full bg-gradient-to-r from-blue-900 to-blue-700 text-white shadow-2xl shadow-blue-900/20 hover:scale-110 active:scale-90 transition-all duration-300 group">
+<span class="material-symbols-outlined text-3xl">support_agent</span>
+<span class="absolute right-full mr-4 bg-white px-4 py-2 rounded-xl text-primary font-bold text-sm shadow-xl opacity-0 group-hover:opacity-100 whitespace-nowrap transition-opacity">Concierge Chat</span>
+</button>
+</div>
+<!-- Footer -->
+<footer class="w-full border-t border-slate-200 bg-slate-50 dark:bg-slate-950">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-8 space-y-4 md:space-y-0 max-w-screen-2xl mx-auto">
+<div class="text-lg font-bold text-blue-900">Booking4LU</div>
+<div class="flex space-x-6">
+<a class="text-xs uppercase tracking-widest font-semibold text-slate-500 hover:text-amber-600 transition-colors" href="#">About</a>
+<a class="text-xs uppercase tracking-widest font-semibold text-slate-500 hover:text-amber-600 transition-colors" href="#">Contact</a>
+<a class="text-xs uppercase tracking-widest font-semibold text-slate-500 hover:text-amber-600 transition-colors" href="#">Privacy</a>
+<a class="text-xs uppercase tracking-widest font-semibold text-slate-500 hover:text-amber-600 transition-colors" href="#">Terms</a>
+<a class="text-xs uppercase tracking-widest font-semibold text-slate-500 hover:text-amber-600 transition-colors" href="#">Support</a>
+</div>
+<p class="text-slate-400 text-[10px] font-medium">© 2024 Booking4LU. Editorial Excellence in Travel.</p>
+</div>
+</footer>
+</body></html>
