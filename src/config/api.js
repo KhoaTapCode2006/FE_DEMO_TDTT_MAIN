@@ -10,7 +10,7 @@ export const API_CONFIG = {
   BASE_URL: "https://api.booking4lu.com/v1",
 
   /** Google Maps JavaScript API key */
-  GOOGLE_MAPS_API_KEY: "YOUR_GOOGLE_MAPS_API_KEY",
+  GOOGLE_MAPS_API_KEY: "AIzaSyDk23WJBkLXBVeDmUSXrfbzhNcNjmP-_t0",
 
   /** Default search radius in metres */
   DEFAULT_RADIUS_M: 3000,

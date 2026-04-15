@@ -212,7 +212,7 @@
 
     // ── API stubs (wire to real backend by replacing these) ──────────────────
     window.API = {
-      GOOGLE_MAPS_KEY: "2791c65a0125eb5e48fdfea18e30e1b0bcc7cfaa90c467f7607419ec60c3ea98",
+      GOOGLE_MAPS_KEY: "AIzaSyDk23WJBkLXBVeDmUSXrfbzhNcNjmP-_t0",
 
       /** Search hotels using the live discovery API */
       async searchHotels({ location, checkIn, checkOut, guests, minPrice, maxPrice, radius, filters }) {
@@ -1083,12 +1083,52 @@
           setMapError(true); return;
         }
         const s = document.createElement("script");
-        s.src = `https://maps.googleapis.com/maps/api/js?key=${key}&libraries=places`;
         s.async = true;
+        s.defer = true;
+        s.loading = "lazy";
+        s.src = `https://maps.googleapis.com/maps/api/js?key=${key}&libraries=places,marker`;
         s.onload = initMap;
         s.onerror = () => setMapError(true);
         document.head.appendChild(s);
       }, []);
+
+      function createCircleMarker(map, position, color, { title, zIndex } = {}) {
+        if (window.google?.maps?.marker?.AdvancedMarkerElement) {
+          const content = document.createElement("div");
+          Object.assign(content.style, {
+            width: "16px",
+            height: "16px",
+            borderRadius: "50%",
+            backgroundColor: color,
+            border: "3px solid #ffffff",
+            boxShadow: "0 0 0 6px rgba(0, 0, 0, 0.08)",
+            boxSizing: "border-box",
+          });
+          const marker = new google.maps.marker.AdvancedMarkerElement({
+            map,
+            position,
+            title,
+            content,
+          });
+          if (typeof zIndex === "number") marker.setZIndex(zIndex);
+          return marker;
+        }
+
+        return new google.maps.Marker({
+          map,
+          position,
+          title,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            scale: 8,
+            fillColor: color,
+            fillOpacity: 1,
+            strokeColor: "#ffffff",
+            strokeWeight: 3,
+          },
+          zIndex,
+        });
+      }
 
       function initMap() {
         if (!mapRef.current) return;
@@ -1101,15 +1141,7 @@
         });
         mapObjRef.current = map;
 
-        new google.maps.Marker({
-          map, position:center,
-          icon:{
-            path:google.maps.SymbolPath.CIRCLE,
-            scale:8, fillColor:"#00346f", fillOpacity:1,
-            strokeColor:"#fff", strokeWeight:3,
-          },
-          zIndex:30,
-        });
+        createCircleMarker(map, center, "#00346f", { zIndex: 30, title: "You" });
 
         const circle = new google.maps.Circle({
           map, center, radius:radiusM,
@@ -1159,19 +1191,7 @@
           if (hotel.lat == null || hotel.lng == null) return;
           bounds.extend({ lat: hotel.lat, lng: hotel.lng });
 
-          const marker = new google.maps.Marker({
-            map: mapObjRef.current,
-            position: { lat: hotel.lat, lng: hotel.lng },
-            title: hotel.name,
-            icon: {
-              path: google.maps.SymbolPath.CIRCLE,
-              scale: 8,
-              fillColor: "#ff5a3c",
-              fillOpacity: 1,
-              strokeColor: "#ffffff",
-              strokeWeight: 2,
-            },
-          });
+          const marker = createCircleMarker(mapObjRef.current, { lat: hotel.lat, lng: hotel.lng }, "#ff5a3c", { title: hotel.name });
           marker.hotelId = hotel.id;
           marker.addListener("click", () => {
             onHotelSelect?.(hotel);
