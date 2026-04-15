@@ -1,0 +1,1980 @@
+{
+  "status_code": 200,
+  "message": "Success",
+  "data": [
+    {
+      "property_token": "ChoIp-vPwaH4wODsARoNL2cvMTFiNjdzYjdnchAB",
+      "name": "Hotel Hoa Cúc Phương",
+      "description": null,
+      "link": "http://hoacucphuonghotel.com/",
+      "address": null,
+      "phone": null,
+      "gps_coordinates": {
+        "latitude": 10.890787099999999,
+        "longitude": 106.7786708
+      },
+      "nearby_places": [],
+      "check_in_time": "14:00",
+      "check_out_time": "12:00",
+      "price": 242182,
+      "deal": null,
+      "booking_sources": [],
+      "images": [
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEq-QXPJWZSF-6bc8rLOKhDi2tSHX9cYIOzDtIb6SmV6l4eSc-25WVcSroACAWJBaJVpUJDbjrverHo-x0_-RBGDnBkaOpveJINlH2LRsAlLshq5Tkk6-oLg7LALWg37In4nNlfBP3q1uA=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEq-QXPJWZSF-6bc8rLOKhDi2tSHX9cYIOzDtIb6SmV6l4eSc-25WVcSroACAWJBaJVpUJDbjrverHo-x0_-RBGDnBkaOpveJINlH2LRsAlLshq5Tkk6-oLg7LALWg37In4nNlfBP3q1uA=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHDx0N81MKI8AxQG-xEhBAH0NWFGXVQ1rHKne45xOKI_Eq61Aepj-xCaBOA2ySqPhMSx1KPMyYHHTFPVpXqteOaBRz-MeNRxH3sYuZUiSrEBZ5FEB6pe2O54cVKs5V79TThOik-sg=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHDx0N81MKI8AxQG-xEhBAH0NWFGXVQ1rHKne45xOKI_Eq61Aepj-xCaBOA2ySqPhMSx1KPMyYHHTFPVpXqteOaBRz-MeNRxH3sYuZUiSrEBZ5FEB6pe2O54cVKs5V79TThOik-sg=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHyNkaTYWoqasqZj137N4bLMsdWyktnLKbay4VgfhZ-ivpNc9JXOYStLgMxW6XGV0v49hh2ndqqbBxoPH7COBExuMsGHUij-EWDNPUhPDykHqUZzRNEGJWWIjf81CPVcPGwCEPw=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHyNkaTYWoqasqZj137N4bLMsdWyktnLKbay4VgfhZ-ivpNc9JXOYStLgMxW6XGV0v49hh2ndqqbBxoPH7COBExuMsGHUij-EWDNPUhPDykHqUZzRNEGJWWIjf81CPVcPGwCEPw=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/proxy/BpZz1Nu44Zqqau3voBEWctarvsGDrYZ0qUMusctCD_T_5u9wI9_va0WiyVeFal0VOgnLtmJVXFQ7-fMCGsy1CoqzxzUYiDYuOeRtbQb3hRGOFaZpZ8LDgAKE4gP0d_EIbVHoX3vB5il5QbpZnwwyClcTgmrGbA=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://images.trvl-media.com/lodging/100000000/99440000/99434000/99433915/4bf3de4a_z.jpg"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH3KiXrmI2fDjaj3KXihfc0LbXqjNCyTtSj95QAfIQ-mUK3FWmPLRDIxuQC7WbT2yR36ibOM52Syjhns8C-b2MMNsBYEpXBnsUvzjOgMzghDwBtJ_-fBiMXzTSlrHtgV067Vo_WmAwPR28=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH3KiXrmI2fDjaj3KXihfc0LbXqjNCyTtSj95QAfIQ-mUK3FWmPLRDIxuQC7WbT2yR36ibOM52Syjhns8C-b2MMNsBYEpXBnsUvzjOgMzghDwBtJ_-fBiMXzTSlrHtgV067Vo_WmAwPR28=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE6snkhQS0yJstMIB8dxIBNhyzwv7HV3ThsqLy0iBL-ZRMLzEs3taIOrvhtmOdzI8IFIBsWibDr8bI1QjxMeXgfBqV_hknmWyF-d0OrMwcA7f_bkdRYgZ5xv9kpaN4QAlIn3Q-PGw=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE6snkhQS0yJstMIB8dxIBNhyzwv7HV3ThsqLy0iBL-ZRMLzEs3taIOrvhtmOdzI8IFIBsWibDr8bI1QjxMeXgfBqV_hknmWyF-d0OrMwcA7f_bkdRYgZ5xv9kpaN4QAlIn3Q-PGw=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFrxHj4wOeViCxaBpvAkIb5BRwD2p0RWrYzxZ-HSXtX4HFI1TGPjOQMTxS_Iqy-rAFlEQh34XHnqhIwCVzq7b5cBzQMRyTyFDOScGh_YsHyBeCDsMOiJ-DQvGCVBhnCxyXZuMtd8w=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFrxHj4wOeViCxaBpvAkIb5BRwD2p0RWrYzxZ-HSXtX4HFI1TGPjOQMTxS_Iqy-rAFlEQh34XHnqhIwCVzq7b5cBzQMRyTyFDOScGh_YsHyBeCDsMOiJ-DQvGCVBhnCxyXZuMtd8w=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGrGU-Hg8NpywfmzPbn6Sx5AUY7rFz71dDWUH2Jfi-yU7Yl3gXEZn3brLD6XfFpr4eEr7iM9-81iD7xJFK-OLRvxM9DWoKtzVo_84Cm8yMaJRGmUE2JFAnZUv4cNjP5mihyQUT_T5obnkRj=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGrGU-Hg8NpywfmzPbn6Sx5AUY7rFz71dDWUH2Jfi-yU7Yl3gXEZn3brLD6XfFpr4eEr7iM9-81iD7xJFK-OLRvxM9DWoKtzVo_84Cm8yMaJRGmUE2JFAnZUv4cNjP5mihyQUT_T5obnkRj=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEd6gdQOmZDlfZcq4EZ6nkG6Lvl9EuOjzHlqUWBVpINKRwOIjhbaPf5lsNjeuNWQSe30Wqkp9ID6e3cjKiLqRicB1gY9XXXrbjVuHrlvlLPDyFjIRhpKyVOaQ4wU0ROseLnElL60UMFLQi2=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEd6gdQOmZDlfZcq4EZ6nkG6Lvl9EuOjzHlqUWBVpINKRwOIjhbaPf5lsNjeuNWQSe30Wqkp9ID6e3cjKiLqRicB1gY9XXXrbjVuHrlvlLPDyFjIRhpKyVOaQ4wU0ROseLnElL60UMFLQi2=s10000"
+        }
+      ],
+      "amenities": [
+        "Breakfast ($)",
+        "Free Wi-Fi",
+        "Free parking",
+        "Air conditioning",
+        "Pet-friendly",
+        "Fitness center",
+        "Room service",
+        "Kitchen in some rooms",
+        "Airport shuttle",
+        "Full-service laundry",
+        "Accessible"
+      ],
+      "raw_rating": 0,
+      "user_reviews": [
+        {
+          "text": "expected spent night hotel wife way sedona stayed adobe grand villa loved, kind disappointed, stayed ritz laguna nigel really unimpressed resort, thoughts room bed comfortable expected, furniture rooms looked old worn, a/c heater unit kept malfunctioning, heater come wrong time room toasty, called desk sent repair man fix, stated fuse needed changed, amenity workout room small, crammed bunch tredmills free weights, kind crampedservice kind wave parking fee complained heater, wife left favorite pillow asked ship, offered 30, thought kind absurd.all think better place stay phoenix, got great deal online stay got sam deal,  ",
+          "raw_stars": 3
+        },
+        {
+          "text": "ooh la la, perfect hotel perfect neighborhood rue cler, fantastic staff delightful petit dejeuner lovely room spacious bath immaculate, place wish leave eager return, need sweet small property lets feel like parisian, swoon time pictures nightstand stay love,  ",
+          "raw_stars": 5
+        },
+        {
+          "text": "great hotel lively area just stay hotel, impressed room given read previous reviews mentioning upper floor rooms balconies best asked possible, views corner room 5th floor fantastic room bathroom expectations.i staff extremely helpful, did not eat breakfast hotel preferring brunch area travelling in.i strongly recommend restaurant azabu 6th arrondissement, suggest make reservations lucky table hour restaurant fully booked recommended time eating guide paris, food delicious staff absolutely charming word warning did not speak english french japanese really great time not hesitate recommend hotel d'albe st michel people going paris fact,  ",
+          "raw_stars": 5
+        },
+        {
+          "text": "not bad not best definitely quaint place stay couples, recently booked trip puerto rico boyfriend chose wind chimes inn reviews read online, stayed 9/24 9/28/2008, cute fact feels like home, arrived greeted felix nice man desk, gave map took time explain best places eat served authentic island food buses travel, hotel room stayed 2nd floor bar room 127. room comfortable queen sized bed overall bit small strange smell somewhat like musky odor, not bad, ac worked fine definitely need heat, bathroom bit cleaner cable connection small tv room really bad, bit mosquito issue room kept windows closed reason just kept coming, overall atmosphere hotel great makes feel right home, definitely nothing flashy extreme, outside room small sitting area enjoyed beers medalla light best try, great music bartender just downstairs, location pretty good literally block beach, walk rest area not far just steps away restaurants, hotel quiet location looking relaxation perfect spot want, try hotel little bit closer action heart condado area like marriot, pool clean nice, really cute cat named ferdinand lingers patio bar area outside, condado beach really nice packed waves bit strong, heading old san juan area just dos hermanos bridge really beautiful beach calm clear waters,  ",
+          "raw_stars": 3
+        }
+      ],
+      "ai_score": 4,
+      "trust_weight": 1,
+      "analyzed_reviews": [
+        {
+          "text": "expected spent night hotel wife way sedona stayed adobe grand villa loved, kind disappointed, stayed ritz laguna nigel really unimpressed resort, thoughts room bed comfortable expected, furniture rooms looked old worn, a/c heater unit kept malfunctioning, heater come wrong time room toasty, called desk sent repair man fix, stated fuse needed changed, amenity workout room small, crammed bunch tredmills free weights, kind crampedservice kind wave parking fee complained heater, wife left favorite pillow asked ship, offered 30, thought kind absurd.all think better place stay phoenix, got great deal online stay got sam deal,  ",
+          "raw_stars": 3,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 3
+        },
+        {
+          "text": "ooh la la, perfect hotel perfect neighborhood rue cler, fantastic staff delightful petit dejeuner lovely room spacious bath immaculate, place wish leave eager return, need sweet small property lets feel like parisian, swoon time pictures nightstand stay love,  ",
+          "raw_stars": 5,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 5
+        },
+        {
+          "text": "great hotel lively area just stay hotel, impressed room given read previous reviews mentioning upper floor rooms balconies best asked possible, views corner room 5th floor fantastic room bathroom expectations.i staff extremely helpful, did not eat breakfast hotel preferring brunch area travelling in.i strongly recommend restaurant azabu 6th arrondissement, suggest make reservations lucky table hour restaurant fully booked recommended time eating guide paris, food delicious staff absolutely charming word warning did not speak english french japanese really great time not hesitate recommend hotel d'albe st michel people going paris fact,  ",
+          "raw_stars": 5,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 5
+        },
+        {
+          "text": "not bad not best definitely quaint place stay couples, recently booked trip puerto rico boyfriend chose wind chimes inn reviews read online, stayed 9/24 9/28/2008, cute fact feels like home, arrived greeted felix nice man desk, gave map took time explain best places eat served authentic island food buses travel, hotel room stayed 2nd floor bar room 127. room comfortable queen sized bed overall bit small strange smell somewhat like musky odor, not bad, ac worked fine definitely need heat, bathroom bit cleaner cable connection small tv room really bad, bit mosquito issue room kept windows closed reason just kept coming, overall atmosphere hotel great makes feel right home, definitely nothing flashy extreme, outside room small sitting area enjoyed beers medalla light best try, great music bartender just downstairs, location pretty good literally block beach, walk rest area not far just steps away restaurants, hotel quiet location looking relaxation perfect spot want, try hotel little bit closer action heart condado area like marriot, pool clean nice, really cute cat named ferdinand lingers patio bar area outside, condado beach really nice packed waves bit strong, heading old san juan area just dos hermanos bridge really beautiful beach calm clear waters,  ",
+          "raw_stars": 3,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 3
+        }
+      ],
+      "ai_score_expiration_date": "2026-04-22T08:26:27.050010Z",
+      "ai_summary_expiration_date": null,
+      "ai_summary": null,
+      "last_updated": "2026-04-15T08:26:33.549266Z"
+    },
+    {
+      "property_token": "ChkItoSJiI-jqtFUGg0vZy8xMWg1bWt6ejNrEAE",
+      "name": "Hotel Hương Thiên Phú",
+      "description": null,
+      "link": null,
+      "address": null,
+      "phone": null,
+      "gps_coordinates": {
+        "latitude": 10.8996009,
+        "longitude": 106.78049779999999
+      },
+      "nearby_places": [],
+      "check_in_time": null,
+      "check_out_time": "12:00",
+      "price": 315000,
+      "deal": "Rẻ hơn bình thường 23%",
+      "booking_sources": [],
+      "images": [
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGP-oGYGVvkxu7K6ZuZSn-XMwS2lZz-CTu2W987ORJPnh5uAvRrGX_mzq038bu9QQl-MqeDH4L8xBTjq0maEKCZ_qYMkOkIvZwPaCkDswJ-5F_POPksi2ulfou3poS6Wye89uMP=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGP-oGYGVvkxu7K6ZuZSn-XMwS2lZz-CTu2W987ORJPnh5uAvRrGX_mzq038bu9QQl-MqeDH4L8xBTjq0maEKCZ_qYMkOkIvZwPaCkDswJ-5F_POPksi2ulfou3poS6Wye89uMP=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFiyet5c-d1aUCjZw-yhV1CGgbLV315hPBfmho3ufwUViia6Ve1UPHC8udHfnQ2AYFEKA3jc8YshzCQ5x6yXDXWaLdFSuvXmWuu5vHBKj0TJDUc7-R7zmM4MWwfG88-LlwJTkpq=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFiyet5c-d1aUCjZw-yhV1CGgbLV315hPBfmho3ufwUViia6Ve1UPHC8udHfnQ2AYFEKA3jc8YshzCQ5x6yXDXWaLdFSuvXmWuu5vHBKj0TJDUc7-R7zmM4MWwfG88-LlwJTkpq=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFy7SduDP3nxi6D_crJaVtq2rEsU1XcrrtglkDz-kTxqrDAtYlZkBje7HiF6qact1Z3j5dsNeAWrkD9B3eFeTZvqiByIXG5UupCJch-beBYA4TVGjQUqhopn9j6IA68uWjVFEhAEw=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFy7SduDP3nxi6D_crJaVtq2rEsU1XcrrtglkDz-kTxqrDAtYlZkBje7HiF6qact1Z3j5dsNeAWrkD9B3eFeTZvqiByIXG5UupCJch-beBYA4TVGjQUqhopn9j6IA68uWjVFEhAEw=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGrq5_1MVihgBtJI2jutwTNLmeIQG_vsC0QmHR-dekwsdN5Ef52YTTlqDgWOIjX0uudzi5SK6mPqSMcf1JyRJ0pHEQCqw52kki6Hhe0LqB07hQAXp-qvaNVK2vQSNPnhudez0Q5=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGrq5_1MVihgBtJI2jutwTNLmeIQG_vsC0QmHR-dekwsdN5Ef52YTTlqDgWOIjX0uudzi5SK6mPqSMcf1JyRJ0pHEQCqw52kki6Hhe0LqB07hQAXp-qvaNVK2vQSNPnhudez0Q5=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFhZTEhe-z-F-UJs5ZaMb3vwfqzIGkcdRzF1dNGnQY5K-8iOn-gEh32zD8_NOdacpO1vjLAEfl988XgsSXCdi_YIge1BVFK7qoV0z6A8T_soTkBofWufGN1qvTkjcp63ptghNDA=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFhZTEhe-z-F-UJs5ZaMb3vwfqzIGkcdRzF1dNGnQY5K-8iOn-gEh32zD8_NOdacpO1vjLAEfl988XgsSXCdi_YIge1BVFK7qoV0z6A8T_soTkBofWufGN1qvTkjcp63ptghNDA=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH3jiu0-juTzAkenyr0_Af1H_mEKzdczM3-QZmrSo3LhkAqCxLbiqDOpomw5nLFl6bQqiR3bNMCQ23teQhhxKEfe5yqttvcmNkBjCiAQ0FsOYNTUfDpgKzKtjr6qaUQTYIKl0H3=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH3jiu0-juTzAkenyr0_Af1H_mEKzdczM3-QZmrSo3LhkAqCxLbiqDOpomw5nLFl6bQqiR3bNMCQ23teQhhxKEfe5yqttvcmNkBjCiAQ0FsOYNTUfDpgKzKtjr6qaUQTYIKl0H3=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHXSWfq12Ymn-YCeAb-o_iCUIvdRnvSnhDzc8wXWG5AFDlmOS4o0Qsabv5Dry4-tOgeJjgyWg6T9WBlftidajjg5oeCkKYYONbn4rQbXNfcOlGzbILqsNpHSsR3jUlqc11chpG6=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHXSWfq12Ymn-YCeAb-o_iCUIvdRnvSnhDzc8wXWG5AFDlmOS4o0Qsabv5Dry4-tOgeJjgyWg6T9WBlftidajjg5oeCkKYYONbn4rQbXNfcOlGzbILqsNpHSsR3jUlqc11chpG6=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEefbDliENGQAAg5hqnzBA4Z80twGTE7WQKiauJ9d6zPgk8weWc_q9ekcLJ63--878NWr7gOSt4ls1KR0OnMRhTt9H5nk3Ghbh_6H3bMYN6gfOxpUNKVOal3j-GZBTG1yF8Ntg=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEefbDliENGQAAg5hqnzBA4Z80twGTE7WQKiauJ9d6zPgk8weWc_q9ekcLJ63--878NWr7gOSt4ls1KR0OnMRhTt9H5nk3Ghbh_6H3bMYN6gfOxpUNKVOal3j-GZBTG1yF8Ntg=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGpucQfzgqVPskAKjfYckwkyvhqW4qfZPsaYPg8bAju7jc7xHK17mHrqpY6cdbcoDj_ZUAVVqK-CADcfVbCx7eCbk8tZtGRPK8YUW5OqcCMB7g38bIJ0FypGmBHKWIf1OgVXbkK=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGpucQfzgqVPskAKjfYckwkyvhqW4qfZPsaYPg8bAju7jc7xHK17mHrqpY6cdbcoDj_ZUAVVqK-CADcfVbCx7eCbk8tZtGRPK8YUW5OqcCMB7g38bIJ0FypGmBHKWIf1OgVXbkK=s10000"
+        }
+      ],
+      "amenities": [
+        "Free Wi-Fi",
+        "Free parking",
+        "Air conditioning",
+        "Pet-friendly",
+        "Room service",
+        "Full-service laundry"
+      ],
+      "raw_rating": 0,
+      "user_reviews": [
+        {
+          "text": "stay away, worse hotel stay, booked night just case not like hotel, thank god stayed night, hotel old smelly sheets dirty, strings hair bed sheet yellow stain ewwwww, staff management disgusting attitude felt good job, stay away hotel nice think center end wants sleep dirty stained sheets, absolutely not worth,  ",
+          "raw_stars": 1
+        }
+      ],
+      "ai_score": 4,
+      "trust_weight": 1,
+      "analyzed_reviews": [
+        {
+          "text": "stay away, worse hotel stay, booked night just case not like hotel, thank god stayed night, hotel old smelly sheets dirty, strings hair bed sheet yellow stain ewwwww, staff management disgusting attitude felt good job, stay away hotel nice think center end wants sleep dirty stained sheets, absolutely not worth,  ",
+          "raw_stars": 1,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 4
+        }
+      ],
+      "ai_score_expiration_date": "2026-04-22T08:26:27.050010Z",
+      "ai_summary_expiration_date": null,
+      "ai_summary": null,
+      "last_updated": "2026-04-15T08:26:33.555789Z"
+    },
+    {
+      "property_token": "ChkItI20k6GF6uABGg0vZy8xMXh3NnBjdF9tEAE",
+      "name": "Bcons City Hotel",
+      "description": null,
+      "link": "https://bconscityhotel.com.vn/",
+      "address": null,
+      "phone": null,
+      "gps_coordinates": {
+        "latitude": 10.8927829,
+        "longitude": 106.79357669999999
+      },
+      "nearby_places": [],
+      "check_in_time": "14:00",
+      "check_out_time": "12:00",
+      "price": 539337,
+      "deal": "Rẻ hơn bình thường 44%",
+      "booking_sources": [],
+      "images": [
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF7omxXVlRUrrAEBvoaQ9V8jgnNdkaYQk-V0l93O5fPIhhnyblBYY9wk1uKCxgmVuDBvaPoVej7vaNW5_iQT8P_kXZO3KuwcRXh9dSxFQhlUdGMkMEZP6YLrdSET0FcpZo_H-8qCSIlQY8=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF7omxXVlRUrrAEBvoaQ9V8jgnNdkaYQk-V0l93O5fPIhhnyblBYY9wk1uKCxgmVuDBvaPoVej7vaNW5_iQT8P_kXZO3KuwcRXh9dSxFQhlUdGMkMEZP6YLrdSET0FcpZo_H-8qCSIlQY8=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGx78tLg0I9ZlYeO_-nzE2VWRm83oYponm1zFaNjg3Zt3ArLv4cw1ntDDRACtUBIbfaDFLdCKi23O4gN8F-cEJHChloUcdjX8KrudxXoGr0dzCa6-H9n3IUQUe5IyyfIdbIbLoqnUSNN9GC=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGx78tLg0I9ZlYeO_-nzE2VWRm83oYponm1zFaNjg3Zt3ArLv4cw1ntDDRACtUBIbfaDFLdCKi23O4gN8F-cEJHChloUcdjX8KrudxXoGr0dzCa6-H9n3IUQUe5IyyfIdbIbLoqnUSNN9GC=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGvBgRcyo7ji9E4_z0LtMhyC5oG_pavhAzsQJz3WumUmpvIhIp2uVMkAgHGlXX4I4iNoaJlyXWTaCkkbl4VaxjjDR2IKGm90TcOPLM9U9sX6pfhW3fqrmvzx3-_dRsZjZdAysY_FyTQNMHX=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGvBgRcyo7ji9E4_z0LtMhyC5oG_pavhAzsQJz3WumUmpvIhIp2uVMkAgHGlXX4I4iNoaJlyXWTaCkkbl4VaxjjDR2IKGm90TcOPLM9U9sX6pfhW3fqrmvzx3-_dRsZjZdAysY_FyTQNMHX=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAETUa1h-I30gfpnY2vXnyH83NveTLFlI17j2qAugeLG4QSMAEKHVluOxClHQ-MPDIV_6SgHfVWmI-dFW7dLOYsNAY8avulZXfiGzMOfXPN-RP6UsoqdHXe-3z_usfdXHQkaTd5VO2yqqPP1=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAETUa1h-I30gfpnY2vXnyH83NveTLFlI17j2qAugeLG4QSMAEKHVluOxClHQ-MPDIV_6SgHfVWmI-dFW7dLOYsNAY8avulZXfiGzMOfXPN-RP6UsoqdHXe-3z_usfdXHQkaTd5VO2yqqPP1=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEBzF5EB0Sl6fTe26c_bXqyChuHv8mJkonno1cuSAEDl64x2gSYuOWMs0xb74832UulAmr1K-nwjsEc8fIFxgfYFyJzB0R5TgMfq9zYxHaOUYCU2ASldEGevP66ZYOWccD4qFtl0o0n4ihU=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEBzF5EB0Sl6fTe26c_bXqyChuHv8mJkonno1cuSAEDl64x2gSYuOWMs0xb74832UulAmr1K-nwjsEc8fIFxgfYFyJzB0R5TgMfq9zYxHaOUYCU2ASldEGevP66ZYOWccD4qFtl0o0n4ihU=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/proxy/H1K577fQdkqVFqzujp4zGeCPfTlBmgkYEz7fgjdOS2sRZ-6HuRn51LrJj7o6bEUosCQ3Ql11QXznko8eOH9dfsfuZyRRrXvxJC5a23WapLubNtZHDk0AGOtH4KSi3Kbv90zilFXmell4HgaNEmAAbUwCDUL33w=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/31/35/15/2f/caption.jpg?w=2100&h=1200&s=1"
+        },
+        {
+          "thumbnail": "https://lh6.googleusercontent.com/proxy/cSYdSYZN4xEz4NR2RONPCl-c9wh-tkVDjE8uFBqws4hqdb5VGGmxA_ahgMd-NVydhU2qr2ydQybQjtCulfGL4vSsw3drx_358_hgLKUBCfg1QisxeAFBgtSPK9MmD3AVYpZwNpcOT9WVsr4QP8SyRUzZmnYOAw=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://images.trvl-media.com/lodging/121000000/120570000/120566300/120566286/45a15229_z.jpg"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/proxy/MQYYG2OWnNzIezBGg4l0hIoYsolz4Yr4x33Ho3vLMhSB0zgbIvts4s_kENli8BEFxbg0mVdqtzzoY5mD7n8r0UcKNgDoCx8mSbweAcBPI1w5AC9isnawftxm9a34VscmqiRnfaVU2nRpwa35LIguhVkKUwQMZg=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://images.trvl-media.com/lodging/121000000/120570000/120566300/120566286/ecfc7a39_z.jpg"
+        },
+        {
+          "thumbnail": "https://lh5.googleusercontent.com/proxy/4hAvXMRCScK4KV__K7befYMa2Y4cWq0y3AaW5LZQhOS32Zrmkow3oQoYJnIRnfN55jNv1NVFgk_t7r8a4e-SqGlAK2eV_YrANqA4sY0y0vZGImTOsHZMFC3g9fFFIn66TFr41B7FvYar6T7MlITGoHj0iJuU-w=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://images.trvl-media.com/lodging/121000000/120570000/120566300/120566286/d132f586_z.jpg"
+        }
+      ],
+      "amenities": [
+        "Free breakfast",
+        "Free Wi-Fi",
+        "Parking",
+        "Outdoor pool",
+        "Fitness center",
+        "Restaurant",
+        "Airport shuttle",
+        "Full-service laundry"
+      ],
+      "raw_rating": 0,
+      "user_reviews": [],
+      "ai_score": 0,
+      "trust_weight": 0,
+      "analyzed_reviews": [],
+      "ai_score_expiration_date": "2026-04-22T08:26:27.050010Z",
+      "ai_summary_expiration_date": null,
+      "ai_summary": null,
+      "last_updated": "2026-04-15T08:26:33.559051Z"
+    },
+    {
+      "property_token": "ChoIsOn_3dC5pfmrARoNL2cvMTFnajRrZ2d5ehAB",
+      "name": "Nhà nghỉ Thanh Tùng A2",
+      "description": null,
+      "link": null,
+      "address": null,
+      "phone": null,
+      "gps_coordinates": {
+        "latitude": 10.8924723,
+        "longitude": 106.77081899999999
+      },
+      "nearby_places": [],
+      "check_in_time": null,
+      "check_out_time": null,
+      "price": 205627,
+      "deal": "Rẻ hơn bình thường 30%",
+      "booking_sources": [],
+      "images": [
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFnkUgUuvplbDybKpW1kbJ_N-uFr8cG15KIWtDGhnW-W3vK_N-qit5BKhqrNFxMVhqicK3NWx1kw7zqTaG5z4yEKpB__6-DfCC8fQT9iD6X6_gMPcNaydG3Ga0gZSrEiHicL4WT=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFnkUgUuvplbDybKpW1kbJ_N-uFr8cG15KIWtDGhnW-W3vK_N-qit5BKhqrNFxMVhqicK3NWx1kw7zqTaG5z4yEKpB__6-DfCC8fQT9iD6X6_gMPcNaydG3Ga0gZSrEiHicL4WT=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEStj-Pk1TOZZlGELlURlas1G8s6LMkuZ1VYLD5ZZ5eckpTYj6-z9IcLDXbwMMGk07yY27N-jERNZXY5DeBP2GIotnJdnDU1RIjQOliotgd8B2EJ4JC3CE1Qduvnm8sMJ-ZzDcP=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEStj-Pk1TOZZlGELlURlas1G8s6LMkuZ1VYLD5ZZ5eckpTYj6-z9IcLDXbwMMGk07yY27N-jERNZXY5DeBP2GIotnJdnDU1RIjQOliotgd8B2EJ4JC3CE1Qduvnm8sMJ-ZzDcP=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAERsub2abj3-xDYgc5NKWHlqA13Ycsp7_v3iXQkjcXasUsmC1oq8MvQKMvRQs8xDGTEEmAKx43NGFhVuGBIHEw6WtCSYgnvELrWuqhIcyKlBr3-EuDt7dPBT7ZtKjwX3EaRoi8t5g=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAERsub2abj3-xDYgc5NKWHlqA13Ycsp7_v3iXQkjcXasUsmC1oq8MvQKMvRQs8xDGTEEmAKx43NGFhVuGBIHEw6WtCSYgnvELrWuqhIcyKlBr3-EuDt7dPBT7ZtKjwX3EaRoi8t5g=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG73P3vEliuJwSRo6tnrGuFLIQE7ddEbpFTqmjvDbty4YqbARFofdRT4hYve8YZdP4PrBwDjajXQzAIlRYCuwlrOTuJ5HsfqajcI6T07GIlze55lorvo9UrOXLEMuGYiqgokUNr=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG73P3vEliuJwSRo6tnrGuFLIQE7ddEbpFTqmjvDbty4YqbARFofdRT4hYve8YZdP4PrBwDjajXQzAIlRYCuwlrOTuJ5HsfqajcI6T07GIlze55lorvo9UrOXLEMuGYiqgokUNr=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEiZ6yTxYe-SW5fhXvZeL4oT1xu-99C0GNFEybL4XX4eJBoSWDyrgZl8Uk3HYgPGpv5dWfYg3iEWxNO2IRuN2g7Wbrs2UP5TQne8dzEtXiEslwJ9eGPhjA7drjc5NkNA5_6V3Sh=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEiZ6yTxYe-SW5fhXvZeL4oT1xu-99C0GNFEybL4XX4eJBoSWDyrgZl8Uk3HYgPGpv5dWfYg3iEWxNO2IRuN2g7Wbrs2UP5TQne8dzEtXiEslwJ9eGPhjA7drjc5NkNA5_6V3Sh=s10000"
+        },
+        {
+          "thumbnail": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=isbmajq5bR4lFKqZS_VJsw&cb_client=search.estubs.gps&w=287&h=192&yaw=102.90326&pitch=0&thumbfov=100&scale=2",
+          "original_image": "https://lh5.googleusercontent.com/p/isbmajq5bR4lFKqZS_VJsw=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEkuQd7WajLfxXeGAjzeA13flr4I2-dwRmMGi_PKi4mCjUnNRAU03xa1AuFU4Dt-7eZziS8p2xx76yqHZNbKm_WX3Ck4Tl4xXVyHSTn3C1gb2W4rVyhdb_FqXEO35cg-ay4VLoAKg=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEkuQd7WajLfxXeGAjzeA13flr4I2-dwRmMGi_PKi4mCjUnNRAU03xa1AuFU4Dt-7eZziS8p2xx76yqHZNbKm_WX3Ck4Tl4xXVyHSTn3C1gb2W4rVyhdb_FqXEO35cg-ay4VLoAKg=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHlCNK98bqFSYJiD53YU1-gu5jca43Tp1g_bUXVBMzeLjSHeVP1ZHNXBPLEI8OKDIWmn8ZOm3zfxrJQYc-Qkq0weimrvPwrFmAs0A7sqFxDiz8wc2bC2cuKLpGf-dnqdCJu16p10zqgKZQ=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHlCNK98bqFSYJiD53YU1-gu5jca43Tp1g_bUXVBMzeLjSHeVP1ZHNXBPLEI8OKDIWmn8ZOm3zfxrJQYc-Qkq0weimrvPwrFmAs0A7sqFxDiz8wc2bC2cuKLpGf-dnqdCJu16p10zqgKZQ=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFqFOc2jZ6_A1eqP9HD_0r6aWaz_S-uW-_tYgRGC2YW5YnXBuMfi9l6vXo70k63oxTeN4zogDwd6T9eezi4noGOolq06vZWcdLyK7cR8_cJTSSAtY0BZNZUB0sdzxDieGa7lUK_=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFqFOc2jZ6_A1eqP9HD_0r6aWaz_S-uW-_tYgRGC2YW5YnXBuMfi9l6vXo70k63oxTeN4zogDwd6T9eezi4noGOolq06vZWcdLyK7cR8_cJTSSAtY0BZNZUB0sdzxDieGa7lUK_=s10000"
+        }
+      ],
+      "amenities": [],
+      "raw_rating": 0,
+      "user_reviews": [
+        {
+          "text": "nice vacation spot not luxurious booked hotel package airline, nervous reading reviews pretty happy experience, 5 minutes airport 20 cabs pr outrageuos ny, check breeze 5 minutes room ready noon expected wait till 4 room clean beautiful ocean view floor, maid great came night replaced towels used shower dinner, came later needed, hotel older room little dated, clean, loved huge walk closet kept clothes way gave place bathroom change kids major disappointment beach, beach people reasons booked place beach, photos websites justice deserves beach right highway loud trucks cars racing not serene beach experience looking, lagoon not ocean, rocky filled sharp rocks slice feet hands wear water shoes, public beach not just hotel guests.we stayed pools clean, son loved water slide towels readily available, resorts come claim seats early morning best location, ate breakfast hotel max restaurant 15 got nice buffet eat, homemade waffles omelets good, did n't try restaurants ventured street old san juan great meals, did lunch day pool restaurant horrible priced.the hotel staff weak, really did n't care unlike places staff attentive looking tips staff like n't bothered, swim bar pool bartenders wait forever served weak 8 drinks 3 soda 3 oz soda 5 oz ice lines bar no waiters walking lounge chairs taking drink orders, restaurant pool horrible service afternoon ordered lunch waited hour told order busy, presidents week sure hotel add staff, not big lunch eaters big breakfast really needed snack mid-day dinner dinner night got case soda beer local store room refrigerator, picked snacks brought soda snacks pool afternoon.i stay wanted quick getaway got good deal,  ",
+          "raw_stars": 3
+        }
+      ],
+      "ai_score": 3,
+      "trust_weight": 1,
+      "analyzed_reviews": [
+        {
+          "text": "nice vacation spot not luxurious booked hotel package airline, nervous reading reviews pretty happy experience, 5 minutes airport 20 cabs pr outrageuos ny, check breeze 5 minutes room ready noon expected wait till 4 room clean beautiful ocean view floor, maid great came night replaced towels used shower dinner, came later needed, hotel older room little dated, clean, loved huge walk closet kept clothes way gave place bathroom change kids major disappointment beach, beach people reasons booked place beach, photos websites justice deserves beach right highway loud trucks cars racing not serene beach experience looking, lagoon not ocean, rocky filled sharp rocks slice feet hands wear water shoes, public beach not just hotel guests.we stayed pools clean, son loved water slide towels readily available, resorts come claim seats early morning best location, ate breakfast hotel max restaurant 15 got nice buffet eat, homemade waffles omelets good, did n't try restaurants ventured street old san juan great meals, did lunch day pool restaurant horrible priced.the hotel staff weak, really did n't care unlike places staff attentive looking tips staff like n't bothered, swim bar pool bartenders wait forever served weak 8 drinks 3 soda 3 oz soda 5 oz ice lines bar no waiters walking lounge chairs taking drink orders, restaurant pool horrible service afternoon ordered lunch waited hour told order busy, presidents week sure hotel add staff, not big lunch eaters big breakfast really needed snack mid-day dinner dinner night got case soda beer local store room refrigerator, picked snacks brought soda snacks pool afternoon.i stay wanted quick getaway got good deal,  ",
+          "raw_stars": 3,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 3
+        }
+      ],
+      "ai_score_expiration_date": "2026-04-22T08:26:27.050010Z",
+      "ai_summary_expiration_date": null,
+      "ai_summary": null,
+      "last_updated": "2026-04-15T08:26:33.561790Z"
+    },
+    {
+      "property_token": "ChoIp6qtvPPFsLCnARoNL2cvMTF0d2ZqN3BxdhAB",
+      "name": "Khách Sạn Dạ Lan",
+      "description": null,
+      "link": null,
+      "address": null,
+      "phone": null,
+      "gps_coordinates": {
+        "latitude": 10.8910618,
+        "longitude": 106.7792817
+      },
+      "nearby_places": [],
+      "check_in_time": null,
+      "check_out_time": "12:00",
+      "price": 272978,
+      "deal": "Rẻ hơn bình thường 15%",
+      "booking_sources": [],
+      "images": [
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHHR7hFvsrK6FKoKOvCx7s_oZVJhCM0eYVbfU0dhr7zk9lh_azPSzFF2K2iMQ48h0TZrREtLG41Efr97rs0Aa93qV_wE6n5f3fnf5AxSk_98xe-ce6r1umKGfkgzG_OH-GLG0Ug4w=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHHR7hFvsrK6FKoKOvCx7s_oZVJhCM0eYVbfU0dhr7zk9lh_azPSzFF2K2iMQ48h0TZrREtLG41Efr97rs0Aa93qV_wE6n5f3fnf5AxSk_98xe-ce6r1umKGfkgzG_OH-GLG0Ug4w=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGJsiTg2gH89ZupwVZNeAPVj960Jc_luLIzQ54Gj-MAkoCx8P73xQvExBsd1IbgjSnrjML3HESSD4BEWH_mIQhLr_ERnzLj2yR-G9noNdMaSR617m67ZTqZETXcL3idalsXtSY=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGJsiTg2gH89ZupwVZNeAPVj960Jc_luLIzQ54Gj-MAkoCx8P73xQvExBsd1IbgjSnrjML3HESSD4BEWH_mIQhLr_ERnzLj2yR-G9noNdMaSR617m67ZTqZETXcL3idalsXtSY=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGnDeYfgMEuv_k5JiCrswlBCi_TE7ZDP3Hna5XFxrwcaYmYf3k4-IJPWw3Y3LDlEn-Hn67KLs1lVeYbPMNSZfMPqPrJGC54Zs--Z06KpA3EdSQSTq0dEOcLwaDBfw0dszBMpRV7=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGnDeYfgMEuv_k5JiCrswlBCi_TE7ZDP3Hna5XFxrwcaYmYf3k4-IJPWw3Y3LDlEn-Hn67KLs1lVeYbPMNSZfMPqPrJGC54Zs--Z06KpA3EdSQSTq0dEOcLwaDBfw0dszBMpRV7=s10000"
+        },
+        {
+          "thumbnail": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=2FBuuK2_LLIYUnNZbtPLQg&cb_client=search.estubs.gps&w=287&h=192&yaw=8.6171875&pitch=0&thumbfov=100&scale=2",
+          "original_image": "https://lh5.googleusercontent.com/p/2FBuuK2_LLIYUnNZbtPLQg=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFaRetIxFaqeGoA8MiP3o5uc26A0hFt5nl_8yfC8mnX_YEXGt3KV6p40v6OFzq4GCqlPINUaHEeuqp88JdkNWhbrp4q_eWfD43nZcJtUtMV35NaL3Y7VM8KRFUZfi64MgfcBIz9cw=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFaRetIxFaqeGoA8MiP3o5uc26A0hFt5nl_8yfC8mnX_YEXGt3KV6p40v6OFzq4GCqlPINUaHEeuqp88JdkNWhbrp4q_eWfD43nZcJtUtMV35NaL3Y7VM8KRFUZfi64MgfcBIz9cw=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGbu8_F3EClfBNAjhdf8LVej_Thb7gtuzIvGP0TuhiKqHQZ8wChi-Lgq8wp1a3yOqV5FkLVAlq1kFqgqZ6skkPDDkYFTpIhfMTWZBOlV0evalLJIU7Ni94DyrcDITo9N7-WcPYaYw=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGbu8_F3EClfBNAjhdf8LVej_Thb7gtuzIvGP0TuhiKqHQZ8wChi-Lgq8wp1a3yOqV5FkLVAlq1kFqgqZ6skkPDDkYFTpIhfMTWZBOlV0evalLJIU7Ni94DyrcDITo9N7-WcPYaYw=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHfPA_z3WrZQiyEPt8DMAgRukji6zvH3uiMvx8_ZGb4rJ_9FK7bW6IyKDm9kMxwbcDfNXVhLw8BQr4dM9_CXt8TP691AWfzEeU0XG4jNQ1ijYHPLC8QciYaH1oKcYjfqO680mqU=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHfPA_z3WrZQiyEPt8DMAgRukji6zvH3uiMvx8_ZGb4rJ_9FK7bW6IyKDm9kMxwbcDfNXVhLw8BQr4dM9_CXt8TP691AWfzEeU0XG4jNQ1ijYHPLC8QciYaH1oKcYjfqO680mqU=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGT_vdJAI-2U2eGfYk1VhjYI4Ulx8_EGV8_asHkEbeeSi8O4C-tpMJsvegtV2fu2qBENOXdGIYwlgFWTTiI0o4TT86xjY7Dl2F7SUf9RrY2HtPwlyjLy1S09FMsD1e5QHpU1lg=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGT_vdJAI-2U2eGfYk1VhjYI4Ulx8_EGV8_asHkEbeeSi8O4C-tpMJsvegtV2fu2qBENOXdGIYwlgFWTTiI0o4TT86xjY7Dl2F7SUf9RrY2HtPwlyjLy1S09FMsD1e5QHpU1lg=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEb7n70r81-e83CJ7cJr_0n8Rn8PuUdeaqxxvf5o6Y0coypG1OkHi0MBDG9tS81PUFKYen7c3vTuhg6o3a8W-kFD4qoMHMo5pJtH8hpEpxBrntKC5KT7br2RWmPq_pfmVBIxi_gNQ=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEb7n70r81-e83CJ7cJr_0n8Rn8PuUdeaqxxvf5o6Y0coypG1OkHi0MBDG9tS81PUFKYen7c3vTuhg6o3a8W-kFD4qoMHMo5pJtH8hpEpxBrntKC5KT7br2RWmPq_pfmVBIxi_gNQ=s10000"
+        }
+      ],
+      "amenities": [],
+      "raw_rating": 0,
+      "user_reviews": [
+        {
+          "text": "excellent boutique hotel stayed hotel 4 nights no regrets start downsides size room, double queen really smallest room stayed years, thanks tripadvisor reviews came prepared small room hoping reviews room size exaggerated bit, no surprises good bad, bathroom half living room size powerful shower nice smelling bvlgari toiletries believe green tea aroma acceptable women men, lobby bar restaurant gives prefect feeling charming boutique hotel.location hotel perfect got ritz le meurice, 5 15 min walking distance attractions 2 min metro stop.but staff deserves highest marks possible, feel truly welcome moment arrive requests fulfilled promptly, stay fully relaxed cos knew safe hands, basically staff reason heavily offsets room size deficiency.will stay hotel time paris hesitation,  ",
+          "raw_stars": 5
+        },
+        {
+          "text": "perfect location location perfect, blocks cable cars muni transporation union square china town, area safe clean, took advantage public transporation, cable car stopped street hotel, bus line fishermans wharf blocks away union sq station transporation tickets ahead time, saves time money buying tickets, covers muni cable car transportation.the room small day touring wont problem, beds clean maid services clean room everyday.the hotel staff friendly free continental breakfast perfect saving money meals.check-in time 3pm early store bags hotel sights s.f.i recommend place friends family,  ",
+          "raw_stars": 5
+        },
+        {
+          "text": "absolute best hotel, alexis hotel far best excellent hotels life, service great food fantastic room warm feeling home plus, reccomend hotel course alexis,  ",
+          "raw_stars": 5
+        },
+        {
+          "text": "beautiful decor hotel beautiful small lobby cozy children relax, pool big plus, location superb, staff friendly, main complaint hotel wooden floors hear rom room,  ",
+          "raw_stars": 4
+        }
+      ],
+      "ai_score": 4.69,
+      "trust_weight": 0.8,
+      "analyzed_reviews": [
+        {
+          "text": "excellent boutique hotel stayed hotel 4 nights no regrets start downsides size room, double queen really smallest room stayed years, thanks tripadvisor reviews came prepared small room hoping reviews room size exaggerated bit, no surprises good bad, bathroom half living room size powerful shower nice smelling bvlgari toiletries believe green tea aroma acceptable women men, lobby bar restaurant gives prefect feeling charming boutique hotel.location hotel perfect got ritz le meurice, 5 15 min walking distance attractions 2 min metro stop.but staff deserves highest marks possible, feel truly welcome moment arrive requests fulfilled promptly, stay fully relaxed cos knew safe hands, basically staff reason heavily offsets room size deficiency.will stay hotel time paris hesitation,  ",
+          "raw_stars": 5,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 5
+        },
+        {
+          "text": "perfect location location perfect, blocks cable cars muni transporation union square china town, area safe clean, took advantage public transporation, cable car stopped street hotel, bus line fishermans wharf blocks away union sq station transporation tickets ahead time, saves time money buying tickets, covers muni cable car transportation.the room small day touring wont problem, beds clean maid services clean room everyday.the hotel staff friendly free continental breakfast perfect saving money meals.check-in time 3pm early store bags hotel sights s.f.i recommend place friends family,  ",
+          "raw_stars": 5,
+          "sentiment_score": 5,
+          "trust_weight": 0.2,
+          "adjusted_stars": 5
+        },
+        {
+          "text": "absolute best hotel, alexis hotel far best excellent hotels life, service great food fantastic room warm feeling home plus, reccomend hotel course alexis,  ",
+          "raw_stars": 5,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 5
+        },
+        {
+          "text": "beautiful decor hotel beautiful small lobby cozy children relax, pool big plus, location superb, staff friendly, main complaint hotel wooden floors hear rom room,  ",
+          "raw_stars": 4,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 4
+        }
+      ],
+      "ai_score_expiration_date": "2026-04-22T08:26:27.050010Z",
+      "ai_summary_expiration_date": null,
+      "ai_summary": null,
+      "last_updated": "2026-04-15T08:26:33.564589Z"
+    },
+    {
+      "property_token": "ChkIg4SntrKBxPYZGg0vZy8xMW01ZjQxdmxiEAE",
+      "name": "Japan Luna Hotel",
+      "description": null,
+      "link": null,
+      "address": null,
+      "phone": null,
+      "gps_coordinates": {
+        "latitude": 10.888884299999999,
+        "longitude": 106.77400340000001
+      },
+      "nearby_places": [],
+      "check_in_time": "14:00",
+      "check_out_time": "12:00",
+      "price": 506834,
+      "deal": null,
+      "booking_sources": [],
+      "images": [
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHFCJ5NTF5gAqDgggYanFWJMFIhHrU-nzKZat7B34ZR50o9t5vWvze3iVhvx3ghhbLK9BkbVgg2IxRNtcLiHXSEV0DoF5asu9Erj3cGA5Mp1Q1ZlzBC4UcuvNH5j-DfZASSICTK=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHFCJ5NTF5gAqDgggYanFWJMFIhHrU-nzKZat7B34ZR50o9t5vWvze3iVhvx3ghhbLK9BkbVgg2IxRNtcLiHXSEV0DoF5asu9Erj3cGA5Mp1Q1ZlzBC4UcuvNH5j-DfZASSICTK=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGivCV-j41vLk4ikK286XCnnqUEI9nRvZzLXfJAcDD8GHmWVZ-yj-HaiCfg61Nc3XSmxlWd2sXQ_5uej4W_5AkF8TzQKp47aMi-b3YnemOVEv_4mEbVGRmudG8joseq3K1YrISzBw-Wuu3H=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGivCV-j41vLk4ikK286XCnnqUEI9nRvZzLXfJAcDD8GHmWVZ-yj-HaiCfg61Nc3XSmxlWd2sXQ_5uej4W_5AkF8TzQKp47aMi-b3YnemOVEv_4mEbVGRmudG8joseq3K1YrISzBw-Wuu3H=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFFpqNPS8cvXrwWZ01N1iPNw3f2BPBkqtBFNsljJ4-OLTx1lkaEj7BUXC6nQlCFiGOYmmZqe1yDofT5Mrb0oPfzdntCBAr6Dmog2qgWuGyMTINZ9LuDyHZ4zc5xlK8hyR4yfWNqLn-7Udv9=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFFpqNPS8cvXrwWZ01N1iPNw3f2BPBkqtBFNsljJ4-OLTx1lkaEj7BUXC6nQlCFiGOYmmZqe1yDofT5Mrb0oPfzdntCBAr6Dmog2qgWuGyMTINZ9LuDyHZ4zc5xlK8hyR4yfWNqLn-7Udv9=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHNEuH0kUkHbMxqDlHookwfiM1GrquMDLj794n-S9dF0Wqp5s0SFVW0dIO2h3IBtmrVh81Cex3Z2xwkSwB_YCB9nM6b0ICNHL_YdfLFBw6n2PsW1OYSViOu71AIjhzBGKJezKZKo7C1VUzL=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHNEuH0kUkHbMxqDlHookwfiM1GrquMDLj794n-S9dF0Wqp5s0SFVW0dIO2h3IBtmrVh81Cex3Z2xwkSwB_YCB9nM6b0ICNHL_YdfLFBw6n2PsW1OYSViOu71AIjhzBGKJezKZKo7C1VUzL=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHUmfWDh41VUrsgxQX-Wh-d118sp0O2lcB3Mq57qnuAzCtmRrnkfefXj2apXoy-DpqYrC-wHD7RX5hTJ6KnfXO1pgTzNFbXyTvD_t4VvmAXgiBoR5vUaeqUVeLENZg2gg0UB7aQZyAWlAU=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHUmfWDh41VUrsgxQX-Wh-d118sp0O2lcB3Mq57qnuAzCtmRrnkfefXj2apXoy-DpqYrC-wHD7RX5hTJ6KnfXO1pgTzNFbXyTvD_t4VvmAXgiBoR5vUaeqUVeLENZg2gg0UB7aQZyAWlAU=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF0Jze-WzyIkAJWFpQi-nnV-DUSlsL5Tf0lWpYsLeQbB6BJK1QcpuFZicwlHhGGTuMvQ1BQJ_KkwDiNO-4VgVhM1-x8ULqE3OJhILSlz2Tjhc9YTf5QT1Y6ZISFl7dNB6sfTZMvOV5XWGc=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF0Jze-WzyIkAJWFpQi-nnV-DUSlsL5Tf0lWpYsLeQbB6BJK1QcpuFZicwlHhGGTuMvQ1BQJ_KkwDiNO-4VgVhM1-x8ULqE3OJhILSlz2Tjhc9YTf5QT1Y6ZISFl7dNB6sfTZMvOV5XWGc=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFJAker0zvVf0fO34n0w1W4gGn1p4SJo9V0m9RO-B6aJ3LYqesxYjPR8HqBF5wh9U99V7k4-MqXdHBhVxFbysr6E668GiXPPDFz7qndNrt41ncyfGg5RyRON27Mul3TxeU-t0uj1P54hO0x=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFJAker0zvVf0fO34n0w1W4gGn1p4SJo9V0m9RO-B6aJ3LYqesxYjPR8HqBF5wh9U99V7k4-MqXdHBhVxFbysr6E668GiXPPDFz7qndNrt41ncyfGg5RyRON27Mul3TxeU-t0uj1P54hO0x=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGfU0f5OujGjnVcawyl7BUsXXyzmmGYPTuRbCcF_N8Qo-msoqjJqpUVsgUc4-6UCSpAV7p1OriZ0PyP26DBxTblO8gmQBSGFli0cyvGKh9pRQyzt1i1MWquLFOMy_V9Bw-6i1T2y2KUoR7C=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGfU0f5OujGjnVcawyl7BUsXXyzmmGYPTuRbCcF_N8Qo-msoqjJqpUVsgUc4-6UCSpAV7p1OriZ0PyP26DBxTblO8gmQBSGFli0cyvGKh9pRQyzt1i1MWquLFOMy_V9Bw-6i1T2y2KUoR7C=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEBaZGpdo_DPkLhh7lrT7zF--f67L1nmGbBGXywm3xUmi2-dm4phev0XBzO0-PTvRRK69Vi87H4JszWD9BfOcR7uKzaxtfscxqdgaCzjGMqikMcIgegV0gd6E6w2Zc2PyQDWFlR=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEBaZGpdo_DPkLhh7lrT7zF--f67L1nmGbBGXywm3xUmi2-dm4phev0XBzO0-PTvRRK69Vi87H4JszWD9BfOcR7uKzaxtfscxqdgaCzjGMqikMcIgegV0gd6E6w2Zc2PyQDWFlR=s10000"
+        }
+      ],
+      "amenities": [],
+      "raw_rating": 0,
+      "user_reviews": [
+        {
+          "text": "great amsterdam hotel enjoyed staying amsterdam renaissance, stayed times, location perfect, walking distance centraal station trams canal boats metro, taxis usually cued hotel especially morning dinner time.the rooms average exceptionally clean, rooms face street pick street noise it__Ç_é_ unavoidable, hotel bit expensive compared surrounding hotels value pay for.the staff extremely friendly helpful, concierge desk ready help guest services managers bronwyn christopher.water pressure plenty hot water makes comfortable shower, restaurants hotel, current security measures cause outside hotel use koppel cafÄ no big deal unless raining hard.marriott elite members use club lounge 6th floor, serves complimentary continental breakfast daily including weekends generous evening refreshments, say nicest club lounges used, free use lounge check e-mails web sites, just ask reasonable sharing time others.my disappointment hotel heating air conditioning difficult regulate, hot summer days air conditioning feels week, cold winter days heat strong tend like room cooler people, hotel not provide lot old world charm, business oriented hotel accustomed united states,  ",
+          "raw_stars": 5
+        },
+        {
+          "text": "abysmal service el san juan reservations wyndham el san juan phone 2/19-2/22, paid advance webrate, received type confirmation called wyndham 4 days trip faxed confirmation, dates reservation incorrect arriving 2/20 instead, hotel completely sold decent hotel san juan, flight tickets extremely upset, woman phone insisted not error reservation read reservation not, share room friends embassy suites night, finally checked el san juan women desk unwelcoming attitude, told wyndham messed reservation hope upgrade room make huge inconvenience, received low-level room view cinderblocks laying low-level roof, bathroom dirty, went beach greeted rude hotel employee refused umbrella, said reserved saw dozen umbrellas beach unused, hotel employee moving chaise lounges rusty cart scraped husband leg causing bleed resulting gash, employee apologetic, husband finally complained security guard amazingly umbrella immediately available, hotel definitely hotspot night attractive lobby not recommend staying, doubt worst hotel stays experienced,  ",
+          "raw_stars": 1
+        },
+        {
+          "text": "fab hotel right midtown great boutique hotel definitely stay, staff warm friendly helpful breakfasts good rooftop bar great fun, convenient shops 5th ave right near grand central station sightseeing subway, warned say petite room really mean, lovely room proper bath definitely person close, book theme charming stayed comfortably encyclopedia section,  ",
+          "raw_stars": 4
+        },
+        {
+          "text": "great price location travelled weekend break watch barcelona match stayed 4 nights say impressed soon arrived 12pm allowed check good hotel, staff welcoming especially manuel man reception star especially lost room key, area great big shopping centre nearby glories diagonal not far away, room clean comfy breakfast selection good fresh, monumental metro station nearest hotel easy, 4 stops placa da catalunya la rambla starts nightlife happens, looking book cheap good value hotel not regret,  ",
+          "raw_stars": 5
+        },
+        {
+          "text": "not stay thieves, stayed boyfriend 3 nights spending 10 days orlando 30th birthday, luckily fantastic time orlando, riu hotel dirty stains seats bed room windows rusty hard open room lick paint plaster work bascially need knocked rebuilt harsh, lobby nice dont spend time lobby, bar staff overcharged meal 14 charged 23 hardly speaks english properly including tv channels, really icing cake day texted aunty grandmother hospital left phone bedside table, went pool 3 hours day got gone, looked packed stripped room phone, went reception reported stolen staff unhelpful suggested packed, called number went answermachine knew left message grandmother, called housekeeping maid said opened door room occupied left mobile saw round table, round table room phone boyfriend phone come right room, say mobile room did scan room mobiles enters, staff suggested home unpack not case, n't missed flight, home unpacked called say definitely didnt know taken met wasnt problem, not stay hotel want good holiday not advice stay watch things mysteriously disappear warned,  ",
+          "raw_stars": 1
+        }
+      ],
+      "ai_score": 4.29,
+      "trust_weight": 0.84,
+      "analyzed_reviews": [
+        {
+          "text": "great amsterdam hotel enjoyed staying amsterdam renaissance, stayed times, location perfect, walking distance centraal station trams canal boats metro, taxis usually cued hotel especially morning dinner time.the rooms average exceptionally clean, rooms face street pick street noise it__Ç_é_ unavoidable, hotel bit expensive compared surrounding hotels value pay for.the staff extremely friendly helpful, concierge desk ready help guest services managers bronwyn christopher.water pressure plenty hot water makes comfortable shower, restaurants hotel, current security measures cause outside hotel use koppel cafÄ no big deal unless raining hard.marriott elite members use club lounge 6th floor, serves complimentary continental breakfast daily including weekends generous evening refreshments, say nicest club lounges used, free use lounge check e-mails web sites, just ask reasonable sharing time others.my disappointment hotel heating air conditioning difficult regulate, hot summer days air conditioning feels week, cold winter days heat strong tend like room cooler people, hotel not provide lot old world charm, business oriented hotel accustomed united states,  ",
+          "raw_stars": 5,
+          "sentiment_score": 5,
+          "trust_weight": 0.2,
+          "adjusted_stars": 5
+        },
+        {
+          "text": "abysmal service el san juan reservations wyndham el san juan phone 2/19-2/22, paid advance webrate, received type confirmation called wyndham 4 days trip faxed confirmation, dates reservation incorrect arriving 2/20 instead, hotel completely sold decent hotel san juan, flight tickets extremely upset, woman phone insisted not error reservation read reservation not, share room friends embassy suites night, finally checked el san juan women desk unwelcoming attitude, told wyndham messed reservation hope upgrade room make huge inconvenience, received low-level room view cinderblocks laying low-level roof, bathroom dirty, went beach greeted rude hotel employee refused umbrella, said reserved saw dozen umbrellas beach unused, hotel employee moving chaise lounges rusty cart scraped husband leg causing bleed resulting gash, employee apologetic, husband finally complained security guard amazingly umbrella immediately available, hotel definitely hotspot night attractive lobby not recommend staying, doubt worst hotel stays experienced,  ",
+          "raw_stars": 1,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 4
+        },
+        {
+          "text": "fab hotel right midtown great boutique hotel definitely stay, staff warm friendly helpful breakfasts good rooftop bar great fun, convenient shops 5th ave right near grand central station sightseeing subway, warned say petite room really mean, lovely room proper bath definitely person close, book theme charming stayed comfortably encyclopedia section,  ",
+          "raw_stars": 4,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 4
+        },
+        {
+          "text": "great price location travelled weekend break watch barcelona match stayed 4 nights say impressed soon arrived 12pm allowed check good hotel, staff welcoming especially manuel man reception star especially lost room key, area great big shopping centre nearby glories diagonal not far away, room clean comfy breakfast selection good fresh, monumental metro station nearest hotel easy, 4 stops placa da catalunya la rambla starts nightlife happens, looking book cheap good value hotel not regret,  ",
+          "raw_stars": 5,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 5
+        },
+        {
+          "text": "not stay thieves, stayed boyfriend 3 nights spending 10 days orlando 30th birthday, luckily fantastic time orlando, riu hotel dirty stains seats bed room windows rusty hard open room lick paint plaster work bascially need knocked rebuilt harsh, lobby nice dont spend time lobby, bar staff overcharged meal 14 charged 23 hardly speaks english properly including tv channels, really icing cake day texted aunty grandmother hospital left phone bedside table, went pool 3 hours day got gone, looked packed stripped room phone, went reception reported stolen staff unhelpful suggested packed, called number went answermachine knew left message grandmother, called housekeeping maid said opened door room occupied left mobile saw round table, round table room phone boyfriend phone come right room, say mobile room did scan room mobiles enters, staff suggested home unpack not case, n't missed flight, home unpacked called say definitely didnt know taken met wasnt problem, not stay hotel want good holiday not advice stay watch things mysteriously disappear warned,  ",
+          "raw_stars": 1,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 4
+        }
+      ],
+      "ai_score_expiration_date": "2026-04-22T08:26:27.050010Z",
+      "ai_summary_expiration_date": null,
+      "ai_summary": null,
+      "last_updated": "2026-04-15T08:26:33.568278Z"
+    },
+    {
+      "property_token": "ChoIq_Sd78fiovqRARoNL2cvMTFqOGoweHpqeBAB",
+      "name": "Khách Sạn Hội Ngộ",
+      "description": null,
+      "link": "https://www.booking.com/hotel/vn/khach-san-ngoc-lan-di-an.vi.html?aid=356938&label=metagha-link-LUVN-hotel-10719577_dev-desktop_los-1_bw-13_dow-Wednesday_defdate-1_room-_gstadt-2_rateid-public_aud-0_gacid-21411118307_mcid-10_ppa-0_clrid-0_ad-1_gstkid-0_checkin-20241218_ppt-Co_lp-2704_r-17647831506425897543&sid=ab2d8fdcaec13c5c808fc34f31ce014a&all_sr_blocks=1321244401_404811904_2_0_0&checkin=2024-12-18&checkout=2024-12-19&dest_id=-3712603&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=4&highlighted_blocks=1321244401_404811904_2_0_0&hpos=4&matching_block_id=1321244401_404811904_2_0_0&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&sr_pri_blocks=1321244401_404811904_2_0_0__25000000&srepoch=1733628815&srpvid=eaf018fe558e029d&type=total&ucfs=1&",
+      "address": null,
+      "phone": null,
+      "gps_coordinates": {
+        "latitude": 10.8921935,
+        "longitude": 106.7710836
+      },
+      "nearby_places": [],
+      "check_in_time": null,
+      "check_out_time": null,
+      "price": 335695,
+      "deal": null,
+      "booking_sources": [],
+      "images": [
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEu6ErsXuTwc1iJGW_DfWGYFjymqtqzuaxyeUnWCLIkYlJTk63GOOo5hyDCdK0LkDN-gazTXJQMvII4CZWQM-HBSFYhXkAC1gz9hrXZx51DlMOQS6zjpKl187UL78kmfdMbUDnrSA=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEu6ErsXuTwc1iJGW_DfWGYFjymqtqzuaxyeUnWCLIkYlJTk63GOOo5hyDCdK0LkDN-gazTXJQMvII4CZWQM-HBSFYhXkAC1gz9hrXZx51DlMOQS6zjpKl187UL78kmfdMbUDnrSA=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFf8uF2jbGpWrzvME_nCsHlJgOYMg0P-xhmRa5ZwpGcXFTM73Sjd5ulQaL1Igglu7A20Dlr1l3mj3M35TqWa-WWwhWL-A8pV99DRfl7-rrlgLojf5TMTCoNy5ZBEf7YFNJiJQCNbTWZKFe-=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFf8uF2jbGpWrzvME_nCsHlJgOYMg0P-xhmRa5ZwpGcXFTM73Sjd5ulQaL1Igglu7A20Dlr1l3mj3M35TqWa-WWwhWL-A8pV99DRfl7-rrlgLojf5TMTCoNy5ZBEf7YFNJiJQCNbTWZKFe-=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFN0b0gblAAYVdNWlxmTzG6Vnk1ovjBKnoK7nfYmFYZ18XMglj7RCBvQsrdCNPWsPYuJ7q_NzGCzduvdsNCsPJFDi2gvaWvK_-czlRP8ne7SeNYgK469WZ3JSlPOGbh4a9SoL9n5TzgfHQ=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFN0b0gblAAYVdNWlxmTzG6Vnk1ovjBKnoK7nfYmFYZ18XMglj7RCBvQsrdCNPWsPYuJ7q_NzGCzduvdsNCsPJFDi2gvaWvK_-czlRP8ne7SeNYgK469WZ3JSlPOGbh4a9SoL9n5TzgfHQ=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG0ymVpXv0q1ZGIP0zMh0LMEFAtNK4q6p58j_UFyrcJYAC7gIxieokiTemlLYyySQJmvrl5t8n1tHCUiOmVIPyQU49TG3t8fLtYa9b8yTLwY20Q70ymomuM9y9fD-rx_oNAQNZMpX26DLw=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG0ymVpXv0q1ZGIP0zMh0LMEFAtNK4q6p58j_UFyrcJYAC7gIxieokiTemlLYyySQJmvrl5t8n1tHCUiOmVIPyQU49TG3t8fLtYa9b8yTLwY20Q70ymomuM9y9fD-rx_oNAQNZMpX26DLw=s10000"
+        },
+        {
+          "thumbnail": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=IQFSkDeoiQoCGoSuDG2gcg&cb_client=search.estubs.gps&w=287&h=192&yaw=102.93169&pitch=0&thumbfov=100&scale=2",
+          "original_image": "https://lh5.googleusercontent.com/p/IQFSkDeoiQoCGoSuDG2gcg=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH74CM0fEwaxAiUMZAgbQiE-b4dr6Z30R62cGBm4UpoPf7So4-pLlQo0TabYL39rsjYAcasllavP4MFr4KfRsk52aezCOxxMmdlSPeeqVeSdBJDpFxLcBpS_jBHqFk_donedxI4=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH74CM0fEwaxAiUMZAgbQiE-b4dr6Z30R62cGBm4UpoPf7So4-pLlQo0TabYL39rsjYAcasllavP4MFr4KfRsk52aezCOxxMmdlSPeeqVeSdBJDpFxLcBpS_jBHqFk_donedxI4=s10000"
+        }
+      ],
+      "amenities": [],
+      "raw_rating": 0,
+      "user_reviews": [
+        {
+          "text": "yecch, hotel la playa seedy feel moment, walked room smell cigarette smoke overwhelming, surprised moment commenting maid emerged bathroom cigarette dangling lip bed uncomfortable sheets itchy, bathroom sketchy warrant wearing flip-flops shower, drinks bar tasted like rubbing alcohol specifically ordered 2nd shelf liquor, overall place just dive.like travelers tight budget, night san juan stayed gorgeous guest house andalucia ocean park, exact price worlds apart, trust not need punish stay hotel la playa just save money,  ",
+          "raw_stars": 1
+        },
+        {
+          "text": "great value oue experience hotel fantastic, rooms small not tiny clean bathrooms, lobby friendly atmosphere staff helpful, hotel not far away main strip waikiki safe walk, floors elevators little slow annoying change elevators not bad, overall value money definitely return,  ",
+          "raw_stars": 4
+        },
+        {
+          "text": "fantastic affordable boutique hotel great location boyfriend recently stayed, research noticed lot reviewers mentioned rooms little small, contacted max daddy a.k.a, chris bebo asked larger room, not booked larger artist king room gave additional pricing wanted upgrade deluxe rooms, stuck larger artist king staying 4 nights, perfect, great view cozy hip room, hotel rooms really reminded smaller expensive w stayed nyc, little storage space bathroom small, did research hotel max used older hotel explains smaller bathrooms, personally thought cute completely sufficient, solve storage problems asked hangers 10 minutes later, staff helpful desk questions needs, harry sure cab night car airport, highly recommend getting car instead cab, cheaper safer nicer automobile, hotel close attractions shopping restaurants, needed cab able walk, definitely like boutique feel lot hotels doing nowadays hotel max does cheaper pricing not cheap service, needless say really enjoyed stay time seattle, visit near future definitely stay hotel max,  ",
+          "raw_stars": 4
+        },
+        {
+          "text": "worth penny 600/night paid, loved large luxurious rooms exellent location, worth penny paid, highly recommend,  ",
+          "raw_stars": 5
+        },
+        {
+          "text": "ace hotel, reasonably priced hotel great location seattle, spent nights room staff great, communal showers immaculate queue, breakfast great, bit street noise coming floor ear plugs room, highly recommend bar cyclops hotel,  ",
+          "raw_stars": 4
+        }
+      ],
+      "ai_score": 4.2,
+      "trust_weight": 1,
+      "analyzed_reviews": [
+        {
+          "text": "yecch, hotel la playa seedy feel moment, walked room smell cigarette smoke overwhelming, surprised moment commenting maid emerged bathroom cigarette dangling lip bed uncomfortable sheets itchy, bathroom sketchy warrant wearing flip-flops shower, drinks bar tasted like rubbing alcohol specifically ordered 2nd shelf liquor, overall place just dive.like travelers tight budget, night san juan stayed gorgeous guest house andalucia ocean park, exact price worlds apart, trust not need punish stay hotel la playa just save money,  ",
+          "raw_stars": 1,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 4
+        },
+        {
+          "text": "great value oue experience hotel fantastic, rooms small not tiny clean bathrooms, lobby friendly atmosphere staff helpful, hotel not far away main strip waikiki safe walk, floors elevators little slow annoying change elevators not bad, overall value money definitely return,  ",
+          "raw_stars": 4,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 4
+        },
+        {
+          "text": "fantastic affordable boutique hotel great location boyfriend recently stayed, research noticed lot reviewers mentioned rooms little small, contacted max daddy a.k.a, chris bebo asked larger room, not booked larger artist king room gave additional pricing wanted upgrade deluxe rooms, stuck larger artist king staying 4 nights, perfect, great view cozy hip room, hotel rooms really reminded smaller expensive w stayed nyc, little storage space bathroom small, did research hotel max used older hotel explains smaller bathrooms, personally thought cute completely sufficient, solve storage problems asked hangers 10 minutes later, staff helpful desk questions needs, harry sure cab night car airport, highly recommend getting car instead cab, cheaper safer nicer automobile, hotel close attractions shopping restaurants, needed cab able walk, definitely like boutique feel lot hotels doing nowadays hotel max does cheaper pricing not cheap service, needless say really enjoyed stay time seattle, visit near future definitely stay hotel max,  ",
+          "raw_stars": 4,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 4
+        },
+        {
+          "text": "worth penny 600/night paid, loved large luxurious rooms exellent location, worth penny paid, highly recommend,  ",
+          "raw_stars": 5,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 5
+        },
+        {
+          "text": "ace hotel, reasonably priced hotel great location seattle, spent nights room staff great, communal showers immaculate queue, breakfast great, bit street noise coming floor ear plugs room, highly recommend bar cyclops hotel,  ",
+          "raw_stars": 4,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 4
+        }
+      ],
+      "ai_score_expiration_date": "2026-04-22T08:26:27.050010Z",
+      "ai_summary_expiration_date": null,
+      "ai_summary": null,
+      "last_updated": "2026-04-15T08:26:33.572347Z"
+    },
+    {
+      "property_token": "ChkI0tbcvJyG265eGg0vZy8xMXpqeTVubm41EAE",
+      "name": "Nong Lam Ecolodge",
+      "description": null,
+      "link": "http://www.nonglamecolodge.com/",
+      "address": null,
+      "phone": null,
+      "gps_coordinates": {
+        "latitude": 10.8698375,
+        "longitude": 106.78947149999999
+      },
+      "nearby_places": [],
+      "check_in_time": "14:00",
+      "check_out_time": "12:00",
+      "price": 585108,
+      "deal": "Rẻ hơn bình thường 50%",
+      "booking_sources": [],
+      "images": [
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHbTTvIoeMbWgG3ZdzVguJxdpE3LBG5szp9T7KTRZT_QeG5Zp1Bc4B488ghfGjRy8GrjaIukHR_xB_JTXbS2GWLSL7fT-j7lz9W3oNhVJ2nae7u-v5d9gLo8sisL46i2RqnVPXP5MY8kiV2=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHbTTvIoeMbWgG3ZdzVguJxdpE3LBG5szp9T7KTRZT_QeG5Zp1Bc4B488ghfGjRy8GrjaIukHR_xB_JTXbS2GWLSL7fT-j7lz9W3oNhVJ2nae7u-v5d9gLo8sisL46i2RqnVPXP5MY8kiV2=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH8UNn4ZhMqmm1b4D72i2b_B291HPmaA4AmPT1fORAoY3CURIYtC45AT4vDXJYeyR8D4WfEG--orhouYQ-o9MGuO6h7Zs-IR2gJLjdMJJtv81w6cVpoOp8ULu7nxiTbE6UzkA-RKodLcnRw=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH8UNn4ZhMqmm1b4D72i2b_B291HPmaA4AmPT1fORAoY3CURIYtC45AT4vDXJYeyR8D4WfEG--orhouYQ-o9MGuO6h7Zs-IR2gJLjdMJJtv81w6cVpoOp8ULu7nxiTbE6UzkA-RKodLcnRw=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHylSeW1xtcDs05PMeji3QT0A2BHS5fPrRTXpnw3d-WfkDmtshOAMLufq1marZevO20TLo9Sb6emIXcxlwnzseZ0RjXczBn2RmrQPqCK1eaRHa0dY3rv5ExebarKOCKlRhErKQJfvXLW3ud=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHylSeW1xtcDs05PMeji3QT0A2BHS5fPrRTXpnw3d-WfkDmtshOAMLufq1marZevO20TLo9Sb6emIXcxlwnzseZ0RjXczBn2RmrQPqCK1eaRHa0dY3rv5ExebarKOCKlRhErKQJfvXLW3ud=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHXfJ9FX_xMAdEBZeUB0-bW-ZuvucAjiedHFQurnRUAArE4XFsxhX-SKrTEVe9mZOV-NJK-N0UUAAf7SlqGcIQNXGc1KAghcoxqKk3PMTArGAatKR3E6mtRxqTQcyyh8uGVXY5graHI893z=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHXfJ9FX_xMAdEBZeUB0-bW-ZuvucAjiedHFQurnRUAArE4XFsxhX-SKrTEVe9mZOV-NJK-N0UUAAf7SlqGcIQNXGc1KAghcoxqKk3PMTArGAatKR3E6mtRxqTQcyyh8uGVXY5graHI893z=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEm8I3ZCHjZ2uxAs6z8ruig8cknXvTxhtirUyUON3_1Uen37_XXuS514p2-V3y0UfHF3X_S1h8Xf6uBfHFU8Cb-XRZlafbdZf_MBEuOF4r4E2rPKXOfkFds3eXOKGK176JcaB3R7b3_2k4=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEm8I3ZCHjZ2uxAs6z8ruig8cknXvTxhtirUyUON3_1Uen37_XXuS514p2-V3y0UfHF3X_S1h8Xf6uBfHFU8Cb-XRZlafbdZf_MBEuOF4r4E2rPKXOfkFds3eXOKGK176JcaB3R7b3_2k4=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFwE9LQeSzOt-1HVD2288ynvAN5yL4OUZK8ukOjFCFYvfj1lx1CJMRI04Iq07kZ3Zr2GAkgwtX3DKkHZ-WBLS5Twh2haHJ-6l3mgqNug5d6GYPJcIOtV9nMluGGau-FvQkECUZ0HLxC5-gW=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFwE9LQeSzOt-1HVD2288ynvAN5yL4OUZK8ukOjFCFYvfj1lx1CJMRI04Iq07kZ3Zr2GAkgwtX3DKkHZ-WBLS5Twh2haHJ-6l3mgqNug5d6GYPJcIOtV9nMluGGau-FvQkECUZ0HLxC5-gW=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHI1wxeLLobeiVj2YmfVSQYMobM6n05D_4jyoDQdJ889MashIaMPgmrlRxU9CqYSyg2vTpVykxq5zzX-DeB5J3qjiGuRA3HAebIt9HSleXGD5RmWH4Ki572gdFgJswKYvzWKUpdCZUumHig=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHI1wxeLLobeiVj2YmfVSQYMobM6n05D_4jyoDQdJ889MashIaMPgmrlRxU9CqYSyg2vTpVykxq5zzX-DeB5J3qjiGuRA3HAebIt9HSleXGD5RmWH4Ki572gdFgJswKYvzWKUpdCZUumHig=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHJ2GVFleot927T20dMEQwEsUQaUUG8ycyl5cd-J-vYcaAzp4zSSzJrrJfAiWXuQuC7EJ3Y4PTNC3i-_PPd_WitErvrioyX5EnY86IhMyo03HRXSRxo7wsjQxB2sNXCgFcyWp0xmQYo4rwu=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHJ2GVFleot927T20dMEQwEsUQaUUG8ycyl5cd-J-vYcaAzp4zSSzJrrJfAiWXuQuC7EJ3Y4PTNC3i-_PPd_WitErvrioyX5EnY86IhMyo03HRXSRxo7wsjQxB2sNXCgFcyWp0xmQYo4rwu=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG_WzYYDQS764ci528chymsrZlsikSjiJlhpDZcp_lZtTQP4FDWegkHIEtKCWKgBGuYnojecZYbkDqDHaKPFOKNTPHjYyoNwchMJQsguBc0PXtDRlnSyBYFu_HrvU7Po5jLkimXv8w9opmo=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG_WzYYDQS764ci528chymsrZlsikSjiJlhpDZcp_lZtTQP4FDWegkHIEtKCWKgBGuYnojecZYbkDqDHaKPFOKNTPHjYyoNwchMJQsguBc0PXtDRlnSyBYFu_HrvU7Po5jLkimXv8w9opmo=s10000"
+        }
+      ],
+      "amenities": [
+        "Free breakfast",
+        "Free Wi-Fi",
+        "Free parking",
+        "Air conditioning",
+        "Pet-friendly",
+        "Kitchen",
+        "Full-service laundry"
+      ],
+      "raw_rating": 0,
+      "user_reviews": [
+        {
+          "text": "don t stay searching decent hotel kensington london decided stay parkcity hotel, moment arrived left service hotel not faulted, hotel set beautiful terrace houses recently refurbished stylish modern really positioned close gloucester road station 5min walk kensington gardens 15 min walk high street kensington 15 min walk not mention restaurants sainbury cafe beautiful french patissere opposite tube station, starbucks opposite station usa travellers, hotel located cromwell road residential area room quiet, hotel immaculate exceeded expectations, thought value money, firstly staff nice 30 hours flying comforting know going looked, room n't ready arrived 8am allowed shower change store luggage went explored london, arriving courteous room ready bags set biscuits tea fresh bottled water, room beautiful king size bed enormous bathroom modern comfortable, not speak highly hotel au230 night bargain,  ",
+          "raw_stars": 5
+        },
+        {
+          "text": "great time iberostar bavaro stayed bavaro jan 22-29/05, say fantastic time, vacation no complaints, food good lots choose, waiter superb happy singing got needed, no got sick did self inflicted, coco locos rum juice, worked friendly rooms clean spacious, pool nice spent time beach, pool bar little way not alot people, beach early want spot fills fast, market just beach good remember bargin, n't excited casino small hot, grounds beautiful clean lots peacocks flamingo wildlife really neat, definelty resort, make sure buy stuff home resort expensive, 28 underwater camera,  ",
+          "raw_stars": 5
+        }
+      ],
+      "ai_score": 5,
+      "trust_weight": 1,
+      "analyzed_reviews": [
+        {
+          "text": "don t stay searching decent hotel kensington london decided stay parkcity hotel, moment arrived left service hotel not faulted, hotel set beautiful terrace houses recently refurbished stylish modern really positioned close gloucester road station 5min walk kensington gardens 15 min walk high street kensington 15 min walk not mention restaurants sainbury cafe beautiful french patissere opposite tube station, starbucks opposite station usa travellers, hotel located cromwell road residential area room quiet, hotel immaculate exceeded expectations, thought value money, firstly staff nice 30 hours flying comforting know going looked, room n't ready arrived 8am allowed shower change store luggage went explored london, arriving courteous room ready bags set biscuits tea fresh bottled water, room beautiful king size bed enormous bathroom modern comfortable, not speak highly hotel au230 night bargain,  ",
+          "raw_stars": 5,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 5
+        },
+        {
+          "text": "great time iberostar bavaro stayed bavaro jan 22-29/05, say fantastic time, vacation no complaints, food good lots choose, waiter superb happy singing got needed, no got sick did self inflicted, coco locos rum juice, worked friendly rooms clean spacious, pool nice spent time beach, pool bar little way not alot people, beach early want spot fills fast, market just beach good remember bargin, n't excited casino small hot, grounds beautiful clean lots peacocks flamingo wildlife really neat, definelty resort, make sure buy stuff home resort expensive, 28 underwater camera,  ",
+          "raw_stars": 5,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 5
+        }
+      ],
+      "ai_score_expiration_date": "2026-04-22T08:26:27.050010Z",
+      "ai_summary_expiration_date": null,
+      "ai_summary": null,
+      "last_updated": "2026-04-15T08:26:33.576174Z"
+    },
+    {
+      "property_token": "ChkI07OHyafKxOd6Gg0vZy8xMXkzd2dxOHF6EAE",
+      "name": "Bảo Trâm Korea Motel",
+      "description": null,
+      "link": null,
+      "address": null,
+      "phone": null,
+      "gps_coordinates": {
+        "latitude": 10.920957300000001,
+        "longitude": 106.7592372
+      },
+      "nearby_places": [],
+      "check_in_time": null,
+      "check_out_time": null,
+      "price": 308314,
+      "deal": null,
+      "booking_sources": [],
+      "images": [
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGuD_SHyWb9WXFsgtuhcnqH1YnV-rUJkFpjKR4qx-IqeYN71meKOGGVRCOpK6_vvPavbBuI9AnTXMd5zOhIakwrYTY62CVtQjjjelRvqY9xfM-WgRZQ3KnFEEtRo1CtdXuyuqmr=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGuD_SHyWb9WXFsgtuhcnqH1YnV-rUJkFpjKR4qx-IqeYN71meKOGGVRCOpK6_vvPavbBuI9AnTXMd5zOhIakwrYTY62CVtQjjjelRvqY9xfM-WgRZQ3KnFEEtRo1CtdXuyuqmr=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEaEkYkanNRldLBuDze2vpVI0GDvnrqm2y0qcVy1akkCsPoD_1LtHCZTIGQeEjXw_Mo76QAStDIUKeixebMDqb7BNdHq_IsBeo8n4t3-RcH6JOgPxeUqZw6NitL-Z39Fm0LzTT9=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEaEkYkanNRldLBuDze2vpVI0GDvnrqm2y0qcVy1akkCsPoD_1LtHCZTIGQeEjXw_Mo76QAStDIUKeixebMDqb7BNdHq_IsBeo8n4t3-RcH6JOgPxeUqZw6NitL-Z39Fm0LzTT9=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH4XNRcnMKq3Q39et6FqwYkwfCCiZWry4GHQZj-n38n30q-25d-DRCh6NAgNGGNh1FY8QAAsrxpJ3KXW2L2u1YTX_Nth6diZVppfv_Jehu5TWq8W4zLFCMYFdFacuXikcRfrL_G4ROopeKX=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH4XNRcnMKq3Q39et6FqwYkwfCCiZWry4GHQZj-n38n30q-25d-DRCh6NAgNGGNh1FY8QAAsrxpJ3KXW2L2u1YTX_Nth6diZVppfv_Jehu5TWq8W4zLFCMYFdFacuXikcRfrL_G4ROopeKX=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFHW919FWUO7cbewBDP0I_4mpsZ9xX4docmIuAT6G2mOXofqcZmzRSIPsConVWtEyWfZxfdkP_WASLuKzFF5Kq3ErmwXiBmqFDap1PM4kM7u4j7jKuDZfDnt2iPaUBmoyA8KxnO=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFHW919FWUO7cbewBDP0I_4mpsZ9xX4docmIuAT6G2mOXofqcZmzRSIPsConVWtEyWfZxfdkP_WASLuKzFF5Kq3ErmwXiBmqFDap1PM4kM7u4j7jKuDZfDnt2iPaUBmoyA8KxnO=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHcO6UYS5UY3PCzXIZX0hz9NP3P7pDyonzZkHlhqHCQCBeyJuZxS17lMqtkR0c53UL84PCNNvlFN9W75qw7grFG8LuqDq3v7Uzo9SwZZbTQk0QBtBnaWFB_7BqTft4gnyoFHOGZ=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHcO6UYS5UY3PCzXIZX0hz9NP3P7pDyonzZkHlhqHCQCBeyJuZxS17lMqtkR0c53UL84PCNNvlFN9W75qw7grFG8LuqDq3v7Uzo9SwZZbTQk0QBtBnaWFB_7BqTft4gnyoFHOGZ=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFkZWPNIxnnTd-vqWLK3uzuPlzvQYevAcu9PEMmSaK9Jh_-yu25PX-YnWnYz6SI4Kp95HVhrIK52REiPBUH7ld8QyTHM_sqNXwX1ntzLwkyBj5w3LQaWgf9MS4lhfSfH13m5uH1qky717XV=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFkZWPNIxnnTd-vqWLK3uzuPlzvQYevAcu9PEMmSaK9Jh_-yu25PX-YnWnYz6SI4Kp95HVhrIK52REiPBUH7ld8QyTHM_sqNXwX1ntzLwkyBj5w3LQaWgf9MS4lhfSfH13m5uH1qky717XV=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE7ZxGT5MZoBLPmyE4wRjl_WIRkgEZbk5SSWSBBYDjutQ0Rzj-rAhl7ISQt3bMDYHGkXquVeC9lBHYMjYjmY23QjE1f36SKHFrbJqDPM1c5rnwJAAgx8YAHBh2_3W1m1D_frGZPcJpabhMm=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE7ZxGT5MZoBLPmyE4wRjl_WIRkgEZbk5SSWSBBYDjutQ0Rzj-rAhl7ISQt3bMDYHGkXquVeC9lBHYMjYjmY23QjE1f36SKHFrbJqDPM1c5rnwJAAgx8YAHBh2_3W1m1D_frGZPcJpabhMm=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFM6QinCdcDuZ9RwGaIzdXW35nx6D3wMDzX4MW0iYgaO7nnKlqfHsZJwoNq0WO5bhmcMECPo5nE25tbQocmjSYsk7tPWKwtImsI2YvdvAwYrTM208Gdx8UF-f9TioCJsnET9NHExGsJ52pz=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFM6QinCdcDuZ9RwGaIzdXW35nx6D3wMDzX4MW0iYgaO7nnKlqfHsZJwoNq0WO5bhmcMECPo5nE25tbQocmjSYsk7tPWKwtImsI2YvdvAwYrTM208Gdx8UF-f9TioCJsnET9NHExGsJ52pz=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFHZgaNS43fkou37bcK4bHsFTTwQ3os1CLvaWtpG5EXb050PCItwvPBRtBurhWqrneXNXnj_vX6BEeUi6OdFt-FZSIb5FrWcFxfGMQx5POoL-_cjMmDz_pnxxokNpnjcnWKupPO3u5tlnFX=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFHZgaNS43fkou37bcK4bHsFTTwQ3os1CLvaWtpG5EXb050PCItwvPBRtBurhWqrneXNXnj_vX6BEeUi6OdFt-FZSIb5FrWcFxfGMQx5POoL-_cjMmDz_pnxxokNpnjcnWKupPO3u5tlnFX=s10000"
+        }
+      ],
+      "amenities": [],
+      "raw_rating": 0,
+      "user_reviews": [
+        {
+          "text": "not bad place stay short term n't expect, want roominess amenities not walk stairs not place you.if day just need place sleep shower fine place, rate good compared lodgings city.it old 1920 built twin apartment buildings retired priests nuns, building sisters priests.our room queen bed large walk-in closet kitchenette bath, clean adequate night stay.the staff friendly bellboy..adam nice helpful, stairway funny smell mildew like room no air conditioner no smell, temps hit 90 open windows ceiling fan bearable, hot temperature seattle rare.this street city center old 1962 worlds fair site space needle park amusement rides short walk away, monorail 2 ride downtown, walk free public transportations pioneer square pike markey waterfront.if arriving air rush-hour period suggest let hotel book towncar, 45 plus tip taxi ride rush-hour expensive, stuck traffic nice not meter, went taxi 5 a.m. sunday cost 35 plus tip,  ",
+          "raw_stars": 4
+        },
+        {
+          "text": "dependable hotel good three/four star hotel great location, clean functional, modern, location excellent close old barcelona area.there hotels area offer comparable value,  ",
+          "raw_stars": 4
+        },
+        {
+          "text": "paradise went hotel 2002 august 2003 book august 2004 best place vacations nice big pool nice rooms new rooms jacuzzi lots restaurants japonese el romantico good grill burgers hot dogs year went problems went wc 10 times day drink botled water think food wrong botled water, wife bring bottles portugal didn__t kind problems second year bring water portugal no problems drink water botlle.the sun strong careful.enjoy paradise,  ",
+          "raw_stars": 5
+        }
+      ],
+      "ai_score": 4.33,
+      "trust_weight": 1,
+      "analyzed_reviews": [
+        {
+          "text": "not bad place stay short term n't expect, want roominess amenities not walk stairs not place you.if day just need place sleep shower fine place, rate good compared lodgings city.it old 1920 built twin apartment buildings retired priests nuns, building sisters priests.our room queen bed large walk-in closet kitchenette bath, clean adequate night stay.the staff friendly bellboy..adam nice helpful, stairway funny smell mildew like room no air conditioner no smell, temps hit 90 open windows ceiling fan bearable, hot temperature seattle rare.this street city center old 1962 worlds fair site space needle park amusement rides short walk away, monorail 2 ride downtown, walk free public transportations pioneer square pike markey waterfront.if arriving air rush-hour period suggest let hotel book towncar, 45 plus tip taxi ride rush-hour expensive, stuck traffic nice not meter, went taxi 5 a.m. sunday cost 35 plus tip,  ",
+          "raw_stars": 4,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 4
+        },
+        {
+          "text": "dependable hotel good three/four star hotel great location, clean functional, modern, location excellent close old barcelona area.there hotels area offer comparable value,  ",
+          "raw_stars": 4,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 4
+        },
+        {
+          "text": "paradise went hotel 2002 august 2003 book august 2004 best place vacations nice big pool nice rooms new rooms jacuzzi lots restaurants japonese el romantico good grill burgers hot dogs year went problems went wc 10 times day drink botled water think food wrong botled water, wife bring bottles portugal didn__t kind problems second year bring water portugal no problems drink water botlle.the sun strong careful.enjoy paradise,  ",
+          "raw_stars": 5,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 5
+        }
+      ],
+      "ai_score_expiration_date": "2026-04-22T08:26:27.050010Z",
+      "ai_summary_expiration_date": null,
+      "ai_summary": null,
+      "last_updated": "2026-04-15T08:26:33.579701Z"
+    },
+    {
+      "property_token": "ChkI84-ewbDGv4kGGg0vZy8xMWd5Ymhma2RfEAE",
+      "name": "Khách sạn Hạ Long",
+      "description": null,
+      "link": "https://www.facebook.com/profile.php?id=100010979346159",
+      "address": null,
+      "phone": null,
+      "gps_coordinates": {
+        "latitude": 10.8642047,
+        "longitude": 106.781809
+      },
+      "nearby_places": [],
+      "check_in_time": "14:00",
+      "check_out_time": "11:00",
+      "price": 308995,
+      "deal": null,
+      "booking_sources": [],
+      "images": [
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEzJ0F40aRacT_OOG3s6f9H8JNdSt7xYRStrxj0Xz2jWFLgnjjBlh6iG460P5KwwR67H9g7hJuWMnXjUHq-eybdG9_eWp5HB2NcF923xJ4Jkj5ijvpb4TWjwVcYwdFu0Fc9gk6e=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEzJ0F40aRacT_OOG3s6f9H8JNdSt7xYRStrxj0Xz2jWFLgnjjBlh6iG460P5KwwR67H9g7hJuWMnXjUHq-eybdG9_eWp5HB2NcF923xJ4Jkj5ijvpb4TWjwVcYwdFu0Fc9gk6e=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFz1Wqs_B1ga-1yp9a4bS8Y9CBjm6JonOyuPjHkNZC9FWWtGW6dE7B3enFZ2kYeqWMcf7ATK_VpZpjjXQUK2SGdNDtF7F6t0ZlSk7QAyqn7J7QaDesKNhHzzHbnHegI3TQFOpNH=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFz1Wqs_B1ga-1yp9a4bS8Y9CBjm6JonOyuPjHkNZC9FWWtGW6dE7B3enFZ2kYeqWMcf7ATK_VpZpjjXQUK2SGdNDtF7F6t0ZlSk7QAyqn7J7QaDesKNhHzzHbnHegI3TQFOpNH=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHPx45AnsO8v0phtz8kAfrLShBBA8kRCipGykdUg6fVuqdaVqzaAZFfVcERzvlhrw5ip_6d13H7qhYC9s98GUWKZkCJgm6qnNu5TuEZKaoI8Vg5FbIQNRq5vmLVJ6qRjQD4kU7R=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHPx45AnsO8v0phtz8kAfrLShBBA8kRCipGykdUg6fVuqdaVqzaAZFfVcERzvlhrw5ip_6d13H7qhYC9s98GUWKZkCJgm6qnNu5TuEZKaoI8Vg5FbIQNRq5vmLVJ6qRjQD4kU7R=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHKWm0k8mCxeayHOn1iuhoVsht-XhoA4ytTQnTuF0V8CREUVKmlotFcJt9VSL1z56YXghA4W42d-LK62XPFn6eopPISEdV7EfQY1OmDun9ex7ij9kjpQBWy9ceN-xDohONJQLLELw=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHKWm0k8mCxeayHOn1iuhoVsht-XhoA4ytTQnTuF0V8CREUVKmlotFcJt9VSL1z56YXghA4W42d-LK62XPFn6eopPISEdV7EfQY1OmDun9ex7ij9kjpQBWy9ceN-xDohONJQLLELw=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGHBbIA9enYEzkL8nU9ad2pbi-x06Ev-3uS6iPUrCiz8R1_67RjLd4VW_yTk6Hlpg6TgiBnqs5On2ck4QJeFjdOceacYWIVA8ctgFWU807OTqMNg-l0spqkAUWFtSkYDjpKrrzz=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGHBbIA9enYEzkL8nU9ad2pbi-x06Ev-3uS6iPUrCiz8R1_67RjLd4VW_yTk6Hlpg6TgiBnqs5On2ck4QJeFjdOceacYWIVA8ctgFWU807OTqMNg-l0spqkAUWFtSkYDjpKrrzz=s10000"
+        },
+        {
+          "thumbnail": "https://lh4.googleusercontent.com/proxy/FRELdBrCY-pfJ_adoruMS4EXCjVQANNSHvayK3uL8u3K4uCxS3Fs6zX3WWSt9_0LlY-3sOWvQooYNlQodiObKWwNl_kGZH_tnzJgpxeTkXep72rfwRWZnykEqqQCY7j0wZVb_scpCCcH7ZVtMZOTwNFYqpn5IA=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://cdn.worldota.net/t/1024x768/content/3a/74/3a74a9ed2ee3f40e1883c9991ca9630583a03cac.jpeg"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHf_heeY5H083zivk3gwJ6EBC7fVrJEfqVCzkwRe9GXEKNjQfugiGkulNqCtbCoEnCtReGd9EXfP2-D81OksjMDxSQSnlkQpaD70UyICs4X_5DDRNWbM-t9kkfPkE3jvOUhEts=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHf_heeY5H083zivk3gwJ6EBC7fVrJEfqVCzkwRe9GXEKNjQfugiGkulNqCtbCoEnCtReGd9EXfP2-D81OksjMDxSQSnlkQpaD70UyICs4X_5DDRNWbM-t9kkfPkE3jvOUhEts=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFdlKaBUv8Wiyl191jmnoi3MRSDFV5V-AUbV1lFyeDdZjcd1hKYbKxRKWAnHacfuHDr98WFG4LuW4oHfCJKk3WOIvB9SIGAYHYRF73PS7CckFPwKTR9npb8u2joMwdbzVQaS3g1=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFdlKaBUv8Wiyl191jmnoi3MRSDFV5V-AUbV1lFyeDdZjcd1hKYbKxRKWAnHacfuHDr98WFG4LuW4oHfCJKk3WOIvB9SIGAYHYRF73PS7CckFPwKTR9npb8u2joMwdbzVQaS3g1=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH97nzP6C5ftlcNS3yOmlptDVxJBLoITTtW6Y-ggmdlwPHLD3Bw-s7no-JTjChKOE5i7rUdpmovUDZpWMcBHGkAxIOzlAaacuVnug6UtQV0oS4GirbObFJU-h3uYXFduvL5tNEFBQ=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH97nzP6C5ftlcNS3yOmlptDVxJBLoITTtW6Y-ggmdlwPHLD3Bw-s7no-JTjChKOE5i7rUdpmovUDZpWMcBHGkAxIOzlAaacuVnug6UtQV0oS4GirbObFJU-h3uYXFduvL5tNEFBQ=s10000"
+        }
+      ],
+      "amenities": [
+        "Free Wi-Fi",
+        "Free parking",
+        "Air conditioning",
+        "Restaurant",
+        "Airport shuttle",
+        "Full-service laundry",
+        "Kid-friendly"
+      ],
+      "raw_rating": 0,
+      "user_reviews": [
+        {
+          "text": "2nd stay pleased enjoyed stay hotel past may.this second visit years marriott, like location kind quite end waikiki beach, great beach right street, enjoyed breakfast buffet food great came room, good restaurants close dukes great view chesseburger paradise reasonably priced plenty shopping, room clean spacious, bath room layout little strange, beds comfortable soft views diamond head pacific great, staff friendly helpful, stay,  ",
+          "raw_stars": 4
+        },
+        {
+          "text": "great time just got saturday night 8 day vacation excellence, traveled 3 couples anxiously waiting trip months, great time things missing preventing 5 star.it beautiful hotel beautiful beach pool room ceiling shower caving piping tubes, kinda creeped like watching shower, shower mold, cleaning service didnt come 5 6pm night annoying wanted come right middle getting ready dinner, grab extra towels beach knowing not clean towels later, room service took hour half just bring hamburger, kept losing power long periods time, room clocks, went blowdry hair fuse blew power room.the pool area beautiful relaxing pool activities fun chose participate, entertainment staff great, annoying wake early 8am not able chair reserved, just moved peoples towels pool floats like gold people scoop 7am reserved chairs, unless 7 youre not getting, pool def, needs little buffettarea grab quick bite dot inside lunch, thing annoyed stay, pizza guy does come 3pm y eaten inside wait, rarely saw waiter taking drink orders, time cafe bar own.i happened think food great restaurants toscana, ordered steak figuring safe choice inedible, loved lobster house breakfast grill lunch, unbelievable french fries onion rings chicken sandwiches caesar salads, buffet breakfast lunch ok quick bite really liked, spice chez isabelle amazing, best french onion soup chateaubriand, lobster house wasnt bad grill favorites dinner, fliet mignon great, funny enjoyed food stomach issues living bottles maalox.we did dunebuggy tour great stopping wanted buy jewelry souvenirs, actually way fun got kicked tour end rowdy not following tour guide, awesome, incredibly muddy like tidal waves mud throw clothes worn, no saving, club lot fun pretty time 8 fun, overall great trip really need improve service maintenance, honeymoon le blanc cancun august blows place away areas, hard husband kept comparing le blanc clearly no comparison, excellence just 4 star resort poor service le blanc leave chair,  ",
+          "raw_stars": 4
+        },
+        {
+          "text": "love, family travelled riu bambu twice august 2001 march 2007, love riu bambu, amazing place stay, worrying negative comments ignore, riu bambu amazing just like riu hotel chain fantastic, mom actually travelling riu vallarta week puerto vallarta, riu riu palace cabo san lucas riu cancun says entertainment 1 beach service..its amazing want good entertainment riu bambu domenican no, palaces bambu night getting best entertainment overall riu bambu amazing going return year going try new, likely march break returning group friends enjoy stay,  ",
+          "raw_stars": 1
+        },
+        {
+          "text": "good choice, wife stayed hotel catedral march 2007 twice, time arriving mexico second time end mexico tour, stay pleasant, staff helpful restaurant downstairs excellent course not beat location.the negative factor fact night-club nearby, room backside hotel concert room ends ca 1 o'clock night, tired stayed late did not bother, want quiet room ask room faces street.tip check roof terrace, fantastic views mexico city.if return mexico city definitely stay,  ",
+          "raw_stars": 4
+        }
+      ],
+      "ai_score": 4,
+      "trust_weight": 1,
+      "analyzed_reviews": [
+        {
+          "text": "2nd stay pleased enjoyed stay hotel past may.this second visit years marriott, like location kind quite end waikiki beach, great beach right street, enjoyed breakfast buffet food great came room, good restaurants close dukes great view chesseburger paradise reasonably priced plenty shopping, room clean spacious, bath room layout little strange, beds comfortable soft views diamond head pacific great, staff friendly helpful, stay,  ",
+          "raw_stars": 4,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 4
+        },
+        {
+          "text": "great time just got saturday night 8 day vacation excellence, traveled 3 couples anxiously waiting trip months, great time things missing preventing 5 star.it beautiful hotel beautiful beach pool room ceiling shower caving piping tubes, kinda creeped like watching shower, shower mold, cleaning service didnt come 5 6pm night annoying wanted come right middle getting ready dinner, grab extra towels beach knowing not clean towels later, room service took hour half just bring hamburger, kept losing power long periods time, room clocks, went blowdry hair fuse blew power room.the pool area beautiful relaxing pool activities fun chose participate, entertainment staff great, annoying wake early 8am not able chair reserved, just moved peoples towels pool floats like gold people scoop 7am reserved chairs, unless 7 youre not getting, pool def, needs little buffettarea grab quick bite dot inside lunch, thing annoyed stay, pizza guy does come 3pm y eaten inside wait, rarely saw waiter taking drink orders, time cafe bar own.i happened think food great restaurants toscana, ordered steak figuring safe choice inedible, loved lobster house breakfast grill lunch, unbelievable french fries onion rings chicken sandwiches caesar salads, buffet breakfast lunch ok quick bite really liked, spice chez isabelle amazing, best french onion soup chateaubriand, lobster house wasnt bad grill favorites dinner, fliet mignon great, funny enjoyed food stomach issues living bottles maalox.we did dunebuggy tour great stopping wanted buy jewelry souvenirs, actually way fun got kicked tour end rowdy not following tour guide, awesome, incredibly muddy like tidal waves mud throw clothes worn, no saving, club lot fun pretty time 8 fun, overall great trip really need improve service maintenance, honeymoon le blanc cancun august blows place away areas, hard husband kept comparing le blanc clearly no comparison, excellence just 4 star resort poor service le blanc leave chair,  ",
+          "raw_stars": 4,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 4
+        },
+        {
+          "text": "love, family travelled riu bambu twice august 2001 march 2007, love riu bambu, amazing place stay, worrying negative comments ignore, riu bambu amazing just like riu hotel chain fantastic, mom actually travelling riu vallarta week puerto vallarta, riu riu palace cabo san lucas riu cancun says entertainment 1 beach service..its amazing want good entertainment riu bambu domenican no, palaces bambu night getting best entertainment overall riu bambu amazing going return year going try new, likely march break returning group friends enjoy stay,  ",
+          "raw_stars": 1,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 4
+        },
+        {
+          "text": "good choice, wife stayed hotel catedral march 2007 twice, time arriving mexico second time end mexico tour, stay pleasant, staff helpful restaurant downstairs excellent course not beat location.the negative factor fact night-club nearby, room backside hotel concert room ends ca 1 o'clock night, tired stayed late did not bother, want quiet room ask room faces street.tip check roof terrace, fantastic views mexico city.if return mexico city definitely stay,  ",
+          "raw_stars": 4,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 4
+        }
+      ],
+      "ai_score_expiration_date": "2026-04-22T08:26:27.050010Z",
+      "ai_summary_expiration_date": null,
+      "ai_summary": null,
+      "last_updated": "2026-04-15T08:26:33.661109Z"
+    },
+    {
+      "property_token": "ChoIl6PRne_KjvfDARoNL2cvMTF4czc3NDBnORAB",
+      "name": "Summer Hotel",
+      "description": null,
+      "link": "https://www.facebook.com/summerhotel.0981669393/",
+      "address": null,
+      "phone": null,
+      "gps_coordinates": {
+        "latitude": 10.921089199999999,
+        "longitude": 106.7677394
+      },
+      "nearby_places": [],
+      "check_in_time": "14:00",
+      "check_out_time": null,
+      "price": 308264,
+      "deal": "Rẻ hơn bình thường 30%",
+      "booking_sources": [],
+      "images": [
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG8KftL6y31iIZ3ydiQL477FddYkl4w7oqWmnZ4VooQuPrr-96cRQ8nnEzXBmUCfzAEyCOcX2PuxlLgpuuHnRdxZei6OLAM8lSVgc2oi_sfaqeidUxQKoqV8HGb0sc-RZZ0lTFfK6KZr1o=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG8KftL6y31iIZ3ydiQL477FddYkl4w7oqWmnZ4VooQuPrr-96cRQ8nnEzXBmUCfzAEyCOcX2PuxlLgpuuHnRdxZei6OLAM8lSVgc2oi_sfaqeidUxQKoqV8HGb0sc-RZZ0lTFfK6KZr1o=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEbAgFDBxxxWzyJ60O1_P2PTPFtd6qXushTWHqHS_wi86mcRZyBaBFgfyzaNO2Nd3dyl_UQddE3epZXTjy03AYEzbkKtOOnQwCl5wrbANxnmmlSBp7RfDMjkHnCzDm9msxDPYVR67-Gbzsp=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEbAgFDBxxxWzyJ60O1_P2PTPFtd6qXushTWHqHS_wi86mcRZyBaBFgfyzaNO2Nd3dyl_UQddE3epZXTjy03AYEzbkKtOOnQwCl5wrbANxnmmlSBp7RfDMjkHnCzDm9msxDPYVR67-Gbzsp=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFqsqnrjzZOxOIIt82lrFmS4UGllcSxQjnVtHKcmbH1yk7HdT-9xnkWKITHLmuY88Ms6D5xaB5mpaMux--3JaDnh3dSfY9xEUeb2rO3HIryU8k8QDh7iG-wOFJWLZGgnAPKwl2ll5E1kPJw=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFqsqnrjzZOxOIIt82lrFmS4UGllcSxQjnVtHKcmbH1yk7HdT-9xnkWKITHLmuY88Ms6D5xaB5mpaMux--3JaDnh3dSfY9xEUeb2rO3HIryU8k8QDh7iG-wOFJWLZGgnAPKwl2ll5E1kPJw=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGy6OlbZmzAoTPVM69RirZ0NfRcNEh2I14l9SFC4NLsisVhfutUxx8eEYDso6WBhWV9bNsZ9nL2v0lIHSyReOHIHSiq9i73C-8O1BWZLFeVq8Is6ZLPhQSOb03pmwQDxJGnt4uh1hsg9Fv0=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGy6OlbZmzAoTPVM69RirZ0NfRcNEh2I14l9SFC4NLsisVhfutUxx8eEYDso6WBhWV9bNsZ9nL2v0lIHSyReOHIHSiq9i73C-8O1BWZLFeVq8Is6ZLPhQSOb03pmwQDxJGnt4uh1hsg9Fv0=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG83sa_EmSmHrv1NhRtR9Tn_UUKihi96lbGAN_wTAQUPP9zxLn6QKkEgPcW3SCKcmrf5ETansI2PtIYKxmWGzPsDvNkYWaNpkvjG-jPsM2t5ccmfPVf8Bn4uue2fOMFIyKSV7cVFOGIt_c=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG83sa_EmSmHrv1NhRtR9Tn_UUKihi96lbGAN_wTAQUPP9zxLn6QKkEgPcW3SCKcmrf5ETansI2PtIYKxmWGzPsDvNkYWaNpkvjG-jPsM2t5ccmfPVf8Bn4uue2fOMFIyKSV7cVFOGIt_c=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEFqvbcKFFNZHoUZ4VerfkwjPXXqxH02MRPxV1jPnSsXd2Ghv4MokRy4c6dEgkEr7VwuWCk23QO9I5h0SKkAsXY5YF1nC2-mlzcwc7mBe80IzYQKXUGEWUjU7FLv6ZUucimdgreIGvPCxJ9=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEFqvbcKFFNZHoUZ4VerfkwjPXXqxH02MRPxV1jPnSsXd2Ghv4MokRy4c6dEgkEr7VwuWCk23QO9I5h0SKkAsXY5YF1nC2-mlzcwc7mBe80IzYQKXUGEWUjU7FLv6ZUucimdgreIGvPCxJ9=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFZ3ajS1rNYDYwhDTNY3tjpqiSh1NVgRb-pWRzblmbxXeEM3PfZQulrdhNsHy7DBezqJyp2JHEesYrQh1TXngxRgeDD4JuRIdZ4alA2Igbm2EI_lSY7Sbf8yrRo1fKmcvds2ils4t2UikpV=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFZ3ajS1rNYDYwhDTNY3tjpqiSh1NVgRb-pWRzblmbxXeEM3PfZQulrdhNsHy7DBezqJyp2JHEesYrQh1TXngxRgeDD4JuRIdZ4alA2Igbm2EI_lSY7Sbf8yrRo1fKmcvds2ils4t2UikpV=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGHwAKWrDwf4-hbtS3TK8wtRcNIDz0bSIPDJZJw0qh15nRx-OlbnzdisJPe8Yvg49h2IOCF61rWBtF_IXRWBbC_5wxjCb_cynPva255PA1hT2NF1KKo4_142ATWcTgQ4sP0H2QnJMsi8V0=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGHwAKWrDwf4-hbtS3TK8wtRcNIDz0bSIPDJZJw0qh15nRx-OlbnzdisJPe8Yvg49h2IOCF61rWBtF_IXRWBbC_5wxjCb_cynPva255PA1hT2NF1KKo4_142ATWcTgQ4sP0H2QnJMsi8V0=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHYTKhK4cKN9Jc9GJ_IoWcIoTIRpTXX7j3DgEtXV36eNXm2pUga9hv4qg8ywT0DwU6PTRYDmVeO3gpgwMNpPEiopuFyyMF3179iLS6XjyszpOywfaAJevEU45_fCz6u_ZjndMm1oKzNMLCU=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHYTKhK4cKN9Jc9GJ_IoWcIoTIRpTXX7j3DgEtXV36eNXm2pUga9hv4qg8ywT0DwU6PTRYDmVeO3gpgwMNpPEiopuFyyMF3179iLS6XjyszpOywfaAJevEU45_fCz6u_ZjndMm1oKzNMLCU=s10000"
+        }
+      ],
+      "amenities": [],
+      "raw_rating": 0,
+      "user_reviews": [
+        {
+          "text": "amazing location note hotel middle renovation change soon.we booked starwood preferred guest point stay online, bulk hotel middle renovation, lobby blocked restaurant open hardly guests hotel, said room newly renovated looked smelled brand new appointed modern furnishings like new linens virtually no signs wear, heard virtually no construction noise 3 night stay, facilities reduced room service operation arrived quickly desk staff helpful bell staff eager helping rapidly power adapter ethernet cable, best hotel location, 2 blocks brandenberg gate right street series luxury malls 50 u-bahn stop 15 minute walk museum island, overall pleasant stay absolute bargain 7,000 spg points night,  ",
+          "raw_stars": 4
+        },
+        {
+          "text": "worst hotel experience, stayed number shraeger properties world really worst, lobby quintessentially shraeger dark overall not bad, assuming dark lobby essentially masks dirt, room got supposed suite really like larger room miniscule bathroom.the room quite simply dirty, room dirty used condom bed used plaster toilet, carpets dirty worn, simply does not expect sort dirt supposedly good hotel.the furniture ikea, hotel supposedly selling design looked like poster-child furnish room ikea poor taste.the bathroom tiny stained cheap fixtures rusty rail, shampoo bathroom fused shut not use, luckily personal toilletries, thing irked no water room, good hotels complimentary water not water minibar, stayed recently clift know provide complimentary water arrival time round no water, no water minibar, room service got charged 15 bottle water costs 1.50, daylight robbery got hotel late tired, told desk day got nonchalant haughty reply desk claimed provide complimentary water room did not apologise fact no water minibar did not offer water reduce price buy minibar, think barefaced lies treatment irked most.the residents door came 2 morning shouting singing, called downstairs nothing stop drunk disorderly neighbours nuisance, lastly desk staff spoke water just rude, know mondrian group cool snobby attitude does not customer service, staff interested hair gel chatting serving customer, stayed number shraeger properties decided finally price pays design does not compensate essentially low quality poorly-serviced rooms cheap bathroom fittings toilletries electronics e.g, n't know chain box tvs flat screen clift bunch tvs 80s feedback stay low quality thought let know, plan send journalist friends conde nast times uk, clientele clift trying attract low-class drunks no taste suppose context doing good job,  ",
+          "raw_stars": 1
+        },
+        {
+          "text": "good airport choice stayed twice ovenite layovers frankfurt directions vacation, hotel lovely, excellent staff modern rooms great beds nice chilly air conditioning, heard absolutely no airport noise rooms hotel matter, did n't stay long use gym did look excellent open 24 hours, breakfast buffet best seen, visit having check extra early return did n't time eat way home, sorely disappointed breakfast truly excellent, n't know experience extremely pleased hotel, yes restaurant expensive food good service 2 flights day great choice dinner, bathrooms fine not particularly outstanding towels little larger thicker no complaints, picky hotels nothing bad say, guess problem arrive terminal 2 pain butt walk airport hotel attached terminal 1 airport fault, significant luggage 3 people 3+ week trip bellman helped way shuttle bus downstairs hotel, incidentally arrival frankfurt no airport told shuttle bus hotel told schlep luggage myriad escalators, hotel staff led shuttle, overnite stay hotel perfect,  ",
+          "raw_stars": 5
+        },
+        {
+          "text": "excellent location just returned 6 nights/5 day stay, excellent location close quiet street uspcale district.the rooms small extremely hot-had sleep open windows march heard complaints heat guests hotel, beds firm size room hard beds not unusual hotels europe, hotel clean bathroom room 605 modern spotless towels changed daily, door staff not friendly professional helpful tour reservations, complementary use computers benefit make sure request print boarding passes wish no printer generally exceptions boarding passes.we did not eat hotel bar pleasant day sightseeing.overall hotel functional clean best 3 star, recommend travelers plan sightseeing spending littel time inside good deal, location amazing,  ",
+          "raw_stars": 3
+        },
+        {
+          "text": "beautiful resort husband plus couple stayed secrets excellence march 1st 8th, resort beautiful quite remote previous posts stated.out transfer airport resort prieto tours, not recommend company taxi, switch busses times trip resort, return trip crammed small bus absolutely available seat taken, stopped pick passengers sunscape beach waited long time finalize departure, not prieto tour fault insistant hurrying things left sent bus pick inconsiderate passengers, given room keys went room discover occupied couple arrived bus, returning dest informed room not ready 9:00 pm, 4:00 morning dealt, gave swim-up room cascade pool plus 200 spa credit, thought nice gesture, room location perfect 1001 close, reviews indicated food not best, favorite restaurants asian mexican french, thought week breakfasts got humdrum, choice restaurant basically food day, lunches beach poorly organized food qustionable.we went dune buggy ride hotel, highlights stay, went small town called laguna shopped tried talk children, luckily group spoke spanish, interesting countryside homes native people.we went free half-hour horseback ride, fun, tour guide tried talk purchasing longer ride, did n't opt this.every night hotel allows vendors come grounds sell wares guests, say fount quite offensive, vendors agressive passed, kind abuse walk beach direction.all stay enjoyable, staff sweet, favorite elisa sports bar,  ",
+          "raw_stars": 4
+        }
+      ],
+      "ai_score": 4.06,
+      "trust_weight": 0.68,
+      "analyzed_reviews": [
+        {
+          "text": "amazing location note hotel middle renovation change soon.we booked starwood preferred guest point stay online, bulk hotel middle renovation, lobby blocked restaurant open hardly guests hotel, said room newly renovated looked smelled brand new appointed modern furnishings like new linens virtually no signs wear, heard virtually no construction noise 3 night stay, facilities reduced room service operation arrived quickly desk staff helpful bell staff eager helping rapidly power adapter ethernet cable, best hotel location, 2 blocks brandenberg gate right street series luxury malls 50 u-bahn stop 15 minute walk museum island, overall pleasant stay absolute bargain 7,000 spg points night,  ",
+          "raw_stars": 4,
+          "sentiment_score": 4.9,
+          "trust_weight": 1,
+          "adjusted_stars": 4
+        },
+        {
+          "text": "worst hotel experience, stayed number shraeger properties world really worst, lobby quintessentially shraeger dark overall not bad, assuming dark lobby essentially masks dirt, room got supposed suite really like larger room miniscule bathroom.the room quite simply dirty, room dirty used condom bed used plaster toilet, carpets dirty worn, simply does not expect sort dirt supposedly good hotel.the furniture ikea, hotel supposedly selling design looked like poster-child furnish room ikea poor taste.the bathroom tiny stained cheap fixtures rusty rail, shampoo bathroom fused shut not use, luckily personal toilletries, thing irked no water room, good hotels complimentary water not water minibar, stayed recently clift know provide complimentary water arrival time round no water, no water minibar, room service got charged 15 bottle water costs 1.50, daylight robbery got hotel late tired, told desk day got nonchalant haughty reply desk claimed provide complimentary water room did not apologise fact no water minibar did not offer water reduce price buy minibar, think barefaced lies treatment irked most.the residents door came 2 morning shouting singing, called downstairs nothing stop drunk disorderly neighbours nuisance, lastly desk staff spoke water just rude, know mondrian group cool snobby attitude does not customer service, staff interested hair gel chatting serving customer, stayed number shraeger properties decided finally price pays design does not compensate essentially low quality poorly-serviced rooms cheap bathroom fittings toilletries electronics e.g, n't know chain box tvs flat screen clift bunch tvs 80s feedback stay low quality thought let know, plan send journalist friends conde nast times uk, clientele clift trying attract low-class drunks no taste suppose context doing good job,  ",
+          "raw_stars": 1,
+          "sentiment_score": 4.9,
+          "trust_weight": 0.2,
+          "adjusted_stars": 1
+        },
+        {
+          "text": "good airport choice stayed twice ovenite layovers frankfurt directions vacation, hotel lovely, excellent staff modern rooms great beds nice chilly air conditioning, heard absolutely no airport noise rooms hotel matter, did n't stay long use gym did look excellent open 24 hours, breakfast buffet best seen, visit having check extra early return did n't time eat way home, sorely disappointed breakfast truly excellent, n't know experience extremely pleased hotel, yes restaurant expensive food good service 2 flights day great choice dinner, bathrooms fine not particularly outstanding towels little larger thicker no complaints, picky hotels nothing bad say, guess problem arrive terminal 2 pain butt walk airport hotel attached terminal 1 airport fault, significant luggage 3 people 3+ week trip bellman helped way shuttle bus downstairs hotel, incidentally arrival frankfurt no airport told shuttle bus hotel told schlep luggage myriad escalators, hotel staff led shuttle, overnite stay hotel perfect,  ",
+          "raw_stars": 5,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 5
+        },
+        {
+          "text": "excellent location just returned 6 nights/5 day stay, excellent location close quiet street uspcale district.the rooms small extremely hot-had sleep open windows march heard complaints heat guests hotel, beds firm size room hard beds not unusual hotels europe, hotel clean bathroom room 605 modern spotless towels changed daily, door staff not friendly professional helpful tour reservations, complementary use computers benefit make sure request print boarding passes wish no printer generally exceptions boarding passes.we did not eat hotel bar pleasant day sightseeing.overall hotel functional clean best 3 star, recommend travelers plan sightseeing spending littel time inside good deal, location amazing,  ",
+          "raw_stars": 3,
+          "sentiment_score": 5,
+          "trust_weight": 0.2,
+          "adjusted_stars": 3
+        },
+        {
+          "text": "beautiful resort husband plus couple stayed secrets excellence march 1st 8th, resort beautiful quite remote previous posts stated.out transfer airport resort prieto tours, not recommend company taxi, switch busses times trip resort, return trip crammed small bus absolutely available seat taken, stopped pick passengers sunscape beach waited long time finalize departure, not prieto tour fault insistant hurrying things left sent bus pick inconsiderate passengers, given room keys went room discover occupied couple arrived bus, returning dest informed room not ready 9:00 pm, 4:00 morning dealt, gave swim-up room cascade pool plus 200 spa credit, thought nice gesture, room location perfect 1001 close, reviews indicated food not best, favorite restaurants asian mexican french, thought week breakfasts got humdrum, choice restaurant basically food day, lunches beach poorly organized food qustionable.we went dune buggy ride hotel, highlights stay, went small town called laguna shopped tried talk children, luckily group spoke spanish, interesting countryside homes native people.we went free half-hour horseback ride, fun, tour guide tried talk purchasing longer ride, did n't opt this.every night hotel allows vendors come grounds sell wares guests, say fount quite offensive, vendors agressive passed, kind abuse walk beach direction.all stay enjoyable, staff sweet, favorite elisa sports bar,  ",
+          "raw_stars": 4,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 4
+        }
+      ],
+      "ai_score_expiration_date": "2026-04-22T08:26:27.050010Z",
+      "ai_summary_expiration_date": null,
+      "ai_summary": null,
+      "last_updated": "2026-04-15T08:26:33.662741Z"
+    },
+    {
+      "property_token": "ChkIvaC5ruLtss58Gg0vZy8xMWRmMzRzczN4EAE",
+      "name": "Phương Anh Hotel",
+      "description": null,
+      "link": "http://dongbinhduong.vn/",
+      "address": null,
+      "phone": null,
+      "gps_coordinates": {
+        "latitude": 10.911708299999999,
+        "longitude": 106.7565477
+      },
+      "nearby_places": [],
+      "check_in_time": null,
+      "check_out_time": null,
+      "price": 374399,
+      "deal": null,
+      "booking_sources": [],
+      "images": [
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFuXqqM1oP9oxYh1H0LPuYVr_HCrXCYCEC2zZ9mT7oqe9E2e25a4r4umOQl1EFFZGCTXzTI_om1n-wtTy0o2-XyinEpE6dOMPyu-oWRYU91ytUFS_z46nN8eHUuzs4VlDURbHijYuhSWS8A=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFuXqqM1oP9oxYh1H0LPuYVr_HCrXCYCEC2zZ9mT7oqe9E2e25a4r4umOQl1EFFZGCTXzTI_om1n-wtTy0o2-XyinEpE6dOMPyu-oWRYU91ytUFS_z46nN8eHUuzs4VlDURbHijYuhSWS8A=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEbQP01FQwcPA1xe18Ju_IjO1WuVwkPBf4m3_0SdRYa3SWXsqELKMwCJ1cr4lSZHjZB6OMctFHXVJDEMBqT-V2pU-l6B0BiYnoLo-Koa4Ea403FIVR8VtgDBG26q4ov6wg9FFg-H4xo163r=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEbQP01FQwcPA1xe18Ju_IjO1WuVwkPBf4m3_0SdRYa3SWXsqELKMwCJ1cr4lSZHjZB6OMctFHXVJDEMBqT-V2pU-l6B0BiYnoLo-Koa4Ea403FIVR8VtgDBG26q4ov6wg9FFg-H4xo163r=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHJv1LMgmouXwMbezXdMNzfTay_RMHj_ur5ZfrJAeREiknJY1XZD52eBzMw9hdD0CbNefdmsumnOL9oXo39yVhDiTbO-hjumfhDkQCQFOpbB2Zw66qfH5R64S87KYf-Ytqj2SPZDqHJaqNs=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHJv1LMgmouXwMbezXdMNzfTay_RMHj_ur5ZfrJAeREiknJY1XZD52eBzMw9hdD0CbNefdmsumnOL9oXo39yVhDiTbO-hjumfhDkQCQFOpbB2Zw66qfH5R64S87KYf-Ytqj2SPZDqHJaqNs=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHoGjeC4IFPTlBlJt1RaZgfEQwT5U0tfUqvL5dOMgJj4tyZY6Tv6MSgtoXJo34NByxwdQWwvrOnmCHy-YpNBTdhXQKpJjfrZ_cdCJRrRSLLux_NbyDG54269_aHjhS8Z2pasALS=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHoGjeC4IFPTlBlJt1RaZgfEQwT5U0tfUqvL5dOMgJj4tyZY6Tv6MSgtoXJo34NByxwdQWwvrOnmCHy-YpNBTdhXQKpJjfrZ_cdCJRrRSLLux_NbyDG54269_aHjhS8Z2pasALS=s10000"
+        },
+        {
+          "thumbnail": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=rLPWJ2pu1eNyNDzEmBDR_A&cb_client=search.estubs.gps&w=287&h=192&yaw=106.55407&pitch=0&thumbfov=100&scale=2",
+          "original_image": "https://lh5.googleusercontent.com/p/rLPWJ2pu1eNyNDzEmBDR_A=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEcCohWZ4gToeTdsWH3I7VvCBi9G1lsCmmvZZv5a7hz_L37OeKZ_S7F4uyTPcDAbqODOATnXcAgB01zIib1YQw6MW29lj2A95Ith1mW56Zn60HGuOVhR-BUUdQfU08JlhItFhF68uyl27K5=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEcCohWZ4gToeTdsWH3I7VvCBi9G1lsCmmvZZv5a7hz_L37OeKZ_S7F4uyTPcDAbqODOATnXcAgB01zIib1YQw6MW29lj2A95Ith1mW56Zn60HGuOVhR-BUUdQfU08JlhItFhF68uyl27K5=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGGIWODrqSvsUiY5FYmj7MS56VVCIC1K-C9pNgwtpNtxO6T2dDxFc1JZ7prvapMnlvoTY487SwzrEowTSmpfp61B3wE-mADdwF9UJQ6o9qZl_TSVbsNLzRTRMFbwEvJOt5meKkV=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGGIWODrqSvsUiY5FYmj7MS56VVCIC1K-C9pNgwtpNtxO6T2dDxFc1JZ7prvapMnlvoTY487SwzrEowTSmpfp61B3wE-mADdwF9UJQ6o9qZl_TSVbsNLzRTRMFbwEvJOt5meKkV=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG_sGfuR2yAo2m-gGCwe61D5pS1IRKO9t0qlVNCAozg8SyfA-soLVJYec4ll5zbUJ23MELsQEkxKUzByQBz0A3ccrelSAOrWivnDPINNXtNjV0HBkuhpRrcNaKX_gWr3mMSuaaN=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG_sGfuR2yAo2m-gGCwe61D5pS1IRKO9t0qlVNCAozg8SyfA-soLVJYec4ll5zbUJ23MELsQEkxKUzByQBz0A3ccrelSAOrWivnDPINNXtNjV0HBkuhpRrcNaKX_gWr3mMSuaaN=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEvY7zlr58acxyfZ8cEvTDANoSb6X84vmCi2FAZXjlfiPvbKrXAjBD3ORFYgLdXWojhqTXD6w2NOFFVlhc2ywY2VECaYb8ILEtO7WsRinxfNkGOE3ZZwmizRCLkWfdCu3pM2XCU=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEvY7zlr58acxyfZ8cEvTDANoSb6X84vmCi2FAZXjlfiPvbKrXAjBD3ORFYgLdXWojhqTXD6w2NOFFVlhc2ywY2VECaYb8ILEtO7WsRinxfNkGOE3ZZwmizRCLkWfdCu3pM2XCU=s10000"
+        }
+      ],
+      "amenities": [],
+      "raw_rating": 0,
+      "user_reviews": [
+        {
+          "text": "great vacation, husband young children stayed melia caribe tropical week end march, trip dominican republic, stayed all-inclusive cancun twice moon palace, weather wonderful great time, looking fun sun place, spent day pool beach area.room room clean spacious, bungalow caribe mid-way lobby/restaurant pool/beach, location suited fine, did n't hear construction noise did n't room building new resort.service really n't big complaints steakhouse, agree service getting drink order slow buffet restaurants did n't really bother, staff attentive la carte restaurants, gave dollars tip great service steakhouse, did not feel pressure tipping, lot people did n't tip treated just well.food food average, fresh juice selection breakfast great, la carte dining provided nice change, kind hassle phone reservation following day, ate 5 la carte restaurants pagoda le gourmet capri ma maison steakhouse, service steakhouse slowest, waited 20-30 minutes dessert, asked staff say momento, left dessert came did, grounds gardens grounds beautiful, mentioned reviews resort large, road train lot around/around kids thought fun, really n't bad walk place train nice option hot.pool/beach pool area nice not beautiful moon palace, plenty lounge chairs palapas, white sandy beach nice, workers cleaned beach seaweed morning.overall experience positive, lot timeshare people avoided said thanks approached, true little english spoken guests, heard lot spanish french german, recommend dominican republic melia caribe tropical, not sure return hotel like experience different resorts,  ",
+          "raw_stars": 4
+        },
+        {
+          "text": "excellent hotel, stayed avenue 5 nghts march really pleased arrived cosy welcoming staff really helpful reception, having room smokers requested smoking room really pleased room clean tidy smoking room not stinky all.the room adequate 2 people used base.it cold windy time stayed dam room bit chilly times hey good excuse snuggle, amazed didnt hear noise rooms really solid walls, like morning cuppa remember travel kettle not huge problem douwe egberts coffee/tea machine lobby.breakfast good really cereals usual hotel streaky bacon srambled eggs beans bread/rolls jam, late breakfast morning thogh edible bit hotter not problem plenty things offer, overall thoroughly enjoyable stay definately stay just not need time recover, really good situation too,10mins centraal station 10 mins dam sq depending coffeeshops pass way perfect,  ",
+          "raw_stars": 5
+        },
+        {
+          "text": "best bar lobby meet friend year, pop elevator oliver great place drinks people watching, great location,  ",
+          "raw_stars": 5
+        },
+        {
+          "text": "great place great price visit new orleans year stayed frenchmen twice love place, looking true feel new orleans stay small quaint like frenchmen, offer free breakfast free parking, parking little bit pain area small, courtyard nice pool rooms clean, location close mississippi end french quarter hotel close french market, room 49,  ",
+          "raw_stars": 4
+        }
+      ],
+      "ai_score": 4.5,
+      "trust_weight": 1,
+      "analyzed_reviews": [
+        {
+          "text": "great vacation, husband young children stayed melia caribe tropical week end march, trip dominican republic, stayed all-inclusive cancun twice moon palace, weather wonderful great time, looking fun sun place, spent day pool beach area.room room clean spacious, bungalow caribe mid-way lobby/restaurant pool/beach, location suited fine, did n't hear construction noise did n't room building new resort.service really n't big complaints steakhouse, agree service getting drink order slow buffet restaurants did n't really bother, staff attentive la carte restaurants, gave dollars tip great service steakhouse, did not feel pressure tipping, lot people did n't tip treated just well.food food average, fresh juice selection breakfast great, la carte dining provided nice change, kind hassle phone reservation following day, ate 5 la carte restaurants pagoda le gourmet capri ma maison steakhouse, service steakhouse slowest, waited 20-30 minutes dessert, asked staff say momento, left dessert came did, grounds gardens grounds beautiful, mentioned reviews resort large, road train lot around/around kids thought fun, really n't bad walk place train nice option hot.pool/beach pool area nice not beautiful moon palace, plenty lounge chairs palapas, white sandy beach nice, workers cleaned beach seaweed morning.overall experience positive, lot timeshare people avoided said thanks approached, true little english spoken guests, heard lot spanish french german, recommend dominican republic melia caribe tropical, not sure return hotel like experience different resorts,  ",
+          "raw_stars": 4,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 4
+        },
+        {
+          "text": "excellent hotel, stayed avenue 5 nghts march really pleased arrived cosy welcoming staff really helpful reception, having room smokers requested smoking room really pleased room clean tidy smoking room not stinky all.the room adequate 2 people used base.it cold windy time stayed dam room bit chilly times hey good excuse snuggle, amazed didnt hear noise rooms really solid walls, like morning cuppa remember travel kettle not huge problem douwe egberts coffee/tea machine lobby.breakfast good really cereals usual hotel streaky bacon srambled eggs beans bread/rolls jam, late breakfast morning thogh edible bit hotter not problem plenty things offer, overall thoroughly enjoyable stay definately stay just not need time recover, really good situation too,10mins centraal station 10 mins dam sq depending coffeeshops pass way perfect,  ",
+          "raw_stars": 5,
+          "sentiment_score": 4.9,
+          "trust_weight": 1,
+          "adjusted_stars": 5
+        },
+        {
+          "text": "best bar lobby meet friend year, pop elevator oliver great place drinks people watching, great location,  ",
+          "raw_stars": 5,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 5
+        },
+        {
+          "text": "great place great price visit new orleans year stayed frenchmen twice love place, looking true feel new orleans stay small quaint like frenchmen, offer free breakfast free parking, parking little bit pain area small, courtyard nice pool rooms clean, location close mississippi end french quarter hotel close french market, room 49,  ",
+          "raw_stars": 4,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 4
+        }
+      ],
+      "ai_score_expiration_date": "2026-04-22T08:26:27.050010Z",
+      "ai_summary_expiration_date": null,
+      "ai_summary": null,
+      "last_updated": "2026-04-15T08:26:33.664358Z"
+    },
+    {
+      "property_token": "ChkIlr7qtqve0MpAGg0vZy8xMWNsd2tzNzJ0EAE",
+      "name": "Khách Sạn Mặt Trời",
+      "description": null,
+      "link": "http://thesunhotel.vn/",
+      "address": null,
+      "phone": null,
+      "gps_coordinates": {
+        "latitude": 10.9043999,
+        "longitude": 106.8446002
+      },
+      "nearby_places": [],
+      "check_in_time": null,
+      "check_out_time": null,
+      "price": 432000,
+      "deal": null,
+      "booking_sources": [],
+      "images": [
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH-t8_Ss0mWz-FvIWcX4SHuYo6c0Vte11-EhHDOVfmCJYWLJnbgzwZQ_AT89reXjPOs5Rm8k57ntlNtjuET9FcrRHycC_XD3xy6VTTXsz4rRNTBhptedQHhQghN81pgqFRtY7w=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH-t8_Ss0mWz-FvIWcX4SHuYo6c0Vte11-EhHDOVfmCJYWLJnbgzwZQ_AT89reXjPOs5Rm8k57ntlNtjuET9FcrRHycC_XD3xy6VTTXsz4rRNTBhptedQHhQghN81pgqFRtY7w=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGXh3WryNn-WKPTQCUlZmwDEqLGAt8RD_SVhWoRikAWok1jH7BQ2Jzroht0crdjJRM-x6aQGqR_MoPhkhCIIaihtODKunTuEPCOIilOabE5od6fckKptsyTsBM2Gq3l3pn7NQDWyHmpBkZJ=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGXh3WryNn-WKPTQCUlZmwDEqLGAt8RD_SVhWoRikAWok1jH7BQ2Jzroht0crdjJRM-x6aQGqR_MoPhkhCIIaihtODKunTuEPCOIilOabE5od6fckKptsyTsBM2Gq3l3pn7NQDWyHmpBkZJ=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFGcph2ylQ0ZF3sbZrl9Kns-GzBk6J4jMxMrapEDA5ha_MU7UwcjlgDuXDDQLuBg9sxMSiJehLXqEkV1UySYP-sgp3ijW7BBH1HttY_FBnEL-7k6J7SU3iSuBIICXtZQlM60_I=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFGcph2ylQ0ZF3sbZrl9Kns-GzBk6J4jMxMrapEDA5ha_MU7UwcjlgDuXDDQLuBg9sxMSiJehLXqEkV1UySYP-sgp3ijW7BBH1HttY_FBnEL-7k6J7SU3iSuBIICXtZQlM60_I=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGT69xx_CUr-vyoEOwL3QVLOs2Fd1wmsoHDNlT6-GFi25s2SOwu2fvd3MSgZZCtDOgPOCf5Evh9oH_msZOoKyDYxTw5Bkmw7pEqYDkrOc6suLhr9YcMak5AknOKMAMY7mtKZLe6y4hLmSs=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGT69xx_CUr-vyoEOwL3QVLOs2Fd1wmsoHDNlT6-GFi25s2SOwu2fvd3MSgZZCtDOgPOCf5Evh9oH_msZOoKyDYxTw5Bkmw7pEqYDkrOc6suLhr9YcMak5AknOKMAMY7mtKZLe6y4hLmSs=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFTjhme1V5y6B0zO0_DNLboOSytZHPAYPTy6Ww3N31DLvDtlPfWDdBJb9feDKWM7eRgYcvAA0U7ZCGKFlJxafgrzLwT7GHnp6W2g08gfDyQQPTKX-ZpdN8K6fOdfnBPHISi8eNf=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFTjhme1V5y6B0zO0_DNLboOSytZHPAYPTy6Ww3N31DLvDtlPfWDdBJb9feDKWM7eRgYcvAA0U7ZCGKFlJxafgrzLwT7GHnp6W2g08gfDyQQPTKX-ZpdN8K6fOdfnBPHISi8eNf=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFm5wrUzsYexN0JfFpySzpjwy32vxw-AtE3JihUo6ZbwU3j3ZjPrflo4M8-dJ89uNJsntsEEJcPfvJFHMGIAe_4FWzco4-uXJDWyZd4wHYm-Qa4AxEHKrdqhF-K2iX5DKL1zgsg75rsUAA3=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFm5wrUzsYexN0JfFpySzpjwy32vxw-AtE3JihUo6ZbwU3j3ZjPrflo4M8-dJ89uNJsntsEEJcPfvJFHMGIAe_4FWzco4-uXJDWyZd4wHYm-Qa4AxEHKrdqhF-K2iX5DKL1zgsg75rsUAA3=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEXW50xwpugeKYz96f9zJtk9FhbnbTr-uMNc870srDVT_V8L3dqNW5cRg8MwDq9ibIx7gtVXC6siG-sNqY0XHlIJMbDr3uq0E-wnVDhW5t2tShwUz5JOFVuvjXeWxSRRUMg-CFQ=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEXW50xwpugeKYz96f9zJtk9FhbnbTr-uMNc870srDVT_V8L3dqNW5cRg8MwDq9ibIx7gtVXC6siG-sNqY0XHlIJMbDr3uq0E-wnVDhW5t2tShwUz5JOFVuvjXeWxSRRUMg-CFQ=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHRAjh4nsTHKsyJ3qXM-1IDPAi30eQ1PzzYQmqgnZNPpFKF8zSRxl9vOsqaJqph9vxEzZ_71Z2syCivFDmOgWQcRgdhFgm8Z1WS26R8FdE-epXSnQKt8_8g-C91_iUfz_Gvq51MbFUMOmg2=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHRAjh4nsTHKsyJ3qXM-1IDPAi30eQ1PzzYQmqgnZNPpFKF8zSRxl9vOsqaJqph9vxEzZ_71Z2syCivFDmOgWQcRgdhFgm8Z1WS26R8FdE-epXSnQKt8_8g-C91_iUfz_Gvq51MbFUMOmg2=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGBKcCBaJTsFYRnQ5bFAMXIuYAOQt_wqElEl7D-A-5wdPoVCuP7ROhzrSPgmKp3Hetz3iXk7tim700Nu0pZq0fgcXCwUE1aLku6F8vfeX5Ujnkw6sEW8rtYrp7hIS3r9lVhafoE=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGBKcCBaJTsFYRnQ5bFAMXIuYAOQt_wqElEl7D-A-5wdPoVCuP7ROhzrSPgmKp3Hetz3iXk7tim700Nu0pZq0fgcXCwUE1aLku6F8vfeX5Ujnkw6sEW8rtYrp7hIS3r9lVhafoE=s10000"
+        }
+      ],
+      "amenities": [],
+      "raw_rating": 0,
+      "user_reviews": [
+        {
+          "text": "wonderful pre-cruise stay husband stayed nights leaving alaska cruise, hotel lovely convenient location, rooms contemporary plenty big people, king bed 19th floor, good view downtown area, unfortunately rain days seattle best, enjoyed afternoon happy hour specials ruth chris steakhouse, ate breakfast filling, definitely recommend hotel, staff friendly helpful, visit seattle loved emerald city, sure book room hotel,  ",
+          "raw_stars": 5
+        },
+        {
+          "text": "perfect hotel husband stayed week 2 nights, hotel absolutely perfect location great service good clean contemporary offered needed short city break, say beds absolutely amazing comfortable n't think slept away home.would definitely book room revisit beautiful barcelona,  ",
+          "raw_stars": 5
+        }
+      ],
+      "ai_score": 5,
+      "trust_weight": 1,
+      "analyzed_reviews": [
+        {
+          "text": "wonderful pre-cruise stay husband stayed nights leaving alaska cruise, hotel lovely convenient location, rooms contemporary plenty big people, king bed 19th floor, good view downtown area, unfortunately rain days seattle best, enjoyed afternoon happy hour specials ruth chris steakhouse, ate breakfast filling, definitely recommend hotel, staff friendly helpful, visit seattle loved emerald city, sure book room hotel,  ",
+          "raw_stars": 5,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 5
+        },
+        {
+          "text": "perfect hotel husband stayed week 2 nights, hotel absolutely perfect location great service good clean contemporary offered needed short city break, say beds absolutely amazing comfortable n't think slept away home.would definitely book room revisit beautiful barcelona,  ",
+          "raw_stars": 5,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 5
+        }
+      ],
+      "ai_score_expiration_date": "2026-04-22T08:26:27.050010Z",
+      "ai_summary_expiration_date": null,
+      "ai_summary": null,
+      "last_updated": "2026-04-15T08:26:33.665761Z"
+    },
+    {
+      "property_token": "ChkI_emeirTm9Lh0Gg0vZy8xMXgyY2YwNngwEAE",
+      "name": "Khách sạn Lộc Thiên Ân - Biên Hoà",
+      "description": null,
+      "link": null,
+      "address": null,
+      "phone": null,
+      "gps_coordinates": {
+        "latitude": 10.944982099999999,
+        "longitude": 106.8308914
+      },
+      "nearby_places": [],
+      "check_in_time": null,
+      "check_out_time": null,
+      "price": 430000,
+      "deal": null,
+      "booking_sources": [],
+      "images": [
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAENtY977igaynFejYD_JaGiWPLi19rZewCyF4rh_gSjGPn9FGoobOEUCsXn_OYAF989uhVyroflkh424UBKtxsBtevZW681D1oTseUg0z8Idjj5qWJw1SRPT_IyYJea1Wm5_zXH0U8W8-J-=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAENtY977igaynFejYD_JaGiWPLi19rZewCyF4rh_gSjGPn9FGoobOEUCsXn_OYAF989uhVyroflkh424UBKtxsBtevZW681D1oTseUg0z8Idjj5qWJw1SRPT_IyYJea1Wm5_zXH0U8W8-J-=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHsPDP__RmygjbneWJ0nk_wfRBeW_TIyPbxtIU1o-ltnrWtjjTugKItG1B3Cq8Jytq1DXTf02XeGlnvUU4YlmAJwvgBzgiUhLkkCrSEZAY2SFwQVB_38DpqNQ18LwwinMIqJcZWkJ7HSmhI=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHsPDP__RmygjbneWJ0nk_wfRBeW_TIyPbxtIU1o-ltnrWtjjTugKItG1B3Cq8Jytq1DXTf02XeGlnvUU4YlmAJwvgBzgiUhLkkCrSEZAY2SFwQVB_38DpqNQ18LwwinMIqJcZWkJ7HSmhI=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGy99ZY7-zBneNYwup8_QQIbWZWVYKiJCVnOShP3VGTVHMD0fnkR7Z_l7hylf33W-4twziqRRXdoGi8u7ux2di97Wy2BBHf3ToJtBfUptXfRTo-uLsoBAcxFZ3bkE8Vz0yUpV_9JQo3piFG=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGy99ZY7-zBneNYwup8_QQIbWZWVYKiJCVnOShP3VGTVHMD0fnkR7Z_l7hylf33W-4twziqRRXdoGi8u7ux2di97Wy2BBHf3ToJtBfUptXfRTo-uLsoBAcxFZ3bkE8Vz0yUpV_9JQo3piFG=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGtAPHxKior1zwt9kdugvccgd_eW0qSrLjkNtDP2a0FaFVO-fIV3x-ifLTQvGXRD2DHvJ7PI2OstQh42jcoEZtdbWJTYjweZn0hdZWR2H2CcxEtydNo8I7yMd7vqTeUAcfxvf_0G2QLyqxo=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGtAPHxKior1zwt9kdugvccgd_eW0qSrLjkNtDP2a0FaFVO-fIV3x-ifLTQvGXRD2DHvJ7PI2OstQh42jcoEZtdbWJTYjweZn0hdZWR2H2CcxEtydNo8I7yMd7vqTeUAcfxvf_0G2QLyqxo=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHAE3v_px5Jfja5czXvTAZ5xKOGMG1AAneCCLrj0wifQHAgJP6yo9xmNfDLAy3kgVlVbbYo6wBRDnGn4N97i1KXS9b3X90bSFdwsRNFwgYACu-Db_hMgn3dK-J8XeGKSPnVARVESFMzm7ht=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHAE3v_px5Jfja5czXvTAZ5xKOGMG1AAneCCLrj0wifQHAgJP6yo9xmNfDLAy3kgVlVbbYo6wBRDnGn4N97i1KXS9b3X90bSFdwsRNFwgYACu-Db_hMgn3dK-J8XeGKSPnVARVESFMzm7ht=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF5BcorMbmuE6LDoZrcdy52DvojoUt3e_Nft4UmOHNIjPlEv7QxEr3dO5GvFTNXL_qW179NQLRD8KCrorO6mGtZwjAqrRPby8fgavhQGXTyT8mz0KdjkeqZHiD9HFb3a6BC7HEbQl7CKVQP=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAF5BcorMbmuE6LDoZrcdy52DvojoUt3e_Nft4UmOHNIjPlEv7QxEr3dO5GvFTNXL_qW179NQLRD8KCrorO6mGtZwjAqrRPby8fgavhQGXTyT8mz0KdjkeqZHiD9HFb3a6BC7HEbQl7CKVQP=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE2bwtWNvxw_Wx_OlFqlbk6li6s1BYgfJpm3ZLDpD3XAGA3BDvKK1D_LzROgeUyCu0eREDUJY4ta8SeALzIPROwkRphf-Z0wVCkU_bchMDffDVx3xuq3gyeuyfmC3yldwkJmsSwP39a3uCI=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAE2bwtWNvxw_Wx_OlFqlbk6li6s1BYgfJpm3ZLDpD3XAGA3BDvKK1D_LzROgeUyCu0eREDUJY4ta8SeALzIPROwkRphf-Z0wVCkU_bchMDffDVx3xuq3gyeuyfmC3yldwkJmsSwP39a3uCI=s10000"
+        },
+        {
+          "thumbnail": "https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=I5ERSNoDa8OtKKgir86TDQ&cb_client=search.estubs.gps&w=287&h=192&yaw=114.42789&pitch=0&thumbfov=100&scale=2",
+          "original_image": "https://lh5.googleusercontent.com/p/I5ERSNoDa8OtKKgir86TDQ=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAElztfdyP5P0v9axBjtYP9eOnC-zfceKTiozM-EOW6Q-m4CmBM1exYB34DrWwAew7uSeTnvsYIDpdjGrNTQDCmezao4Ip96Jvbasn4CEZ6apYIoot48B5Zm951txPDB96TVZ66udk_Z22Q=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAElztfdyP5P0v9axBjtYP9eOnC-zfceKTiozM-EOW6Q-m4CmBM1exYB34DrWwAew7uSeTnvsYIDpdjGrNTQDCmezao4Ip96Jvbasn4CEZ6apYIoot48B5Zm951txPDB96TVZ66udk_Z22Q=s10000"
+        }
+      ],
+      "amenities": [],
+      "raw_rating": 0,
+      "user_reviews": [],
+      "ai_score": 0,
+      "trust_weight": 0,
+      "analyzed_reviews": [],
+      "ai_score_expiration_date": "2026-04-22T08:26:27.050010Z",
+      "ai_summary_expiration_date": null,
+      "ai_summary": null,
+      "last_updated": "2026-04-15T08:26:33.666932Z"
+    },
+    {
+      "property_token": "ChoIjqXChJrq4L24ARoNL2cvMTFoZjhidGI5NhAB",
+      "name": "NHÀ NGHỈ 2552",
+      "description": null,
+      "link": "http://www.bienhoamotel.com/",
+      "address": null,
+      "phone": null,
+      "gps_coordinates": {
+        "latitude": 10.9443059,
+        "longitude": 106.8272463
+      },
+      "nearby_places": [],
+      "check_in_time": null,
+      "check_out_time": "12:00",
+      "price": 269872,
+      "deal": null,
+      "booking_sources": [],
+      "images": [
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEfi8Xt5IHoWwWrh7wsQv6anyRBz7JfmxJLO1ZG2dnZvqrswM_hnYnaLG3xhHX-sLfqavaJsDq2P76eq8IfCyjNZfRfGJ9NOnSoeUMbl8KB0EKrQWDoXy6vfSjP2WOlWfCs5ILE5Q=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEfi8Xt5IHoWwWrh7wsQv6anyRBz7JfmxJLO1ZG2dnZvqrswM_hnYnaLG3xhHX-sLfqavaJsDq2P76eq8IfCyjNZfRfGJ9NOnSoeUMbl8KB0EKrQWDoXy6vfSjP2WOlWfCs5ILE5Q=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGLfQlpM8TZSCJJVgNwexvbuKr_eG1atikDlMCivAzJsuV42kqRV3TlzLP5sxUyF8bEfhfrXChb4AFo8nPLetf9AEKWwSohOgpqni7hO6as3ZYwv2rnRp-AjHVSawthZoo1ziSQ=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGLfQlpM8TZSCJJVgNwexvbuKr_eG1atikDlMCivAzJsuV42kqRV3TlzLP5sxUyF8bEfhfrXChb4AFo8nPLetf9AEKWwSohOgpqni7hO6as3ZYwv2rnRp-AjHVSawthZoo1ziSQ=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHAboh4FnxIUZjpxEGRbLL4SmfTXqblRcBTfRdVs4yQtUk1mY6aTg4lcHK6Muq_VZBexhqbUZVB4qY472ySCSC8zepZ_oBdIGGSa0hM_QGOyho1AXWR0iNM7grWjZppJFep7ZbM=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHAboh4FnxIUZjpxEGRbLL4SmfTXqblRcBTfRdVs4yQtUk1mY6aTg4lcHK6Muq_VZBexhqbUZVB4qY472ySCSC8zepZ_oBdIGGSa0hM_QGOyho1AXWR0iNM7grWjZppJFep7ZbM=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG3R8D2X1K-yrwuGPlXxw5zwyDmn0GerdXw3fEUzf4Rn4zuI6b69vvmBsLXNOCJHqUBhsdNYA5ztRFiG5FiUQbDPBaNFZvaXk6PFAHSV3aBw8sWrJR5MJj9juwTB3wXZF8IqEC5=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG3R8D2X1K-yrwuGPlXxw5zwyDmn0GerdXw3fEUzf4Rn4zuI6b69vvmBsLXNOCJHqUBhsdNYA5ztRFiG5FiUQbDPBaNFZvaXk6PFAHSV3aBw8sWrJR5MJj9juwTB3wXZF8IqEC5=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAESxoTNjygRFN070yF_xWVUmTCa-Ev3FRIYepNp46kP2KXBo3jU7WP5s2ImJv3VrU3LVw0cZX62iP-IhByAjTo6cuR3G4RD2XUnpEURENANLfvqhxFjxJOFD_x6SU3AdbUmDyKrUg=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAESxoTNjygRFN070yF_xWVUmTCa-Ev3FRIYepNp46kP2KXBo3jU7WP5s2ImJv3VrU3LVw0cZX62iP-IhByAjTo6cuR3G4RD2XUnpEURENANLfvqhxFjxJOFD_x6SU3AdbUmDyKrUg=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEyTMldPW9syrHVTNw4a0_y5-NLHM2GElwYM7_Xk3Pp4nie36GHGHrgvR5mCZqPQmZpgRcLSNggztbUa_ifIxHpOMvgmaFU6hqqg-wa16QVM_CGghF5e-Gi6ddCSpnbnJ97cqW7=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEyTMldPW9syrHVTNw4a0_y5-NLHM2GElwYM7_Xk3Pp4nie36GHGHrgvR5mCZqPQmZpgRcLSNggztbUa_ifIxHpOMvgmaFU6hqqg-wa16QVM_CGghF5e-Gi6ddCSpnbnJ97cqW7=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFYfnIxbhhVMTKP9_xDWjtgeihbej877ODQgq-_YieUKKojMXIR7QLWVyN7MRN1gK2CUb1V-xX9R0olT88IRW2Pfewhbl5Tm0dqzzpmDmM4JkqgMYja4YPxEff15tEGob7ED702=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFYfnIxbhhVMTKP9_xDWjtgeihbej877ODQgq-_YieUKKojMXIR7QLWVyN7MRN1gK2CUb1V-xX9R0olT88IRW2Pfewhbl5Tm0dqzzpmDmM4JkqgMYja4YPxEff15tEGob7ED702=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHG_kKknnU3KwXDXcCRo2Ow9KJO92SsuU45Ph8s1wQpgGcGg0hHVWze-0yxKOWNj2S0dQHjIyNhVfpsw_QbQKhBoNuZPQ1PcxDa6CNsxLa4h-Xc_IN-mXmjRMufmgcLxyzh1NVI=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHG_kKknnU3KwXDXcCRo2Ow9KJO92SsuU45Ph8s1wQpgGcGg0hHVWze-0yxKOWNj2S0dQHjIyNhVfpsw_QbQKhBoNuZPQ1PcxDa6CNsxLa4h-Xc_IN-mXmjRMufmgcLxyzh1NVI=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAENowPqGFVTySA31_gKtvxLGBuRo6EneW7RFWO-dPlaRLwrrRdMZJ4rRIuluA0teusXRuZEuM-eMk-jCzCExNUXBEnIueTwg7QXuLA7KqwGgQ03gk51xjJLgj3dQJpArh2LMq2b=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAENowPqGFVTySA31_gKtvxLGBuRo6EneW7RFWO-dPlaRLwrrRdMZJ4rRIuluA0teusXRuZEuM-eMk-jCzCExNUXBEnIueTwg7QXuLA7KqwGgQ03gk51xjJLgj3dQJpArh2LMq2b=s10000"
+        }
+      ],
+      "amenities": [],
+      "raw_rating": 0,
+      "user_reviews": [
+        {
+          "text": "good hotel budget traveller long mind budget hotel pleased stay, definitely not town located charles river street watch college crew teams practicing morning run, weather n't good stay imagine season sunny day walk charles river harvard square wonderful.we used car taxis pulling hotel, ca n't speak restaurant breakfast buffet option 10 did n't worth, fair number people did enjoying morning, did appreciate restaurant bar open, people bar guests simply unwinding catching tour group day sightseeing,  ",
+          "raw_stars": 4
+        },
+        {
+          "text": "beautiful location average foood hotel nestled 500 acres prestine beach rainforest, aside large destruction rainforest build golf courses really loved location hotel, westin runs hotel average best, dinner restaurants hotel seriously overpriced food average best, n't mind paying food long food tastes good fresh, ate local restaurants area great quarter price lolitas don pepe served fresh authentic food, hotel charges everthing breakfast not included want internet lose towels parking 165 golf not played 185 snorkeling rent boat nothing given free hotel look wrong way room, rooms nice bed sheets rough like management used clorex washing sheets, bed average bathroom nice large shower good water pressure air conditioning fine, did excellent relaxing time,  ",
+          "raw_stars": 4
+        },
+        {
+          "text": "perfect quarter hotel husband children 7 stayed iberville 4 nights mid-june, town family wedding, husband grew no siblings know no quarter extremely great time, iberville staff extremely pleasant deal, agree minor complaints reviews yes housekeeping extremely slow overall excellent stay, no n't ritz amenities ritz hotel spa exercise facilitites just 10 day room not person 139 night ca n't beat price, spa fabulous, workout facilities not big state art staff does n't know hotel staying treat, yes buffet breakfasts discontinued manager hotel subject 25 fee person 2 adults room applied family members town wedding waived, requested discounted valet parking fees reduced 50 spot, hotel old pretty good shape, did n't greatest view 10th floor suite n't really important, kids blast resistance pool pretty, location perfect like walk not bad cabbing driving, definitely stay trip no, considering iberville suggestion manager arriving contact not liking, experience willing just make stay memorable, dealt patience respect took care,  ",
+          "raw_stars": 4
+        }
+      ],
+      "ai_score": 4,
+      "trust_weight": 1,
+      "analyzed_reviews": [
+        {
+          "text": "good hotel budget traveller long mind budget hotel pleased stay, definitely not town located charles river street watch college crew teams practicing morning run, weather n't good stay imagine season sunny day walk charles river harvard square wonderful.we used car taxis pulling hotel, ca n't speak restaurant breakfast buffet option 10 did n't worth, fair number people did enjoying morning, did appreciate restaurant bar open, people bar guests simply unwinding catching tour group day sightseeing,  ",
+          "raw_stars": 4,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 4
+        },
+        {
+          "text": "beautiful location average foood hotel nestled 500 acres prestine beach rainforest, aside large destruction rainforest build golf courses really loved location hotel, westin runs hotel average best, dinner restaurants hotel seriously overpriced food average best, n't mind paying food long food tastes good fresh, ate local restaurants area great quarter price lolitas don pepe served fresh authentic food, hotel charges everthing breakfast not included want internet lose towels parking 165 golf not played 185 snorkeling rent boat nothing given free hotel look wrong way room, rooms nice bed sheets rough like management used clorex washing sheets, bed average bathroom nice large shower good water pressure air conditioning fine, did excellent relaxing time,  ",
+          "raw_stars": 4,
+          "sentiment_score": 4.9,
+          "trust_weight": 1,
+          "adjusted_stars": 4
+        },
+        {
+          "text": "perfect quarter hotel husband children 7 stayed iberville 4 nights mid-june, town family wedding, husband grew no siblings know no quarter extremely great time, iberville staff extremely pleasant deal, agree minor complaints reviews yes housekeeping extremely slow overall excellent stay, no n't ritz amenities ritz hotel spa exercise facilitites just 10 day room not person 139 night ca n't beat price, spa fabulous, workout facilities not big state art staff does n't know hotel staying treat, yes buffet breakfasts discontinued manager hotel subject 25 fee person 2 adults room applied family members town wedding waived, requested discounted valet parking fees reduced 50 spot, hotel old pretty good shape, did n't greatest view 10th floor suite n't really important, kids blast resistance pool pretty, location perfect like walk not bad cabbing driving, definitely stay trip no, considering iberville suggestion manager arriving contact not liking, experience willing just make stay memorable, dealt patience respect took care,  ",
+          "raw_stars": 4,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 4
+        }
+      ],
+      "ai_score_expiration_date": "2026-04-22T08:26:27.050010Z",
+      "ai_summary_expiration_date": null,
+      "ai_summary": null,
+      "last_updated": "2026-04-15T08:26:33.667830Z"
+    },
+    {
+      "property_token": "ChoIpvSk7-aMh7r8ARoNL2cvMTFta3NyazdfNBAB",
+      "name": "AviCasa - boutique living (CN1)",
+      "description": null,
+      "link": "https://avicasa.vn/",
+      "address": null,
+      "phone": null,
+      "gps_coordinates": {
+        "latitude": 10.8389747,
+        "longitude": 106.8422045
+      },
+      "nearby_places": [],
+      "check_in_time": "14:00",
+      "check_out_time": null,
+      "price": 516833,
+      "deal": "Rẻ hơn bình thường 38%",
+      "booking_sources": [],
+      "images": [
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGbU6mARm-PX_kh5hUuS5d9hBYAPRfGzUmwpTLep09Z59_oKejVVAkcG9VoGQW6rOWeA_BO-2fAB0_3cwlNEAPrt0W2Pu_stwq2SQq-ebafM7fMVlBaa2jSdWuiDX-TN9WdtJ4ZPv0bg2RC=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGbU6mARm-PX_kh5hUuS5d9hBYAPRfGzUmwpTLep09Z59_oKejVVAkcG9VoGQW6rOWeA_BO-2fAB0_3cwlNEAPrt0W2Pu_stwq2SQq-ebafM7fMVlBaa2jSdWuiDX-TN9WdtJ4ZPv0bg2RC=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHC1CkjXtBr8rnR5SNHy01wyYTk3Av044xE9uWiAy3AqF8pvjMzxh0TU7xUdGgIAa4S92rw72-LNmS4ItEY7nExw2BCsEpRL1fNH2JwwMqZ2XUNxsBss6o0324_PkzjCnBfWWXtaia5MAOX=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHC1CkjXtBr8rnR5SNHy01wyYTk3Av044xE9uWiAy3AqF8pvjMzxh0TU7xUdGgIAa4S92rw72-LNmS4ItEY7nExw2BCsEpRL1fNH2JwwMqZ2XUNxsBss6o0324_PkzjCnBfWWXtaia5MAOX=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH6SrobZb-U3_PlQgdvKgKGHwMc1Rb9_mhu-4mkHtj3-0UJYRu4JceiQXIsx4G731cpU2Or6cbWLPJqm7hiuJUEr0tVo2D9rTK1lqAURDD6MD72ErMQs864CMtA9xXvvYUm6SOlwK91E8I=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH6SrobZb-U3_PlQgdvKgKGHwMc1Rb9_mhu-4mkHtj3-0UJYRu4JceiQXIsx4G731cpU2Or6cbWLPJqm7hiuJUEr0tVo2D9rTK1lqAURDD6MD72ErMQs864CMtA9xXvvYUm6SOlwK91E8I=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEY63vP7h22Vwsy_ilCEUQ6PFG2yWZ2l6fUUr-9KhjxWZvRb64QXBPP3m61QpMO00DCdq2Sxy-vKJi79P8_winxq2Q4u_6YUOConMHvV5mUGQEy4mccsnwbDXQEsaYRb6ls1fVka7mZcFI=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEY63vP7h22Vwsy_ilCEUQ6PFG2yWZ2l6fUUr-9KhjxWZvRb64QXBPP3m61QpMO00DCdq2Sxy-vKJi79P8_winxq2Q4u_6YUOConMHvV5mUGQEy4mccsnwbDXQEsaYRb6ls1fVka7mZcFI=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEMs40a64OB9REoG-RaLMrPJT-0udMqhAHL4-n4se5OdYt0HB1dwCSUNa9knfjQ-SmY4ID9AkuWUf6EJUp0zhIDMOspNaKI1Zi6N3tDlwDDnWvB4TTEYvfedb2YBEmND_yz9uMF1G1qn1J1=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEMs40a64OB9REoG-RaLMrPJT-0udMqhAHL4-n4se5OdYt0HB1dwCSUNa9knfjQ-SmY4ID9AkuWUf6EJUp0zhIDMOspNaKI1Zi6N3tDlwDDnWvB4TTEYvfedb2YBEmND_yz9uMF1G1qn1J1=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFJ_Q1u3nsVtXXJLcr0GywmhRyNYrGAqZprQTbzaoA75JgPJmwIVGbkULNHq_ShtG7hCdWa10z78hm8lCstYfqLA54HXu4fE9DaztCBZMFTdqLA6_4MXoK9b1Ox5rhieEnWYjInvpef93Q=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFJ_Q1u3nsVtXXJLcr0GywmhRyNYrGAqZprQTbzaoA75JgPJmwIVGbkULNHq_ShtG7hCdWa10z78hm8lCstYfqLA54HXu4fE9DaztCBZMFTdqLA6_4MXoK9b1Ox5rhieEnWYjInvpef93Q=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFjp38t6IuaZCpeTsobUm_qwPtCLqlwksVgXZLJSPh01YcQcYbAnqj1EOKQIKUI8trQY0aykIY8ptWXDcpgdLgC1-z1uDAzQ1CbiA6bRL25NJXNATkC02ILRCWOyyO52m_7zh26RG9O5ec=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFjp38t6IuaZCpeTsobUm_qwPtCLqlwksVgXZLJSPh01YcQcYbAnqj1EOKQIKUI8trQY0aykIY8ptWXDcpgdLgC1-z1uDAzQ1CbiA6bRL25NJXNATkC02ILRCWOyyO52m_7zh26RG9O5ec=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGsd_MJobUGRDwSOSZr-9A9_6yxAOslLSn9SMwdJ8PKRwRCsgh9vIyyS7JviDwTXRU4ExlZsrj5Sp526V49PWUJkTZVOZHlkopBzt-P1rreCnOpSFF6CMj847TXPoREONe50F31-kJtbUw=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGsd_MJobUGRDwSOSZr-9A9_6yxAOslLSn9SMwdJ8PKRwRCsgh9vIyyS7JviDwTXRU4ExlZsrj5Sp526V49PWUJkTZVOZHlkopBzt-P1rreCnOpSFF6CMj847TXPoREONe50F31-kJtbUw=s10000"
+        }
+      ],
+      "amenities": [],
+      "raw_rating": 0,
+      "user_reviews": [
+        {
+          "text": "convenient hotel located just street fontana metro station makes easy arrive el prat airport renfe train till passeig gracia l3 trinitad nova caneyelles use t-10 trip long takes no 1.15 min, loved location foot took 40 min seaside wide shopping street gives las ramblas, hotel room comfort fairly big cleaned daily kitchen really useful dishes fridge.. bathroom nice, flaw hotel noise easily heard make sure earplugs, walls thicker hotel perfect,  ",
+          "raw_stars": 4
+        }
+      ],
+      "ai_score": 4,
+      "trust_weight": 1,
+      "analyzed_reviews": [
+        {
+          "text": "convenient hotel located just street fontana metro station makes easy arrive el prat airport renfe train till passeig gracia l3 trinitad nova caneyelles use t-10 trip long takes no 1.15 min, loved location foot took 40 min seaside wide shopping street gives las ramblas, hotel room comfort fairly big cleaned daily kitchen really useful dishes fridge.. bathroom nice, flaw hotel noise easily heard make sure earplugs, walls thicker hotel perfect,  ",
+          "raw_stars": 4,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 4
+        }
+      ],
+      "ai_score_expiration_date": "2026-04-22T08:26:27.050010Z",
+      "ai_summary_expiration_date": null,
+      "ai_summary": null,
+      "last_updated": "2026-04-15T08:26:33.669113Z"
+    },
+    {
+      "property_token": "ChkIg7vgsvvh1JcvGg0vZy8xMWZ5bHBmMDZrEAE",
+      "name": "Khách Sạn Cúc Phương",
+      "description": null,
+      "link": "https://khachsancucphuong.com/",
+      "address": null,
+      "phone": null,
+      "gps_coordinates": {
+        "latitude": 10.8895707,
+        "longitude": 106.7740687
+      },
+      "nearby_places": [],
+      "check_in_time": "12:00",
+      "check_out_time": "12:00",
+      "price": 739582,
+      "deal": null,
+      "booking_sources": [],
+      "images": [
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFsuZ56OzbpwyTIwHeTSgJmwdASkhC6N00kaTQZvQCKR3YGkRK1e2xW2x9oj6Z1fs0-q7OoUvz3V3e-9pCUHanwIUgPJJC0wo0-sAiMbM84VgpuYkymO1DD1d5x1NNZWIZHLtC5dYQ89XO2=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFsuZ56OzbpwyTIwHeTSgJmwdASkhC6N00kaTQZvQCKR3YGkRK1e2xW2x9oj6Z1fs0-q7OoUvz3V3e-9pCUHanwIUgPJJC0wo0-sAiMbM84VgpuYkymO1DD1d5x1NNZWIZHLtC5dYQ89XO2=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFWu3I7lIvg33x4-AHt51ufHY9WkBpJtK3sJsg0wTg-QQwQRJkaoul317wvcYYagCpq-opnFrRGhkJYeESm20VSrnL8B-UeTTqGbL5MrGslcjMwTz5i9th93PUTzlxVXz1veQg=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFWu3I7lIvg33x4-AHt51ufHY9WkBpJtK3sJsg0wTg-QQwQRJkaoul317wvcYYagCpq-opnFrRGhkJYeESm20VSrnL8B-UeTTqGbL5MrGslcjMwTz5i9th93PUTzlxVXz1veQg=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGuhrmNO054YKoNRx_WuA9sQ5jWho7SLhJUhISLVxfPGwU7gyQ1wBleuw5Yifs7Y1Q8tEgg00fohJ6W2cNA4U07aLgr5GRMISYYQDrkfyQJ2nEHvstMeuq6I355P2azGUjnqT0vfA=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGuhrmNO054YKoNRx_WuA9sQ5jWho7SLhJUhISLVxfPGwU7gyQ1wBleuw5Yifs7Y1Q8tEgg00fohJ6W2cNA4U07aLgr5GRMISYYQDrkfyQJ2nEHvstMeuq6I355P2azGUjnqT0vfA=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGGUbXjAjQnZePt-ScdOUq7D9qvpD92i9nitjQ03n5IQSd7JpR2USeOwxvtxzlzSVDt_0_pxtQ-z_M7nx9xvOZffliMm4Zn_vgSOOm7SCPDwz4PBHL8kivaVPRmebGJ-C_81UOU14iUIiBF=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGGUbXjAjQnZePt-ScdOUq7D9qvpD92i9nitjQ03n5IQSd7JpR2USeOwxvtxzlzSVDt_0_pxtQ-z_M7nx9xvOZffliMm4Zn_vgSOOm7SCPDwz4PBHL8kivaVPRmebGJ-C_81UOU14iUIiBF=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGReRNqRRtCru7UgLTKB-fay7wqsbgHQTZtsyWGiXXQ_CTMsaQRJ5S3MJqxyGZ5ScqAV3AV-FDnMplacdTSU-FQgjbYL9pzbL6nH40NL75sSRzpRLU0cqk6CFfOCAucwrlkONxtgaq0bNI-=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGReRNqRRtCru7UgLTKB-fay7wqsbgHQTZtsyWGiXXQ_CTMsaQRJ5S3MJqxyGZ5ScqAV3AV-FDnMplacdTSU-FQgjbYL9pzbL6nH40NL75sSRzpRLU0cqk6CFfOCAucwrlkONxtgaq0bNI-=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEzh487jGoZ-4RI64elltBaV7Wgn5lKIeaR6gqDDCD9brLtvtrxE6xIcZnjG8tlJG9NW_wXEiMXEGZcVLIKtI7H4S2XMl7vzPG9m5LafoxXzT3DSVlx70jhtNBNT-WzQtqdWkoEHhAHPtH-=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEzh487jGoZ-4RI64elltBaV7Wgn5lKIeaR6gqDDCD9brLtvtrxE6xIcZnjG8tlJG9NW_wXEiMXEGZcVLIKtI7H4S2XMl7vzPG9m5LafoxXzT3DSVlx70jhtNBNT-WzQtqdWkoEHhAHPtH-=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHappAPmVcvKSdPg3FKiLXjmOFaBjlNDjqZyU6z_pA8i-BcNkKBsAB5y1qY3QCfAghphN5mbOYfa0F0cudGL2PqvXWMCuFIevzMIFUisdbV6edaUlr5_AcUTJAYx3v4Hs4qdqJZFJAKoTi2=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHappAPmVcvKSdPg3FKiLXjmOFaBjlNDjqZyU6z_pA8i-BcNkKBsAB5y1qY3QCfAghphN5mbOYfa0F0cudGL2PqvXWMCuFIevzMIFUisdbV6edaUlr5_AcUTJAYx3v4Hs4qdqJZFJAKoTi2=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGWiR6OGeTpJ-lxjO6RFOME7UjvCx0tsse76u9eEXSevB3VRx8SqA8cWLA4kaEpl8ZX0z_MWu3IXNjFU4_671E9milKGQL8-JjsssP8eX0bz01xQZ7hgbPFEYV7AodTZ4GU0-zuqyu3p3oy=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGWiR6OGeTpJ-lxjO6RFOME7UjvCx0tsse76u9eEXSevB3VRx8SqA8cWLA4kaEpl8ZX0z_MWu3IXNjFU4_671E9milKGQL8-JjsssP8eX0bz01xQZ7hgbPFEYV7AodTZ4GU0-zuqyu3p3oy=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGuekAtcpKEQHrhZmRkEtTmP1uVGzIu465qEzLT00Fkg9tb-4uHHzecs-NHTqodTCxTYiua4lxXYY48oQjhErkBS0T3IFpq60b8ZUipMxDqiBO20m6wLDQ_YTKjJh4AufniCaEChxnMkqO1=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGuekAtcpKEQHrhZmRkEtTmP1uVGzIu465qEzLT00Fkg9tb-4uHHzecs-NHTqodTCxTYiua4lxXYY48oQjhErkBS0T3IFpq60b8ZUipMxDqiBO20m6wLDQ_YTKjJh4AufniCaEChxnMkqO1=s10000"
+        }
+      ],
+      "amenities": [
+        "Free breakfast",
+        "Free Wi-Fi",
+        "Parking",
+        "Hot tub",
+        "Air conditioning",
+        "Restaurant",
+        "Kitchen in some rooms",
+        "Airport shuttle",
+        "Full-service laundry"
+      ],
+      "raw_rating": 0,
+      "user_reviews": [
+        {
+          "text": "great florence hotel florence hotel pendini19 2007we just arrived home week florence, stay hotel pendini fabulous, fourth floor arch piazza republica hotel centrally located walking distance sites city offer, rooms reasonably priced clean comfortable staff pendini fantastic, served barbara pamela crew helpful folks names did n't learn, restaurant recommendations reservations class, enjoyed pendini hospitality past certainly stay future visits firenze.bernard bette goldsteinsaint helena ca,  ",
+          "raw_stars": 5
+        },
+        {
+          "text": "fantastic fantastic hotel, views room amazing thought city, nice size room 2. short walk time sq central perk ha n't return new york thought just city, did stay millenium plaza,  ",
+          "raw_stars": 4
+        },
+        {
+          "text": "awesome experience, wonderful time resort, like guests site expecting bit rundown place property neglect check, mind travel lot seen share reputable establishments places no better shanty towns, far grandest nicest resorts, hard pressed suggest needs improvement, service excellent facilities well-maintained food great, landed sjc sunday evening close 11 pm, took airport shuttle not complimentary totally worth resort pleasantly surprised greatly relieved partake complimentary bacardi rum coke cocktails available bus, ones shuttle driver undivided attention, able ask sorts questions resort island people, arrived bell hop efficient collecting bags waiting checked, desk asked hotel sold particular week, said no asked possible upgraded ocean view room, readily agreed room fifth floor la vistas wing, ocean view breathtaking, vieques island wyndham private island palomino, think drifting sleep spectacular view sun rose, morning picking coffee pastries david coffee good coffee snobs breakfast balcony counted blessings, day toured resort check facilities available, took ferry palomino island lay underneath beach huts quick nap, ferry shuttles resort 4:30 pm, bad n't extend palomino hours night, potential popping hot spot given chance.we rented car resort avis site local strip mall, wal mart walgreens mcdonalds pueblo grocery store payless shoe source, seen reviews fajardo certain areas make step gas pedal, drove fajardo centro night nothing friendly, drove luquillo night thing, looks deceiving think look trouble eventually, went local bars hung night, just boyfriend probably asian fajardo maybe entire island, el conquistador drawback nightlife lacking, casino happening place weekends casablanca good music no enjoy, did best thing hung locals, favorite hot spots el rancho brass cactus luquillo, night drove old san juan went bar/club hopping drive torture real late just wanted home, musts pr el yunque rainforst luquillo food kiosks playa azul costa azul luquillo old san juan plaza las americas shopping center bacardi factory don q rum tastes sooooo better, overall come resort, definitely felt week just figure way swing things, weeks better,  ",
+          "raw_stars": 5
+        },
+        {
+          "text": "love hotel stay doubletree soldiers field rd perfect place families, stylish king suite spacious clean, little tricky finding entrance hotel, restaurant little pricey excellent views charles river, location amenities employees helpful,  ",
+          "raw_stars": 5
+        }
+      ],
+      "ai_score": 4.75,
+      "trust_weight": 1,
+      "analyzed_reviews": [
+        {
+          "text": "great florence hotel florence hotel pendini19 2007we just arrived home week florence, stay hotel pendini fabulous, fourth floor arch piazza republica hotel centrally located walking distance sites city offer, rooms reasonably priced clean comfortable staff pendini fantastic, served barbara pamela crew helpful folks names did n't learn, restaurant recommendations reservations class, enjoyed pendini hospitality past certainly stay future visits firenze.bernard bette goldsteinsaint helena ca,  ",
+          "raw_stars": 5,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 5
+        },
+        {
+          "text": "fantastic fantastic hotel, views room amazing thought city, nice size room 2. short walk time sq central perk ha n't return new york thought just city, did stay millenium plaza,  ",
+          "raw_stars": 4,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 4
+        },
+        {
+          "text": "awesome experience, wonderful time resort, like guests site expecting bit rundown place property neglect check, mind travel lot seen share reputable establishments places no better shanty towns, far grandest nicest resorts, hard pressed suggest needs improvement, service excellent facilities well-maintained food great, landed sjc sunday evening close 11 pm, took airport shuttle not complimentary totally worth resort pleasantly surprised greatly relieved partake complimentary bacardi rum coke cocktails available bus, ones shuttle driver undivided attention, able ask sorts questions resort island people, arrived bell hop efficient collecting bags waiting checked, desk asked hotel sold particular week, said no asked possible upgraded ocean view room, readily agreed room fifth floor la vistas wing, ocean view breathtaking, vieques island wyndham private island palomino, think drifting sleep spectacular view sun rose, morning picking coffee pastries david coffee good coffee snobs breakfast balcony counted blessings, day toured resort check facilities available, took ferry palomino island lay underneath beach huts quick nap, ferry shuttles resort 4:30 pm, bad n't extend palomino hours night, potential popping hot spot given chance.we rented car resort avis site local strip mall, wal mart walgreens mcdonalds pueblo grocery store payless shoe source, seen reviews fajardo certain areas make step gas pedal, drove fajardo centro night nothing friendly, drove luquillo night thing, looks deceiving think look trouble eventually, went local bars hung night, just boyfriend probably asian fajardo maybe entire island, el conquistador drawback nightlife lacking, casino happening place weekends casablanca good music no enjoy, did best thing hung locals, favorite hot spots el rancho brass cactus luquillo, night drove old san juan went bar/club hopping drive torture real late just wanted home, musts pr el yunque rainforst luquillo food kiosks playa azul costa azul luquillo old san juan plaza las americas shopping center bacardi factory don q rum tastes sooooo better, overall come resort, definitely felt week just figure way swing things, weeks better,  ",
+          "raw_stars": 5,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 5
+        },
+        {
+          "text": "love hotel stay doubletree soldiers field rd perfect place families, stylish king suite spacious clean, little tricky finding entrance hotel, restaurant little pricey excellent views charles river, location amenities employees helpful,  ",
+          "raw_stars": 5,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 5
+        }
+      ],
+      "ai_score_expiration_date": "2026-04-22T08:26:27.050010Z",
+      "ai_summary_expiration_date": null,
+      "ai_summary": null,
+      "last_updated": "2026-04-15T08:26:33.670097Z"
+    },
+    {
+      "property_token": "ChoItbnE1__jpNPpARoNL2cvMTFtdmxud2ZuehAB",
+      "name": "Khách sạn Hoàng Hùng",
+      "description": "Khách sạn bình dị có phòng ở ấm cúng, quán cà phê/quầy bar, nhà hàng, bể bơi ngoài trời và khu vui chơi.",
+      "link": "http://www.khachsanhoanghung.com.vn/",
+      "address": null,
+      "phone": null,
+      "gps_coordinates": {
+        "latitude": 10.8933885,
+        "longitude": 106.76028370000002
+      },
+      "nearby_places": [],
+      "check_in_time": "14:00",
+      "check_out_time": "12:00",
+      "price": 727399,
+      "deal": null,
+      "booking_sources": [],
+      "images": [
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHKRP0M6jfOnVjKXrOD21y9XWs7UhZCHPj291GIT3FgWuXPRsdV2rcpBIXo8-y0qzO86df9PkczmfauxeY3Xdi8lS87pUqUwAgWbiYpeuhsXze3SWKrqqSqBa5in9aOXzSqg_TpNA=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHKRP0M6jfOnVjKXrOD21y9XWs7UhZCHPj291GIT3FgWuXPRsdV2rcpBIXo8-y0qzO86df9PkczmfauxeY3Xdi8lS87pUqUwAgWbiYpeuhsXze3SWKrqqSqBa5in9aOXzSqg_TpNA=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHFsbC9ghjvxnHPRnOhQ1QXiq9aypClGmIaiDu8d-Z_ngtqt2CWDQim3P4a9AT03i3rhrfkn2E_a0Is3UN2jd7C7gIjQgjPVTeZ-9-I74xdCp2S2hI6j6tcKbDMP9hCLkeE3h87NBIxD7Tl=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHFsbC9ghjvxnHPRnOhQ1QXiq9aypClGmIaiDu8d-Z_ngtqt2CWDQim3P4a9AT03i3rhrfkn2E_a0Is3UN2jd7C7gIjQgjPVTeZ-9-I74xdCp2S2hI6j6tcKbDMP9hCLkeE3h87NBIxD7Tl=s10000"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFATK3bZPgZUL7zmpzVKSD5iHHTBx_q4b3vaAHrLTYxVZYcO59sMh-W59xFOBDvyM4TNzB1QqEMqcvXzXab7J4NJ_YRLXQLKdky2Jm5e9G0pWsni81xkDKoiMQGGyl0llLOKoE=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFATK3bZPgZUL7zmpzVKSD5iHHTBx_q4b3vaAHrLTYxVZYcO59sMh-W59xFOBDvyM4TNzB1QqEMqcvXzXab7J4NJ_YRLXQLKdky2Jm5e9G0pWsni81xkDKoiMQGGyl0llLOKoE=s10000"
+        },
+        {
+          "thumbnail": "https://lh5.googleusercontent.com/proxy/NpzU5AoAYAjsDMdL2qO5aKILRFgBtS3qbxRGEOA83G3FWGFUT02tMUEItkz3xUsA526BDHPSqb8nTY_R5BGBgUz8SPEKePhmajW8ym-Md7bHMGoYfdCzIsCLZrrS2DzgYrWWLc6mJTnnUr8b0g_1t8Puuf-gXg=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://photos.hotelbeds.com/giata/original/89/895253/895253a_hb_f_005.jpg?20250123094613?20250622163105"
+        },
+        {
+          "thumbnail": "https://lh4.googleusercontent.com/proxy/KyrxKHgJWIFgPWq3KIo1jGlUDfG9akb7Tn7UER5jM5oUgtKV7sp_CbPh-BBX6LQ0iwq_8QeS5Nz4oCfQ71ipnWz87oTNaYNk1W6b6bq63U8N8gSSSTD5REOKQ9YwEc_mocxduT0dVryFAWV2QMZROFXoc10XxQ=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://photos.hotelbeds.com/giata/original/89/895253/895253a_hb_ro_036.jpg"
+        },
+        {
+          "thumbnail": "https://lh5.googleusercontent.com/proxy/Es2MsPPs0lI-qkduqFLpUoy42X66k_0jLa1LtBAcz0oXqNq3ZusHqO1L6A5y3T_zzf3OJ_8mULTrqXdlDn9TQ9U77yvt1J9kFb13FMPYSqUUUBUKIPvBoaUTp6_HC8DnFtpiiaUga0IE2WzoWhkFMrsUeC3WKYI=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://photos.hotelbeds.com/giata/original/89/895253/895253a_hb_ro_015.jpg"
+        },
+        {
+          "thumbnail": "https://lh6.googleusercontent.com/proxy/18ECFfzHap2w8D3qTI9fIaJPcfLwCNuK-I8uGOlDHV0F8FCwgQEcMtuwCz4I8cSqheL_Xj19BZ7R-2Y54A98vtYSvieKgl_R14C5jy4KarjRaa0hMQvTHTupx01VYsunsz-D-h3_R3P97Brz702dCRzDJwggX6c=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://photos.hotelbeds.com/giata/original/89/895253/895253a_hb_f_001.jpg?20250204034550?20250622163105"
+        },
+        {
+          "thumbnail": "https://lh4.googleusercontent.com/proxy/iUzOPmWY5WvedrbyLCyBj6or-SiES00wYcM28pVpdkDESM3PhUuIl9l3-uwp5TZqY1COi1Q7tJskHVxu2pxOJjISCO3zAZtZih7AD8mgyqfDQHz43s2dzWhNly9zdyt06mBo0iYaP915t0AyHJMqdsCblWqhSQ=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://photos.hotelbeds.com/giata/original/89/895253/895253a_hb_w_018_20251127_160720.jpg"
+        },
+        {
+          "thumbnail": "https://lh4.googleusercontent.com/proxy/7AZigWfQJm6OI_JRiiEaBpDsQmxBa4mFvvkfgok5Kt4L0FwleVvSC1bvYMmXcWc5XuQiH1XmI1Rz24e16lUj1WMy3HAv9gvF5YaojAs59i4gevsYZuA_Qi7_7QzJ4dhTIBiy63SGoR6I85jgbwz1fSdVFgHtYw=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://photos.hotelbeds.com/giata/original/89/895253/895253a_hb_a_004.jpg?20241206090116?20250622163059"
+        }
+      ],
+      "amenities": [
+        "Free Wi-Fi",
+        "Free parking",
+        "Outdoor pool",
+        "Air conditioning",
+        "Restaurant",
+        "Full-service laundry"
+      ],
+      "raw_rating": 0,
+      "user_reviews": [
+        {
+          "text": "rex rocks hotel rex cool hotel conveniently located san francisco, great spot towners couoles want night away kids just hanging city, hotel affordably-priced n't worry getting soaked, vetry good experience end end, hearily recommend hotel rex,  ",
+          "raw_stars": 5
+        },
+        {
+          "text": "great motor inn, stayed 3 nights beginning 16 night tour west, booked property using advice fellow trip advisor travellers, motel exceeded expectations.we rented car airport able park 3 days no problem free car park beneath hotel, went early evening drive marina able space return.i requested 2 quiet rooms party 5. 2 bedroom suite situated little view quiet, king room situated right elevator ice machine busy road view, guess win lose, asked told rooms if/when available decided stay liked room.our floor think 2nd floor looked like recently refurbed, rooms clean spacious large flat screen tv, little balcony not time use, coffee maker ironing board hairdryer.it 5 10 minute walk bay little longer reach pier 39. highly recommend pats cafe breakfast just road slightly left, lots italian restaurants nearby, cable car just 5 minutes away.all definately recommend place especially rates low, great value,  ",
+          "raw_stars": 4
+        },
+        {
+          "text": "convenient location, tiny room, just weekend watching end tour france, hotel quite convenient central sites little way decent choice bistros, refurbishment going means restaurant open no noise sign workmen, france weekend.for 380___ thought room tiny presented, compared example hyatt great eastern london stayed beginning july room 3 times size nearly half price.we did 50cl bottle red wine bottle opener welcome present n't tried n't comment that.the reception staff perfectly nice service breakfast fine, breakfast wanted not range hyatts.we ate dinner hotel cafe m sunday night, 190___ including 4 glasses wine thought best average, braised beef hot slight film liquid suggesting close microwave, female waiter suggested good wine match starter male colleague clearly no idea matching desert wines n't remotely sweet did n't work choices,  ",
+          "raw_stars": 3
+        }
+      ],
+      "ai_score": 3.64,
+      "trust_weight": 0.73,
+      "analyzed_reviews": [
+        {
+          "text": "rex rocks hotel rex cool hotel conveniently located san francisco, great spot towners couoles want night away kids just hanging city, hotel affordably-priced n't worry getting soaked, vetry good experience end end, hearily recommend hotel rex,  ",
+          "raw_stars": 5,
+          "sentiment_score": 5,
+          "trust_weight": 0.2,
+          "adjusted_stars": 5
+        },
+        {
+          "text": "great motor inn, stayed 3 nights beginning 16 night tour west, booked property using advice fellow trip advisor travellers, motel exceeded expectations.we rented car airport able park 3 days no problem free car park beneath hotel, went early evening drive marina able space return.i requested 2 quiet rooms party 5. 2 bedroom suite situated little view quiet, king room situated right elevator ice machine busy road view, guess win lose, asked told rooms if/when available decided stay liked room.our floor think 2nd floor looked like recently refurbed, rooms clean spacious large flat screen tv, little balcony not time use, coffee maker ironing board hairdryer.it 5 10 minute walk bay little longer reach pier 39. highly recommend pats cafe breakfast just road slightly left, lots italian restaurants nearby, cable car just 5 minutes away.all definately recommend place especially rates low, great value,  ",
+          "raw_stars": 4,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 4
+        },
+        {
+          "text": "convenient location, tiny room, just weekend watching end tour france, hotel quite convenient central sites little way decent choice bistros, refurbishment going means restaurant open no noise sign workmen, france weekend.for 380___ thought room tiny presented, compared example hyatt great eastern london stayed beginning july room 3 times size nearly half price.we did 50cl bottle red wine bottle opener welcome present n't tried n't comment that.the reception staff perfectly nice service breakfast fine, breakfast wanted not range hyatts.we ate dinner hotel cafe m sunday night, 190___ including 4 glasses wine thought best average, braised beef hot slight film liquid suggesting close microwave, female waiter suggested good wine match starter male colleague clearly no idea matching desert wines n't remotely sweet did n't work choices,  ",
+          "raw_stars": 3,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 3
+        }
+      ],
+      "ai_score_expiration_date": "2026-04-22T08:26:27.050010Z",
+      "ai_summary_expiration_date": null,
+      "ai_summary": null,
+      "last_updated": "2026-04-15T08:26:33.671518Z"
+    },
+    {
+      "property_token": "ChoQvfSB7-PX5cSIARoNL2cvMTF5bHE0bHh6ZBAC",
+      "name": "Khu nhà hoa hồng",
+      "description": null,
+      "link": "https://www.bluepillow.com/search/62de8c21de4e4eebed15199b?dest=ago&cat=Apartment&lat=10.86848&lng=106.79678&language=en",
+      "address": null,
+      "phone": null,
+      "gps_coordinates": {
+        "latitude": 10.86847972869873,
+        "longitude": 106.79678344726562
+      },
+      "nearby_places": [],
+      "check_in_time": null,
+      "check_out_time": null,
+      "price": 136648,
+      "deal": null,
+      "booking_sources": [],
+      "images": [
+        {
+          "thumbnail": "https://lh5.googleusercontent.com/proxy/n1DR7cwV-aQgfAZFpof4mOARuUVdhY2rDCS9u1WYg7Yd5MmLKXpitjsPG-h7T7lGguXitBch9RtaNhNNdb80vCf4tZpXzu9v9UOz0euHtxYOjcvbjPar9GShzKRx3RDeBz9g56Hj18Ug1zmn5LYgbMvYErKb_mU=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://pix8.agoda.net/hotelImages/31666237/0/2f1f87a7d524878791dc0a732db71657.jpg?ce=0&s=312x"
+        }
+      ],
+      "amenities": [
+        "Đỗ xe miễn phí"
+      ],
+      "raw_rating": 0,
+      "user_reviews": [
+        {
+          "text": "fabulous family room second stay tryp apolo definitely booking future.we booked spiderman themed family room sounded bit tacky good deal, reality thoughtout room room 575, spacious clean, children large bunk beds room containing desk tv armchairs separated mum dad sliding doors, spiderman theme subtle pillowcases cushions posters.it probably best family rooms stayed, stayed pere iv barcelona good family hotel location not good tryp apolo, booked direct solmelia.com, allows join mas scheme giving additional benefits staying hotels complimentary newspapers special deals etc.the room mini bar no tea coffee facilities, tv air-con safe pillow menu bath robe slippers extensive supply complimentary products including usual suspects nice touches like foot kit etc.we did n't eat hotel visit stay breakfast excellent buffet style lots choice.this hotel located, literally minutes port la ramblas, short cut takes maritime museum la ramblas.all recommend hotel look forward visit hopefully soon,  ",
+          "raw_stars": 4
+        }
+      ],
+      "ai_score": 4,
+      "trust_weight": 1,
+      "analyzed_reviews": [
+        {
+          "text": "fabulous family room second stay tryp apolo definitely booking future.we booked spiderman themed family room sounded bit tacky good deal, reality thoughtout room room 575, spacious clean, children large bunk beds room containing desk tv armchairs separated mum dad sliding doors, spiderman theme subtle pillowcases cushions posters.it probably best family rooms stayed, stayed pere iv barcelona good family hotel location not good tryp apolo, booked direct solmelia.com, allows join mas scheme giving additional benefits staying hotels complimentary newspapers special deals etc.the room mini bar no tea coffee facilities, tv air-con safe pillow menu bath robe slippers extensive supply complimentary products including usual suspects nice touches like foot kit etc.we did n't eat hotel visit stay breakfast excellent buffet style lots choice.this hotel located, literally minutes port la ramblas, short cut takes maritime museum la ramblas.all recommend hotel look forward visit hopefully soon,  ",
+          "raw_stars": 4,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 4
+        }
+      ],
+      "ai_score_expiration_date": "2026-04-22T08:26:27.050010Z",
+      "ai_summary_expiration_date": null,
+      "ai_summary": null,
+      "last_updated": "2026-04-15T08:26:33.672923Z"
+    },
+    {
+      "property_token": "ChoQ0avLiaCAoJiPARoNL2cvMTFuYm1zMncyNhAC",
+      "name": "Khách sạn Hội Ngộ - Deluxe Double or Twin Room with Balcony",
+      "description": null,
+      "link": "https://www.freecancellations.com/search/F2gnQFZXHyFUD1EBCg1QQQteVhw0EFFK?lat=10.89219&lng=106.77108&language=en",
+      "address": null,
+      "phone": null,
+      "gps_coordinates": {
+        "latitude": 10.892189979553223,
+        "longitude": 106.77108001708984
+      },
+      "nearby_places": [],
+      "check_in_time": "12:00",
+      "check_out_time": "12:00",
+      "price": 335695,
+      "deal": null,
+      "booking_sources": [],
+      "images": [
+        {
+          "thumbnail": "https://lh5.googleusercontent.com/proxy/cNLNKiu7Q349UHMdjjfz2V-kMsaeMm9cRA4qpCN1YyVMiCG6GEpmVkfUXLqi0pvRDZFDBc5Q9cARt0GBZxZ_qNmcBf6m5nCHxolCOQKR1FRQzQ7BP6qbt4ArH3NWsYnSDMGzldpiRrCcjcLlRwjTjBYdLHzuDg=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://freecancellationscdn-hsbgcwfragasdpfe.z01.azurefd.net/remote/q-xx.bstatic.com/xdata/images/hotel/max1024x683/807812702.jpg?k=5271893071b87822d982afa65000c3aa06840380b7b44eb51f2c145df4f7f3b1&o=&a=2344045&w=1024&h=683&mode=crop&scale=both&anchor=middlecenter&quality=80"
+        },
+        {
+          "thumbnail": "https://lh6.googleusercontent.com/proxy/GaJSyLCCwsKIbFR5oQPATgYqGG64zNt8j4k9yGRhTphwuGbrzpi5L0jVPHeQbEsU_ghWmEMWGQtk0HAa6FezKVimSWpZ8HetkMsgYqUrw97mcONjyuAnMeiALv0Jkh03jvAdojn33yjznTuNyW5T3KWp8AKwHQ=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://freecancellationscdn-hsbgcwfragasdpfe.z01.azurefd.net/remote/q-xx.bstatic.com/xdata/images/hotel/max1024x683/801343801.jpg?k=e374b9bef5bdc4a1fb745af4d731942919650f2219cb005c90b5d2225b92d187&o=&a=2344045&w=1024&h=683&mode=crop&scale=both&anchor=middlecenter&quality=80"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/proxy/GLwA7C0OZQ2F5XYTF9ICGkJDMN4NBX_mizFMtsPgo-Rbg3yHJrjg1s2mrIn_yvqrD-R8XfK-EK3xf5FXSP6GXUr_55Rc2sKsfabMd_lzn_XczcaMP-t8_kRhHAZ5y1JDHDVjFXQtq7qCwz0DPvd5ehEYVZDHDw=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://freecancellationscdn-hsbgcwfragasdpfe.z01.azurefd.net/remote/q-xx.bstatic.com/xdata/images/hotel/max1024x683/807803800.jpg?k=fcfcd475a0e9eba0285371214e0c4fd906fb6c7192017903e0722ef6ba044ae3&o=&a=2344045&w=1024&h=683&mode=crop&scale=both&anchor=middlecenter&quality=80"
+        },
+        {
+          "thumbnail": "https://lh4.googleusercontent.com/proxy/Us8kyIDPD5CAGWtMOFFKmWfRRQVHVs3FA4vUlgYdUUJkVCP-tgc5J_ELyKvYUfmUHyCqHmcz562EEqkX6ngMU3U6W-QrTYyXhRcvFsOuj6eQe79s9eQFSrxWUM8akShkRFEW8RVnQAL-93HcU1kazjOKBtMx_g=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://freecancellationscdn-hsbgcwfragasdpfe.z01.azurefd.net/remote/q-xx.bstatic.com/xdata/images/hotel/max1024x683/801343804.jpg?k=f0fbe5580e7c6d72c53c3e54370cb4f204c6139e30a4f621fb70fb23a6df4fdd&o=&a=2344045&w=1024&h=683&mode=crop&scale=both&anchor=middlecenter&quality=80"
+        },
+        {
+          "thumbnail": "https://lh5.googleusercontent.com/proxy/ZrnlCcvCltNNDbthrJtHqYImoj2iPS_-Hr2XKykZAxDvrPFms5ZVKkWkUkDk8FcHyhBGE6vFM27J7r3SC4EfrOf2E45sE9Wan7_IAKForuWXQERToR1OV3K1OD3vevQOWwLw3INCAo--491UkiXDPvX0x-MqN3I=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://freecancellationscdn-hsbgcwfragasdpfe.z01.azurefd.net/remote/q-xx.bstatic.com/xdata/images/hotel/max1024x683/801343803.jpg?k=3ed4ff6dff812085515e76ec8c0b57c0c76828c14e7eae0a4ec3ca2564578911&o=&a=2344045&w=1024&h=683&mode=crop&scale=both&anchor=middlecenter&quality=80"
+        },
+        {
+          "thumbnail": "https://lh3.googleusercontent.com/proxy/yZqBDsJWPqh9duYMaYiTAOOOjHfy_lKsaPtOafU2fZs617l-rJ9TUwxSnLpdi-KI8IeubfErjlUEGp5gmlsyoYia4Nww8sclNfDh8ThorBK-0oHn6INUXYEycb5Mj3YkTOtqtuZxd3Y2HvLJE_TUTUnp1wsg9g=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://freecancellationscdn-hsbgcwfragasdpfe.z01.azurefd.net/remote/q-xx.bstatic.com/xdata/images/hotel/max1024x683/622625985.jpg?k=b26f7078bd527e2f403403b1aef6c189041e3124f7c6b8f27a4a5bb36243f76a&o=&a=2344045&w=1024&h=683&mode=crop&scale=both&anchor=middlecenter&quality=80"
+        },
+        {
+          "thumbnail": "https://lh4.googleusercontent.com/proxy/wXfz9X-VTnuZaCTZJq550NQHFZKHWDJB973zNtp05wKpQVuvUK5NNaKjRv8PT2VQ9DdABLUOjXRCkyfHj0cD0k4vzD_v7gafhr1OkW0lGWKJ8_CNO1hEdFbbIRdD0ThQcJZSGhltTO4a2989zV5j4hLHozSrrQ=s287-w287-h192-n-k-no-v1",
+          "original_image": "https://freecancellationscdn-hsbgcwfragasdpfe.z01.azurefd.net/remote/q-xx.bstatic.com/xdata/images/hotel/max1024x683/622625999.jpg?k=d22d418557a56bdbb8165e50f6548a91ecdf2a71cda13ab9194f6c0c57d598e9&o=&a=2344045&w=1024&h=683&mode=crop&scale=both&anchor=middlecenter&quality=80"
+        }
+      ],
+      "amenities": [
+        "Điều hòa nhiệt độ",
+        "Bếp",
+        "Truyền hình cáp",
+        "Máy giặt",
+        "Đỗ xe miễn phí"
+      ],
+      "raw_rating": 0,
+      "user_reviews": [
+        {
+          "text": "better expected hotel great loation helpful staff day florentine art nice sleep air-conditioned room frescoed vaulted ceilings rafael room, 2 adjacent rooms second rafael room smaller acceptable, breakfast warm un-airconditioned room dining room attractive food areas clean, parking not included price valet parking available local garage, benefit driving florence difficult, bathroom large clean, not hyatt good value price,  ",
+          "raw_stars": 4
+        },
+        {
+          "text": "great place, just left marriott yesetrday 5 great days, n't understand negative complaints, people just need gripe, yeah large whattaya expect marriott waikiki beach, staff friendly rooms environs notch neat clean views ocean room outstanding, stayed sheraton waikiki hilton hawaiian village heard sheraton need work appears undergoing right hilton absolutely outstanding little removed main waikiki n't like walk dark daughters, gripe marriott wi-fi access, did n't work room 10.95 day, sitting lobby turtle bay resort north shore looking surf free wi-fi 12 day resort fee includes parking tennis snorkle gear, leave impressions tbr heading trip far good,  ",
+          "raw_stars": 5
+        },
+        {
+          "text": "great spot, decided splurge stay downtown evening looking special, lovely staff desk feel welcome, room wonderfully upscale funky good way, comfortable bed fantastic shower, love unexpected turndown service, no view neat little terrace looked post st. windows triple glazed kept street noise minimum, checked morning treated old friends, definitely try,  ",
+          "raw_stars": 5
+        }
+      ],
+      "ai_score": 4.91,
+      "trust_weight": 0.73,
+      "analyzed_reviews": [
+        {
+          "text": "better expected hotel great loation helpful staff day florentine art nice sleep air-conditioned room frescoed vaulted ceilings rafael room, 2 adjacent rooms second rafael room smaller acceptable, breakfast warm un-airconditioned room dining room attractive food areas clean, parking not included price valet parking available local garage, benefit driving florence difficult, bathroom large clean, not hyatt good value price,  ",
+          "raw_stars": 4,
+          "sentiment_score": 5,
+          "trust_weight": 0.2,
+          "adjusted_stars": 4
+        },
+        {
+          "text": "great place, just left marriott yesetrday 5 great days, n't understand negative complaints, people just need gripe, yeah large whattaya expect marriott waikiki beach, staff friendly rooms environs notch neat clean views ocean room outstanding, stayed sheraton waikiki hilton hawaiian village heard sheraton need work appears undergoing right hilton absolutely outstanding little removed main waikiki n't like walk dark daughters, gripe marriott wi-fi access, did n't work room 10.95 day, sitting lobby turtle bay resort north shore looking surf free wi-fi 12 day resort fee includes parking tennis snorkle gear, leave impressions tbr heading trip far good,  ",
+          "raw_stars": 5,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 5
+        },
+        {
+          "text": "great spot, decided splurge stay downtown evening looking special, lovely staff desk feel welcome, room wonderfully upscale funky good way, comfortable bed fantastic shower, love unexpected turndown service, no view neat little terrace looked post st. windows triple glazed kept street noise minimum, checked morning treated old friends, definitely try,  ",
+          "raw_stars": 5,
+          "sentiment_score": 5,
+          "trust_weight": 1,
+          "adjusted_stars": 5
+        }
+      ],
+      "ai_score_expiration_date": "2026-04-22T08:26:27.050010Z",
+      "ai_summary_expiration_date": null,
+      "ai_summary": null,
+      "last_updated": "2026-04-15T08:26:33.673790Z"
+    }
+  ]
+}
